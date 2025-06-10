@@ -12,7 +12,8 @@ import {
     RevampDeviceBox,
     ReverbDeviceBox,
     StereoToolDeviceBox,
-    ZeitgeistDeviceBox
+    ZeitgeistDeviceBox,
+    EuclidDeviceBox
 } from "@/data/boxes"
 import {int, INVERSE_SQRT_2, UUID} from "std"
 import {Project} from "@/project/Project.ts"
@@ -76,6 +77,18 @@ export namespace Effects {
                     box.host.refer(unit)
                 })
             }
+        } satisfies Entry,
+        euclid: {
+            name: "Euclid",
+            description: "Generates Euclidean rhythms from incoming notes",
+            icon: IconSymbol.Euclid,
+            separatorBefore: false,
+            type: "midi",
+            create: ({boxGraph}, unit, index) => EuclidDeviceBox.create(boxGraph, UUID.generate(), box => {
+                box.label.setValue("Euclid")
+                box.index.setValue(index)
+                box.host.refer(unit)
+            })
         } satisfies Entry
     }
 

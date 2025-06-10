@@ -15,7 +15,8 @@ import {
     StereoToolDeviceBox,
     TapeDeviceBox,
     VaporisateurDeviceBox,
-    ZeitgeistDeviceBox
+    ZeitgeistDeviceBox,
+    EuclidDeviceBox
 } from "@/data/boxes"
 import {ArpeggioDeviceEditor} from "@/ui/devices/midi-effects/ArpeggioDeviceEditor.tsx"
 import {ArpeggioDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/midi-effects/ArpeggioDeviceBoxAdapter.ts"
@@ -54,6 +55,8 @@ import {
 import {PlayfieldSampleEditor} from "./instruments/PlayfieldSampleEditor"
 import {ZeitgeistDeviceEditor} from "@/ui/devices/midi-effects/ZeitgeistDeviceEditor"
 import {ZeitgeistDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/midi-effects/ZeitgeistDeviceBoxAdapter"
+import { EuclidDeviceEditor } from "./midi-effects/EuclidDeviceEditor"
+import { EuclidDeviceBoxAdapter } from "@/audio-engine-shared/adapters/devices/midi-effects/EuclidDeviceBoxAdapter"
 
 export namespace DeviceEditorFactory {
     export const toMidiEffectDeviceEditor = (project: Project, lifecycle: Lifecycle, box: Box, deviceHost: DeviceHost) =>
@@ -75,6 +78,12 @@ export namespace DeviceEditorFactory {
                                        project={project}
                                        adapter={project.boxAdapters.adapterFor(box, ZeitgeistDeviceBoxAdapter)}
                                        deviceHost={deviceHost}/>
+            ),
+            visitEuclidDeviceBox: (box: EuclidDeviceBox) => (
+                <EuclidDeviceEditor lifecycle={lifecycle}
+                                    project={project}
+                                    adapter={project.boxAdapters.adapterFor(box, EuclidDeviceBoxAdapter)}
+                                    deviceHost={deviceHost}/>
             )
         }), `No MidiEffectDeviceEditor found for ${box}`)
 
