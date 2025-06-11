@@ -108,7 +108,7 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
 
                     if (stepIndex >= 0 && pattern[stepIndex] && position < baseNote.position + baseNote.duration) {
                         let accentFactor = 1.0;
-                        if (stepIndex % this.#accent === 0) {
+                        if (this.#accent > 0 && stepIndex % this.#accent === 0) {
                               accentFactor = 2.0;
                           }
 
