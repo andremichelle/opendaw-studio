@@ -97,10 +97,10 @@ export class EuclidDeviceBoxAdapter implements MidiEffectDeviceAdapter {
                 StringMapping.percent({ fractionDigits: 0, bipolar: false }), "velocity"
             ),
             division: this.#parametric.createParameter(
-                         box.division,
-                         ValueMapping.linearInteger(0, EuclidDeviceBoxAdapter.DivisionFractions.length - 1),
-                         EuclidDeviceBoxAdapter.DivisionStringMapping, "division"
-                     ),
+                box.division,
+                ValueMapping.linearInteger(0, EuclidDeviceBoxAdapter.DivisionFractions.length - 1),
+                EuclidDeviceBoxAdapter.DivisionStringMapping, "division"
+            ),
         } as const
     }
 }

@@ -49,15 +49,15 @@ export const EuclidDeviceEditor = ({lifecycle, project, adapter, deviceHost}: Co
                                   editing,
                                   midiDevices,
                                   adapter,
-                                  parameter: rotation,
-                                })}
+                                  parameter: division,
+                              })}
                               {ControlBuilder.createKnob({
                                   lifecycle,
                                   editing,
                                   midiDevices,
                                   adapter,
-                                  parameter: division,
-                              })}
+                                  parameter: rotation,
+                                })}
                               {ControlBuilder.createKnob({
                                   lifecycle,
                                   editing,

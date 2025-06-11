@@ -54,21 +54,26 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
     }
 
     #generateEuclidianPattern(steps: number, notes: number, rotation: number): boolean[] {
-        const pattern = new Array(steps).fill(false)
-        if (notes === 0) return pattern
-        if (notes >= steps) return pattern.fill(true)
+        if (notes === 0) return new Array(steps).fill(false)
+        if (notes >= steps) return new Array(steps).fill(true)
 
-        const count = new Array(steps).fill(0)
-        for (let i = 0; i < notes; i++) {
-            count[Math.floor((i * steps) / notes)] = 1
+        const pattern = new Array(steps).fill(false)
+        let error = 0
+        const threshold = steps / 2
+
+        for (let i = 0; i < steps; i++) {
+            error += notes
+            if (error >= threshold) {
+                pattern[i] = true
+                error -= steps
+            }
         }
 
-        const result = count.map(v => v === 1)
         if (rotation > 0) {
             const shift = rotation % steps
-            return [...result.slice(shift), ...result.slice(0, shift)]
+            return [...pattern.slice(shift), ...pattern.slice(0, shift)]
         }
-        return result
+        return pattern
     }
 
     * processNotes(from: ppqn, to: ppqn, flags: int): Generator<NoteLifecycleEvent> {
