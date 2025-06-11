@@ -57,7 +57,7 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
         return Terminable.create(() => this.#source = Option.None)
     }
 
-    #generateEuclidianPattern(steps: number, notes: number, rotation: number): boolean[] {
+    #generateEuclideanPattern(steps: number, notes: number, rotation: number): boolean[] {
         if (notes === 0) return new Array(steps).fill(false)
         if (notes >= steps) return new Array(steps).fill(true)
         const pattern = new Array(steps).fill(false)
@@ -96,7 +96,7 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
             const onlyExternal = !Bits.every(flags, BlockFlag.transporting)
             const divisionFraction = EuclidDeviceBoxAdapter.DivisionFractions[this.#divisionIndex] || [1, 4]
             const stepDuration = Fraction.toPPQN(divisionFraction)
-            const pattern = this.#generateEuclidianPattern(this.#steps, this.#notes, this.#rotation)
+            const pattern = this.#generateEuclideanPattern(this.#steps, this.#notes, this.#rotation)
             const noteDuration = Math.max(1, Math.min(stepDuration, Math.floor(stepDuration * this.#gate)));
 
             for (const {position} of Fragmentor.iterateWithIndex(from, to, stepDuration)) {
