@@ -1,6 +1,6 @@
 import { EngineContext } from "@/worklet/EngineContext"
 import { EventProcessor } from "@/worklet/EventProcessor"
-import { Event, EventSpanRetainer, NoteEvent, PPQN, ppqn } from "dsp"
+import { Event, EventSpanRetainer, Fraction, NoteEvent, ppqn } from "dsp"
 import { MidiEffectProcessor } from "@/worklet/processors"
 import { EuclidDeviceBoxAdapter } from "@/audio-engine-shared/adapters/devices/midi-effects/EuclidDeviceBoxAdapter"
 import { assert, Bits, Id, int, Option, Terminable, UUID } from "std"
@@ -25,7 +25,7 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
     #gate: number = 1.0
     #rotation: int = 0
     #velocity: number = 0.0
-    #division: int = 1 // Default division, e.g., 1/8th note
+    #divisionIndex: int = 8
 
     constructor(context: EngineContext, adapter: EuclidDeviceBoxAdapter) {
         super(context)
@@ -90,7 +90,8 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
             for (const _ of source.processNotes(from, to, flags)) {} // advance source
             const onlyExternal = !Bits.every(flags, BlockFlag.transporting)
 
-            const stepDuration = PPQN.Quarter / this.#division
+            const divisionFraction = EuclidDeviceBoxAdapter.DivisionFractions[this.#divisionIndex] || [1, 4]
+               const stepDuration = Fraction.toPPQN(divisionFraction)
             const pattern = this.#generateEuclidianPattern(this.#steps, this.#notes, this.#rotation)
             const noteDuration = Math.max(1, Math.min(stepDuration, Math.floor(stepDuration * this.#gate)));
 
@@ -139,7 +140,7 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
         } else if (parameter === this.#velocityParameter) {
             this.#velocity = this.#velocityParameter.getValue()
         } else if (parameter === this.#divisionParameter) {
-            this.#division = this.#divisionParameter.getValue()
+            this.#divisionIndex = this.#divisionParameter.getValue()
         }
     }
 

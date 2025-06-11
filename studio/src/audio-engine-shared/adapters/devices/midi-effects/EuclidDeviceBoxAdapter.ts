@@ -7,8 +7,29 @@ import { StringMapping, UUID, ValueMapping } from "std"
 import { AutomatableParameterFieldAdapter } from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter"
 import { AudioUnitBoxAdapter } from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter"
 import { BoxAdaptersContext } from "@/audio-engine-shared/BoxAdaptersContext"
+import { Fraction } from "dsp"
 
 export class EuclidDeviceBoxAdapter implements MidiEffectDeviceAdapter {
+  static DivisionFractions = Fraction.builder()
+      .add([1, 1])
+      .add([1, 2])
+      .add([1, 3])
+      .add([1, 4])
+      .add([1, 6])
+      .add([1, 8])
+      .add([1, 12])
+      .add([1, 16])
+      .add([1, 24])
+      .add([1, 32])
+      .add([1, 48])
+      .add([1, 64])
+      .add([1, 96])
+      .add([1, 128])
+      .add([1, 256])
+      .asDescendingArray()
+
+  static DivisionStringMapping = StringMapping.indices("", this.DivisionFractions.map(([n, d]) => n === 1 ? `${d === 1 ? '1' : '1/' + d}` : `${n}/${d}`))
+
     readonly type = "midi-effect"
     readonly accepts = "midi"
 
@@ -67,7 +88,7 @@ export class EuclidDeviceBoxAdapter implements MidiEffectDeviceAdapter {
             ),
             gate: this.#parametric.createParameter(
                 box.gate,
-                ValueMapping.linear(0.0, 2.0),
+                ValueMapping.linear(0.0, 1.0),
                 StringMapping.percent({ fractionDigits: 0 }), "gate"
             ),
             velocity: this.#parametric.createParameter(
@@ -76,9 +97,10 @@ export class EuclidDeviceBoxAdapter implements MidiEffectDeviceAdapter {
                 StringMapping.percent({ fractionDigits: 0, bipolar: false }), "velocity"
             ),
             division: this.#parametric.createParameter(
-                box.division,
-                ValueMapping.linearInteger(1, 10),
-                StringMapping.indices("", ["1/4", "1/4", "1/8", "1/4t", "1/16", "1/8t", "1/32", "1/16t", "1/64", "1/32t"]), "division"),
+                         box.division,
+                         ValueMapping.linearInteger(0, EuclidDeviceBoxAdapter.DivisionFractions.length - 1),
+                         EuclidDeviceBoxAdapter.DivisionStringMapping, "division"
+                     ),
         } as const
     }
 }
