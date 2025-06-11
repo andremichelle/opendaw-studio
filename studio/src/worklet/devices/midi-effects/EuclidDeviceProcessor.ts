@@ -53,7 +53,7 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
         return Terminable.create(() => this.#source = Option.None)
     }
 
- #generateEuclidianPattern(steps: number, notes: number, rotation: number): boolean[] {
+    #generateEuclidianPattern(steps: number, notes: number, rotation: number): boolean[] {
         const pattern = new Array(steps).fill(false)
         if (notes === 0) return pattern
         if (notes >= steps) return pattern.fill(true)
@@ -71,7 +71,6 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
         return result
     }
 
-    // TODO Fix stuck notes when using with Zeitgeist Device
     * processNotes(from: ppqn, to: ppqn, flags: int): Generator<NoteLifecycleEvent> {
         if (this.#retainer.nonEmpty()) {
             const releaseAll = Bits.every(flags, BlockFlag.discontinuous)
@@ -114,10 +113,6 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
                         yield event
                     }
                 }
-            }
-
-            for (const event of this.#retainer.releaseLinearCompleted(to)) {
-                yield NoteLifecycleEvent.stop(event, event.position + event.duration)
             }
         }
     }
