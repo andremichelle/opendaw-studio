@@ -101,6 +101,11 @@ export class EuclidDeviceBoxAdapter implements MidiEffectDeviceAdapter {
                 ValueMapping.linearInteger(0, EuclidDeviceBoxAdapter.DivisionFractions.length - 1),
                 EuclidDeviceBoxAdapter.DivisionStringMapping, "division"
             ),
+            accent: this.#parametric.createParameter(
+                box.accent,
+                ValueMapping.linearInteger(0, 100),
+                StringMapping.numeric({ fractionDigits: 0 }), "accent"
+            )
         } as const
     }
 }

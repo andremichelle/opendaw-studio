@@ -18,6 +18,8 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
     readonly #rotationParameter: AutomatableParameter<int>
     readonly #velocityParameter: AutomatableParameter<number>
     readonly #divisionParameter: AutomatableParameter<int>
+    readonly #accentParameter: AutomatableParameter<int>
+
 
     #source: Option<NoteEventSource> = Option.None
     #steps: int = 8
@@ -26,6 +28,7 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
     #rotation: int = 0
     #velocity: number = 0.0
     #divisionIndex: int = 8
+    #accent: int = 0
 
     constructor(context: EngineContext, adapter: EuclidDeviceBoxAdapter) {
         super(context)
@@ -37,6 +40,7 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
         this.#rotationParameter = this.own(this.bindParameter(adapter.namedParameter.rotation))
         this.#velocityParameter = this.own(this.bindParameter(adapter.namedParameter.velocity))
         this.#divisionParameter = this.own(this.bindParameter(adapter.namedParameter.division))
+        this.#accentParameter = this.own(this.bindParameter(adapter.namedParameter.accent))
 
         this.ownAll(context.registerProcessor(this))
         this.readAllParameters()
@@ -56,24 +60,19 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
     #generateEuclidianPattern(steps: number, notes: number, rotation: number): boolean[] {
         if (notes === 0) return new Array(steps).fill(false)
         if (notes >= steps) return new Array(steps).fill(true)
-
         const pattern = new Array(steps).fill(false)
         let error = 0
-        const threshold = steps / 2
-
         for (let i = 0; i < steps; i++) {
             error += notes
-            if (error >= threshold) {
+            if (error >= steps) {
                 pattern[i] = true
                 error -= steps
             }
         }
-
-        if (rotation > 0) {
-            const shift = rotation % steps
-            return [...pattern.slice(shift), ...pattern.slice(0, shift)]
-        }
-        return pattern
+        const firstTrueIndex = pattern.findIndex(value => value)
+        const totalRotation = (firstTrueIndex + rotation) % steps
+        return totalRotation === 0 ? pattern :
+            [...pattern.slice(totalRotation), ...pattern.slice(0, totalRotation)]
     }
 
     * processNotes(from: ppqn, to: ppqn, flags: int): Generator<NoteLifecycleEvent> {
@@ -93,10 +92,10 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
         if (this.#source.nonEmpty()) {
             const source = this.#source.unwrap()
             for (const _ of source.processNotes(from, to, flags)) {} // advance source
-            const onlyExternal = !Bits.every(flags, BlockFlag.transporting)
 
+            const onlyExternal = !Bits.every(flags, BlockFlag.transporting)
             const divisionFraction = EuclidDeviceBoxAdapter.DivisionFractions[this.#divisionIndex] || [1, 4]
-               const stepDuration = Fraction.toPPQN(divisionFraction)
+            const stepDuration = Fraction.toPPQN(divisionFraction)
             const pattern = this.#generateEuclidianPattern(this.#steps, this.#notes, this.#rotation)
             const noteDuration = Math.max(1, Math.min(stepDuration, Math.floor(stepDuration * this.#gate)));
 
@@ -108,7 +107,12 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
                     const stepIndex = Math.floor(relativePosition / stepDuration) % this.#steps
 
                     if (stepIndex >= 0 && pattern[stepIndex] && position < baseNote.position + baseNote.duration) {
-                        const modifiedVelocity = Math.min(1, Math.max(0, baseNote.velocity * (1 + this.#velocity)))
+                        let accentFactor = 1.0;
+                        if (stepIndex % this.#accent === 0) {
+                              accentFactor = 2.0;
+                          }
+
+                        const modifiedVelocity = Math.min(1, Math.max(0, baseNote.velocity * (1 + this.#velocity) * accentFactor))
                         const event = NoteLifecycleEvent.startWith({
                             ...baseNote,
                             position,
@@ -146,6 +150,8 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
             this.#velocity = this.#velocityParameter.getValue()
         } else if (parameter === this.#divisionParameter) {
             this.#divisionIndex = this.#divisionParameter.getValue()
+        } else if (parameter === this.#accentParameter) {
+            this.#accent = this.#accentParameter.getValue()
         }
     }
 

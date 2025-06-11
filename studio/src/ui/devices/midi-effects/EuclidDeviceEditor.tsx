@@ -21,7 +21,7 @@ type Construct = {
 }
 
 export const EuclidDeviceEditor = ({lifecycle, project, adapter, deviceHost}: Construct) => {
-    const {steps, notes, gate, rotation, velocity, division} = adapter.namedParameter
+    const {steps, notes, gate, rotation, velocity, division, accent} = adapter.namedParameter
     const {editing, midiDevices} = project
     return (
         <DeviceEditor lifecycle={lifecycle}
@@ -57,6 +57,13 @@ export const EuclidDeviceEditor = ({lifecycle, project, adapter, deviceHost}: Co
                                   midiDevices,
                                   adapter,
                                   parameter: rotation,
+                                })}
+                              {ControlBuilder.createKnob({
+                                  lifecycle,
+                                  editing,
+                                  midiDevices,
+                                  adapter,
+                                  parameter: accent,
                                 })}
                               {ControlBuilder.createKnob({
                                   lifecycle,
