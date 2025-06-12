@@ -623,7 +623,23 @@ export const IconLibrary = () => (
 		c0.49,1.008,1.62,2.575,2.022,3.127c1.736,1.719,4.13,2.778,6.766,2.778c5.309,0,9.629-4.317,9.629-9.627
 		C30.896,10.139,26.576,5.819,21.268,5.819z"/>
             </symbol>
+            <symbol id={enumToName(IconSymbol.Euclid)}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.0">
+              <path d="M12 12L12 4" />
+              <path d="M12 12L19 8" />
+              <path d="M12 12L17 16" />
+              <path d="M12 12L7 20" />
+              <path d="M12 12L5 8" />
+
+              <circle cx="12" cy="4" r="1"/>
+              <circle cx="19" cy="8" r="1"/>
+              <circle cx="17" cy="16" r="1"/>
+              <circle cx="7" cy="20" r="1"/>
+              <circle cx="5" cy="8" r="1"/>
+          </symbol>
         </defs>
     </svg>
 )
-

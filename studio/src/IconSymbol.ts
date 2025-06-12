@@ -110,7 +110,8 @@ export enum IconSymbol {
     Swap,
     Connected,
     Disconnected,
-    Zeitgeist
+    Zeitgeist,
+    Euclid
 }
 
 export const enumToName = (symbol: IconSymbol): string => IconSymbol[symbol]
