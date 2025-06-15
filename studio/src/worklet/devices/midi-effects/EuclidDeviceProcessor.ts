@@ -20,15 +20,16 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
     readonly #divisionParameter: AutomatableParameter<int>
     readonly #accentParameter: AutomatableParameter<int>
 
-
     #source: Option<NoteEventSource> = Option.None
     #steps: int = 8
     #notes: int = 3
     #gate: number = 1.0
     #rotation: int = 0
     #velocity: number = 0.0
-    #divisionIndex: int = 8
+    #divisionIndex: int = 16
     #accent: int = 0
+    #cachedPattern: boolean[] = []
+    #patternNeedsUpdate: boolean = true
 
     constructor(context: EngineContext, adapter: EuclidDeviceBoxAdapter) {
         super(context)
@@ -44,6 +45,7 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
 
         this.ownAll(context.registerProcessor(this))
         this.readAllParameters()
+        this.#updateCachedPattern()
     }
 
     get uuid(): UUID.Format { return this.#adapter.uuid }
@@ -55,6 +57,13 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
         assert(this.#source.isEmpty(), "NoteEventSource already set")
         this.#source = Option.wrap(source)
         return Terminable.create(() => this.#source = Option.None)
+    }
+
+    #updateCachedPattern(): void {
+        if (!this.#patternNeedsUpdate) return
+
+        this.#cachedPattern = this.#generateEuclideanPattern(this.#steps, this.#notes, this.#rotation)
+        this.#patternNeedsUpdate = false
     }
 
     #generateEuclideanPattern(steps: number, notes: number, rotation: number): boolean[] {
@@ -75,7 +84,7 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
             [...pattern.slice(totalRotation), ...pattern.slice(0, totalRotation)]
     }
 
-    * processNotes(from: ppqn, to: ppqn, flags: int): Generator<NoteLifecycleEvent> {
+    *processNotes(from: ppqn, to: ppqn, flags: int): Generator<NoteLifecycleEvent> {
         if (this.#retainer.nonEmpty()) {
             const releaseAll = Bits.every(flags, BlockFlag.discontinuous)
             if (releaseAll) {
@@ -89,42 +98,49 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
             }
         }
 
-        if (this.#source.nonEmpty()) {
-            const source = this.#source.unwrap()
-            for (const _ of source.processNotes(from, to, flags)) {} // advance source
+        if (this.#source.isEmpty()) {
+          return
+        }
 
-            const onlyExternal = !Bits.every(flags, BlockFlag.transporting)
-            const divisionFraction = EuclidDeviceBoxAdapter.DivisionFractions[this.#divisionIndex] || [1, 4]
-            const stepDuration = Fraction.toPPQN(divisionFraction)
-            const pattern = this.#generateEuclideanPattern(this.#steps, this.#notes, this.#rotation)
-            const noteDuration = Math.max(1, Math.min(stepDuration, Math.floor(stepDuration * this.#gate)));
+        const source = this.#source.unwrap()
+        for (const _ of source.processNotes(from, to, flags)) {} // advance source
 
-            for (const {position} of Fragmentor.iterateWithIndex(from, to, stepDuration)) {
-                const activeNotes = Array.from(source.iterateActiveNotesAt(position, onlyExternal))
+        const onlyExternal = !Bits.every(flags, BlockFlag.transporting)
+        const divisionFraction = EuclidDeviceBoxAdapter.DivisionFractions[this.#divisionIndex] || [1, 4]
+        const stepDuration = Fraction.toPPQN(divisionFraction)
+        const noteDuration = Math.max(1, Math.min(stepDuration, Math.floor(stepDuration * this.#gate)));
 
-                for (const baseNote of activeNotes) {
-                    const relativePosition = position - baseNote.position
-                    const stepIndex = Math.floor(relativePosition / stepDuration) % this.#steps
+        this.#updateCachedPattern()
+        const pattern = this.#cachedPattern
 
-                    if (stepIndex >= 0 && pattern[stepIndex] && position < baseNote.position + baseNote.duration) {
-                        let accentFactor = 1.0;
-                        if (this.#accent > 0 && stepIndex % this.#accent === 0) {
-                              accentFactor = 2.0;
-                          }
+        for (const position of Fragmentor.iterate(from, to, stepDuration)) {
+            const activeNotes = Array.from(source.iterateActiveNotesAt(position, onlyExternal))
 
-                        const modifiedVelocity = Math.min(1, Math.max(0, baseNote.velocity * (1 + this.#velocity) * accentFactor))
-                        const event = NoteLifecycleEvent.startWith({
-                            ...baseNote,
-                            position,
-                            duration: noteDuration,
-                            velocity: modifiedVelocity
-                        })
-                        this.#retainer.addAndRetain(event)
-                        yield event
+            for (const baseNote of activeNotes) {
+                const relativePosition = position - baseNote.position
+                const stepIndex = Math.floor(relativePosition / stepDuration) % this.#steps
+
+                if (stepIndex >= 0 && pattern[stepIndex] && position < baseNote.position + baseNote.duration) {
+                    let accentFactor = 1.0;
+                    if (this.#accent > 0 && stepIndex % this.#accent === 0) {
+                          accentFactor = 2.0;
+                      }
+
+                      const modifiedVelocity = Math.min(1, Math.max(0, baseNote.velocity * (1 + this.#velocity) * accentFactor))
+                      const event = NoteLifecycleEvent.startWith({
+                          ...baseNote,
+                          position,
+                          duration: noteDuration,
+                          velocity: modifiedVelocity
+                      })
+                      this.#retainer.addAndRetain(event)
+                      yield event
                     }
                 }
+                for (const event of this.#retainer.releaseLinearCompleted(to)) {
+                    yield NoteLifecycleEvent.stop(event, event.position + event.duration)
+                }
             }
-        }
     }
 
     *iterateActiveNotesAt(position: ppqn, onlyExternal: boolean): Generator<NoteEvent> {
@@ -135,15 +151,19 @@ export class EuclidDeviceProcessor extends EventProcessor implements MidiEffectP
     reset(): void {
         this.#retainer.clear()
         this.eventInput.clear()
+        this.#patternNeedsUpdate = true
     }
 
     parameterChanged(parameter: AutomatableParameter): void {
         if (parameter === this.#stepsParameter) {
             this.#steps = this.#stepsParameter.getValue()
+            this.#patternNeedsUpdate = true
         } else if (parameter === this.#notesParameter) {
             this.#notes = Math.min(this.#notesParameter.getValue(), this.#steps)
+            this.#patternNeedsUpdate = true
         } else if (parameter === this.#rotationParameter) {
             this.#rotation = this.#rotationParameter.getValue()
+            this.#patternNeedsUpdate = true
         } else if (parameter === this.#gateParameter) {
             this.#gate = this.#gateParameter.getValue()
         } else if (parameter === this.#velocityParameter) {

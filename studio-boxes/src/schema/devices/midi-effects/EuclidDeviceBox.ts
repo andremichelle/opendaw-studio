@@ -9,6 +9,6 @@ export const EuclidDeviceBox: BoxSchema<Pointers> = createMidiEffectDevice("Eucl
 	12: { type: "float32", name: "gate", pointerRules: DefaultParameterPointerRules, value: 1.0 },
 	13: { type: "int32", name: "rotation", pointerRules: DefaultParameterPointerRules, value: 0 },
 	14: { type: "float32", name: "velocity", pointerRules: DefaultParameterPointerRules, value: 0.0 },
-	15: { type: "int32", name: "division", pointerRules: DefaultParameterPointerRules, value: 5 },
+	15: { type: "int32", name: "division", pointerRules: DefaultParameterPointerRules, value: 7 },
 	16: { type: "int32", name: "accent", pointerRules: DefaultParameterPointerRules, value: 0 },
 })
