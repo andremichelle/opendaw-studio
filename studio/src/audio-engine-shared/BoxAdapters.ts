@@ -41,7 +41,8 @@ import {
     ValueEventCollectionBox,
     ValueRegionBox,
     VaporisateurDeviceBox,
-    ZeitgeistDeviceBox
+    ZeitgeistDeviceBox,
+    EuclidDeviceBox
 } from "@/data/boxes"
 import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
 import {DelayDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/audio-effects/DelayDeviceBoxAdapter.ts"
@@ -91,6 +92,7 @@ import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"
 import {BoxAdapter} from "@/audio-engine-shared/BoxAdapter"
 import {ZeitgeistDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/midi-effects/ZeitgeistDeviceBoxAdapter"
 import {GrooveShuffleBoxAdapter} from "@/audio-engine-shared/adapters/grooves/GrooveShuffleBoxAdapter"
+import { EuclidDeviceBoxAdapter } from "./adapters/devices/midi-effects/EuclidDeviceBoxAdapter"
 
 export class BoxAdapters implements Terminable {
     readonly #context: BoxAdaptersContext
@@ -182,7 +184,8 @@ export class BoxAdapters implements Terminable {
             visitTimelineBox: (box: TimelineBox) => new TimelineBoxAdapter(this.#context, box),
             visitMarkerBox: (box: MarkerBox) => new MarkerBoxAdapter(this.#context, box),
             visitZeitgeistDeviceBox: (box: ZeitgeistDeviceBox) => new ZeitgeistDeviceBoxAdapter(this.#context, box),
-            visitGrooveShuffleBox: (box: GrooveShuffleBox) => new GrooveShuffleBoxAdapter(this.#context, box)
+            visitGrooveShuffleBox: (box: GrooveShuffleBox) => new GrooveShuffleBoxAdapter(this.#context, box),
+            visitEuclidDeviceBox: (box: EuclidDeviceBox) => new EuclidDeviceBoxAdapter(this.#context, box)
         }), `Could not find factory for ${unknownBox}`)
     }
 }

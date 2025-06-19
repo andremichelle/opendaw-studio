@@ -13,7 +13,8 @@ import {
     StereoToolDeviceBox,
     TapeDeviceBox,
     VaporisateurDeviceBox,
-    ZeitgeistDeviceBox
+    ZeitgeistDeviceBox,
+    EuclidDeviceBox
 } from "@/data/boxes"
 import {DelayDeviceProcessor} from "@/worklet/devices/audio-effects/DelayDeviceProcessor.ts"
 import {DelayDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/audio-effects/DelayDeviceBoxAdapter.ts"
@@ -48,6 +49,8 @@ import {
 import {StereoToolDeviceProcessor} from "./devices/audio-effects/StereoToolDeviceProcessor"
 import {ZeitgeistDeviceProcessor} from "@/worklet/devices/midi-effects/ZeitgeistDeviceProcessor"
 import {ZeitgeistDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/midi-effects/ZeitgeistDeviceBoxAdapter"
+import { EuclidDeviceBoxAdapter } from "@/audio-engine-shared/adapters/devices/midi-effects/EuclidDeviceBoxAdapter"
+import { EuclidDeviceProcessor } from "./devices/midi-effects/EuclidDeviceProcessor"
 
 export namespace InstrumentDeviceProcessorFactory {
     export const create = (context: EngineContext,
@@ -75,7 +78,9 @@ export namespace MidiEffectDeviceProcessorFactory {
             visitPitchDeviceBox: (box: PitchDeviceBox): MidiEffectProcessor =>
                 new PitchDeviceProcessor(context, context.boxAdapters.adapterFor(box, PitchDeviceBoxAdapter)),
             visitZeitgeistDeviceBox: (box: ZeitgeistDeviceBox): MidiEffectProcessor =>
-                new ZeitgeistDeviceProcessor(context, context.boxAdapters.adapterFor(box, ZeitgeistDeviceBoxAdapter))
+                new ZeitgeistDeviceProcessor(context, context.boxAdapters.adapterFor(box, ZeitgeistDeviceBoxAdapter)),
+            visitEuclidDeviceBox: (box: EuclidDeviceBox): MidiEffectProcessor =>
+                new EuclidDeviceProcessor(context, context.boxAdapters.adapterFor(box, EuclidDeviceBoxAdapter)),
         }), `Could not create midi-effect for'${box.name}'`)
 }
 

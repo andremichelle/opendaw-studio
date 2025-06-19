@@ -11,6 +11,7 @@ import { NanoDeviceBox } from "./instruments/NanoDeviceBox"
 import { PlayfieldDeviceBox, PlayfieldSampleBox } from "./instruments/PlayfieldDeviceBox"
 import { StereoToolDeviceBox } from "./audio-effects/StereoToolDeviceBox"
 import { ZeitgeistDeviceBox } from "./midi-effects/ZeitGeistDeviceBox"
+import { EuclidDeviceBox } from "./midi-effects/EuclidDeviceBox"
 
 export const DeviceDefinitions = [
 	DeviceInterfaceKnobBox,
@@ -26,5 +27,6 @@ export const DeviceDefinitions = [
 	TapeDeviceBox,
 	ArpeggioDeviceBox,
 	PitchDeviceBox,
-	ZeitgeistDeviceBox
+	ZeitgeistDeviceBox,
+	EuclidDeviceBox
 ]
