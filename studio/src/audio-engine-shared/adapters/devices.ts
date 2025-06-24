@@ -10,7 +10,8 @@ import {
     RevampDeviceBox,
     ReverbDeviceBox,
     StereoToolDeviceBox,
-    ZeitgeistDeviceBox
+    ZeitgeistDeviceBox,
+    EuclidDeviceBox
 } from "@/data/boxes"
 import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType.ts"
 import {SortedBoxAdapterCollection} from "@/audio-engine-shared/adapters/SortedBoxAdapterCollection"
@@ -116,7 +117,8 @@ export namespace Devices {
         visitModularDeviceBox: (box: ModularDeviceBox) => box.index,
         visitRevampDeviceBox: (box: RevampDeviceBox) => box.index,
         visitReverbDeviceBox: (box: ReverbDeviceBox) => box.index,
-        visitZeitgeistDeviceBox: (box: ZeitgeistDeviceBox) => box.index
+        visitZeitgeistDeviceBox: (box: ZeitgeistDeviceBox) => box.index,
+        visitEuclidDeviceBox: (box: EuclidDeviceBox) => box.index
     }), `No index-field found for ${box}`)
 
     export const deleteEffectDevices = (devices: ReadonlyArray<EffectDeviceBoxAdapter>): void => {
