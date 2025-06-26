@@ -8,11 +8,15 @@ export interface EngineCommands extends Terminable {
     setRecording(value: boolean): void
     setPosition(position: ppqn): void
     setMetronomeEnabled(enabled: boolean): void
+    // full stop and clear all buffers
     stopAndReset(): void
     queryLoadingComplete(): Promise<boolean>
+    // throws a test error while processing audio
     panic(): void
+    // feeds a note request into an audio-unit identified by uuid
     noteOn(uuid: UUID.Format, pitch: byte, velocity: unitValue): void
     noteOff(uuid: UUID.Format, pitch: byte): void
+    // timeline clip playback management
     scheduleClipPlay(clipIds: ReadonlyArray<UUID.Format>): void
     scheduleClipStop(trackIds: ReadonlyArray<UUID.Format>): void
 }
