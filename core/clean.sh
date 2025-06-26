@@ -8,5 +8,4 @@ remove_targets() {
   done
 }
 remove_targets
-rm -rf dist build-info.json gen
-rm -rf core/src/data/boxes
+rm -rf src/data/boxes
