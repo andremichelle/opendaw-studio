@@ -6,7 +6,7 @@ import {CanvasPainter} from "@/ui/canvas/painter.ts"
 import {PianoRollLayout} from "@/ui/piano-panel/PianoRollLayout.ts"
 import {LoopableRegion, MidiKeys, PPQN, ppqn} from "dsp"
 import {NoteRegionBoxAdapter} from "@core/shared/adapters/timeline/region/NoteRegionBoxAdapter.ts"
-import {Fragmentor} from "@/worklet/Fragmentor.ts"
+import {Fragmentor} from "@core/worklet/Fragmentor.ts"
 import {Fonts} from "@/ui/Fonts.ts"
 import {Project} from "@/project/Project.ts"
 

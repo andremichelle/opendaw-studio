@@ -1,7 +1,7 @@
 import {Project} from "@/project/Project"
-import WorkletUrl from "../worklet/EngineProcessor.ts?worker&url"
+import WorkletUrl from "@core/worklet/EngineProcessor.ts?worker&url"
 import {BoxIO} from "@core/data/boxes"
-import {EngineCommands, EngineToClient} from "@/worklet/protocols.ts"
+import {EngineCommands, EngineToClient} from "@core/worklet/protocols.ts"
 import {
     Arrays,
     byte,
@@ -26,7 +26,7 @@ import {ClipNotification, ClipSequencingUpdates} from "@core/shared/ClipNotifica
 import {SyncSource} from "box"
 import {Communicator, Messenger} from "runtime"
 import {WorkletFactory} from "@/audio-engine/WorkletFactory"
-import {EngineState, EngineStateSchema} from "@/worklet/EngineStateSchema"
+import {EngineState, EngineStateSchema} from "@core/worklet/EngineStateSchema"
 import {AnimationFrame} from "dom"
 
 export class EngineWorklet extends AudioWorkletNode implements Engine {

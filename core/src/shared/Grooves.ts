@@ -1,7 +1,5 @@
-// TODO
-import {AutomatableParameter} from "../../../studio/src/worklet/AutomatableParameter.ts"
-import {AbstractProcessor} from "../../../studio/src/worklet/AbstractProcessor.ts"
-
+import {AutomatableParameter} from "@core/worklet/AutomatableParameter.ts"
+import {AbstractProcessor} from "@core/worklet/AbstractProcessor.ts"
 import {GrooveShuffleBoxAdapter} from "@core/shared/adapters/grooves/GrooveShuffleBoxAdapter.ts"
 import {Groove, GroovePattern, GroovePatternFunction, PPQN, ppqn} from "dsp"
 import {asDefined, moebiusEase, squashUnit, Terminable, Terminator} from "std"

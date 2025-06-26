@@ -1,9 +1,9 @@
 import {WorkletFactory} from "@/audio-engine/WorkletFactory"
-import WorkletUrl from "../worklet/RecordingProcessor.ts?worker&url"
+import WorkletUrl from "@core/worklet/RecordingProcessor.ts?worker&url"
 import {mergeChunkPlanes, RingBuffer} from "@core/shared/RingBuffer.ts"
 import {encodeWavFloat} from "@/wav"
 import {EmptyExec, int} from "std"
-import {RenderQuantum} from "@/worklet/constants"
+import {RenderQuantum} from "@core/worklet/constants"
 import {Files} from "dom"
 
 export class RecordingWorklet extends AudioWorkletNode {

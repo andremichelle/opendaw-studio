@@ -1,4 +1,4 @@
-import WorkletUrl from "../worklet/PeakMeterProcessor.ts?worker&url"
+import WorkletUrl from "@core/worklet/PeakMeterProcessor.ts?worker&url"
 import {WorkletFactory} from "@/audio-engine/WorkletFactory"
 import {PeakMeterProcessorOptions} from "@core/shared/PeakMeterProcessorOptions"
 import {int, Notifier, Observer, Schema, Subscription, SyncStream, Terminable, Terminator} from "std"
