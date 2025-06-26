@@ -15,7 +15,7 @@ import {
 import {AudioUnitBoxAdapter} from "@core/shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
 import {Effects} from "@/service/Effects.ts"
 import {DeviceHost, EffectDeviceBoxAdapter, EffectPointerType} from "@core/shared/devices.ts"
-import {enumToName, IconSymbol} from "@core/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {AnyClipBox} from "@core/data/unions.ts"
 import {TrackType} from "@core/shared/adapters/timeline/TrackType.ts"
 import {ColorCodes} from "@/ui/mixer/ColorCodes.ts"
@@ -88,7 +88,7 @@ export namespace Modifier {
         const audioBusBox = AudioBusBox.create(boxGraph, uuid, box => {
             box.collection.refer(rootBox.audioBusses)
             box.label.setValue(name)
-            box.icon.setValue(enumToName(icon))
+            box.icon.setValue(IconSymbol.toName(icon))
             box.color.setValue(color)
         })
         const audioUnitBox = Modifier.createAudioUnit(project, type)

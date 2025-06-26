@@ -1,9 +1,10 @@
 import {asDefined} from "std"
-import {enumToName, IconSymbol} from "@core/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {CssUtils} from "dom"
 
 const iconSymbolToCursor = (symbol: IconSymbol, hotspotX: number, hotspotY: number, fallback: CssUtils.Cursor = "auto") => {
-    const cursor: Element = asDefined(document.getElementById(enumToName(symbol)), `Could not find ${enumToName(symbol)}`)
+    const cursor: Element = asDefined(document.getElementById(
+        IconSymbol.toName(symbol)), `Could not find ${IconSymbol.toName(symbol)}`)
         .cloneNode(true) as Element
     cursor.removeAttribute("id")
     cursor.setAttribute("xmlns", "http://www.w3.org/2000/svg")

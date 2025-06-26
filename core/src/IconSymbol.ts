@@ -113,6 +113,8 @@ export enum IconSymbol {
     Zeitgeist
 }
 
-export const enumToName = (symbol: IconSymbol): string => IconSymbol[symbol]
-export const nameToEnum = (name: keyof typeof IconSymbol | string): IconSymbol =>
-    IconSymbol[name as keyof typeof IconSymbol] ?? IconSymbol.Rectangle
+export namespace IconSymbol {
+    export const toName = (symbol: IconSymbol): string => IconSymbol[symbol]
+    export const fromName = (name: keyof typeof IconSymbol | string): IconSymbol =>
+        <IconSymbol>IconSymbol[name as keyof typeof IconSymbol] ?? IconSymbol.Rectangle
+}

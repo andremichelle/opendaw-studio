@@ -16,7 +16,7 @@ import {BoxAdapters} from "@core/shared/BoxAdapters.ts"
 import {AudioBusBox} from "@core/data/boxes"
 import {Pointers} from "@core/data/pointers.ts"
 import {AudioUnitInputAdapter} from "@core/shared/adapters/audio-unit/AudioUnitInputAdapter.ts"
-import {enumToName, IconSymbol, nameToEnum} from "@core/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 
 export class AudioUnitInput implements ObservableValue<Option<AudioUnitInputAdapter>>, Terminable {
     readonly #terminator: Terminator
@@ -39,7 +39,7 @@ export class AudioUnitInput implements ObservableValue<Option<AudioUnitInputAdap
                     return Terminable.Empty
                 },
                 some: ({labelField, iconField}) => Terminable.many(
-                    iconField.catchupAndSubscribe(field => this.#iconValue.setValue(nameToEnum(field.getValue()))),
+                    iconField.catchupAndSubscribe(field => this.#iconValue.setValue(IconSymbol.fromName(field.getValue()))),
                     labelField.catchupAndSubscribe(field => this.#labelNotifier.notify(Option.wrap(field.getValue())))
                 )
             })
@@ -85,11 +85,11 @@ export class AudioUnitInput implements ObservableValue<Option<AudioUnitInputAdap
     set label(value: string) {this.getValue().ifSome(input => input.labelField.setValue(value))}
     get label(): Option<string> {return this.getValue().map(input => input.labelField.getValue())}
 
-    set icon(value: IconSymbol) {this.getValue().ifSome(input => input.iconField.setValue(enumToName(value)))}
+    set icon(value: IconSymbol) {this.getValue().ifSome(input => input.iconField.setValue(IconSymbol.toName(value)))}
     get icon(): IconSymbol {
         return this.getValue().match({
             none: () => IconSymbol.Unknown,
-            some: input => nameToEnum(input.iconField.getValue())
+            some: input => IconSymbol.fromName(input.iconField.getValue())
         })
     }
 

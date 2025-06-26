@@ -33,7 +33,7 @@ import {RootBoxAdapter} from "@core/shared/RootBoxAdapter.ts"
 import {AudioUnitType} from "@core/data/enums.ts"
 import {Colors} from "@/ui/Colors"
 import {ppqn} from "dsp"
-import {enumToName, IconSymbol} from "@core/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {TimelineBoxAdapter} from "@core/shared/adapters/timeline/TimelineBoxAdapter.ts"
 import {ParameterFieldAdapters} from "@core/shared/ParameterFieldAdapters"
 import {showInfoDialog} from "@/ui/components/dialogs.tsx"
@@ -71,7 +71,7 @@ export class Project implements BoxAdaptersContext, Terminable, TerminableOwner 
         const masterBusBox = AudioBusBox.create(boxGraph, UUID.generate(), box => {
             box.collection.refer(rootBox.audioBusses)
             box.label.setValue("Output")
-            box.icon.setValue(enumToName(IconSymbol.SpeakerHeadphone))
+            box.icon.setValue(IconSymbol.toName(IconSymbol.SpeakerHeadphone))
             box.color.setValue(Colors.blue)
         })
         const masterAudioUnit = AudioUnitBox.create(boxGraph, UUID.generate(), box => {

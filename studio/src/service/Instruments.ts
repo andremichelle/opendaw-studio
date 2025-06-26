@@ -12,7 +12,7 @@ import {Utils} from "@/utils"
 import {BoxGraph} from "box"
 import {TrackType} from "@core/shared/adapters/timeline/TrackType.ts"
 import {Project} from "@/project/Project.ts"
-import {enumToName, IconSymbol} from "@core/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {Waveform} from "dsp"
 import {Modifier} from "@/ui/Modifier.ts"
 import {AudioUnitType} from "@core/data/enums.ts"
@@ -49,7 +49,7 @@ export namespace Instruments {
         createDevice: (boxGraph: BoxGraph, deviceHost: DeviceHost, name: string, icon: IconSymbol): TapeDeviceBox =>
             TapeDeviceBox.create(boxGraph, UUID.generate(), box => {
                 box.label.setValue(name)
-                box.icon.setValue(enumToName(icon))
+                box.icon.setValue(IconSymbol.toName(icon))
                 box.flutter.setValue(0.2)
                 box.wow.setValue(0.05)
                 box.noise.setValue(0.02)
@@ -77,7 +77,7 @@ export namespace Instruments {
                 }))
             return NanoDeviceBox.create(boxGraph, UUID.generate(), box => {
                 box.label.setValue(name)
-                box.icon.setValue(enumToName(icon))
+                box.icon.setValue(IconSymbol.toName(icon))
                 box.file.refer(audioFileBox)
                 box.host.refer(deviceHost.inputField)
             })
@@ -98,7 +98,7 @@ export namespace Instruments {
         createDevice: (boxGraph: BoxGraph, deviceHost: DeviceHost, name: string, icon: IconSymbol): PlayfieldDeviceBox => {
             const deviceBox = PlayfieldDeviceBox.create(boxGraph, UUID.generate(), box => {
                 box.label.setValue(name)
-                box.icon.setValue(enumToName(icon))
+                box.icon.setValue(IconSymbol.toName(icon))
                 box.host.refer(deviceHost.inputField)
             })
             const files = [
@@ -139,7 +139,7 @@ export namespace Instruments {
         createDevice: (boxGraph: BoxGraph, deviceHost: DeviceHost, name: string, icon: IconSymbol): VaporisateurDeviceBox =>
             VaporisateurDeviceBox.create(boxGraph, UUID.generate(), box => {
                 box.label.setValue(name)
-                box.icon.setValue(enumToName(icon))
+                box.icon.setValue(IconSymbol.toName(icon))
                 box.tune.setInitValue(0.0)
                 box.cutoff.setInitValue(1000.0)
                 box.resonance.setInitValue(0.1)
