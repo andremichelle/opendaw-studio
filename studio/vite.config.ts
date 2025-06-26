@@ -43,7 +43,10 @@ export default defineConfig(({mode, command}) => {
             })
         ],
         resolve: {
-            alias: {"@": resolve(__dirname, "./src")}
+            alias: {
+                "@": resolve(__dirname, "./src"),
+                "@core": resolve(__dirname, "../core/src")
+            }
         },
         build: {
             target: "esnext",
