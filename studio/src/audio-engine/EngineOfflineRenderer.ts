@@ -7,7 +7,7 @@ import {Promises, Wait} from "runtime"
 import {AnimationFrame, Errors, Files} from "dom"
 import {encodeWavFloat} from "@/wav"
 import {ProjectMeta} from "@/project/ProjectMeta"
-import {ExportStemsConfiguration} from "@/audio-engine-shared/EngineProcessorOptions"
+import {ExportStemsConfiguration} from "@core/shared/EngineProcessorOptions"
 import JSZip from "jszip"
 
 export namespace EngineOfflineRenderer {

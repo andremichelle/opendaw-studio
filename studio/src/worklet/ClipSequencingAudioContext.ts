@@ -1,10 +1,10 @@
-import {AnyClipBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes"
+import {AnyClipBoxAdapter} from "@core/shared/UnionAdapterTypes.ts"
 import {Arrays, identity, Option, quantizeFloor, SortedSet, UUID} from "std"
 import {ppqn, PPQN} from "dsp"
-import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter"
+import {TrackBoxAdapter} from "@core/shared/adapters/timeline/TrackBoxAdapter"
 import {BoxGraph, Update} from "box"
-import {ClipSequencing, Section} from "@/audio-engine-shared/ClipSequencing"
-import {ClipSequencingUpdates} from "@/audio-engine-shared/ClipNotifications.ts"
+import {ClipSequencing, Section} from "@core/shared/ClipSequencing"
+import {ClipSequencingUpdates} from "@core/shared/ClipNotifications.ts"
 
 // Just convenient to identify which UUID is for which type
 type ClipKey = UUID.Format

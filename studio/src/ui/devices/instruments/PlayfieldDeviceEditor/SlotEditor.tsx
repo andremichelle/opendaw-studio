@@ -4,7 +4,7 @@ import {asDefined, clamp, Lifecycle, Option} from "std"
 import {createElement} from "jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {Icon} from "@/ui/components/Icon"
-import {IconSymbol} from "@/IconSymbol"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {CanvasPainter} from "@/ui/canvas/painter"
 import {EditWrapper} from "@/ui/wrapper/EditWrapper.ts"
 import {Colors} from "@/ui/Colors"
@@ -15,11 +15,11 @@ import {SlotUtils} from "@/ui/devices/instruments/PlayfieldDeviceEditor/SlotUtil
 import {RadioGroup} from "@/ui/components/RadioGroup"
 import {ParameterLabel} from "@/ui/components/ParameterLabel"
 import {RelativeUnitValueDragging} from "@/ui/wrapper/RelativeUnitValueDragging"
-import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
-import {Gate} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/Gate"
+import {AutomatableParameterFieldAdapter} from "@core/shared/AutomatableParameterFieldAdapter.ts"
+import {Gate} from "@core/shared/adapters/devices/instruments/Playfield/Gate"
 import {
     PlayfieldSampleBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
+} from "@core/shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
 import {SnapValueThresholdInPixels} from "@/ui/timeline/editors/value/ValueMoveModifier"
 
 const className = Html.adoptStyleSheet(css, "SlotEditor")

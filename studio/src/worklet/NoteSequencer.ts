@@ -1,5 +1,5 @@
 import {EngineContext} from "@/worklet/EngineContext.ts"
-import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType.ts"
+import {TrackType} from "@core/shared/adapters/timeline/TrackType.ts"
 import {EventSpanRetainer, LoopableRegion, NoteEvent, ppqn} from "dsp"
 import {
     Bits,
@@ -16,16 +16,16 @@ import {
     unitValue,
     UUID
 } from "std"
-import {NoteClipBoxAdapter} from "@/audio-engine-shared/adapters/timeline/clip/NoteClipBoxAdapter.ts"
+import {NoteClipBoxAdapter} from "@core/shared/adapters/timeline/clip/NoteClipBoxAdapter.ts"
 import {
     NoteEventCollectionBoxAdapter
-} from "@/audio-engine-shared/adapters/timeline/collection/NoteEventCollectionBoxAdapter.ts"
-import {NoteRegionBoxAdapter} from "@/audio-engine-shared/adapters/timeline/region/NoteRegionBoxAdapter.ts"
-import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
-import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter"
+} from "@core/shared/adapters/timeline/collection/NoteEventCollectionBoxAdapter.ts"
+import {NoteRegionBoxAdapter} from "@core/shared/adapters/timeline/region/NoteRegionBoxAdapter.ts"
+import {AudioUnitBoxAdapter} from "@core/shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
+import {TrackBoxAdapter} from "@core/shared/adapters/timeline/TrackBoxAdapter"
 import {NoteCompleteEvent, NoteEventSource, NoteLifecycleEvent} from "@/worklet/NoteEventSource"
 import {BlockFlag, ProcessPhase} from "@/worklet/processing"
-import {NoteBroadcaster} from "@/audio-engine-shared/NoteBroadcaster"
+import {NoteBroadcaster} from "@core/shared/NoteBroadcaster"
 
 type ExternalNote = {
     readonly pitch: byte

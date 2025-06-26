@@ -1,6 +1,6 @@
 import css from "./ModularTabButton.sass?inline"
 import {Lifecycle} from "std"
-import {ModularAdapter} from "@/audio-engine-shared/adapters/modular/modular.ts"
+import {ModularAdapter} from "@core/shared/adapters/modular/modular.ts"
 import {UserEditing} from "@/UserEditingManager.ts"
 import {Vertex} from "box"
 import {createElement, Inject} from "jsx"

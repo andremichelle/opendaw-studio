@@ -1,25 +1,25 @@
-import {ValueRegionBoxAdapter} from "@/audio-engine-shared/adapters/timeline/region/ValueRegionBoxAdapter.ts"
+import {ValueRegionBoxAdapter} from "@core/shared/adapters/timeline/region/ValueRegionBoxAdapter.ts"
 import {
     ValueEventCollectionBoxAdapter
-} from "@/audio-engine-shared/adapters/timeline/collection/ValueEventCollectionBoxAdapter.ts"
-import {AudioRegionBoxAdapter} from "@/audio-engine-shared/adapters/timeline/region/AudioRegionBoxAdapter.ts"
-import {LoopableRegionBoxAdapter} from "@/audio-engine-shared/adapters/timeline/RegionBoxAdapter.ts"
+} from "@core/shared/adapters/timeline/collection/ValueEventCollectionBoxAdapter.ts"
+import {AudioRegionBoxAdapter} from "@core/shared/adapters/timeline/region/AudioRegionBoxAdapter.ts"
+import {LoopableRegionBoxAdapter} from "@core/shared/adapters/timeline/RegionBoxAdapter.ts"
 import {
     AudioEventOwnerReader,
     EventOwnerReader,
     NoteEventOwnerReader,
     ValueEventOwnerReader
 } from "@/ui/timeline/editors/EventOwnerReader.ts"
-import {NoteRegionBoxAdapter} from "@/audio-engine-shared/adapters/timeline/region/NoteRegionBoxAdapter.ts"
+import {NoteRegionBoxAdapter} from "@core/shared/adapters/timeline/region/NoteRegionBoxAdapter.ts"
 import {
     NoteEventCollectionBoxAdapter
-} from "@/audio-engine-shared/adapters/timeline/collection/NoteEventCollectionBoxAdapter.ts"
+} from "@core/shared/adapters/timeline/collection/NoteEventCollectionBoxAdapter.ts"
 import {ppqn} from "dsp"
 import {mod, Observer, Option, Subscription} from "std"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {Propagation} from "box"
-import {AudioFileBoxAdapter} from "@/audio-engine-shared/adapters/AudioFileBoxAdapter.ts"
-import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter"
+import {AudioFileBoxAdapter} from "@core/shared/AudioFileBoxAdapter.ts"
+import {TrackBoxAdapter} from "@core/shared/adapters/timeline/TrackBoxAdapter"
 
 export class RegionReader<REGION extends LoopableRegionBoxAdapter<CONTENT>, CONTENT> implements EventOwnerReader<CONTENT> {
     static forAudioRegionBoxAdapter(region: AudioRegionBoxAdapter): AudioEventOwnerReader {

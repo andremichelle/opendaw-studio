@@ -1,4 +1,4 @@
-import {AnyClipBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
+import {AnyClipBoxAdapter} from "@core/shared/UnionAdapterTypes.ts"
 import {int} from "std"
 
 export interface ClipModifyStrategies {

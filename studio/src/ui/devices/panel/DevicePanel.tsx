@@ -8,7 +8,7 @@ import {
     DeviceHost,
     Devices,
     MidiEffectDeviceAdapter
-} from "@/audio-engine-shared/adapters/devices.ts"
+} from "@core/shared/devices.ts"
 import {ScrollModel} from "@/ui/components/ScrollModel.ts"
 import {Orientation, Scroller} from "@/ui/components/Scroller"
 import {DeviceMidiMeter} from "@/ui/devices/panel/DeviceMidiMeter.tsx"
@@ -16,7 +16,7 @@ import {ChannelStrip} from "@/ui/mixer/ChannelStrip"
 import {installAutoScroll} from "@/ui/AutoScroll"
 import {deferNextFrame, Events, Html} from "dom"
 import {DevicePanelDragAndDrop} from "@/ui/devices/DevicePanelDragAndDrop"
-import {SortedBoxAdapterCollection} from "@/audio-engine-shared/adapters/SortedBoxAdapterCollection"
+import {SortedBoxAdapterCollection} from "@core/shared/SortedBoxAdapterCollection.ts"
 import {NoAudioUnitSelectedPlaceholder} from "@/ui/devices/panel/NoAudioUnitSelectedPlaceholder"
 import {NoEffectPlaceholder} from "@/ui/devices/panel/NoEffectPlaceholder"
 import {DeviceMount} from "@/ui/devices/panel/DeviceMount"
@@ -24,8 +24,8 @@ import {Box} from "box"
 import {Project} from "@/project/Project"
 import {
     PlayfieldSampleBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
-import {AudioUnitInputAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitInputAdapter"
+} from "@core/shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
+import {AudioUnitInputAdapter} from "@core/shared/adapters/audio-unit/AudioUnitInputAdapter"
 import {Pointers} from "@core/data/pointers"
 
 const className = Html.adoptStyleSheet(css, "DevicePanel")

@@ -1,5 +1,5 @@
-import {RingBuffer} from "@/RingBuffer"
-import {RecordingProcessorOptions} from "@/audio-engine-shared/RecordingProcessorOptions"
+import {RingBuffer} from "@core/shared/RingBuffer.ts"
+import {RecordingProcessorOptions} from "@core/shared/RecordingProcessorOptions"
 
 registerProcessor("recording-processor", class extends AudioWorkletProcessor {
     readonly #writer: RingBuffer.Writer

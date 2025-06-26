@@ -3,7 +3,7 @@ import {isDefined, Nullable} from "std"
 import {PointerRadiusDistance} from "@/ui/timeline/constants.ts"
 import {PitchPositioner} from "@/ui/timeline/editors/notes/pitch/PitchPositioner.ts"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
-import {NoteEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/NoteEventBoxAdapter.ts"
+import {NoteEventBoxAdapter} from "@core/shared/adapters/timeline/event/NoteEventBoxAdapter.ts"
 
 import {NoteEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"
 

@@ -1,7 +1,7 @@
 import {AudioUnitType} from "@core/data/enums.ts"
 import {Colors} from "../Colors"
 
-import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType.ts"
+import {TrackType} from "@core/shared/adapters/timeline/TrackType.ts"
 
 export namespace ColorCodes {
     export const forAudioType = (type?: AudioUnitType): string => {

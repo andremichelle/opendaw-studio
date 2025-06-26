@@ -1,4 +1,4 @@
-import {AudioData} from "@/audio-engine-shared/AudioData.ts"
+import {AudioData} from "@core/shared/AudioData.ts"
 import {ProgressHandler, UUID} from "std"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 

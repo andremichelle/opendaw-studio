@@ -1,7 +1,7 @@
 import {Editing} from "box"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
 import {Procedure, Selection} from "std"
-import {NoteEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/NoteEventBoxAdapter.ts"
+import {NoteEventBoxAdapter} from "@core/shared/adapters/timeline/event/NoteEventBoxAdapter.ts"
 import {EventCollection} from "dsp"
 import {MenuCollector, MenuItem} from "@/ui/model/menu-item.ts"
 

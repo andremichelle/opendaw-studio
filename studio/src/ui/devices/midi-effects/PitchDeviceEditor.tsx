@@ -1,5 +1,5 @@
 import css from "./PitchDeviceEditor.sass?inline"
-import {PitchDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/midi-effects/PitchDeviceBoxAdapter.ts"
+import {PitchDeviceBoxAdapter} from "@core/shared/adapters/devices/midi-effects/PitchDeviceBoxAdapter.ts"
 import {Lifecycle} from "std"
 import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
 import {MenuItems} from "@/ui/devices/menu-items.ts"
@@ -9,7 +9,7 @@ import {ControlBuilder} from "@/ui/devices/ControlBuilder.tsx"
 import {DeviceMidiMeter} from "@/ui/devices/panel/DeviceMidiMeter.tsx"
 import {Html} from "dom"
 import {Effects} from "@/service/Effects"
-import {DeviceHost} from "@/audio-engine-shared/adapters/devices"
+import {DeviceHost} from "@core/shared/devices.ts"
 
 const className = Html.adoptStyleSheet(css, "PitchDeviceEditor")
 

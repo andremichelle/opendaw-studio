@@ -1,5 +1,5 @@
-import {AudioLoader, AudioLoaderManager, AudioLoaderState} from "@/audio-engine-shared/AudioLoader.ts"
-import {AudioData} from "@/audio-engine-shared/AudioData.ts"
+import {AudioLoader, AudioLoaderManager, AudioLoaderState} from "@core/shared/AudioLoader.ts"
+import {AudioData} from "@core/shared/AudioData.ts"
 import {Peaks} from "fusion"
 import {Observer, Option, SortedSet, Subscription, Terminable, UUID} from "std"
 import {EngineToClient} from "@/worklet/protocols.ts"

@@ -1,5 +1,5 @@
 import {Lifecycle} from "std"
-import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
+import {AutomatableParameterFieldAdapter} from "@core/shared/AutomatableParameterFieldAdapter.ts"
 import {createElement, Group, JsxValue} from "jsx"
 
 type Construct = {

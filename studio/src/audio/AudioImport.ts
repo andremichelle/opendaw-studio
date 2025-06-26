@@ -1,5 +1,5 @@
 import {AudioSample} from "@/audio/AudioSample"
-import {AudioData} from "@/audio-engine-shared/AudioData.ts"
+import {AudioData} from "@core/shared/AudioData.ts"
 import {AudioPeaks} from "@/audio/AudioPeaks"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 import {AudioStorage} from "@/audio/AudioStorage"

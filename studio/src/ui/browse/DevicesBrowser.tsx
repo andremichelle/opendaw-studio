@@ -10,7 +10,7 @@ import {TextTooltip} from "@/ui/surface/TextTooltip"
 import {Icon} from "../components/Icon"
 import {Project} from "@/project/Project"
 import {Html} from "dom"
-import {DeviceHost, Devices} from "@/audio-engine-shared/adapters/devices"
+import {DeviceHost, Devices} from "@core/shared/devices.ts"
 
 const className = Html.adoptStyleSheet(css, "DevicesBrowser")
 

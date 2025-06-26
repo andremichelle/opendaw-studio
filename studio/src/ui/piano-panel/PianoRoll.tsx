@@ -4,7 +4,7 @@ import {createElement, Group} from "jsx"
 import {PianoRollLayout} from "@/ui/piano-panel/PianoRollLayout.ts"
 import {isDefined, isInstanceOf, Lifecycle, Notifier} from "std"
 import {LoopableRegion, PPQN, ppqn} from "dsp"
-import {NoteRegionBoxAdapter} from "@/audio-engine-shared/adapters/timeline/region/NoteRegionBoxAdapter.ts"
+import {NoteRegionBoxAdapter} from "@core/shared/adapters/timeline/region/NoteRegionBoxAdapter.ts"
 import {Project} from "@/project/Project.ts"
 
 const className = Html.adoptStyleSheet(css, "PianoRoll")

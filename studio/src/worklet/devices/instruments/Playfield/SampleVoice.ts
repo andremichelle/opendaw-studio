@@ -1,11 +1,11 @@
-import {AudioData} from "@/audio-engine-shared/AudioData.ts"
+import {AudioData} from "@core/shared/AudioData.ts"
 import {NoteEvent, velocityToGain} from "dsp"
 import {Id, int} from "std"
 import {AutomatableParameters} from "@/worklet/devices/instruments/Playfield/AutomatableParameters"
-import {Gate} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/Gate"
+import {Gate} from "@core/shared/adapters/devices/instruments/Playfield/Gate"
 import {
     PlayfieldSampleBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
+} from "@core/shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
 
 const FAST_RELEASE = Math.floor(0.005 * sampleRate)
 

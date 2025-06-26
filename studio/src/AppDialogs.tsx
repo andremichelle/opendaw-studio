@@ -1,5 +1,5 @@
 import {Dialog} from "@/ui/components/Dialog"
-import {IconSymbol} from "@/IconSymbol"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {Surface} from "@/ui/surface/Surface"
 import {Promises} from "runtime"
 import {createElement} from "jsx"

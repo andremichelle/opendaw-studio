@@ -1,4 +1,4 @@
-import {DeviceHost, Devices, EffectDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices.ts"
+import {DeviceHost, Devices, EffectDeviceBoxAdapter} from "@core/shared/devices.ts"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {Effects} from "@/service/Effects.ts"
 import {Editing, PrimitiveField, PrimitiveValues, StringField} from "box"

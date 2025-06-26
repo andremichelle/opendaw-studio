@@ -1,7 +1,7 @@
 import css from "./ZeitgeistDeviceEditor.sass?inline"
 import {
     ZeitgeistDeviceBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/midi-effects/ZeitgeistDeviceBoxAdapter.ts"
+} from "@core/shared/adapters/devices/midi-effects/ZeitgeistDeviceBoxAdapter.ts"
 import {Lifecycle} from "std"
 import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
 import {MenuItems} from "@/ui/devices/menu-items.ts"
@@ -11,8 +11,8 @@ import {ControlBuilder} from "@/ui/devices/ControlBuilder.tsx"
 import {DeviceMidiMeter} from "@/ui/devices/panel/DeviceMidiMeter.tsx"
 import {Html} from "dom"
 import {Effects} from "@/service/Effects"
-import {DeviceHost} from "@/audio-engine-shared/adapters/devices"
-import {GrooveShuffleBoxAdapter} from "@/audio-engine-shared/adapters/grooves/GrooveShuffleBoxAdapter"
+import {DeviceHost} from "@core/shared/devices.ts"
+import {GrooveShuffleBoxAdapter} from "@core/shared/adapters/grooves/GrooveShuffleBoxAdapter"
 
 const className = Html.adoptStyleSheet(css, "ZeitgeistDeviceEditor")
 

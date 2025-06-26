@@ -4,10 +4,10 @@ import {Lifecycle} from "std"
 import {createElement} from "jsx"
 import {CanvasPainter} from "@/ui/canvas/painter.ts"
 import {renderRegions} from "@/ui/timeline/tracks/audio-unit/regions/RegionRenderer.ts"
-import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter.ts"
+import {TrackBoxAdapter} from "@core/shared/adapters/timeline/TrackBoxAdapter.ts"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
-import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType"
+import {TrackType} from "@core/shared/adapters/timeline/TrackType"
 
 const className = Html.adoptStyleSheet(css, "RegionLane")
 

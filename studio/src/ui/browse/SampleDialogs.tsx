@@ -1,6 +1,6 @@
 import {AudioSample} from "@/audio/AudioSample"
 import {Dialog} from "@/ui/components/Dialog"
-import {IconSymbol} from "@/IconSymbol"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {Surface} from "@/ui/surface/Surface"
 import {createElement} from "jsx"
 import {showInfoDialog} from "@/ui/components/dialogs"

@@ -1,7 +1,7 @@
 import {ClipModifier} from "@/ui/timeline/tracks/audio-unit/clips/ClipModifier.ts"
 import {Editing} from "box"
 import {Arrays, asDefined, clamp, int, Option, panic, Selection, ValueAxis} from "std"
-import {AnyClipBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
+import {AnyClipBoxAdapter} from "@core/shared/UnionAdapterTypes.ts"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"
 import {AnyClipBox} from "@core/data/unions.ts"
 import {ClipModifyStrategy} from "@/ui/timeline/tracks/audio-unit/clips/ClipModifyStrategy.ts"

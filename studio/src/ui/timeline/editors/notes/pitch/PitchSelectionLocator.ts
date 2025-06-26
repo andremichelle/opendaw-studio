@@ -1,7 +1,7 @@
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {TimelineCoordinates, TimelineSelectableLocator} from "@/ui/timeline/TimelineSelectableLocator.ts"
-import {NoteEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/NoteEventBoxAdapter.ts"
+import {NoteEventBoxAdapter} from "@core/shared/adapters/timeline/event/NoteEventBoxAdapter.ts"
 import {Intervals, Iterables, ValueAxis} from "std"
 import {PitchCaptureTarget} from "@/ui/timeline/editors/notes/pitch/PitchEventCapturing.ts"
 

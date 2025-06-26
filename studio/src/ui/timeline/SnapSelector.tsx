@@ -5,7 +5,7 @@ import {Snapping} from "@/ui/timeline/Snapping.ts"
 import {Colors} from "@/ui/Colors.ts"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {createElement, Inject} from "jsx"
-import {IconSymbol} from "@/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {Html} from "dom"
 
 const className = Html.adoptStyleSheet(css, "SnapSelector")

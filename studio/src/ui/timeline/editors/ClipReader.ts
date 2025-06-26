@@ -1,6 +1,6 @@
 import {
     NoteEventCollectionBoxAdapter
-} from "@/audio-engine-shared/adapters/timeline/collection/NoteEventCollectionBoxAdapter.ts"
+} from "@core/shared/adapters/timeline/collection/NoteEventCollectionBoxAdapter.ts"
 import {ppqn} from "dsp"
 import {mod, Observer, Option, Subscription} from "std"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
@@ -11,15 +11,15 @@ import {
     NoteEventOwnerReader,
     ValueEventOwnerReader
 } from "@/ui/timeline/editors/EventOwnerReader.ts"
-import {ClipBoxAdapter} from "@/audio-engine-shared/adapters/timeline/ClipBoxAdapter.ts"
-import {NoteClipBoxAdapter} from "@/audio-engine-shared/adapters/timeline/clip/NoteClipBoxAdapter.ts"
+import {ClipBoxAdapter} from "@core/shared/adapters/timeline/ClipBoxAdapter.ts"
+import {NoteClipBoxAdapter} from "@core/shared/adapters/timeline/clip/NoteClipBoxAdapter.ts"
 import {
     ValueEventCollectionBoxAdapter
-} from "@/audio-engine-shared/adapters/timeline/collection/ValueEventCollectionBoxAdapter.ts"
-import {ValueClipBoxAdapter} from "@/audio-engine-shared/adapters/timeline/clip/ValueClipBoxAdapter.ts"
-import {AudioClipBoxAdapter} from "@/audio-engine-shared/adapters/timeline/clip/AudioClipBoxAdapter.ts"
-import {AudioFileBoxAdapter} from "@/audio-engine-shared/adapters/AudioFileBoxAdapter.ts"
-import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter"
+} from "@core/shared/adapters/timeline/collection/ValueEventCollectionBoxAdapter.ts"
+import {ValueClipBoxAdapter} from "@core/shared/adapters/timeline/clip/ValueClipBoxAdapter.ts"
+import {AudioClipBoxAdapter} from "@core/shared/adapters/timeline/clip/AudioClipBoxAdapter.ts"
+import {AudioFileBoxAdapter} from "@core/shared/AudioFileBoxAdapter.ts"
+import {TrackBoxAdapter} from "@core/shared/adapters/timeline/TrackBoxAdapter"
 
 export class ClipReader<CONTENT> implements EventOwnerReader<CONTENT> {
     static forAudioClipBoxAdapter(clip: AudioClipBoxAdapter): AudioEventOwnerReader {

@@ -12,19 +12,19 @@ import {
     ValueEventCollectionBox,
     ValueRegionBox
 } from "@core/data/boxes"
-import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
+import {AudioUnitBoxAdapter} from "@core/shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
 import {Effects} from "@/service/Effects.ts"
-import {DeviceHost, EffectDeviceBoxAdapter, EffectPointerType} from "@/audio-engine-shared/adapters/devices.ts"
-import {enumToName, IconSymbol} from "@/IconSymbol.ts"
+import {DeviceHost, EffectDeviceBoxAdapter, EffectPointerType} from "@core/shared/devices.ts"
+import {enumToName, IconSymbol} from "@core/IconSymbol.ts"
 import {AnyClipBox} from "@core/data/unions.ts"
-import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType.ts"
+import {TrackType} from "@core/shared/adapters/timeline/TrackType.ts"
 import {ColorCodes} from "@/ui/mixer/ColorCodes.ts"
-import {TrackClips} from "@/audio-engine-shared/adapters/timeline/TrackClips.ts"
+import {TrackClips} from "@core/shared/adapters/timeline/TrackClips.ts"
 import {ppqn, PPQN} from "dsp"
 import {showInfoDialog} from "./components/dialogs"
-import {TrackRegions} from "@/audio-engine-shared/adapters/timeline/TrackRegions"
+import {TrackRegions} from "@core/shared/adapters/timeline/TrackRegions"
 import {AudioUnitType} from "@core/data/enums.ts"
-import {RootBoxAdapter} from "@/audio-engine-shared/adapters/RootBoxAdapter"
+import {RootBoxAdapter} from "@core/shared/RootBoxAdapter.ts"
 
 export namespace Modifier {
     const AudioUnitOrdering = {

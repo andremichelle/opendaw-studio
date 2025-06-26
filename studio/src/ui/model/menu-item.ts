@@ -1,6 +1,6 @@
 import {Arrays, Option, Procedure, Terminable} from "std"
 
-import {IconSymbol} from "@/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 
 export type MenuItemOptions = {
     hidden?: boolean

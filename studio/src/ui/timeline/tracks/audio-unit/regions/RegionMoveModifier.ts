@@ -1,10 +1,10 @@
 import {Arrays, clamp, int, Option, Selection} from "std"
-import {AnyLoopableRegionBoxAdapter, AnyRegionBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
+import {AnyLoopableRegionBoxAdapter, AnyRegionBoxAdapter} from "@core/shared/UnionAdapterTypes.ts"
 import {ppqn, RegionCollection} from "dsp"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
 import {Editing} from "box"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"
-import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter.ts"
+import {TrackBoxAdapter} from "@core/shared/adapters/timeline/TrackBoxAdapter.ts"
 import {RegionClipResolver} from "@/ui/timeline/tracks/audio-unit/regions/RegionClipResolver.ts"
 import {
     RegionModifyStrategies,

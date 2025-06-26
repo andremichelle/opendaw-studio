@@ -3,11 +3,11 @@ import {EventProcessor} from "@/worklet/EventProcessor"
 import {Event, NoteEvent, ppqn} from "dsp"
 import {MidiEffectProcessor} from "@/worklet/processors.ts"
 import {assert, int, Objects, Option, Terminable, UUID} from "std"
-import {PitchDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/midi-effects/PitchDeviceBoxAdapter"
+import {PitchDeviceBoxAdapter} from "@core/shared/adapters/devices/midi-effects/PitchDeviceBoxAdapter"
 import {Block, Processor} from "@/worklet/processing.ts"
 import {AutomatableParameter} from "@/worklet/AutomatableParameter.ts"
 import {NoteEventSource, NoteLifecycleEvent} from "@/worklet/NoteEventSource"
-import {NoteBroadcaster} from "@/audio-engine-shared/NoteBroadcaster"
+import {NoteBroadcaster} from "@core/shared/NoteBroadcaster"
 
 export class PitchDeviceProcessor extends EventProcessor implements MidiEffectProcessor {
     readonly #adapter: PitchDeviceBoxAdapter

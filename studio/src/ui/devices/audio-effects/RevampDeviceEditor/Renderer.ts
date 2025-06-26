@@ -1,6 +1,6 @@
 import {CanvasUnitPainter} from "@/ui/canvas/painter.ts"
 import {int, linear, Nullable, Terminable} from "std"
-import {RevampDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/audio-effects/RevampDeviceBoxAdapter.ts"
+import {RevampDeviceBoxAdapter} from "@core/shared/adapters/devices/audio-effects/RevampDeviceBoxAdapter.ts"
 import {Scale} from "@/ui/canvas/scale.ts"
 import {
     Bell,

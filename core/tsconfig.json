@@ -21,7 +21,7 @@
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
+      "@core/*": [
         "src/*"
       ]
     }

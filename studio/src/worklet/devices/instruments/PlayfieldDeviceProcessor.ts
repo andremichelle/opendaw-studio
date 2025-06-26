@@ -4,13 +4,13 @@ import {byte, Option, SortedSet, Terminable, Terminator, UUID} from "std"
 import {AudioBuffer} from "@/worklet/AudioBuffer.ts"
 import {Processor} from "@/worklet/processing.ts"
 import {AutomatableParameter} from "@/worklet/AutomatableParameter.ts"
-import {PlayfieldDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/instruments/PlayfieldDeviceBoxAdapter"
+import {PlayfieldDeviceBoxAdapter} from "@core/shared/adapters/devices/instruments/PlayfieldDeviceBoxAdapter"
 import {PlayfieldSequencer} from "@/worklet/devices/instruments/Playfield/PlayfieldSequencer"
 import {MixProcessor} from "@/worklet/devices/instruments/Playfield/MixProcessor"
 import {SampleProcessor} from "@/worklet/devices/instruments/Playfield/SampleProcessor"
 import {
     PlayfieldSampleBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
+} from "@core/shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
 import {NoteEventSource, NoteEventTarget} from "@/worklet/NoteEventSource"
 
 export class PlayfieldDeviceProcessor implements DeviceProcessor, NoteEventTarget {

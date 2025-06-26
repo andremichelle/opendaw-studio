@@ -4,7 +4,7 @@ import {
     DeviceBoxAdapter,
     DeviceHost,
     MidiEffectDeviceAdapter
-} from "@/audio-engine-shared/adapters/devices"
+} from "@core/shared/devices.ts"
 import {DeviceEditorFactory} from "@/ui/devices/DeviceEditorFactory"
 import {Exec, Lifecycle, Option, Subscription, Terminable, Terminator, UUID} from "std"
 import {JsxValue} from "jsx"

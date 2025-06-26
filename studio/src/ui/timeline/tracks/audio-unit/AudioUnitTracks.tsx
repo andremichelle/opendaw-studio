@@ -1,12 +1,12 @@
 import css from "./AudioUnitTracks.sass?inline"
 import {Lifecycle} from "std"
-import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
+import {AudioUnitBoxAdapter} from "@core/shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
 import {createElement} from "jsx"
 import {Vertex} from "box"
 import {Project} from "@/project/Project"
 import {AudioUnitType} from "@core/data/enums"
 import {Html} from "dom"
-import {Devices} from "@/audio-engine-shared/adapters/devices"
+import {Devices} from "@core/shared/devices.ts"
 
 const className = Html.adoptStyleSheet(css, "AudioUnitTracks")
 

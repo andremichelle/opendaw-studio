@@ -3,7 +3,7 @@ import {Dialog} from "@/ui/components/Dialog.tsx"
 import {createElement} from "jsx"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {RadioGroup} from "@/ui/components/RadioGroup.tsx"
-import {IconSymbol} from "@/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 
 const Icons = [
     IconSymbol.AudioBus, IconSymbol.Waveform, IconSymbol.Flask, IconSymbol.BassGuitar, IconSymbol.Guitar,

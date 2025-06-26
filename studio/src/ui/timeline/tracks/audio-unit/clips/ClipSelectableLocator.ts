@@ -1,5 +1,5 @@
 import {TimelineSelectableLocator} from "@/ui/timeline/TimelineSelectableLocator.ts"
-import {AnyClipBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
+import {AnyClipBoxAdapter} from "@core/shared/UnionAdapterTypes.ts"
 import {Coordinates, Iterables} from "std"
 import {ppqn} from "dsp"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"

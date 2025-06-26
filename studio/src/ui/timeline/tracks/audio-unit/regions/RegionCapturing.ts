@@ -2,7 +2,7 @@ import {
     AnyLoopableRegionBoxAdapter,
     AnyRegionBoxAdapter,
     UnionAdapterTypes
-} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
+} from "@core/shared/UnionAdapterTypes.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {BinarySearch, Nullable, NumberComparator} from "std"
 import {PointerRadiusDistance} from "@/ui/timeline/constants.ts"

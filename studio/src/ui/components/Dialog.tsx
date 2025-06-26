@@ -4,7 +4,7 @@ import {createElement, JsxValue} from "jsx"
 import {Button} from "@/ui/components/Button.tsx"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {Colors} from "@/ui/Colors.ts"
-import {IconSymbol} from "@/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {Events, Html} from "dom"
 
 const className = Html.adoptStyleSheet(css, "Dialog")

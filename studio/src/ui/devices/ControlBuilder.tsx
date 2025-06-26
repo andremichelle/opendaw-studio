@@ -1,5 +1,5 @@
-import {DeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices.ts"
-import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
+import {DeviceBoxAdapter} from "@core/shared/devices.ts"
+import {AutomatableParameterFieldAdapter} from "@core/shared/AutomatableParameterFieldAdapter.ts"
 import {Column} from "@/ui/devices/Column.tsx"
 import {createElement} from "jsx"
 import {LKR} from "@/ui/devices/constants.ts"

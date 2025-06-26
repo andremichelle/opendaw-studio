@@ -4,7 +4,7 @@ import {StudioService} from "@/service/StudioService.ts"
 import {appendChildren, createElement, replaceChildren} from "jsx"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {Surface} from "@/ui/surface/Surface.tsx"
-import {IconSymbol} from "@/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {Dragging, Events, Html, Keyboard} from "dom"
 
 const className = Html.adoptStyleSheet(css, "Spotlight")

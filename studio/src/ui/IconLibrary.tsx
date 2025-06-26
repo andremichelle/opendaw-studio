@@ -1,6 +1,6 @@
 import {createElement} from "jsx"
 import {Colors} from "@/ui/Colors.ts"
-import {enumToName, IconSymbol} from "@/IconSymbol.ts"
+import {enumToName, IconSymbol} from "@core/IconSymbol.ts"
 
 export const IconLibrary = () => (
     <svg width="0" height="0" display="none">

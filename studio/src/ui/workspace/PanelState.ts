@@ -1,6 +1,6 @@
 import {PanelType} from "@/ui/workspace/PanelType.ts"
 import {Workspace} from "@/ui/workspace/Workspace.ts"
-import {IconSymbol} from "@/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 
 export class PanelState {
     static create(schema: Workspace.PanelConfig): PanelState {return new PanelState(schema)}

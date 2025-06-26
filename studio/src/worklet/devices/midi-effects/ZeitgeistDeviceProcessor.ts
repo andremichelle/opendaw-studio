@@ -4,11 +4,11 @@ import {MidiEffectProcessor} from "@/worklet/processors.ts"
 import {asDefined, assert, clamp, int, Nullable, Objects, Option, Terminable, UUID} from "std"
 import {AutomatableParameter} from "@/worklet/AutomatableParameter.ts"
 import {NoteEventSource, NoteLifecycleEvent} from "@/worklet/NoteEventSource"
-import {ZeitgeistDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/midi-effects/ZeitgeistDeviceBoxAdapter"
+import {ZeitgeistDeviceBoxAdapter} from "@core/shared/adapters/devices/midi-effects/ZeitgeistDeviceBoxAdapter"
 import {EventProcessor} from "@/worklet/EventProcessor"
 import {Block} from "@/worklet/processing"
-import {GrooveEngineAdapter} from "@/audio-engine-shared/adapters/Grooves.ts"
-import {NoteBroadcaster} from "@/audio-engine-shared/NoteBroadcaster"
+import {GrooveEngineAdapter} from "@core/shared/Grooves.ts"
+import {NoteBroadcaster} from "@core/shared/NoteBroadcaster"
 
 export class ZeitgeistDeviceProcessor extends EventProcessor implements MidiEffectProcessor {
     readonly #adapter: ZeitgeistDeviceBoxAdapter

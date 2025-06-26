@@ -12,13 +12,13 @@ import {
 } from "std"
 import {createElement, DomElement} from "jsx"
 import {StudioService} from "@/service/StudioService.ts"
-import {PlayfieldDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/instruments/PlayfieldDeviceBoxAdapter"
-import {NoteSender, NoteSustainer} from "@/audio-engine-shared/NoteSender"
+import {PlayfieldDeviceBoxAdapter} from "@core/shared/adapters/devices/instruments/PlayfieldDeviceBoxAdapter"
+import {NoteSender, NoteSustainer} from "@core/shared/NoteSender"
 import {SampleSelector} from "@/ui/devices/SampleSelector"
 import {CanvasPainter} from "@/ui/canvas/painter"
 import {SlotUtils} from "@/ui/devices/instruments/PlayfieldDeviceEditor/SlotUtils"
 import {Icon} from "@/ui/components/Icon"
-import {IconSymbol} from "@/IconSymbol"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {Checkbox} from "@/ui/components/Checkbox"
 import {Colors} from "@/ui/Colors"
 import {Editing} from "box"
@@ -30,7 +30,7 @@ import {NoteLabel} from "@/ui/devices/instruments/PlayfieldDeviceEditor/NoteLabe
 import {DebugMenus} from "@/ui/menu/debug"
 import {
     PlayfieldSampleBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
+} from "@core/shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
 import {TextTooltip} from "@/ui/surface/TextTooltip"
 
 const className = Html.adoptStyleSheet(css, "BusySlot")

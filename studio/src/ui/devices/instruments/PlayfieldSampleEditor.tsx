@@ -5,16 +5,16 @@ import {MenuItems} from "@/ui/devices/menu-items.ts"
 import {Project} from "@/project/Project.ts"
 import {DevicePeakMeter} from "@/ui/devices/panel/DevicePeakMeter.tsx"
 import {Instruments} from "@/service/Instruments"
-import {DeviceHost} from "@/audio-engine-shared/adapters/devices"
+import {DeviceHost} from "@core/shared/devices.ts"
 import {
     PlayfieldSampleBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
-import {NoteSender, NoteSustainer} from "@/audio-engine-shared/NoteSender"
+} from "@core/shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
+import {NoteSender, NoteSustainer} from "@core/shared/NoteSender"
 import {SlotEditor} from "@/ui/devices/instruments/PlayfieldDeviceEditor/SlotEditor"
 import {Colors} from "@/ui/Colors"
 import {Events} from "dom"
 import {Icon} from "@/ui/components/Icon"
-import {IconSymbol} from "@/IconSymbol"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {TextTooltip} from "@/ui/surface/TextTooltip"
 
 type Construct = {

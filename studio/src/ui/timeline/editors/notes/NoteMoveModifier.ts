@@ -2,7 +2,7 @@ import {clamp, int, Notifier, Observer, Option, Selection, Terminable, unitValue
 import {Snapping} from "@/ui/timeline/Snapping.ts"
 import {Editing} from "box"
 import {Line, NoteModifyStrategy} from "./NoteModifyStrategies"
-import {NoteEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/NoteEventBoxAdapter.ts"
+import {NoteEventBoxAdapter} from "@core/shared/adapters/timeline/event/NoteEventBoxAdapter.ts"
 import {EventCollection, ppqn} from "dsp"
 import {NoteModifier} from "@/ui/timeline/editors/notes/NoteModifier.ts"
 import {PitchPositioner} from "@/ui/timeline/editors/notes/pitch/PitchPositioner.ts"

@@ -1,6 +1,6 @@
 import {
     VaporisateurDeviceBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/VaporisateurDeviceBoxAdapter"
+} from "@core/shared/adapters/devices/instruments/VaporisateurDeviceBoxAdapter"
 import {EngineContext} from "@/worklet/EngineContext.ts"
 import {DeviceProcessor, InstrumentDeviceProcessor} from "@/worklet/processors.ts"
 import {

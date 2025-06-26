@@ -15,7 +15,7 @@ import {
     ValueAxis
 } from "std"
 import {Editing} from "box"
-import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
+import {ValueEventBoxAdapter} from "@core/shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
 import {Interpolation, ppqn, ValueEvent} from "dsp"
 import {ValueModifier} from "./ValueModifier"
 import {ValueEventDraft} from "@/ui/timeline/editors/value/ValueEventDraft.ts"

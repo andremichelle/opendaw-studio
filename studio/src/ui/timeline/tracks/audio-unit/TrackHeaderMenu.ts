@@ -1,13 +1,13 @@
 import {MenuItem} from "@/ui/model/menu-item"
 import {Procedure, UUID} from "std"
 import {Project} from "@/project/Project.ts"
-import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter"
-import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter"
+import {AudioUnitBoxAdapter} from "@core/shared/adapters/audio-unit/AudioUnitBoxAdapter"
+import {TrackBoxAdapter} from "@core/shared/adapters/timeline/TrackBoxAdapter"
 import {DebugMenus} from "@/ui/menu/debug"
-import {DeviceAccepts} from "@/audio-engine-shared/adapters/devices.ts"
+import {DeviceAccepts} from "@core/shared/devices.ts"
 import {MidiImport} from "@/ui/timeline/MidiImport.ts"
 import {TrackBox} from "@core/data/boxes"
-import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType"
+import {TrackType} from "@core/shared/adapters/timeline/TrackType"
 import {Modifier} from "@/ui/Modifier.ts"
 
 export const installTrackHeaderMenu = (project: Project,

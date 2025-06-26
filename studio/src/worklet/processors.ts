@@ -1,6 +1,6 @@
 import {int, Option, Terminable, UUID} from "std"
 import {AudioGenerator, AudioInput, Processor} from "./processing"
-import {AudioEffectDeviceBoxAdapter, MidiEffectDeviceAdapter} from "@/audio-engine-shared/adapters/devices.ts"
+import {AudioEffectDeviceBoxAdapter, MidiEffectDeviceAdapter} from "@core/shared/devices.ts"
 import {NoteEventSource, NoteEventTarget} from "@/worklet/NoteEventSource"
 
 export interface DeviceProcessor extends Terminable {

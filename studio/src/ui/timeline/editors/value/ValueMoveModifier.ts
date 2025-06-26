@@ -16,15 +16,15 @@ import {
 } from "std"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
 import {Editing} from "box"
-import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
+import {ValueEventBoxAdapter} from "@core/shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
 import {EventCollection, Interpolation, ppqn, ValueEvent} from "dsp"
 import {ValueModifier} from "./ValueModifier"
 import {ValueEventDraft} from "./ValueEventDraft.ts"
 import {
     ValueEventCollectionBoxAdapter
-} from "@/audio-engine-shared/adapters/timeline/collection/ValueEventCollectionBoxAdapter.ts"
+} from "@core/shared/adapters/timeline/collection/ValueEventCollectionBoxAdapter.ts"
 import {ValueEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"
-import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
+import {AutomatableParameterFieldAdapter} from "@core/shared/AutomatableParameterFieldAdapter.ts"
 import {Dragging} from "dom"
 import {UIValueEvent} from "@/ui/timeline/editors/value/UIValueEvent.ts"
 

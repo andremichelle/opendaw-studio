@@ -7,9 +7,9 @@ import {SampleSelector} from "@/ui/devices/SampleSelector"
 import {SlotDragAndDrop} from "@/ui/devices/instruments/PlayfieldDeviceEditor/SlotDragAndDrop"
 import {NoteLabel} from "@/ui/devices/instruments/PlayfieldDeviceEditor/NoteLabel"
 import {Icon} from "@/ui/components/Icon"
-import {IconSymbol} from "@/IconSymbol"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {ContextMenu} from "@/ui/ContextMenu"
-import {NoteStreamReceiver} from "@/audio-engine-shared/NoteStreamReceiver"
+import {NoteStreamReceiver} from "@core/shared/NoteStreamReceiver"
 
 const className = Html.adoptStyleSheet(css, "EmptySlot")
 

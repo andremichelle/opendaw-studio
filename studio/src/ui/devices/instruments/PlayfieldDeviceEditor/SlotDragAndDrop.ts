@@ -6,7 +6,7 @@ import {Keyboard} from "dom"
 import {Project} from "@/project/Project"
 import {
     PlayfieldSampleBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
+} from "@core/shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
 
 export namespace SlotDragAndDrop {
     type Construct = {

@@ -1,4 +1,4 @@
-import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
+import {AutomatableParameterFieldAdapter} from "@core/shared/AutomatableParameterFieldAdapter.ts"
 import {Editing, PrimitiveValues} from "box"
 import {MutableObservableValue, ObservableValue, Observer, Subscription} from "std"
 

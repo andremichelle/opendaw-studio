@@ -1,7 +1,7 @@
 import {ContextMenu} from "@/ui/ContextMenu.ts"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
-import {AnyClipBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
+import {AnyClipBoxAdapter} from "@core/shared/UnionAdapterTypes.ts"
 import {Project} from "@/project/Project.ts"
 import {EmptyExec, Procedure, Selection, UUID} from "std"
 import {Surface} from "@/ui/surface/Surface.tsx"

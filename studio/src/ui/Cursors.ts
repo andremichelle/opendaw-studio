@@ -1,5 +1,5 @@
 import {asDefined} from "std"
-import {enumToName, IconSymbol} from "@/IconSymbol.ts"
+import {enumToName, IconSymbol} from "@core/IconSymbol.ts"
 import {CssUtils} from "dom"
 
 const iconSymbolToCursor = (symbol: IconSymbol, hotspotX: number, hotspotY: number, fallback: CssUtils.Cursor = "auto") => {

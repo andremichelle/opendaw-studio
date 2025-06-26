@@ -5,11 +5,11 @@ import {MenuItems} from "@/ui/devices/menu-items.ts"
 import {Project} from "@/project/Project.ts"
 import {DevicePeakMeter} from "@/ui/devices/panel/DevicePeakMeter.tsx"
 import {Instruments} from "@/service/Instruments"
-import {PlayfieldDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/instruments/PlayfieldDeviceBoxAdapter"
+import {PlayfieldDeviceBoxAdapter} from "@core/shared/adapters/devices/instruments/PlayfieldDeviceBoxAdapter"
 import {MenuItem} from "@/ui/model/menu-item"
-import {DeviceHost} from "@/audio-engine-shared/adapters/devices"
+import {DeviceHost} from "@core/shared/devices.ts"
 import {SlotGrid} from "@/ui/devices/instruments/PlayfieldDeviceEditor/SlotGrid"
-import {NoteSender} from "@/audio-engine-shared/NoteSender"
+import {NoteSender} from "@core/shared/NoteSender"
 
 type Construct = {
     lifecycle: Lifecycle

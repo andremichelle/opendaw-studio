@@ -1,4 +1,4 @@
-import {PeakMeterProcessorOptions} from "@/audio-engine-shared/PeakMeterProcessorOptions"
+import {PeakMeterProcessorOptions} from "@core/shared/PeakMeterProcessorOptions"
 import {RenderQuantum} from "@/worklet/constants"
 import {RMS} from "dsp"
 import {Arrays, int, Schema, SyncStream} from "std"

@@ -1,11 +1,11 @@
 import {Arrays, assert, SortedSet, Subscription, Terminator, UUID} from "std"
 import {AudioDeviceProcessor, AudioEffectDeviceProcessor, DeviceProcessor} from "@/worklet/processors.ts"
-import {AudioEffectDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices.ts"
+import {AudioEffectDeviceBoxAdapter} from "@core/shared/devices.ts"
 import {AudioEffectDeviceProcessorFactory} from "@/worklet/DeviceProcessorFactory.ts"
 import {AudioInput, ProcessPhase} from "@/worklet/processing.ts"
 import {DeviceChain} from "@/worklet/DeviceChain.ts"
 import {EngineContext} from "@/worklet/EngineContext"
-import {SortedBoxAdapterCollection} from "@/audio-engine-shared/adapters/SortedBoxAdapterCollection"
+import {SortedBoxAdapterCollection} from "@core/shared/SortedBoxAdapterCollection.ts"
 import {Pointers} from "@core/data/pointers"
 
 // TODO Open this to MidiEffects as well

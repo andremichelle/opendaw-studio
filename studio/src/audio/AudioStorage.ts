@@ -1,7 +1,7 @@
-import {AudioData} from "@/audio-engine-shared/AudioData.ts"
+import {AudioData} from "@core/shared/AudioData.ts"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 import {OpfsAgent} from "@/service/agents"
-import {ByteArrayInput, EmptyExec, UUID} from "std"
+import {Arrays, ByteArrayInput, EmptyExec, UUID} from "std"
 import {Peaks} from "fusion"
 import {AudioSample} from "@/audio/AudioSample"
 import {encodeWavFloat} from "@/wav"
@@ -42,7 +42,12 @@ export namespace AudioStorage {
                 .then(bytes => Peaks.from(new ByteArrayInput(bytes.buffer))),
             OpfsAgent.read(`${path}/meta.json`)
                 .then(bytes => JSON.parse(new TextDecoder().decode(bytes)))
-        ]).then(([buffer, peaks, meta]) => [AudioData.from(buffer), peaks, meta])
+        ]).then(([buffer, peaks, meta]) => [{
+            sampleRate: buffer.sampleRate,
+            numberOfFrames: buffer.length,
+            numberOfChannels: buffer.numberOfChannels,
+            frames: Arrays.create(index => buffer.getChannelData(index), buffer.numberOfChannels)
+        }, peaks, meta])
     }
 
     export const remove = async (uuid: UUID.Format): Promise<void> => {

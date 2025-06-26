@@ -1,6 +1,6 @@
 import {MenuItem} from "@/ui/model/menu-item"
 import {ColorCodes} from "@/ui/mixer/ColorCodes"
-import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType"
+import {TrackType} from "@core/shared/adapters/timeline/TrackType"
 import {Procedure} from "std"
 
 export namespace ColorMenu {

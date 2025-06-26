@@ -6,9 +6,9 @@ import {
     AnyLoopableRegionBoxAdapter,
     AnyRegionBoxAdapter,
     UnionAdapterTypes
-} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
+} from "@core/shared/UnionAdapterTypes.ts"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
-import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter.ts"
+import {TrackBoxAdapter} from "@core/shared/adapters/timeline/TrackBoxAdapter.ts"
 import {RegionClipResolver} from "@/ui/timeline/tracks/audio-unit/regions/RegionClipResolver.ts"
 import {RegionModifyStrategy} from "@/ui/timeline/tracks/audio-unit/regions/RegionModifyStrategies.ts"
 import {Dragging} from "dom"

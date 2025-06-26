@@ -1,6 +1,6 @@
 import {createElement} from "jsx"
 import {Dialog, DialogHandler} from "@/ui/components/Dialog"
-import {IconSymbol} from "@/IconSymbol"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {Surface} from "@/ui/surface/Surface"
 import {Exec} from "std"
 

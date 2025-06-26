@@ -3,7 +3,7 @@ import {createElement, Frag} from "jsx"
 import {Colors} from "@/ui/Colors.ts"
 import {Project} from "@/project/Project.ts"
 import {PPQN} from "dsp"
-import {AudioUnitTracks} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitTracks.ts"
+import {AudioUnitTracks} from "@core/shared/adapters/audio-unit/AudioUnitTracks.ts"
 import {deferNextFrame} from "dom"
 
 const tapeVelocity = 13.0 / PPQN.Bar // TapeDeviceEditor speed 4.76 cm/s converted into svg coordinates

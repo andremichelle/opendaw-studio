@@ -16,8 +16,8 @@ import {
 } from "@core/data/boxes"
 import {int, INVERSE_SQRT_2, UUID} from "std"
 import {Project} from "@/project/Project.ts"
-import {IconSymbol} from "@/IconSymbol"
-import {EffectPointerType} from "@/audio-engine-shared/adapters/devices"
+import {IconSymbol} from "@core/IconSymbol.ts"
+import {EffectPointerType} from "@core/shared/devices.ts"
 
 export namespace Effects {
     export interface Entry {

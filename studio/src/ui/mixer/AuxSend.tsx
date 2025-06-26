@@ -1,7 +1,7 @@
 import css from "./AuxSend.sass?inline"
 import {DefaultObservableValue, Lifecycle} from "std"
 import {createElement, DomElement, Inject} from "jsx"
-import {AuxSendBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AuxSendBoxAdapter.ts"
+import {AuxSendBoxAdapter} from "@core/shared/adapters/audio-unit/AuxSendBoxAdapter.ts"
 import {Knob, TinyDesign} from "@/ui/components/Knob.tsx"
 import {RelativeUnitValueDragging} from "@/ui/wrapper/RelativeUnitValueDragging.tsx"
 import {MenuItem} from "@/ui/model/menu-item.ts"
@@ -10,7 +10,7 @@ import {IconCartridge} from "@/ui/components/Icon.tsx"
 import {Colors} from "../Colors.ts"
 import {SnapCenter} from "@/ui/configs.ts"
 import {Editing} from "box"
-import {IconSymbol} from "@/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {Html} from "dom"
 
 const className = Html.adoptStyleSheet(css, "AuxSend")

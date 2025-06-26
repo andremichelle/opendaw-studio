@@ -2,7 +2,7 @@ import {Block, Processor} from "@/worklet/processing"
 import {Event} from "dsp"
 import {NoteEventSource, NoteLifecycleEvent} from "@/worklet/NoteEventSource"
 import {assert, Option, Terminable, Terminator} from "std"
-import {NoteBroadcaster} from "@/audio-engine-shared/NoteBroadcaster"
+import {NoteBroadcaster} from "@core/shared/NoteBroadcaster"
 import {Address} from "box"
 import {LiveStreamBroadcaster} from "fusion"
 

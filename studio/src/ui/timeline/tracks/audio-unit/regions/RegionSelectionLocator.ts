@@ -1,5 +1,5 @@
 import {TimelineCoordinates, TimelineSelectableLocator} from "@/ui/timeline/TimelineSelectableLocator.ts"
-import {AnyRegionBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
+import {AnyRegionBoxAdapter} from "@core/shared/UnionAdapterTypes.ts"
 import {isDefined, Iterables, Selection} from "std"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"
 

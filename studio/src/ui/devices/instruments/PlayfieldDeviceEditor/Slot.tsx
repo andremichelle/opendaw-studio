@@ -1,17 +1,17 @@
 import {DefaultObservableValue, int, Lifecycle, ObservableValue, Option, Terminator, UUID} from "std"
 import {createElement, replaceChildren} from "jsx"
-import {PlayfieldDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/instruments/PlayfieldDeviceBoxAdapter"
-import {NoteSender} from "@/audio-engine-shared/NoteSender"
+import {PlayfieldDeviceBoxAdapter} from "@core/shared/adapters/devices/instruments/PlayfieldDeviceBoxAdapter"
+import {NoteSender} from "@core/shared/NoteSender"
 import {StudioService} from "@/service/StudioService"
 import {SampleSelector, SampleSelectStrategy} from "@/ui/devices/SampleSelector"
 import {AudioFileBox} from "@core/data/boxes/AudioFileBox"
 import {EmptySlot} from "@/ui/devices/instruments/PlayfieldDeviceEditor/EmptySlot"
 import {BusySlot} from "./BusySlot"
 import {PlayfieldSampleBox} from "@core/data/boxes"
-import {NoteStreamReceiver} from "@/audio-engine-shared/NoteStreamReceiver"
+import {NoteStreamReceiver} from "@core/shared/NoteStreamReceiver"
 import {
     PlayfieldSampleBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
+} from "@core/shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
 
 type Construct = {
     lifecycle: Lifecycle

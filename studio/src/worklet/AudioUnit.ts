@@ -1,4 +1,4 @@
-import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
+import {AudioUnitBoxAdapter} from "@core/shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
 import {EngineContext} from "@/worklet/EngineContext.ts"
 import {InstrumentDeviceProcessor} from "@/worklet/processors.ts"
 import {asInstanceOf, int, Option, Terminable, Terminator} from "std"
@@ -8,7 +8,7 @@ import {AudioBuffer} from "@/worklet/AudioBuffer.ts"
 import {AudioDeviceChain} from "@/worklet/AudioDeviceChain.ts"
 import {MidiDeviceChain} from "./MidiDeviceChain.ts"
 import {AudioUnitOptions} from "@/worklet/AudioUnitOptions"
-import {AudioUnitInputAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitInputAdapter"
+import {AudioUnitInputAdapter} from "@core/shared/adapters/audio-unit/AudioUnitInputAdapter"
 
 export class AudioUnit implements Terminable {
     static ID: int = 0 | 0

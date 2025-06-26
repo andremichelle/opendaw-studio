@@ -1,6 +1,6 @@
 import {CanvasPainter} from "@/ui/canvas/painter.ts"
 import {PI_HALF, Procedure, TAU} from "std"
-import {NoteClipBoxAdapter} from "@/audio-engine-shared/adapters/timeline/clip/NoteClipBoxAdapter.ts"
+import {NoteClipBoxAdapter} from "@core/shared/adapters/timeline/clip/NoteClipBoxAdapter.ts"
 
 export const createNoteClipPainter = (adapter: NoteClipBoxAdapter): Procedure<CanvasPainter> => painter => {
     const {context, actualHeight: size} = painter

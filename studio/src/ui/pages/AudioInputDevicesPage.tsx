@@ -8,7 +8,7 @@ import {PeakMeterWorket} from "@/audio-engine/PeakMeterWorket"
 import {gainToDb} from "dsp"
 import {RadioGroup} from "../components/RadioGroup"
 import {Icon} from "@/ui/components/Icon"
-import {IconSymbol} from "@/IconSymbol"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {DefaultObservableValue, Terminable, Terminator} from "std"
 import {Promises} from "runtime"
 

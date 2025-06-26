@@ -2,7 +2,7 @@ import {LinearScale, LogScale} from "@/ui/canvas/scale.ts"
 import {BiquadCoeff} from "dsp"
 import {Arrays, ValueGuide, ValueMapping} from "std"
 import {ColorSet} from "./Curves.ts"
-import {IconSymbol} from "@/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 
 export const ems = [7 / 6, 7 / 6, 7 / 6]
 export const xAxis = new LogScale(20.0, 20_000.0)

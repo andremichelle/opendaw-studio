@@ -5,7 +5,7 @@ import {StudioService} from "@/service/StudioService"
 import {Button} from "@/ui/components/Button.tsx"
 import {Colors} from "@/ui/Colors.ts"
 import {Lifecycle, MutableObservableValue} from "std"
-import {IconSymbol} from "@/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 
 type Construct = {
     lifecycle: Lifecycle

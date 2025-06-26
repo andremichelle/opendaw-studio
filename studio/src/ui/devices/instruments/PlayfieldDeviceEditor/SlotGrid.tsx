@@ -3,15 +3,15 @@ import {Html} from "dom"
 import {Arrays, DefaultObservableValue, int, Lifecycle, Option} from "std"
 import {createElement} from "jsx"
 import {StudioService} from "@/service/StudioService.ts"
-import {NoteStreamReceiver} from "@/audio-engine-shared/NoteStreamReceiver"
+import {NoteStreamReceiver} from "@core/shared/NoteStreamReceiver"
 import {SlotState} from "@/ui/devices/instruments/PlayfieldDeviceEditor/SlotState"
-import {PlayfieldDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/instruments/PlayfieldDeviceBoxAdapter"
+import {PlayfieldDeviceBoxAdapter} from "@core/shared/adapters/devices/instruments/PlayfieldDeviceBoxAdapter"
 import {Slot} from "@/ui/devices/instruments/PlayfieldDeviceEditor/Slot"
 import {OctaveSelector} from "@/ui/devices/instruments/PlayfieldDeviceEditor/OctaveSelector"
-import {NoteSender} from "@/audio-engine-shared/NoteSender"
+import {NoteSender} from "@core/shared/NoteSender"
 import {
     PlayfieldSampleBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
+} from "@core/shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
 
 const className = Html.adoptStyleSheet(css, "SlotGrid")
 

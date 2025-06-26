@@ -5,7 +5,7 @@ import {Arrays, Bits, int, Terminable} from "std"
 import {AbstractProcessor} from "@/worklet/AbstractProcessor.ts"
 import {EventBuffer} from "@/worklet/EventBuffer.ts"
 import {Fragmentor} from "@/worklet/Fragmentor.ts"
-import {UpdateClockRate} from "@/audio-engine-shared/UpdateClockRate"
+import {UpdateClockRate} from "@core/shared/UpdateClockRate"
 
 export interface UpdateEvent extends Event {type: "update-event"}
 

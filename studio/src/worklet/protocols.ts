@@ -1,7 +1,7 @@
 import {ppqn} from "dsp"
 import {byte, int, Nullable, Terminable, unitValue, UUID} from "std"
-import {AudioData} from "@/audio-engine-shared/AudioData.ts"
-import {ClipSequencingUpdates} from "@/audio-engine-shared/ClipNotifications.ts"
+import {AudioData} from "@core/shared/AudioData.ts"
+import {ClipSequencingUpdates} from "@core/shared/ClipNotifications.ts"
 
 export interface EngineCommands extends Terminable {
     setPlaying(value: boolean): void

@@ -5,7 +5,7 @@ import {Pointers} from "@core/data/pointers"
 import {ProcessInfo, Processor} from "./processing"
 import {EngineContext} from "./EngineContext"
 import {EventBuffer} from "./EventBuffer"
-import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
+import {AutomatableParameterFieldAdapter} from "@core/shared/AutomatableParameterFieldAdapter.ts"
 
 export abstract class AbstractProcessor implements Processor, TerminableOwner, Terminable {
     readonly #terminator = new Terminator()

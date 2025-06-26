@@ -6,7 +6,7 @@ import {RenderQuantum} from "@/worklet/constants.ts"
 import {AbstractProcessor} from "@/worklet/AbstractProcessor.ts"
 import {AudioBuffer} from "@/worklet/AudioBuffer.ts"
 import {PeakBroadcaster} from "@/worklet/PeakBroadcaster.ts"
-import {AudioEffectDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices.ts"
+import {AudioEffectDeviceBoxAdapter} from "@core/shared/devices.ts"
 import {AutomatableParameter} from "@/worklet/AutomatableParameter.ts"
 
 export class NopDeviceProcessor extends AbstractProcessor implements AudioEffectDeviceProcessor {

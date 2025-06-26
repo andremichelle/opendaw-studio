@@ -10,14 +10,14 @@ import {
 import {UUID} from "std"
 import {Utils} from "@/utils"
 import {BoxGraph} from "box"
-import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType.ts"
+import {TrackType} from "@core/shared/adapters/timeline/TrackType.ts"
 import {Project} from "@/project/Project.ts"
-import {enumToName, IconSymbol} from "@/IconSymbol.ts"
+import {enumToName, IconSymbol} from "@core/IconSymbol.ts"
 import {Waveform} from "dsp"
 import {Modifier} from "@/ui/Modifier.ts"
 import {AudioUnitType} from "@core/data/enums.ts"
-import {DeviceHost} from "@/audio-engine-shared/adapters/devices"
-import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter"
+import {DeviceHost} from "@core/shared/devices.ts"
+import {AudioUnitBoxAdapter} from "@core/shared/adapters/audio-unit/AudioUnitBoxAdapter"
 
 export namespace Instruments {
     export interface Factory {

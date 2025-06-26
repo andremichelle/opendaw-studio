@@ -11,7 +11,7 @@ import {
     unitValue,
     UUID
 } from "std"
-import {ClipNotification} from "@/audio-engine-shared/ClipNotifications.ts"
+import {ClipNotification} from "@core/shared/ClipNotifications.ts"
 
 export interface Engine {
     position(): ObservableValue<ppqn>

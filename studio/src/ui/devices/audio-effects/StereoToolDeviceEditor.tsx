@@ -1,7 +1,7 @@
 import css from "./StereoToolDeviceEditor.sass?inline"
 import {
     StereoToolDeviceBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/audio-effects/StereoToolDeviceBoxAdapter.ts"
+} from "@core/shared/adapters/devices/audio-effects/StereoToolDeviceBoxAdapter.ts"
 import {Lifecycle} from "std"
 import {createElement} from "jsx"
 import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
@@ -17,13 +17,13 @@ import {Column} from "@/ui/devices/Column"
 import {Checkbox} from "@/ui/components/Checkbox"
 import {EditWrapper} from "@/ui/wrapper/EditWrapper.ts"
 import {Icon} from "@/ui/components/Icon"
-import {IconSymbol} from "@/IconSymbol"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {ControlIndicator} from "@/ui/components/ControlIndicator"
 import {AutoGainButton} from "./StereoToolDeviceEditor/AutoGainButton"
 import {MenuItem} from "@/ui/model/menu-item"
 import {StereoMatrix} from "dsp"
 import {MenuItems} from "../menu-items"
-import {DeviceHost} from "@/audio-engine-shared/adapters/devices"
+import {DeviceHost} from "@core/shared/devices.ts"
 
 const className = Html.adoptStyleSheet(css, "StereoToolDeviceEditor")
 

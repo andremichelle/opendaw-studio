@@ -1,7 +1,7 @@
 import {EventCollection, ppqn, ValueEvent} from "dsp"
 import {int, Nullable} from "std"
 import {ValueModifyStrategy} from "@/ui/timeline/editors/value/ValueModifyStrategies.ts"
-import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
+import {ValueEventBoxAdapter} from "@core/shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
 import {UIValueEvent} from "./UIValueEvent"
 
 export interface ValueEventDraft extends UIValueEvent {

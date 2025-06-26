@@ -13,7 +13,7 @@ import {int, UUID} from "std"
 import {AutomatableParameters} from "@/worklet/devices/instruments/Playfield/AutomatableParameters"
 import {
     PlayfieldSampleBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
+} from "@core/shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
 import {PeakBroadcaster} from "@/worklet/PeakBroadcaster"
 import {NoteLifecycleEvent} from "@/worklet/NoteEventSource"
 

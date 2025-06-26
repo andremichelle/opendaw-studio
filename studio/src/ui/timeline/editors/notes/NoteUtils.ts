@@ -1,6 +1,6 @@
 import {
     NoteEventCollectionBoxAdapter
-} from "@/audio-engine-shared/adapters/timeline/collection/NoteEventCollectionBoxAdapter"
+} from "@core/shared/adapters/timeline/collection/NoteEventCollectionBoxAdapter"
 import {MidiFile} from "@/midi/format/MidiFile"
 import {MidiTrack} from "@/midi/format/MidiTrack"
 import {Promises} from "runtime"

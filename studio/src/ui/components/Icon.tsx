@@ -1,7 +1,7 @@
 import css from "./Icon.sass?inline"
 import {Lifecycle, ObservableValue} from "std"
 import {createElement} from "jsx"
-import {enumToName, IconSymbol} from "@/IconSymbol.ts"
+import {enumToName, IconSymbol} from "@core/IconSymbol.ts"
 import {Html} from "dom"
 
 const defaultClassName = Html.adoptStyleSheet(css, "Icon")

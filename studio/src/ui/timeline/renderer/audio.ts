@@ -2,7 +2,7 @@ import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {RegionBound, RegionColors} from "@/ui/timeline/renderer/env.ts"
 import {dbToGain, LoopableRegion} from "dsp"
 import {Peaks, PeaksPainter} from "fusion"
-import {AudioFileBoxAdapter} from "@/audio-engine-shared/adapters/AudioFileBoxAdapter.ts"
+import {AudioFileBoxAdapter} from "@core/shared/AudioFileBoxAdapter.ts"
 
 export const renderAudio = (context: CanvasRenderingContext2D,
                             range: TimelineRange,

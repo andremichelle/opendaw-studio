@@ -1,5 +1,5 @@
 import {TimelineCoordinates, TimelineSelectableLocator} from "@/ui/timeline/TimelineSelectableLocator.ts"
-import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
+import {ValueEventBoxAdapter} from "@core/shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
 import {Iterables, ValueAxis} from "std"
 import {ValueEvent} from "dsp"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"

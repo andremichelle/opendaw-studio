@@ -1,6 +1,6 @@
 import {DefaultObservableValue, isDefined, Lifecycle, Nullable, Terminator} from "std"
 import {createElement, Group} from "jsx"
-import {AnyClipBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
+import {AnyClipBoxAdapter} from "@core/shared/UnionAdapterTypes.ts"
 import {Clip} from "@/ui/timeline/tracks/audio-unit/clips/Clip.tsx"
 import {Project} from "@/project/Project.ts"
 import {Html} from "dom"

@@ -2,10 +2,10 @@ import css from "./WiringFlyout.sass?inline"
 import {Point, Terminator} from "std"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {createElement} from "jsx"
-import {ModuleConnectorAdapter} from "@/audio-engine-shared/adapters/modular/connector.ts"
-import {ModuleConnectionAdapter} from "@/audio-engine-shared/adapters/modular/connection"
+import {ModuleConnectorAdapter} from "@core/shared/adapters/modular/connector.ts"
+import {ModuleConnectionAdapter} from "@core/shared/adapters/modular/connection"
 import {ModularEnvironment} from "@/ui/modular/ModularEnvironment.ts"
-import {IconSymbol} from "@/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {Events, Html} from "dom"
 
 const className = Html.adoptStyleSheet(css, "WiringFlyout")

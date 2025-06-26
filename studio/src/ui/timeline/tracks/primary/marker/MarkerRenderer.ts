@@ -1,8 +1,8 @@
-import {MarkerBoxAdapter} from "@/audio-engine-shared/adapters/timeline/MarkerBoxAdapter"
+import {MarkerBoxAdapter} from "@core/shared/adapters/timeline/MarkerBoxAdapter"
 import {TimelineRange} from "@/ui/timeline/TimelineRange"
 import {DefaultObservableValue, int, isDefined, Nullable, UUID} from "std"
 import {CanvasPainter} from "@/ui/canvas/painter"
-import {MarkerTrackAdapter} from "@/audio-engine-shared/adapters/timeline/MarkerTrackAdapter"
+import {MarkerTrackAdapter} from "@core/shared/adapters/timeline/MarkerTrackAdapter"
 import {Context2d} from "dom"
 
 export namespace MarkerRenderer {

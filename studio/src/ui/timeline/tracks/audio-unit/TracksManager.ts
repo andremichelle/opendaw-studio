@@ -14,10 +14,10 @@ import {
     Terminator,
     UUID
 } from "std"
-import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
-import {IndexComparator} from "@/ui/timeline/IndexComparator.ts"
+import {AudioUnitBoxAdapter} from "@core/shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
+import {IndexComparator} from "@core/shared/IndexComparator.ts"
 import {RegionModifier} from "@/ui/timeline/tracks/audio-unit/regions/RegionModifier.ts"
-import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter.ts"
+import {TrackBoxAdapter} from "@core/shared/adapters/timeline/TrackBoxAdapter.ts"
 import {StudioService} from "@/service/StudioService.ts"
 import {AudioUnitTracks} from "@/ui/timeline/tracks/audio-unit/AudioUnitTracks.tsx"
 import {ClipModifier} from "./clips/ClipModifier"

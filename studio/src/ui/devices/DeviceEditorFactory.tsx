@@ -18,42 +18,42 @@ import {
     ZeitgeistDeviceBox
 } from "@core/data/boxes"
 import {ArpeggioDeviceEditor} from "@/ui/devices/midi-effects/ArpeggioDeviceEditor.tsx"
-import {ArpeggioDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/midi-effects/ArpeggioDeviceBoxAdapter.ts"
+import {ArpeggioDeviceBoxAdapter} from "@core/shared/adapters/devices/midi-effects/ArpeggioDeviceBoxAdapter.ts"
 import {DelayDeviceEditor} from "@/ui/devices/audio-effects/DelayDeviceEditor.tsx"
-import {DelayDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/audio-effects/DelayDeviceBoxAdapter.ts"
+import {DelayDeviceBoxAdapter} from "@core/shared/adapters/devices/audio-effects/DelayDeviceBoxAdapter.ts"
 import {ReverbDeviceEditor} from "@/ui/devices/audio-effects/ReverbDeviceEditor.tsx"
-import {ReverbDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/audio-effects/ReverbDeviceBoxAdapter.ts"
+import {ReverbDeviceBoxAdapter} from "@core/shared/adapters/devices/audio-effects/ReverbDeviceBoxAdapter.ts"
 import {RevampDeviceEditor} from "@/ui/devices/audio-effects/RevampDeviceEditor.tsx"
-import {RevampDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/audio-effects/RevampDeviceBoxAdapter.ts"
+import {RevampDeviceBoxAdapter} from "@core/shared/adapters/devices/audio-effects/RevampDeviceBoxAdapter.ts"
 import {ModularDeviceEditor} from "@/ui/devices/audio-effects/ModularDeviceEditor.tsx"
-import {ModularDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/audio-effects/ModularDeviceBoxAdapter.ts"
+import {ModularDeviceBoxAdapter} from "@core/shared/adapters/devices/audio-effects/ModularDeviceBoxAdapter.ts"
 import {asDefined, Lifecycle} from "std"
 import {Box} from "box"
 import {PitchDeviceEditor} from "./midi-effects/PitchDeviceEditor"
-import {PitchDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/midi-effects/PitchDeviceBoxAdapter"
+import {PitchDeviceBoxAdapter} from "@core/shared/adapters/devices/midi-effects/PitchDeviceBoxAdapter"
 import {TapeDeviceEditor} from "@/ui/devices/instruments/TapeDeviceEditor.tsx"
-import {TapeDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/instruments/TapeDeviceBoxAdapter.ts"
+import {TapeDeviceBoxAdapter} from "@core/shared/adapters/devices/instruments/TapeDeviceBoxAdapter.ts"
 import {VaporisateurDeviceEditor} from "@/ui/devices/instruments/VaporisateurDeviceEditor.tsx"
 import {
     VaporisateurDeviceBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/VaporisateurDeviceBoxAdapter.ts"
+} from "@core/shared/adapters/devices/instruments/VaporisateurDeviceBoxAdapter.ts"
 import {AudioBusEditor} from "@/ui/devices/AudioBusEditor.tsx"
-import {AudioBusBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioBusBoxAdapter.ts"
-import {NanoDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/instruments/NanoDeviceBoxAdapter"
+import {AudioBusBoxAdapter} from "@core/shared/adapters/audio-unit/AudioBusBoxAdapter.ts"
+import {NanoDeviceBoxAdapter} from "@core/shared/adapters/devices/instruments/NanoDeviceBoxAdapter"
 import {NanoDeviceEditor} from "./instruments/NanoDeviceEditor"
 import {PlayfieldDeviceEditor} from "./instruments/PlayfieldDeviceEditor"
-import {PlayfieldDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/instruments/PlayfieldDeviceBoxAdapter"
+import {PlayfieldDeviceBoxAdapter} from "@core/shared/adapters/devices/instruments/PlayfieldDeviceBoxAdapter"
 import {StereoToolDeviceEditor} from "./audio-effects/StereoToolDeviceEditor"
 import {
     StereoToolDeviceBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/audio-effects/StereoToolDeviceBoxAdapter"
-import {DeviceHost} from "@/audio-engine-shared/adapters/devices"
+} from "@core/shared/adapters/devices/audio-effects/StereoToolDeviceBoxAdapter"
+import {DeviceHost} from "@core/shared/devices.ts"
 import {
     PlayfieldSampleBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
+} from "@core/shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
 import {PlayfieldSampleEditor} from "./instruments/PlayfieldSampleEditor"
 import {ZeitgeistDeviceEditor} from "@/ui/devices/midi-effects/ZeitgeistDeviceEditor"
-import {ZeitgeistDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/midi-effects/ZeitgeistDeviceBoxAdapter"
+import {ZeitgeistDeviceBoxAdapter} from "@core/shared/adapters/devices/midi-effects/ZeitgeistDeviceBoxAdapter"
 
 export namespace DeviceEditorFactory {
     export const toMidiEffectDeviceEditor = (project: Project, lifecycle: Lifecycle, box: Box, deviceHost: DeviceHost) =>

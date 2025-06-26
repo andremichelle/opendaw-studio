@@ -1,4 +1,4 @@
-import {ValueClipBoxAdapter} from "@/audio-engine-shared/adapters/timeline/clip/ValueClipBoxAdapter.ts"
+import {ValueClipBoxAdapter} from "@core/shared/adapters/timeline/clip/ValueClipBoxAdapter.ts"
 import {CanvasPainter} from "@/ui/canvas/painter.ts"
 import {Point, Procedure, TAU} from "std"
 import {ValueEvent} from "dsp"

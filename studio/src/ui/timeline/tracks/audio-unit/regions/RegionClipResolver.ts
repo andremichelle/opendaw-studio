@@ -1,10 +1,10 @@
-import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter.ts"
+import {TrackBoxAdapter} from "@core/shared/adapters/timeline/TrackBoxAdapter.ts"
 import {Event, EventCollection, ppqn} from "dsp"
 import {RegionModifyStrategies} from "@/ui/timeline/tracks/audio-unit/regions/RegionModifyStrategies.ts"
-import {AnyRegionBoxAdapter, UnionAdapterTypes} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
+import {AnyRegionBoxAdapter, UnionAdapterTypes} from "@core/shared/UnionAdapterTypes.ts"
 import {asDefined, assert, Exec, int, mod, panic} from "std"
-import {RegionEditing} from "@/audio-engine-shared/adapters/timeline/RegionEditing.ts"
-import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType"
+import {RegionEditing} from "@core/shared/adapters/timeline/RegionEditing.ts"
+import {TrackType} from "@core/shared/adapters/timeline/TrackType"
 
 export type ClipTask = {
     type: "delete"

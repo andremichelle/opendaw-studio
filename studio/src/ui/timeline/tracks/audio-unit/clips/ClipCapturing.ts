@@ -1,4 +1,4 @@
-import {AnyClipBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
+import {AnyClipBoxAdapter} from "@core/shared/UnionAdapterTypes.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {BinarySearch, int, Nullable, NumberComparator} from "std"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"

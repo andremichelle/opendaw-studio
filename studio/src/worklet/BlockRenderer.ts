@@ -3,7 +3,7 @@ import {Block, BlockFlags, ProcessInfo} from "@/worklet/processing.ts"
 import {RenderQuantum} from "./constants"
 import {EngineContext} from "@/worklet/EngineContext.ts"
 import {Exec, int, isDefined, Iterables, Nullable, Procedure, SetMultimap, Terminable} from "std"
-import {MarkerBoxAdapter} from "@/audio-engine-shared/adapters/timeline/MarkerBoxAdapter"
+import {MarkerBoxAdapter} from "@core/shared/adapters/timeline/MarkerBoxAdapter"
 
 type Action = null
     | { type: "loop", target: ppqn }

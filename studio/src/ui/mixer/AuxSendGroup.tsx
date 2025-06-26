@@ -1,7 +1,7 @@
 import css from "./AuxSendGroup.sass?inline"
 import {Lifecycle, SortedSet, StringComparator, Terminator, UUID} from "std"
-import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
-import {AuxSendBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AuxSendBoxAdapter.ts"
+import {AudioUnitBoxAdapter} from "@core/shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
+import {AuxSendBoxAdapter} from "@core/shared/adapters/audio-unit/AuxSendBoxAdapter.ts"
 import {AuxSend} from "@/ui/mixer/AuxSend.tsx"
 import {createElement} from "jsx"
 import {MenuItem} from "@/ui/model/menu-item.ts"
@@ -13,7 +13,7 @@ import {showNewAudioBusOrAuxDialog} from "@/ui/dialogs.tsx"
 import {AudioUnitType} from "@core/data/enums.ts"
 import {Project} from "@/project/Project.ts"
 import {Modifier} from "@/ui/Modifier.ts"
-import {IconSymbol} from "@/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {Html} from "dom"
 
 const className = Html.adoptStyleSheet(css, "AuxSendGroup")

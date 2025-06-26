@@ -4,13 +4,13 @@ import {Block, Processor} from "@/worklet/processing.ts"
 import {int, Option, Terminable, UUID} from "std"
 import {AudioBuffer} from "@/worklet/AudioBuffer.ts"
 import {PeakBroadcaster} from "@/worklet/PeakBroadcaster.ts"
-import {AudioEffectDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices.ts"
+import {AudioEffectDeviceBoxAdapter} from "@core/shared/devices.ts"
 import {AutomatableParameter} from "@/worklet/AutomatableParameter.ts"
 import {AudioProcessor} from "@/worklet/AudioProcessor"
 import {dbToGain, Ramp, StereoMatrix} from "dsp"
 import {
     StereoToolDeviceBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/audio-effects/StereoToolDeviceBoxAdapter"
+} from "@core/shared/adapters/devices/audio-effects/StereoToolDeviceBoxAdapter"
 
 export class StereoToolDeviceProcessor extends AudioProcessor implements AudioEffectDeviceProcessor {
     readonly #adapter: StereoToolDeviceBoxAdapter

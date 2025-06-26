@@ -1,6 +1,6 @@
 import {Arrays, assert, Exec} from "std"
 
-import {IconSymbol} from "@/IconSymbol.ts"
+import {IconSymbol} from "@core/IconSymbol.ts"
 
 export type SpotlightResult = {
     name: string

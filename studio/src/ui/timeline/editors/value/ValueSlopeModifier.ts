@@ -1,11 +1,11 @@
 import {clampUnit, Iterables, Notifier, Observer, Option, panic, Selection, Terminable, unitValue, ValueAxis} from "std"
 import {Editing} from "box"
-import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
+import {ValueEventBoxAdapter} from "@core/shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
 import {EventCollection, Interpolation, ppqn, ValueEvent} from "dsp"
 import {ValueModifier} from "./ValueModifier"
 import {
     ValueEventCollectionBoxAdapter
-} from "@/audio-engine-shared/adapters/timeline/collection/ValueEventCollectionBoxAdapter.ts"
+} from "@core/shared/adapters/timeline/collection/ValueEventCollectionBoxAdapter.ts"
 import {ValueEventDraft} from "@/ui/timeline/editors/value/ValueEventDraft.ts"
 import {ValueEventOwnerReader} from "../EventOwnerReader"
 import {Dragging} from "dom"

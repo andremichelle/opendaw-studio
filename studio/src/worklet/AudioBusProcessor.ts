@@ -1,7 +1,7 @@
 import {ProcessInfo, Processor} from "@/worklet/processing.ts"
 import {Arrays, int, Option, Terminable, UUID} from "std"
 import {EngineContext} from "@/worklet/EngineContext.ts"
-import {AudioBusBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioBusBoxAdapter.ts"
+import {AudioBusBoxAdapter} from "@core/shared/adapters/audio-unit/AudioBusBoxAdapter.ts"
 import {RenderQuantum} from "@/worklet/constants.ts"
 import {AbstractProcessor} from "@/worklet/AbstractProcessor.ts"
 import {AudioBuffer} from "@/worklet/AudioBuffer.ts"

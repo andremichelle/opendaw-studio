@@ -3,7 +3,7 @@ import {ModuleDelayBox, ModuleGainBox, ModuleMultiplierBox} from "@core/data/box
 import {quantizeRound, UUID} from "std"
 import {Camera} from "@/ui/modular/Camera.ts"
 import {Project} from "@/project/Project.ts"
-import {ModularAdapter} from "@/audio-engine-shared/adapters/modular/modular.ts"
+import {ModularAdapter} from "@core/shared/adapters/modular/modular.ts"
 
 export class ModuleShelf {
     static getMenuItems(project: Project, adapter: ModularAdapter, camera: Camera, clientX: number, clientY: number) {

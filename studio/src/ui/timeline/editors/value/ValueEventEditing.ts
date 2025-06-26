@@ -1,10 +1,10 @@
 import {
     ValueEventCollectionBoxAdapter
-} from "@/audio-engine-shared/adapters/timeline/collection/ValueEventCollectionBoxAdapter.ts"
+} from "@core/shared/adapters/timeline/collection/ValueEventCollectionBoxAdapter.ts"
 import {Interpolation, ppqn, ValueEvent} from "dsp"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
 import {assert, panic, unitValue} from "std"
-import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
+import {ValueEventBoxAdapter} from "@core/shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
 
 export namespace ValueEventEditing {
     export const deleteEvent = (collection: ValueEventCollectionBoxAdapter, event: ValueEventBoxAdapter) => {

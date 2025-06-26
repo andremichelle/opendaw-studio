@@ -5,8 +5,8 @@ import {
     Parameters,
     PassParameters,
     ShelfParameters
-} from "@/audio-engine-shared/adapters/devices/audio-effects/RevampDeviceBoxAdapter.ts"
-import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
+} from "@core/shared/adapters/devices/audio-effects/RevampDeviceBoxAdapter.ts"
+import {AutomatableParameterFieldAdapter} from "@core/shared/AutomatableParameterFieldAdapter.ts"
 import {biquad} from "@/ui/devices/audio-effects/RevampDeviceEditor/constants.ts"
 import {gainToDb} from "dsp"
 

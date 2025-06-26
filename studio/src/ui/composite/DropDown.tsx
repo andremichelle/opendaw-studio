@@ -5,7 +5,7 @@ import {Colors} from "@/ui/Colors.ts"
 import {createElement, Inject} from "jsx"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {Appearance} from "../components/ButtonCheckboxRadio"
-import {IconSymbol} from "@/IconSymbol"
+import {IconSymbol} from "@core/IconSymbol.ts"
 import {Icon} from "@/ui/components/Icon"
 import {Html} from "dom"
 

@@ -1,4 +1,4 @@
-import {ExportStemConfiguration} from "@/audio-engine-shared/EngineProcessorOptions"
+import {ExportStemConfiguration} from "@core/shared/EngineProcessorOptions"
 
 export type AudioUnitOptions = Omit<ExportStemConfiguration, "fileName">
 

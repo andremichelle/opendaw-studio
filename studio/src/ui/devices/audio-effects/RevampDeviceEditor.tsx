@@ -2,7 +2,7 @@ import css from "./RevampDeviceEditor.sass?inline"
 import {
     Parameters,
     RevampDeviceBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/audio-effects/RevampDeviceBoxAdapter.ts"
+} from "@core/shared/adapters/devices/audio-effects/RevampDeviceBoxAdapter.ts"
 import {asDefined, int, Lifecycle} from "std"
 import {createElement} from "jsx"
 import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
@@ -32,7 +32,7 @@ import {ControlIndicator} from "@/ui/components/ControlIndicator"
 import {attachParameterContextMenu} from "@/ui/menu/automation"
 import {Html} from "dom"
 import {Effects} from "@/service/Effects"
-import {DeviceHost} from "@/audio-engine-shared/adapters/devices"
+import {DeviceHost} from "@core/shared/devices.ts"
 
 const className = Html.adoptStyleSheet(css, "RevampDeviceEditor")
 

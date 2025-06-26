@@ -1,4 +1,4 @@
-import {NoteRegionBoxAdapter} from "@/audio-engine-shared/adapters/timeline/region/NoteRegionBoxAdapter.ts"
+import {NoteRegionBoxAdapter} from "@core/shared/adapters/timeline/region/NoteRegionBoxAdapter.ts"
 import {LoopableRegion} from "dsp"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {RegionBound, RegionColors} from "@/ui/timeline/renderer/env.ts"

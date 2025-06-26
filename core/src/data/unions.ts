@@ -10,7 +10,6 @@ import {
 import {Box} from "box"
 
 export type AnyClipBox = NoteClipBox | ValueClipBox | AudioClipBox
-
 export type AnyRegionBox = AudioRegionBox | NoteRegionBox | ValueRegionBox
 export type AnyLoopableRegionBox = AnyRegionBox // TODO Clarify
 

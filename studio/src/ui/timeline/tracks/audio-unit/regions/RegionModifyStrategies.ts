@@ -1,6 +1,6 @@
 import {ppqn, Region, RegionCollection} from "dsp"
 import {int} from "std"
-import {AnyLoopableRegionBoxAdapter, AnyRegionBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
+import {AnyLoopableRegionBoxAdapter, AnyRegionBoxAdapter} from "@core/shared/UnionAdapterTypes.ts"
 
 export interface RegionModifyStrategies {
     showOrigin(): boolean

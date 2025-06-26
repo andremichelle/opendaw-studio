@@ -1,5 +1,5 @@
 import {PrimitiveValues} from "box"
-import {AutomatableParameterFieldAdapter} from "../audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
+import {AutomatableParameterFieldAdapter} from "@core/shared/AutomatableParameterFieldAdapter.ts"
 import {assert, Notifier, Observer, Option, Subscription, Terminable, TerminableOwner, Terminator, unitValue} from "std"
 import {ppqn} from "dsp"
 import {EngineContext} from "@/worklet/EngineContext"

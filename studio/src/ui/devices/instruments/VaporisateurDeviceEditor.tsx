@@ -6,12 +6,12 @@ import {MenuItems} from "@/ui/devices/menu-items.ts"
 import {Project} from "@/project/Project.ts"
 import {
     VaporisateurDeviceBoxAdapter
-} from "@/audio-engine-shared/adapters/devices/instruments/VaporisateurDeviceBoxAdapter.ts"
+} from "@core/shared/adapters/devices/instruments/VaporisateurDeviceBoxAdapter.ts"
 import {ControlBuilder} from "@/ui/devices/ControlBuilder.tsx"
 import {DevicePeakMeter} from "@/ui/devices/panel/DevicePeakMeter.tsx"
 import {Html} from "dom"
 import {Instruments} from "@/service/Instruments"
-import {DeviceHost} from "@/audio-engine-shared/adapters/devices"
+import {DeviceHost} from "@core/shared/devices.ts"
 
 const className = Html.adoptStyleSheet(css, "editor")
 

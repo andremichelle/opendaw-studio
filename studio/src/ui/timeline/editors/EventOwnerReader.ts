@@ -4,12 +4,12 @@ import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {TimeAxisCursorMapper} from "@/ui/timeline/TimeAxis.tsx"
 import {
     NoteEventCollectionBoxAdapter
-} from "@/audio-engine-shared/adapters/timeline/collection/NoteEventCollectionBoxAdapter.ts"
+} from "@core/shared/adapters/timeline/collection/NoteEventCollectionBoxAdapter.ts"
 import {
     ValueEventCollectionBoxAdapter
-} from "@/audio-engine-shared/adapters/timeline/collection/ValueEventCollectionBoxAdapter.ts"
-import {AudioFileBoxAdapter} from "@/audio-engine-shared/adapters/AudioFileBoxAdapter.ts"
-import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter"
+} from "@core/shared/adapters/timeline/collection/ValueEventCollectionBoxAdapter.ts"
+import {AudioFileBoxAdapter} from "@core/shared/AudioFileBoxAdapter.ts"
+import {TrackBoxAdapter} from "@core/shared/adapters/timeline/TrackBoxAdapter"
 
 export interface AudioEventOwnerReader extends EventOwnerReader<never> {
     get file(): AudioFileBoxAdapter

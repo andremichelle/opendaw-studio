@@ -6,7 +6,7 @@ import {TimeInfo} from "@/worklet/TimeInfo.ts"
 import {AudioUnit} from "@/worklet/AudioUnit.ts"
 import {Mixer} from "@/worklet/Mixer.ts"
 import {EngineToClient} from "@/worklet/protocols"
-import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"
+import {BoxAdaptersContext} from "@core/shared/BoxAdaptersContext"
 
 export interface EngineContext extends BoxAdaptersContext, Terminable {
     get broadcaster(): LiveStreamBroadcaster
