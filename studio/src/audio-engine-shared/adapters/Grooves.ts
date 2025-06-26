@@ -1,10 +1,10 @@
-import {AutomatableParameter} from "@/worklet/AutomatableParameter"
-import {GrooveShuffleBoxAdapter} from "@/audio-engine-shared/adapters/grooves/GrooveShuffleBoxAdapter"
-import {AbstractProcessor} from "@/worklet/AbstractProcessor"
+import {AutomatableParameter} from "@/worklet/AutomatableParameter.ts"
+import {GrooveShuffleBoxAdapter} from "@/audio-engine-shared/adapters/grooves/GrooveShuffleBoxAdapter.ts"
+import {AbstractProcessor} from "@/worklet/AbstractProcessor.ts"
 import {Groove, GroovePattern, GroovePatternFunction, PPQN, ppqn} from "dsp"
 import {asDefined, moebiusEase, squashUnit, Terminable, Terminator} from "std"
 import {BoxVisitor, GrooveShuffleBox} from "@/data/boxes"
-import {BoxAdapters} from "@/audio-engine-shared/BoxAdapters"
+import {BoxAdapters} from "@/audio-engine-shared/BoxAdapters.ts"
 import {Box} from "box"
 
 export interface GrooveEngineAdapter extends Terminable {

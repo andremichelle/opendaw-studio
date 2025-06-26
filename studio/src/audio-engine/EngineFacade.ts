@@ -15,7 +15,7 @@ import {
 import {ppqn} from "dsp"
 import {EngineWorklet} from "@/audio-engine/EngineWorklet.ts"
 import {Engine} from "@/audio-engine/Engine.ts"
-import {ClipNotification} from "@/audio-engine/ClipNotifications"
+import {ClipNotification} from "@/audio-engine-shared/ClipNotifications.ts"
 
 export class EngineFacade implements Engine {
     readonly #terminator: Terminator = new Terminator()

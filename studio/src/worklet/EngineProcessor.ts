@@ -46,11 +46,11 @@ import {ClipAdapters} from "@/audio-engine-shared/adapters/timeline/ClipBoxAdapt
 import {AnyClipBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes"
 import {ClipSequencingAudioContext} from "@/worklet/ClipSequencingAudioContext"
 import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter"
-import {ClipSequencingUpdates} from "@/audio-engine-shared/ClipSequencingUpdates"
-import {AudioData} from "@/audio/AudioData"
+import {AudioData} from "@/audio-engine-shared/AudioData.ts"
 import {ClipSequencing} from "@/audio-engine-shared/ClipSequencing"
 import {Communicator, Messenger} from "runtime"
 import {AudioUnitOptions} from "@/worklet/AudioUnitOptions"
+import {ClipSequencingUpdates} from "@/audio-engine-shared/ClipNotifications.ts"
 
 const DEBUG = false
 

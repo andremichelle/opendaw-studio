@@ -9,7 +9,7 @@ import {Block, Processor} from "@/worklet/processing.ts"
 import {PeakBroadcaster} from "@/worklet/PeakBroadcaster.ts"
 import {AutomatableParameter} from "@/worklet/AutomatableParameter.ts"
 import {AudioLoader} from "@/audio-engine-shared/AudioLoader"
-import {AudioData} from "@/audio/AudioData"
+import {AudioData} from "@/audio-engine-shared/AudioData.ts"
 import {NoteEventSource, NoteEventTarget, NoteLifecycleEvent} from "@/worklet/NoteEventSource"
 import {NoteEventInstrument} from "@/worklet/NoteEventInstrument"
 

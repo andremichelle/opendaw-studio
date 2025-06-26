@@ -1,4 +1,4 @@
-import {AudioData} from "@/audio/AudioData.ts"
+import {AudioData} from "@/audio-engine-shared/AudioData.ts"
 import {Peaks} from "fusion"
 import {Observer, Option, Subscription, unitValue, UUID} from "std"
 

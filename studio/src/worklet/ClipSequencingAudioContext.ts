@@ -2,9 +2,9 @@ import {AnyClipBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterType
 import {Arrays, identity, Option, quantizeFloor, SortedSet, UUID} from "std"
 import {ppqn, PPQN} from "dsp"
 import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter"
-import {ClipSequencingUpdates} from "@/audio-engine-shared/ClipSequencingUpdates"
 import {BoxGraph, Update} from "box"
-import {ClipSequencing} from "@/audio-engine-shared/ClipSequencing"
+import {ClipSequencing, Section} from "@/audio-engine-shared/ClipSequencing"
+import {ClipSequencingUpdates} from "@/audio-engine-shared/ClipNotifications.ts"
 
 // Just convenient to identify which UUID is for which type
 type ClipKey = UUID.Format
@@ -15,12 +15,6 @@ class TrackState {
     playing: Option<AnyClipBoxAdapter> = Option.None
 
     constructor(readonly uuid: TrackKey) {}
-}
-
-export type Section = {
-    optClip: Option<AnyClipBoxAdapter>
-    sectionFrom: ppqn
-    sectionTo: ppqn
 }
 
 export class ClipSequencingAudioContext implements ClipSequencing {
@@ -118,7 +112,7 @@ export class ClipSequencingAudioContext implements ClipSequencing {
                     // process to schedule time
                     yield {optClip: state.playing, sectionFrom: p0, sectionTo: scheduleEnd}
                 }
-                state.waiting = Option.None // clear next pointer
+                state.waiting = Option.None // clear the next pointer
                 state.playing.ifSome(clip => this.#onStop(clip.uuid))
                 if (optNextClip.nonEmpty()) {
                     state.playing = optNextClip // play next clip

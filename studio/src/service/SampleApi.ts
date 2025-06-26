@@ -1,5 +1,5 @@
 import {Arrays, asDefined, DefaultObservableValue, panic, Procedure, tryCatch, unitValue, UUID} from "std"
-import {AudioData} from "@/audio/AudioData.ts"
+import {AudioData} from "@/audio-engine-shared/AudioData.ts"
 import {showInfoDialog, showProcessDialog} from "@/ui/components/dialogs.tsx"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 import {AudioSample} from "@/audio/AudioSample"

@@ -1,7 +1,7 @@
 import {AudioFileBox} from "@/data/boxes"
 import {Option, UUID} from "std"
 import {Peaks} from "fusion"
-import {AudioData} from "@/audio/AudioData.ts"
+import {AudioData} from "@/audio-engine-shared/AudioData.ts"
 import {Address} from "box"
 import {AudioLoader} from "@/audio-engine-shared/AudioLoader.ts"
 import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"

@@ -1,7 +1,7 @@
 {
   "scripts": {
     "clean": "bash ./clean.sh",
-    "build": "bash ./rebuild.sh",
+    "rebuild": "bash ./rebuild.sh",
     "cert": "bash ./cert.sh",
     "web": "bash ./run-web.sh"
   },

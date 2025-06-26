@@ -7,7 +7,7 @@ import {NoteEventSource, NoteLifecycleEvent} from "@/worklet/NoteEventSource"
 import {ZeitgeistDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/midi-effects/ZeitgeistDeviceBoxAdapter"
 import {EventProcessor} from "@/worklet/EventProcessor"
 import {Block} from "@/worklet/processing"
-import {GrooveEngineAdapter} from "@/audio-engine/Grooves"
+import {GrooveEngineAdapter} from "@/audio-engine-shared/adapters/Grooves.ts"
 import {NoteBroadcaster} from "@/audio-engine-shared/NoteBroadcaster"
 
 export class ZeitgeistDeviceProcessor extends EventProcessor implements MidiEffectProcessor {

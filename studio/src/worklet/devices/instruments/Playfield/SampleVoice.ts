@@ -1,4 +1,4 @@
-import {AudioData} from "@/audio/AudioData"
+import {AudioData} from "@/audio-engine-shared/AudioData.ts"
 import {NoteEvent, velocityToGain} from "dsp"
 import {Id, int} from "std"
 import {AutomatableParameters} from "@/worklet/devices/instruments/Playfield/AutomatableParameters"

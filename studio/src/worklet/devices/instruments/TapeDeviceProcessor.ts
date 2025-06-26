@@ -12,7 +12,7 @@ import {AudioBuffer} from "@/worklet/AudioBuffer.ts"
 import {PeakBroadcaster} from "@/worklet/PeakBroadcaster.ts"
 import {AutomatableParameter} from "@/worklet/AutomatableParameter.ts"
 import {AudioClipBoxAdapter} from "@/audio-engine-shared/adapters/timeline/clip/AudioClipBoxAdapter"
-import {AudioData} from "@/audio/AudioData"
+import {AudioData} from "@/audio-engine-shared/AudioData.ts"
 import {NoteEventTarget} from "@/worklet/NoteEventSource"
 
 export class TapeDeviceProcessor extends AbstractProcessor implements DeviceProcessor, AudioGenerator {

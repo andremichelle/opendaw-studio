@@ -1,6 +1,6 @@
 import {Peaks} from "fusion"
 import {PeakAgent} from "@/service/agents"
-import {AudioData} from "@/audio/AudioData"
+import {AudioData} from "@/audio-engine-shared/AudioData.ts"
 import {ProgressHandler} from "std"
 
 export namespace AudioPeaks {

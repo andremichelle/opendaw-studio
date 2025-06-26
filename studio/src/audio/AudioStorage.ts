@@ -1,4 +1,4 @@
-import {AudioData} from "@/audio/AudioData"
+import {AudioData} from "@/audio-engine-shared/AudioData.ts"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 import {OpfsAgent} from "@/service/agents"
 import {ByteArrayInput, EmptyExec, UUID} from "std"

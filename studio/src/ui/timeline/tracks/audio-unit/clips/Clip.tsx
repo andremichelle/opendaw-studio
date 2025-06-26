@@ -12,7 +12,7 @@ import {createValueClipPainter} from "@/ui/timeline/tracks/audio-unit/clips/pain
 import {Project} from "@/project/Project.ts"
 import {ClipPlaybackButton} from "./ClipPlaybackButton"
 import {ppqn} from "dsp"
-import {ClipNotification} from "@/audio-engine/ClipNotifications"
+import {ClipNotification} from "@/audio-engine-shared/ClipNotifications.ts"
 import {Events, Html} from "dom"
 
 const className = Html.adoptStyleSheet(css, "Clip")

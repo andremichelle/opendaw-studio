@@ -1,5 +1,5 @@
 import {ByteArrayInput, Exec, int, Notifier, Observer, Option, Progress, Subscription, Terminable, UUID} from "std"
-import {AudioData} from "@/audio/AudioData"
+import {AudioData} from "@/audio-engine-shared/AudioData.ts"
 import {Peaks} from "fusion"
 import {UIAudioManager} from "@/project/UIAudioManager"
 import {OpfsAgent} from "@/service/agents"

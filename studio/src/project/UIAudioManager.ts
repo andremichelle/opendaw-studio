@@ -2,7 +2,7 @@ import {ProgressHandler, SortedSet, UUID} from "std"
 import {UIAudioLoader} from "@/project/UIAudioLoader"
 import {AudioLoaderManager} from "@/audio-engine-shared/AudioLoader.ts"
 import {AudioServerApi} from "@/audio/AudioServerApi"
-import {AudioData} from "@/audio/AudioData"
+import {AudioData} from "@/audio-engine-shared/AudioData.ts"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 
 export class UIAudioManager implements AudioLoaderManager, AudioServerApi {
