@@ -14,7 +14,7 @@ import {
 } from "std"
 import {EventCollection, ppqn, PPQN} from "dsp"
 import {Address, Int32Field, Propagation, Update} from "box"
-import {NoteClipBox} from "@/data/boxes"
+import {NoteClipBox} from "@core/data/boxes"
 import {NoteEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/NoteEventBoxAdapter.ts"
 import {
     NoteEventCollectionBoxAdapter

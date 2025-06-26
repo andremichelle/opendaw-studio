@@ -1,4 +1,4 @@
-import {BoxIO} from "@/data/boxes"
+import {BoxIO} from "@core/data/boxes"
 import {AudioLoaderManager} from "@/audio-engine-shared/AudioLoader"
 import {RootBoxAdapter} from "@/audio-engine-shared/adapters/RootBoxAdapter"
 import {TimelineBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TimelineBoxAdapter"

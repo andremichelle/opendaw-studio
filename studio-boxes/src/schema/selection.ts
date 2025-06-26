@@ -1,5 +1,5 @@
 import {BoxSchema} from "box-forge"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 
 export const SelectionBox: BoxSchema<Pointers> = {
     type: "box",

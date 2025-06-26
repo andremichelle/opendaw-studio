@@ -6,7 +6,7 @@ import {AudioInput, ProcessPhase} from "@/worklet/processing.ts"
 import {DeviceChain} from "@/worklet/DeviceChain.ts"
 import {EngineContext} from "@/worklet/EngineContext"
 import {SortedBoxAdapterCollection} from "@/audio-engine-shared/adapters/SortedBoxAdapterCollection"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 
 // TODO Open this to MidiEffects as well
 

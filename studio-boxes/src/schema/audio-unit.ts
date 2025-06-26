@@ -1,7 +1,7 @@
-import { Pointers } from "@/data/pointers"
+import { Pointers } from "@core/data/pointers"
 import { DefaultParameterPointerRules } from "./defaults"
 import { BoxSchema } from "box-forge"
-import { AudioUnitType } from "@/data/enums"
+import { AudioUnitType } from "@core/data/enums"
 
 export const AudioUnitBox: BoxSchema<Pointers> = {
 	type: "box",

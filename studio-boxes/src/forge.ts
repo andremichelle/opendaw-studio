@@ -1,5 +1,5 @@
 import {BoxForge} from "box-forge"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 import {StepAutomationBox} from "./schema/step-automation"
 import {AudioBusBox, AudioUnitBox, AuxSendBox} from "./schema/audio-unit"
 import {TimelineBox} from "./schema/timeline/timeline"
@@ -29,9 +29,9 @@ import {MarkerBox} from "./schema/timeline/marker"
 import {GrooveShuffleBox} from "./schema/grooves"
 
 BoxForge.gen<Pointers>({
-    path: "../studio/src/data/boxes",
+    path: "../core/src/data/boxes",
     pointers: {
-        from: "@/data/pointers",
+        from: "../pointers",
         enum: "Pointers",
         print: pointer => `Pointers.${Pointers[pointer]}`
     },

@@ -1,5 +1,5 @@
 import {AudioRegionBoxAdapter} from "@/audio-engine-shared/adapters/timeline/region/AudioRegionBoxAdapter.ts"
-import {UnionBoxTypes} from "@/data/unions.ts"
+import {UnionBoxTypes} from "@core/data/unions.ts"
 import {NoteRegionBoxAdapter} from "./timeline/region/NoteRegionBoxAdapter.ts"
 import {ValueRegionBoxAdapter} from "@/audio-engine-shared/adapters/timeline/region/ValueRegionBoxAdapter.ts"
 import {NoteClipBoxAdapter} from "./timeline/clip/NoteClipBoxAdapter.ts"

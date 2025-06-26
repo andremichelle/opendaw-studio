@@ -1,4 +1,4 @@
-import {AudioUnitType} from "@/data/enums.ts"
+import {AudioUnitType} from "@core/data/enums.ts"
 import {Colors} from "../Colors"
 
 import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType.ts"

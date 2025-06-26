@@ -1,10 +1,10 @@
-import {ModularDeviceBox} from "@/data/boxes"
+import {ModularDeviceBox} from "@core/data/boxes"
 import {panic, UUID} from "std"
 import {Address, BooleanField, FieldKeys, Int32Field, PointerField, StringField} from "box"
 import {ModularAdapter} from "@/audio-engine-shared/adapters/modular/modular.ts"
 import {DeviceInterfaceKnobAdapter} from "@/audio-engine-shared/adapters/modular/user-interface.ts"
 import {AudioEffectDeviceBoxAdapter, DeviceHost, Devices} from "@/audio-engine-shared/adapters/devices.ts"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 
 import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
 import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter"

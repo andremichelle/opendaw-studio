@@ -7,7 +7,7 @@ import {AudioEffectDeviceBoxAdapter, Devices, MidiEffectDeviceAdapter} from "@/a
 import {Effects} from "@/service/Effects"
 import {Project} from "@/project/Project"
 import {InsertMarker} from "@/ui/components/InsertMarker"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 
 export namespace DevicePanelDragAndDrop {
     export const install = (project: Project,

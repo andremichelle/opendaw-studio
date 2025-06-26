@@ -16,7 +16,7 @@ import {
     TapeDeviceBox,
     VaporisateurDeviceBox,
     ZeitgeistDeviceBox
-} from "@/data/boxes"
+} from "@core/data/boxes"
 import {ArpeggioDeviceEditor} from "@/ui/devices/midi-effects/ArpeggioDeviceEditor.tsx"
 import {ArpeggioDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/midi-effects/ArpeggioDeviceBoxAdapter.ts"
 import {DelayDeviceEditor} from "@/ui/devices/audio-effects/DelayDeviceEditor.tsx"

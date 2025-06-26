@@ -3,7 +3,7 @@ import {Event} from "dsp"
 import {Address, Propagation, Update} from "box"
 import {TimelineBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TimelineBoxAdapter.ts"
 import {MarkerTrackAdapter} from "@/audio-engine-shared/adapters/timeline/MarkerTrackAdapter.ts"
-import {MarkerBox} from "@/data/boxes"
+import {MarkerBox} from "@core/data/boxes"
 import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"
 import {BoxAdapter} from "@/audio-engine-shared/BoxAdapter"
 

@@ -1,4 +1,4 @@
-import {AudioRegionBox} from "@/data/boxes"
+import {AudioRegionBox} from "@core/data/boxes"
 import {ColorCodes} from "@/ui/mixer/ColorCodes.ts"
 import {RegionCaptureTarget} from "@/ui/timeline/tracks/audio-unit/regions/RegionCapturing.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"

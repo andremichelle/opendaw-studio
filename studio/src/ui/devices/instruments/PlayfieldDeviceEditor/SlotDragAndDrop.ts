@@ -1,7 +1,7 @@
 import {asInstanceOf, int, ObservableValue, Option, Terminable, UUID} from "std"
 import {DragAndDrop} from "@/ui/DragAndDrop"
 import {AnyDragData} from "@/ui/AnyDragData"
-import {PlayfieldSampleBox} from "@/data/boxes"
+import {PlayfieldSampleBox} from "@core/data/boxes"
 import {Keyboard} from "dom"
 import {Project} from "@/project/Project"
 import {

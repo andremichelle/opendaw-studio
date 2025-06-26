@@ -8,7 +8,7 @@ import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {installCursor} from "@/ui/hooks/cursor.ts"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
-import {LoopArea} from "@/data/boxes/LoopArea.ts"
+import {LoopArea} from "@core/data/boxes/LoopArea.ts"
 
 const className = Html.adoptStyleSheet(css, "loop-area-editor")
 

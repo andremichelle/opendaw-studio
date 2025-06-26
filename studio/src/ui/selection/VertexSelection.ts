@@ -1,5 +1,5 @@
-import {Pointers} from "@/data/pointers"
-import {SelectionBox} from "@/data/boxes"
+import {Pointers} from "@core/data/pointers"
+import {SelectionBox} from "@core/data/boxes"
 import {
     asInstanceOf,
     assert,

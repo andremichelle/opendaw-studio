@@ -1,7 +1,7 @@
 import {Arrays, Option, panic, Terminable, TerminableOwner, Terminator} from "std"
 import {PointerField, PrimitiveValues} from "box"
 import {AutomatableParameter} from "./AutomatableParameter"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 import {ProcessInfo, Processor} from "./processing"
 import {EngineContext} from "./EngineContext"
 import {EventBuffer} from "./EventBuffer"

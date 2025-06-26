@@ -19,12 +19,12 @@ import {
     UUID
 } from "std"
 import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
-import {ValueEventCollectionBox, ValueRegionBox} from "@/data/boxes"
+import {ValueEventCollectionBox, ValueRegionBox} from "@core/data/boxes"
 import {Address, Field, Propagation, Update} from "box"
 import {
     ValueEventCollectionBoxAdapter
 } from "@/audio-engine-shared/adapters/timeline/collection/ValueEventCollectionBoxAdapter.ts"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {TrackBoxAdapter} from "../TrackBoxAdapter.ts"
 
 import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"

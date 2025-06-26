@@ -1,11 +1,11 @@
 import {NoteEvent, ppqn} from "dsp"
 import {Arrays, float, int, Option, Selectable, Subscription, unitValue, UUID} from "std"
-import {NoteEventBox} from "@/data/boxes"
+import {NoteEventBox} from "@core/data/boxes"
 import {Address, Field, Propagation, Update} from "box"
 import {
     NoteEventCollectionBoxAdapter
 } from "@/audio-engine-shared/adapters/timeline/collection/NoteEventCollectionBoxAdapter.ts"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"
 import {BoxAdapter} from "@/audio-engine-shared/BoxAdapter"
 

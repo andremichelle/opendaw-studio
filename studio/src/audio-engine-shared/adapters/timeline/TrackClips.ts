@@ -1,7 +1,7 @@
 import {SortedBoxAdapterCollection} from "@/audio-engine-shared/adapters/SortedBoxAdapterCollection.ts"
 import {AnyClipBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
 import {ClipAdapters} from "@/audio-engine-shared/adapters/timeline/ClipBoxAdapter.ts"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {BoxAdapters} from "@/audio-engine-shared/BoxAdapters.ts"
 import {Notifier, Observer, Subscription, Terminable, Terminator} from "std"
 import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter.ts"

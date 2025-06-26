@@ -1,4 +1,4 @@
-import { Pointers } from "@/data/pointers"
+import { Pointers } from "@core/data/pointers"
 import { BoxSchema, FieldRecord, mergeFields, reserveMany } from "box-forge"
 import { Objects } from "std"
 

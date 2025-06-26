@@ -1,14 +1,14 @@
 import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter.ts"
 import {int, Notifier, Observer, Option, panic, SortedSet, Subscription, Terminable, UUID} from "std"
 import {BoxAdapters} from "@/audio-engine-shared/BoxAdapters.ts"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {
     IndexedAdapterCollectionListener,
     SortedBoxAdapterCollection
 } from "@/audio-engine-shared/adapters/SortedBoxAdapterCollection.ts"
 import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
 import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType.ts"
-import {TrackBox} from "@/data/boxes/TrackBox.ts"
+import {TrackBox} from "@core/data/boxes/TrackBox.ts"
 import {Vertex} from "box"
 
 export class AudioUnitTracks implements Terminable {

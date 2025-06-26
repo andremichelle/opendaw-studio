@@ -3,5 +3,5 @@ localhost.pem
 localhost-key.pem
 dist/
 node_modules/
-studio/src/data/boxes/
+core/src/data/boxes/
 studio/public/build-info.json

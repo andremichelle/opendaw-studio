@@ -13,7 +13,7 @@ import {
     UUID
 } from "std"
 import {Box, Field, Int32Field, PointerField} from "box"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {AdapterCollectionListener} from "@/audio-engine-shared/adapters/BoxAdapterCollection.ts"
 import {IndexComparator} from "@/ui/timeline/IndexComparator"
 import {BoxAdapter} from "@/audio-engine-shared/BoxAdapter"

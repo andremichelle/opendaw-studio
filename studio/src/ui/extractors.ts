@@ -7,7 +7,7 @@ import {
     ReverbDeviceBox,
     TapeDeviceBox,
     TrackBox
-} from "@/data/boxes"
+} from "@core/data/boxes"
 import {Box, PointerField, PointerHub, PrimitiveField, PrimitiveValues, StringField} from "box"
 import {
     Arrays,
@@ -20,7 +20,7 @@ import {
     Option,
     Terminator
 } from "std"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 
 // TODO Is this completely obsolete?
 export namespace Extractors {

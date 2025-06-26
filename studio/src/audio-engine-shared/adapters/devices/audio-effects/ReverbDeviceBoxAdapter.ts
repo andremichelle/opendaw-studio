@@ -1,9 +1,9 @@
-import {ReverbDeviceBox} from "@/data/boxes"
+import {ReverbDeviceBox} from "@core/data/boxes"
 import {StringMapping, UUID, ValueMapping} from "std"
 import {ParameterAdapterSet} from "../../ParameterAdapterSet.ts"
 import {AudioEffectDeviceBoxAdapter, DeviceHost, Devices} from "@/audio-engine-shared/adapters/devices.ts"
 import {Address, BooleanField, FieldKeys, Int32Field, PointerField, StringField} from "box"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 
 import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
 import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter"

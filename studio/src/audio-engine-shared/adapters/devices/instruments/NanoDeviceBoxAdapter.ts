@@ -1,4 +1,4 @@
-import {NanoDeviceBox} from "@/data/boxes"
+import {NanoDeviceBox} from "@core/data/boxes"
 import {StringMapping, UUID, ValueMapping} from "std"
 import {DeviceHost, Devices, InstrumentDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices.ts"
 import {Address, BooleanField, FieldKeys, StringField} from "box"

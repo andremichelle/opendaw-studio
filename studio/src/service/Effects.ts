@@ -13,7 +13,7 @@ import {
     ReverbDeviceBox,
     StereoToolDeviceBox,
     ZeitgeistDeviceBox
-} from "@/data/boxes"
+} from "@core/data/boxes"
 import {int, INVERSE_SQRT_2, UUID} from "std"
 import {Project} from "@/project/Project.ts"
 import {IconSymbol} from "@/IconSymbol"

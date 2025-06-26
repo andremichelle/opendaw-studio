@@ -4,7 +4,7 @@ import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/Aud
 import {createElement} from "jsx"
 import {Vertex} from "box"
 import {Project} from "@/project/Project"
-import {AudioUnitType} from "@/data/enums"
+import {AudioUnitType} from "@core/data/enums"
 import {Html} from "dom"
 import {Devices} from "@/audio-engine-shared/adapters/devices"
 

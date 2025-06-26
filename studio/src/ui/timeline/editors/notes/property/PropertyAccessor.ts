@@ -1,7 +1,7 @@
 import {StringMapping, unitValue, ValueMapping} from "std"
 import {PropertyParameters} from "@/ui/timeline/editors/notes/property/PropertyParameters.ts"
 import {NoteModifyStrategy} from "@/ui/timeline/editors/notes/NoteModifyStrategies.ts"
-import {NoteEventBox} from "@/data/boxes"
+import {NoteEventBox} from "@core/data/boxes"
 import {UINoteEvent} from "../UINoteEvent"
 
 export interface PropertyAccessor {

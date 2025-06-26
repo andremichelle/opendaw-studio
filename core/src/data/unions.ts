@@ -6,7 +6,7 @@ import {
     NoteRegionBox,
     ValueClipBox,
     ValueRegionBox
-} from "@/data/boxes"
+} from "./boxes"
 import {Box} from "box"
 
 export type AnyClipBox = NoteClipBox | ValueClipBox | AudioClipBox

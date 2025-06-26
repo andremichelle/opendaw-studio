@@ -1,4 +1,4 @@
-import {BoxVisitor, NoteEventBox, NoteEventCollectionBox} from "@/data/boxes"
+import {BoxVisitor, NoteEventBox, NoteEventCollectionBox} from "@core/data/boxes"
 import {
     asDefined,
     Bits,
@@ -18,7 +18,7 @@ import {
 import {Address, Box} from "box"
 import {EventCollection, NoteEvent, ppqn} from "dsp"
 import {NoteEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/NoteEventBoxAdapter.ts"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"
 import {BoxAdapter} from "@/audio-engine-shared/BoxAdapter"
 import {BlockFlag} from "@/worklet/processing"

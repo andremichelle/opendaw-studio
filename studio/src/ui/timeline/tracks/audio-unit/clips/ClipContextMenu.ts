@@ -9,7 +9,7 @@ import {NameValidator} from "@/ui/validator/name.ts"
 import {ClipCaptureTarget} from "@/ui/timeline/tracks/audio-unit/clips/ClipCapturing.ts"
 import {DebugMenus} from "@/ui/menu/debug"
 import {exportNotesToMidiFile} from "@/ui/timeline/editors/notes/NoteUtils"
-import {AudioRegionBox, NoteRegionBox, ValueRegionBox} from "@/data/boxes"
+import {AudioRegionBox, NoteRegionBox, ValueRegionBox} from "@core/data/boxes"
 import {ColorMenu} from "@/ui/timeline/ColorMenu"
 
 type Creation = {

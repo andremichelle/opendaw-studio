@@ -19,8 +19,8 @@ import {
     ValueMapping
 } from "std"
 import {Address, PointerField, PointerTypes, PrimitiveField, PrimitiveType, PrimitiveValues} from "box"
-import {Pointers} from "@/data/pointers.ts"
-import {BoxVisitor, TrackBox} from "@/data/boxes"
+import {Pointers} from "@core/data/pointers.ts"
+import {BoxVisitor, TrackBox} from "@core/data/boxes"
 import {TrackBoxAdapter} from "./timeline/TrackBoxAdapter"
 import {ppqn} from "dsp"
 import {Browser} from "dom"

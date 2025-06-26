@@ -1,6 +1,6 @@
 import {createVoltageConnector, ModularBox, ModuleConnectionBox} from "./modules"
 import {createModule} from "./builder"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 
 export const ModuleDefinitions = [
     ModularBox,

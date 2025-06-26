@@ -1,6 +1,6 @@
 import {Project} from "@/project/Project"
 import WorkletUrl from "../worklet/EngineProcessor.ts?worker&url"
-import {BoxIO} from "@/data/boxes"
+import {BoxIO} from "@core/data/boxes"
 import {EngineCommands, EngineToClient} from "@/worklet/protocols.ts"
 import {
     Arrays,

@@ -1,6 +1,6 @@
 import {Address, FieldKeys} from "box"
 import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"
-import {GrooveShuffleBox} from "@/data/boxes"
+import {GrooveShuffleBox} from "@core/data/boxes"
 import {int, StringMapping, UUID, ValueMapping} from "std"
 import {ParameterAdapterSet} from "@/audio-engine-shared/adapters/ParameterAdapterSet"
 import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"

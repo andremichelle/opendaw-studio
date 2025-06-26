@@ -1,5 +1,5 @@
 import {MenuItem} from "@/ui/model/menu-item.ts"
-import {ModuleDelayBox, ModuleGainBox, ModuleMultiplierBox} from "@/data/boxes"
+import {ModuleDelayBox, ModuleGainBox, ModuleMultiplierBox} from "@core/data/boxes"
 import {quantizeRound, UUID} from "std"
 import {Camera} from "@/ui/modular/Camera.ts"
 import {Project} from "@/project/Project.ts"

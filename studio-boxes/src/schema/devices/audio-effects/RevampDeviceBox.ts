@@ -1,5 +1,5 @@
 import {BoxSchema, ClassSchema} from "box-forge"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 import {DefaultParameterPointerRules} from "../../defaults"
 import {createAudioEffectDevice} from "../builder"
 

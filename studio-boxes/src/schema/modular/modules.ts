@@ -1,5 +1,5 @@
 import {BoxSchema, FieldName, FieldSchema} from "box-forge"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 
 export const createVoltageConnector = (name: string): FieldSchema<Pointers.VoltageConnection> & FieldName => ({
     type: "field", name, pointerRules: {mandatory: false, accepts: [Pointers.VoltageConnection]}

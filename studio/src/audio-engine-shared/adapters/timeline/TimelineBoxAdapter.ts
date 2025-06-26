@@ -1,4 +1,4 @@
-import {TimelineBox} from "@/data/boxes"
+import {TimelineBox} from "@core/data/boxes"
 import {UUID} from "std"
 import {Address} from "box"
 import {MarkerTrackAdapter} from "@/audio-engine-shared/adapters/timeline/MarkerTrackAdapter.ts"

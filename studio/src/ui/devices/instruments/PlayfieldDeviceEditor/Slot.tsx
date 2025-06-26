@@ -4,10 +4,10 @@ import {PlayfieldDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/
 import {NoteSender} from "@/audio-engine-shared/NoteSender"
 import {StudioService} from "@/service/StudioService"
 import {SampleSelector, SampleSelectStrategy} from "@/ui/devices/SampleSelector"
-import {AudioFileBox} from "@/data/boxes/AudioFileBox"
+import {AudioFileBox} from "@core/data/boxes/AudioFileBox"
 import {EmptySlot} from "@/ui/devices/instruments/PlayfieldDeviceEditor/EmptySlot"
 import {BusySlot} from "./BusySlot"
-import {PlayfieldSampleBox} from "@/data/boxes"
+import {PlayfieldSampleBox} from "@core/data/boxes"
 import {NoteStreamReceiver} from "@/audio-engine-shared/NoteStreamReceiver"
 import {
     PlayfieldSampleBoxAdapter

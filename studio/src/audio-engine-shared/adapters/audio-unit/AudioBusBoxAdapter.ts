@@ -1,6 +1,6 @@
 import {Address, BooleanField, Propagation, StringField} from "box"
 import {Observer, Subscription, UUID} from "std"
-import {AudioBusBox} from "@/data/boxes"
+import {AudioBusBox} from "@core/data/boxes"
 import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
 import {IconSymbol, nameToEnum} from "@/IconSymbol.ts"
 import {DeviceBoxAdapter, DeviceHost, Devices} from "@/audio-engine-shared/adapters/devices.ts"

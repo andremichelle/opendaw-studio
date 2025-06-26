@@ -1,4 +1,4 @@
-import {AudioBusBox, AudioUnitBox, BoxIO, RootBox, TimelineBox, UserInterfaceBox} from "@/data/boxes"
+import {AudioBusBox, AudioUnitBox, BoxIO, RootBox, TimelineBox, UserInterfaceBox} from "@core/data/boxes"
 import {BoxGraph} from "box"
 import {assert, ByteArrayInput, Option, UUID} from "std"
 import {MandatoryBoxes} from "@/audio-engine-shared/ManadatoryBoxes.ts"

@@ -1,6 +1,6 @@
 import {BoxAdapters} from "@/audio-engine-shared/BoxAdapters.ts"
 import {Box, Vertex} from "box"
-import {ModuleAttributes} from "@/data/boxes/ModuleAttributes.ts"
+import {ModuleAttributes} from "@core/data/boxes/ModuleAttributes.ts"
 import {
     BoxVisitor,
     ModularAudioInputBox,
@@ -8,12 +8,12 @@ import {
     ModuleDelayBox,
     ModuleGainBox,
     ModuleMultiplierBox
-} from "@/data/boxes"
+} from "@core/data/boxes"
 import {asDefined, Selectable} from "std"
 import {ModuleMultiplierAdapter} from "@/audio-engine-shared/adapters/modular/modules/multiplier.ts"
 import {ModuleDelayAdapter} from "./modules/delay.ts"
 import {Direction, ModuleConnectorAdapter} from "@/audio-engine-shared/adapters/modular/connector.ts"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {ModularAudioInputAdapter} from "@/audio-engine-shared/adapters/modular/modules/audio-input.ts"
 import {ModularAudioOutputAdapter} from "./modules/audio-output.ts"
 import {ParameterAdapterSet} from "@/audio-engine-shared/adapters/ParameterAdapterSet.ts"

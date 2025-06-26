@@ -1,4 +1,4 @@
-import {AudioFileBox} from "@/data/boxes"
+import {AudioFileBox} from "@core/data/boxes"
 import {Option, UUID} from "std"
 import {Peaks} from "fusion"
 import {AudioData} from "@/audio-engine-shared/AudioData.ts"

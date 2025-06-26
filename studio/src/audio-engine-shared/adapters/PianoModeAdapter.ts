@@ -1,4 +1,4 @@
-import {PianoMode} from "@/data/boxes/PianoMode.ts"
+import {PianoMode} from "@core/data/boxes/PianoMode.ts"
 import {float, int, Observer, StringMapping, Subscription, ValueMapping} from "std"
 import {FieldAdapter} from "@/audio-engine-shared/adapters/FieldAdapter.ts"
 import {Propagation} from "box"

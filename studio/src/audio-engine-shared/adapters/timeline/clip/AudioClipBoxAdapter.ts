@@ -12,11 +12,11 @@ import {
     Terminator,
     UUID
 } from "std"
-import {AudioClipBox} from "@/data/boxes"
+import {AudioClipBox} from "@core/data/boxes"
 import {Address, Int32Field, PointerField, Propagation, Update} from "box"
 import {ClipBoxAdapter, ClipBoxAdapterVisitor} from "../ClipBoxAdapter.ts"
 import {AudioFileBoxAdapter} from "@/audio-engine-shared/adapters/AudioFileBoxAdapter.ts"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {TrackBoxAdapter} from "../TrackBoxAdapter.ts"
 
 import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"

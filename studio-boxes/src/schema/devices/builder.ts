@@ -1,5 +1,5 @@
 import { BoxSchema, FieldRecord, mergeFields, reserveMany } from "box-forge"
-import { Pointers } from "@/data/pointers"
+import { Pointers } from "@core/data/pointers"
 import { Objects } from "std"
 
 const DefaultPointers = [Pointers.Device, Pointers.Selection]

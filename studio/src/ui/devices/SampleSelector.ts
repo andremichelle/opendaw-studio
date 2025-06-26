@@ -1,5 +1,5 @@
 import {AudioSample} from "@/audio/AudioSample"
-import {AudioFileBox} from "@/data/boxes"
+import {AudioFileBox} from "@core/data/boxes"
 import {isDefined, Option, Terminable, UUID} from "std"
 import {showProcessMonolog} from "@/ui/components/dialogs"
 import {Events, Files} from "dom"
@@ -10,7 +10,7 @@ import {FilePickerAcceptTypes} from "@/ui/FilePickerAcceptTypes.ts"
 import {ContextMenu} from "@/ui/ContextMenu"
 import {MenuItem} from "@/ui/model/menu-item"
 import {PointerField} from "box"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 import {DragAndDrop} from "@/ui/DragAndDrop"
 
 export interface SampleSelectStrategy {

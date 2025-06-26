@@ -1,6 +1,6 @@
 import {AnyDragData} from "@/ui/AnyDragData.ts"
 import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType.ts"
-import {AudioFileBox} from "@/data/boxes"
+import {AudioFileBox} from "@core/data/boxes"
 import {ClipCaptureTarget} from "@/ui/timeline/tracks/audio-unit/clips/ClipCapturing.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {isDefined, Nullable, Option, panic, UUID} from "std"

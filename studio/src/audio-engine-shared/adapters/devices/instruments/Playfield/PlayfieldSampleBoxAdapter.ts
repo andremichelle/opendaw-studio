@@ -7,10 +7,10 @@ import {
     MidiEffectDeviceAdapter
 } from "@/audio-engine-shared/adapters/devices"
 import {IndexedBoxAdapter, SortedBoxAdapterCollection} from "@/audio-engine-shared/adapters/SortedBoxAdapterCollection"
-import {PlayfieldSampleBox} from "@/data/boxes"
+import {PlayfieldSampleBox} from "@core/data/boxes"
 import {ParameterAdapterSet} from "@/audio-engine-shared/adapters/ParameterAdapterSet"
 import {AudioFileBoxAdapter} from "@/audio-engine-shared/adapters/AudioFileBoxAdapter"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 import {Gate} from "@/audio-engine-shared/adapters/devices/instruments/Playfield/Gate"
 import {int, Option, StringMapping, Terminator, UUID, ValueMapping} from "std"
 import {Address, BooleanField, Field, Int32Field, StringField} from "box"

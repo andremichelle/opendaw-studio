@@ -10,7 +10,7 @@ import {
     NoteRegionBox,
     ValueClipBox,
     ValueRegionBox
-} from "@/data/boxes"
+} from "@core/data/boxes"
 import {NoteEditor} from "@/ui/timeline/editors/notes/NoteEditor.tsx"
 import {NoteRegionBoxAdapter} from "@/audio-engine-shared/adapters/timeline/region/NoteRegionBoxAdapter.ts"
 import {Box, PointerField, Vertex} from "box"
@@ -42,7 +42,7 @@ import {
 import {RegionReader} from "@/ui/timeline/editors/RegionReader.ts"
 import {AudioClipBoxAdapter} from "@/audio-engine-shared/adapters/timeline/clip/AudioClipBoxAdapter.ts"
 import {ValueClipBoxAdapter} from "@/audio-engine-shared/adapters/timeline/clip/ValueClipBoxAdapter.ts"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 import {ValueEditingContext} from "@/ui/timeline/editors/value/ValueEditingContext.ts"
 import {Html} from "dom"
 

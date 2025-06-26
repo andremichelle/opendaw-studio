@@ -1,4 +1,4 @@
-import {ModuleConnectionBox} from "@/data/boxes"
+import {ModuleConnectionBox} from "@core/data/boxes"
 import {Address, Vertex} from "box"
 import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"
 import {BoxAdapter} from "@/audio-engine-shared/BoxAdapter"

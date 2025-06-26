@@ -1,6 +1,6 @@
 import { PointerRules, UnreferenceableType } from "box"
 import { FieldName, FieldSchema, PointerFieldSchema, PrimitiveFieldSchema } from "box-forge"
-import { Pointers } from "@/data/pointers"
+import { Pointers } from "@core/data/pointers"
 
 export const DefaultParameterPointerRules = {
 	accepts: [Pointers.Modulation, Pointers.Automation, Pointers.MidiControl],

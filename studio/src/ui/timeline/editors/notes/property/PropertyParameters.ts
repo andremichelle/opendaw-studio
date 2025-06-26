@@ -1,6 +1,6 @@
 import {PrimitiveField} from "box"
 import {DefaultParameter, int, StringMapping, ValueMapping} from "std"
-import {NoteEventBox} from "@/data/boxes"
+import {NoteEventBox} from "@core/data/boxes"
 import {PPQN} from "dsp"
 
 export type OnlyPrimitives<T> = { [K in keyof T as T[K] extends PrimitiveField<number> ? K : never]: T[K] }

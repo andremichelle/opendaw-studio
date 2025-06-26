@@ -13,7 +13,7 @@ import {
 } from "std"
 import {StudioService} from "@/service/StudioService.ts"
 import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
-import {ValueEventBox} from "@/data/boxes"
+import {ValueEventBox} from "@core/data/boxes"
 import {RangePadding} from "@/ui/timeline/editors/value/Constants.ts"
 import {ObservableModifyContext} from "@/ui/timeline/ObservableModifyContext.ts"
 import {ValueModifier} from "@/ui/timeline/editors/value/ValueModifier.ts"

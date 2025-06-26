@@ -1,6 +1,6 @@
-import {UserInterfaceBox} from "@/data/boxes"
+import {UserInterfaceBox} from "@core/data/boxes"
 import {Editing, PointerField, Vertex} from "box"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {Notifier, Observer, Option, Subscription, Terminable, Terminator} from "std"
 
 export class UserEditing implements Terminable {

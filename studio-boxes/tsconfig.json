@@ -3,6 +3,9 @@
     "paths": {
       "@/*": [
         "../studio/src/*"
+      ],
+      "@core/*": [
+        "../core/src/*"
       ]
     },
     "target": "ESNext",

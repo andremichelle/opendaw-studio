@@ -1,4 +1,4 @@
-import {BoxVisitor, ValueEventBox, ValueEventCollectionBox} from "@/data/boxes"
+import {BoxVisitor, ValueEventBox, ValueEventCollectionBox} from "@core/data/boxes"
 import {
     asDefined,
     Curve,
@@ -17,7 +17,7 @@ import {
 import {Address, Box} from "box"
 import {EventCollection, Interpolation, ppqn, ValueEvent} from "dsp"
 import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"
 import {BoxAdapter} from "@/audio-engine-shared/BoxAdapter"
 import {InterpolationFieldAdapter} from "@/audio-engine-shared/adapters/timeline/event/InterpolationFieldAdapter.ts"

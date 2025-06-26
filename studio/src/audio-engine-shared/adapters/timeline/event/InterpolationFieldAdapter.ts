@@ -1,7 +1,7 @@
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 import {Int32Field} from "box"
 import {Interpolation} from "dsp"
-import {ValueEventCurveBox} from "@/data/boxes"
+import {ValueEventCurveBox} from "@core/data/boxes"
 import {assertInstanceOf, isDefined, panic, UUID} from "std"
 
 export namespace InterpolationFieldAdapter {

@@ -11,7 +11,7 @@ import {
     UUID,
     ValueMapping
 } from "std"
-import {AudioBusBox, AuxSendBox, BoxVisitor} from "@/data/boxes"
+import {AudioBusBox, AuxSendBox, BoxVisitor} from "@core/data/boxes"
 import {AudioBusBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioBusBoxAdapter.ts"
 import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
 import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"

@@ -1,8 +1,8 @@
 import {assert, Notifier, Observer, SortedSet, Subscription, Terminable, UUID} from "std"
 import {MarkerBoxAdapter} from "@/audio-engine-shared/adapters/timeline/MarkerBoxAdapter.ts"
 import {EventCollection} from "dsp"
-import {MarkerBox} from "@/data/boxes"
-import {MarkerTrack} from "@/data/boxes/MarkerTrack"
+import {MarkerBox} from "@core/data/boxes"
+import {MarkerTrack} from "@core/data/boxes/MarkerTrack"
 import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"
 
 export class MarkerTrackAdapter implements Terminable {

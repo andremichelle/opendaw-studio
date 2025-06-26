@@ -1,11 +1,11 @@
-import {PlayfieldDeviceBox} from "@/data/boxes"
+import {PlayfieldDeviceBox} from "@core/data/boxes"
 import {DeviceHost, Devices, InstrumentDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices.ts"
 import {Address, BooleanField, FieldKeys, StringField} from "box"
 import {ParameterAdapterSet} from "@/audio-engine-shared/adapters/ParameterAdapterSet.ts"
 import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType.ts"
 import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
 import {SortedBoxAdapterCollection} from "@/audio-engine-shared/adapters/SortedBoxAdapterCollection"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 import {UUID} from "std"
 import {
     PlayfieldSampleBoxAdapter

@@ -4,8 +4,8 @@
   "type": "commonjs",
   "scripts": {
     "gen": "npm run clear && npm run build --prefix ../lib/box-forge && npx tsx src/forge.ts && npm run format",
-    "clear": "rm -rf ../studio/src/data/boxes/*",
-    "format": "prettier --write \"../studio/src/data/boxes/**/*.ts\" --ignore-path /dev/null"
+    "clear": "rm -rf ../core/src/data/boxes/*",
+    "format": "prettier --write \"../core/src/data/boxes/**/*.ts\" --ignore-path /dev/null"
   },
   "devDependencies": {
     "std": "file:../lib/std",

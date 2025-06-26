@@ -1,8 +1,8 @@
-import {AudioUnitBox} from "@/data/boxes"
+import {AudioUnitBox} from "@core/data/boxes"
 import {int, Option, StringMapping, Terminator, UUID, ValueMapping} from "std"
 import {ParameterAdapterSet} from "@/audio-engine-shared/adapters/ParameterAdapterSet.ts"
 import {Address, BooleanField, Field, Int32Field} from "box"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {
     AudioEffectDeviceBoxAdapter,
     DeviceHost,
@@ -12,7 +12,7 @@ import {
 import {AudioUnitTracks} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitTracks.ts"
 import {AudioUnitInput} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitInput.ts"
 import {AudioUnitOutput} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitOutput.ts"
-import {AudioUnitType} from "@/data/enums.ts"
+import {AudioUnitType} from "@core/data/enums.ts"
 import {SortedBoxAdapterCollection} from "@/audio-engine-shared/adapters/SortedBoxAdapterCollection.ts"
 import {AuxSendBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AuxSendBoxAdapter.ts"
 import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter.ts"

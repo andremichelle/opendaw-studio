@@ -1,5 +1,5 @@
-import {ModuleDelayBox} from "@/data/boxes"
-import {Pointers} from "@/data/pointers.ts"
+import {ModuleDelayBox} from "@core/data/boxes"
+import {Pointers} from "@core/data/pointers.ts"
 import {ModuleAdapter} from "@/audio-engine-shared/adapters/modular/module.ts"
 import {Direction, ModuleConnectorAdapter} from "@/audio-engine-shared/adapters/modular/connector.ts"
 import {AbstractModuleAdapter} from "../abstract.ts"

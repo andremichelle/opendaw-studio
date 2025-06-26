@@ -9,7 +9,7 @@ import {TextInput} from "@/ui/components/TextInput"
 import {ExportStemsConfiguration} from "@/audio-engine-shared/EngineProcessorOptions"
 import {ColorCodes} from "@/ui/mixer/ColorCodes"
 import {Colors} from "@/ui/Colors"
-import {AudioUnitType} from "@/data/enums"
+import {AudioUnitType} from "@core/data/enums"
 
 const className = Html.adoptStyleSheet(css, "ExportStemsConfigurator")
 

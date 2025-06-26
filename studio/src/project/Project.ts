@@ -12,7 +12,7 @@ import {
     ValueEventBox,
     ValueEventCurveBox,
     ZeitgeistDeviceBox
-} from "@/data/boxes"
+} from "@core/data/boxes"
 import {UIAudioManager} from "@/project/UIAudioManager"
 import {BoxAdapters} from "@/audio-engine-shared/BoxAdapters.ts"
 import {
@@ -30,7 +30,7 @@ import {
 import {UserEditingManager} from "@/UserEditingManager.ts"
 import {StudioService} from "@/service/StudioService.ts"
 import {RootBoxAdapter} from "@/audio-engine-shared/adapters/RootBoxAdapter.ts"
-import {AudioUnitType} from "@/data/enums.ts"
+import {AudioUnitType} from "@core/data/enums.ts"
 import {Colors} from "@/ui/Colors"
 import {ppqn} from "dsp"
 import {enumToName, IconSymbol} from "@/IconSymbol.ts"

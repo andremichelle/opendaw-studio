@@ -12,7 +12,7 @@ import {
     UUID
 } from "std"
 import {Project} from "@/project/Project.ts"
-import {NoteEventBox, NoteEventCollectionBox, NoteRegionBox, TrackBox} from "@/data/boxes"
+import {NoteEventBox, NoteEventCollectionBox, NoteRegionBox, TrackBox} from "@core/data/boxes"
 import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType"
 import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
 import {PPQN, ppqn} from "dsp"

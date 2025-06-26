@@ -42,7 +42,7 @@ import {
     ValueRegionBox,
     VaporisateurDeviceBox,
     ZeitgeistDeviceBox
-} from "@/data/boxes"
+} from "@core/data/boxes"
 import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter.ts"
 import {DelayDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/audio-effects/DelayDeviceBoxAdapter.ts"
 import {ReverbDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/audio-effects/ReverbDeviceBoxAdapter.ts"

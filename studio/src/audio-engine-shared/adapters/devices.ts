@@ -1,5 +1,5 @@
 import {BooleanField, Box, Field, Int32Field, PointerField, StringField} from "box"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {Arrays, asDefined, assert, AssertType, int, Option, panic, UUID} from "std"
 import {
     ArpeggioDeviceBox,
@@ -11,7 +11,7 @@ import {
     ReverbDeviceBox,
     StereoToolDeviceBox,
     ZeitgeistDeviceBox
-} from "@/data/boxes"
+} from "@core/data/boxes"
 import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType.ts"
 import {SortedBoxAdapterCollection} from "@/audio-engine-shared/adapters/SortedBoxAdapterCollection"
 import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter"

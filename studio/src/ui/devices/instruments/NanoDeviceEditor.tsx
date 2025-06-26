@@ -9,7 +9,7 @@ import {NanoDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/instr
 import {ControlBuilder} from "@/ui/devices/ControlBuilder.tsx"
 import {DevicePeakMeter} from "@/ui/devices/panel/DevicePeakMeter.tsx"
 import {Html} from "dom"
-import {AudioFileBox} from "@/data/boxes"
+import {AudioFileBox} from "@core/data/boxes"
 import {Icon} from "@/ui/components/Icon"
 import {Instruments} from "@/service/Instruments"
 import {SampleSelector, SampleSelectStrategy} from "@/ui/devices/SampleSelector"

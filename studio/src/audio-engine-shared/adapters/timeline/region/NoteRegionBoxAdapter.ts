@@ -17,12 +17,12 @@ import {
     Terminator,
     UUID
 } from "std"
-import {NoteEventCollectionBox, NoteRegionBox} from "@/data/boxes"
+import {NoteEventCollectionBox, NoteRegionBox} from "@core/data/boxes"
 import {Address, Field, Propagation, Update} from "box"
 import {
     NoteEventCollectionBoxAdapter
 } from "@/audio-engine-shared/adapters/timeline/collection/NoteEventCollectionBoxAdapter.ts"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {TrackBoxAdapter} from "../TrackBoxAdapter.ts"
 import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"
 

@@ -1,6 +1,6 @@
 import {assert, Func, int, Listeners, SortedSet, Subscription, Terminable, UUID} from "std"
 import {Box, PointerField, PointerHub} from "box"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 
 import {BoxAdapter} from "@/audio-engine-shared/BoxAdapter"
 

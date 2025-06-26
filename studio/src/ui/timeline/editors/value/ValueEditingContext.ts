@@ -15,7 +15,7 @@ import {ValueAssignment} from "@/ui/timeline/editors/value/ValueAssignment.tsx"
 import {PointerField, PrimitiveValues} from "box"
 import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxAdapter.ts"
 import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType.ts"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {Project} from "@/project/Project.ts"
 
 export class ValueEditingContext implements Terminable {

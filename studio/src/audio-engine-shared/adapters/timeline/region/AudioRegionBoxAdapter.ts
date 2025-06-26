@@ -1,7 +1,7 @@
-import {AudioRegionBox} from "@/data/boxes"
+import {AudioRegionBox} from "@core/data/boxes"
 import {int, Notifier, Nullish, Observer, Option, safeExecute, Subscription, Terminator, UUID} from "std"
 import {AudioFileBoxAdapter} from "@/audio-engine-shared/adapters/AudioFileBoxAdapter.ts"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {Address, Field, PointerField, Propagation, Update} from "box"
 import {
     LoopableRegionBoxAdapter,

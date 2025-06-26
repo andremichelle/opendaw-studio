@@ -15,7 +15,7 @@ import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/A
 import {ParameterLabel} from "@/ui/components/ParameterLabel.tsx"
 import {RelativeUnitValueDragging} from "@/ui/wrapper/RelativeUnitValueDragging.tsx"
 import {ContextMenu} from "@/ui/ContextMenu.ts"
-import {DeviceInterfaceKnobBox} from "@/data/boxes"
+import {DeviceInterfaceKnobBox} from "@core/data/boxes"
 import {IconSymbol} from "@/IconSymbol.ts"
 import {Events, Html} from "dom"
 

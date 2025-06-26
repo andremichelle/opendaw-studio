@@ -1,5 +1,5 @@
 import { BoxSchema } from "box-forge"
-import { Pointers } from "@/data/pointers"
+import { Pointers } from "@core/data/pointers"
 import { PPQN } from "dsp"
 
 export const TimelineBox: BoxSchema<Pointers> = {

@@ -1,4 +1,4 @@
-import {AudioBusBox, AudioUnitBox, RootBox, TimelineBox, UserInterfaceBox} from "@/data/boxes"
+import {AudioBusBox, AudioUnitBox, RootBox, TimelineBox, UserInterfaceBox} from "@core/data/boxes"
 
 export type MandatoryBoxes = {
     rootBox: RootBox

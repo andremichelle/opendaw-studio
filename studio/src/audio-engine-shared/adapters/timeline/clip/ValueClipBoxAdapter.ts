@@ -15,7 +15,7 @@ import {
     UUID
 } from "std"
 import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
-import {ValueClipBox} from "@/data/boxes"
+import {ValueClipBox} from "@core/data/boxes"
 import {Address, Int32Field, Propagation, Update} from "box"
 import {
     ValueEventCollectionBoxAdapter

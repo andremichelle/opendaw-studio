@@ -1,5 +1,5 @@
 import {BoxSchema, FieldRecord, mergeFields, reserveMany} from "box-forge"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 import {createAudioEffectDevice} from "./builder"
 
 const DeviceInterfaceElement = {

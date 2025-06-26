@@ -1,4 +1,4 @@
-import {AudioClipBox} from "@/data/boxes"
+import {AudioClipBox} from "@core/data/boxes"
 import {ColorCodes} from "@/ui/mixer/ColorCodes.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {PPQN} from "dsp"

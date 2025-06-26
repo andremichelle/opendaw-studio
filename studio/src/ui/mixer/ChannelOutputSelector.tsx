@@ -10,7 +10,7 @@ import {Html} from "dom"
 import {MenuItem} from "@/ui/model/menu-item"
 import {showNewAudioBusOrAuxDialog} from "@/ui/dialogs"
 import {Modifier} from "@/ui/Modifier"
-import {AudioUnitType} from "@/data/enums"
+import {AudioUnitType} from "@core/data/enums"
 import {MenuButton} from "@/ui/components/MenuButton"
 
 const className = Html.adoptStyleSheet(css, "OutputSelector")

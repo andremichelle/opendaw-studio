@@ -14,7 +14,7 @@ import {
     TapeDeviceBox,
     VaporisateurDeviceBox,
     ZeitgeistDeviceBox
-} from "@/data/boxes"
+} from "@core/data/boxes"
 import {DelayDeviceProcessor} from "@/worklet/devices/audio-effects/DelayDeviceProcessor.ts"
 import {DelayDeviceBoxAdapter} from "@/audio-engine-shared/adapters/devices/audio-effects/DelayDeviceBoxAdapter.ts"
 import {NopDeviceProcessor} from "@/worklet/devices/audio-effects/NopDeviceProcessor.ts"

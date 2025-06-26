@@ -6,7 +6,7 @@ import {
     TapeDeviceBox,
     TrackBox,
     VaporisateurDeviceBox
-} from "@/data/boxes"
+} from "@core/data/boxes"
 import {UUID} from "std"
 import {Utils} from "@/utils"
 import {BoxGraph} from "box"
@@ -15,7 +15,7 @@ import {Project} from "@/project/Project.ts"
 import {enumToName, IconSymbol} from "@/IconSymbol.ts"
 import {Waveform} from "dsp"
 import {Modifier} from "@/ui/Modifier.ts"
-import {AudioUnitType} from "@/data/enums.ts"
+import {AudioUnitType} from "@core/data/enums.ts"
 import {DeviceHost} from "@/audio-engine-shared/adapters/devices"
 import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter"
 

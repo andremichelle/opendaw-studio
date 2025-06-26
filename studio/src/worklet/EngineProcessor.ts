@@ -19,7 +19,7 @@ import {
     UUID
 } from "std"
 import {Address, BoxGraph, createSyncTarget} from "box"
-import {AudioFileBox, BoxIO, BoxVisitor} from "@/data/boxes"
+import {AudioFileBox, BoxIO, BoxVisitor} from "@core/data/boxes"
 import {EngineContext} from "@/worklet/EngineContext.ts"
 import {TimeInfo} from "@/worklet/TimeInfo.ts"
 import {EngineCommands, EngineToClient} from "@/worklet/protocols.ts"

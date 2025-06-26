@@ -1,7 +1,7 @@
 import {ChannelStripProcessor} from "@/worklet/ChannelStripProcessor.ts"
 import {asDefined, SortedSet, Terminable, UUID} from "std"
-import {Pointers} from "@/data/pointers"
-import {AudioUnitBox, AuxSendBox, BoxVisitor} from "@/data/boxes"
+import {Pointers} from "@core/data/pointers"
+import {AudioUnitBox, AuxSendBox, BoxVisitor} from "@core/data/boxes"
 
 export class Mixer {
     readonly #channelStrips: SortedSet<UUID.Format, ChannelStripProcessor>

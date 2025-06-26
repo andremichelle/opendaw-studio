@@ -3,7 +3,7 @@ import {GrooveShuffleBoxAdapter} from "@/audio-engine-shared/adapters/grooves/Gr
 import {AbstractProcessor} from "@/worklet/AbstractProcessor.ts"
 import {Groove, GroovePattern, GroovePatternFunction, PPQN, ppqn} from "dsp"
 import {asDefined, moebiusEase, squashUnit, Terminable, Terminator} from "std"
-import {BoxVisitor, GrooveShuffleBox} from "@/data/boxes"
+import {BoxVisitor, GrooveShuffleBox} from "@core/data/boxes"
 import {BoxAdapters} from "@/audio-engine-shared/BoxAdapters.ts"
 import {Box} from "box"
 

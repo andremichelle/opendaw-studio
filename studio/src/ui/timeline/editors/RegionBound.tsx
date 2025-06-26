@@ -9,7 +9,7 @@ import {LoopableRegion} from "dsp"
 import {AnyRegionBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
 import {createRegionCapturing} from "@/ui/timeline/editors/RegionCapturingTarget.ts"
 import {installCursor} from "@/ui/hooks/cursor.ts"
-import {UnionBoxTypes} from "@/data/unions.ts"
+import {UnionBoxTypes} from "@core/data/unions.ts"
 import {Context2d, Html} from "dom"
 
 const className = Html.adoptStyleSheet(css, "RegionBound")

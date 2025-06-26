@@ -13,8 +13,8 @@ import {
 } from "std"
 import {PointerHub} from "box"
 import {BoxAdapters} from "@/audio-engine-shared/BoxAdapters.ts"
-import {AudioBusBox} from "@/data/boxes"
-import {Pointers} from "@/data/pointers.ts"
+import {AudioBusBox} from "@core/data/boxes"
+import {Pointers} from "@core/data/pointers.ts"
 import {enumToName, IconSymbol, nameToEnum} from "@/IconSymbol.ts"
 import {AudioUnitInputAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitInputAdapter"
 

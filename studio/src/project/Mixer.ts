@@ -1,6 +1,6 @@
 import {Arrays, asDefined, EmptyExec, SortedSet, Subscription, Terminable, Terminator, UUID} from "std"
-import {Pointers} from "@/data/pointers"
-import {AudioUnitBox, AuxSendBox, BoxVisitor} from "@/data/boxes"
+import {Pointers} from "@core/data/pointers"
+import {AudioUnitBox, AuxSendBox, BoxVisitor} from "@core/data/boxes"
 import {AudioUnitBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitBoxAdapter"
 import {DeferExec, deferNextFrame} from "dom"
 import {SortedBoxAdapterCollection} from "@/audio-engine-shared/adapters/SortedBoxAdapterCollection"

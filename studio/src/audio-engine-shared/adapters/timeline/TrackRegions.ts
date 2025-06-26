@@ -2,7 +2,7 @@ import {RegionCollection} from "dsp"
 import {AnyRegionBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTypes.ts"
 import {RegionAdapters, RegionComparator} from "@/audio-engine-shared/adapters/timeline/RegionBoxAdapter.ts"
 import {assert, Notifier, Observer, SortedSet, Subscription, Terminator, UUID} from "std"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {BoxAdapters} from "@/audio-engine-shared/BoxAdapters.ts"
 import {TrackBoxAdapter} from "./TrackBoxAdapter.ts"
 

@@ -1,4 +1,4 @@
-import { Pointers } from "@/data/pointers"
+import { Pointers } from "@core/data/pointers"
 import { ClassSchema } from "box-forge"
 
 export const ClipPlaybackFields = {

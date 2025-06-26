@@ -2,7 +2,7 @@ import css from "./DevicePanel.sass?inline"
 import {asDefined, Lifecycle, ObservableValue, Option, Terminable, Terminator, UUID} from "std"
 import {appendChildren, createElement} from "jsx"
 import {Session, StudioService} from "@/service/StudioService"
-import {AudioUnitBox, BoxVisitor, PlayfieldSampleBox} from "@/data/boxes"
+import {AudioUnitBox, BoxVisitor, PlayfieldSampleBox} from "@core/data/boxes"
 import {
     AudioEffectDeviceBoxAdapter,
     DeviceHost,
@@ -26,7 +26,7 @@ import {
     PlayfieldSampleBoxAdapter
 } from "@/audio-engine-shared/adapters/devices/instruments/Playfield/PlayfieldSampleBoxAdapter"
 import {AudioUnitInputAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioUnitInputAdapter"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 
 const className = Html.adoptStyleSheet(css, "DevicePanel")
 

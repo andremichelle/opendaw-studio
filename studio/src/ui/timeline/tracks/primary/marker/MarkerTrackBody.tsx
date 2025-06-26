@@ -5,7 +5,7 @@ import {TimelineBoxAdapter} from "@/audio-engine-shared/adapters/timeline/Timeli
 import {MarkerBoxAdapter} from "@/audio-engine-shared/adapters/timeline/MarkerBoxAdapter.ts"
 import {createElement} from "jsx"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
-import {MarkerBox} from "@/data/boxes"
+import {MarkerBox} from "@core/data/boxes"
 import {MarkerRenderer} from "@/ui/timeline/tracks/primary/marker/MarkerRenderer"
 import {MarkerTrackAdapter} from "@/audio-engine-shared/adapters/timeline/MarkerTrackAdapter"
 import {MarkerContextMenu} from "@/ui/timeline/tracks/primary/marker/MarkerContextMenu"

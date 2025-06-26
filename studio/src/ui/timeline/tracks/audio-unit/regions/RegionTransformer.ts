@@ -2,9 +2,9 @@ import {AnyRegionBoxAdapter} from "@/audio-engine-shared/adapters/UnionAdapterTy
 import {NoteRegionBoxAdapter} from "@/audio-engine-shared/adapters/timeline/region/NoteRegionBoxAdapter.ts"
 import {AudioRegionBoxAdapter} from "@/audio-engine-shared/adapters/timeline/region/AudioRegionBoxAdapter.ts"
 import {ValueRegionBoxAdapter} from "@/audio-engine-shared/adapters/timeline/region/ValueRegionBoxAdapter.ts"
-import {AudioClipBox, NoteClipBox, ValueClipBox} from "@/data/boxes"
+import {AudioClipBox, NoteClipBox, ValueClipBox} from "@core/data/boxes"
 import {asDefined, UUID} from "std"
-import {AnyClipBox} from "@/data/unions.ts"
+import {AnyClipBox} from "@core/data/unions.ts"
 
 export namespace RegionTransformer {
     export const toClip = (region: AnyRegionBoxAdapter, copyEvents: boolean = true): AnyClipBox => {

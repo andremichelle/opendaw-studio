@@ -1,4 +1,4 @@
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {Address, Field} from "box"
 import {ModuleConnectionAdapter} from "@/audio-engine-shared/adapters/modular/connection.ts"
 import {Arrays} from "std"

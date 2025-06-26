@@ -1,9 +1,9 @@
 import {Notifier, Observer, Option, Subscription, Terminable, Terminator} from "std"
 import {PointerField} from "box"
-import {Pointers} from "@/data/pointers.ts"
+import {Pointers} from "@core/data/pointers.ts"
 import {BoxAdapters} from "@/audio-engine-shared/BoxAdapters.ts"
 import {AudioBusBoxAdapter} from "@/audio-engine-shared/adapters/audio-unit/AudioBusBoxAdapter.ts"
-import {AudioBusBox, BoxVisitor} from "@/data/boxes"
+import {AudioBusBox, BoxVisitor} from "@core/data/boxes"
 
 export class AudioUnitOutput implements Terminable {
     readonly #pointerField: PointerField<Pointers.AudioOutput>

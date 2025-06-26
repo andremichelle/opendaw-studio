@@ -6,7 +6,7 @@ import {TrackBoxAdapter} from "@/audio-engine-shared/adapters/timeline/TrackBoxA
 import {DebugMenus} from "@/ui/menu/debug"
 import {DeviceAccepts} from "@/audio-engine-shared/adapters/devices.ts"
 import {MidiImport} from "@/ui/timeline/MidiImport.ts"
-import {TrackBox} from "@/data/boxes"
+import {TrackBox} from "@core/data/boxes"
 import {TrackType} from "@/audio-engine-shared/adapters/timeline/TrackType"
 import {Modifier} from "@/ui/Modifier.ts"
 

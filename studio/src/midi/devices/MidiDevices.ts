@@ -19,7 +19,7 @@ import {MidiData} from "@/midi/MidiData"
 import {MidiDialogs} from "@/midi/devices/MidiDialogs"
 import {Engine} from "@/audio-engine/Engine"
 import {Address, AddressJSON, PrimitiveField, PrimitiveValues} from "box"
-import {Pointers} from "@/data/pointers"
+import {Pointers} from "@core/data/pointers"
 import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
 
 export type MidiConnectionJSON = (

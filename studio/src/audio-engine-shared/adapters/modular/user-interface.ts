@@ -1,4 +1,4 @@
-import {DeviceInterfaceKnobBox} from "@/data/boxes"
+import {DeviceInterfaceKnobBox} from "@core/data/boxes"
 import {ModuleAdapter, Modules} from "@/audio-engine-shared/adapters/modular/module.ts"
 import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
 import {Address, Box, PointerTypes, PrimitiveField} from "box"

@@ -1,5 +1,5 @@
 import { BoxSchema } from "box-forge"
-import { Pointers } from "@/data/pointers"
+import { Pointers } from "@core/data/pointers"
 import { ClipPlaybackFields } from "./clips"
 
 export const AudioRegionBox: BoxSchema<Pointers> = {
