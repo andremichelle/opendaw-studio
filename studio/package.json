@@ -6,8 +6,7 @@
     "dev": "vite",
     "build": "vite build --mode production",
     "preview": "vite preview",
-    "tauri": "tauri",
-    "build:worklet": "vite --config vite.worklet.config.ts build"
+    "tauri": "tauri"
   },
   "dependencies": {
     "@tauri-apps/api": "^2",
