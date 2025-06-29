@@ -1,9 +1,9 @@
-import {assert, ByteArrayInput, Hash, int, tryCatch} from "opendaw-std"
+import {assert, ByteArrayInput, Hash, int, tryCatch} from "lib-std"
 import {Project} from "@/project/Project"
 import {Commit, CommitType} from "./Commit"
 import {StudioService} from "@/service/StudioService"
-import {Updates} from "opendaw-box"
-import {Wait} from "opendaw-runtime"
+import {Updates} from "lib-box"
+import {Wait} from "lib-runtime"
 import {showProcessMonolog} from "@/ui/components/dialogs"
 
 export class SyncLogReader {

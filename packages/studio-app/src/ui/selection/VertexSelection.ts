@@ -14,8 +14,8 @@ import {
     Subscription,
     Terminator,
     UUID
-} from "opendaw-std"
-import {Address, Addressable, BoxGraph, Editing, Field, PointerField, PointerListener} from "opendaw-box"
+} from "lib-std"
+import {Address, Addressable, BoxGraph, Editing, Field, PointerField, PointerListener} from "lib-box"
 import {SelectableVertex} from "@/ui/selection/SelectableVertex"
 import {SelectionEntry} from "@/ui/selection/SelectionEntry"
 import {FilteredSelection} from "@/ui/selection/FilteredSelection"

@@ -1,4 +1,4 @@
-import {ProgressHandler, SortedSet, UUID} from "opendaw-std"
+import {ProgressHandler, SortedSet, UUID} from "lib-std"
 import {UIAudioLoader} from "@/project/UIAudioLoader"
 import {AudioLoaderManager} from "studio-shared"
 import {AudioServerApi} from "@/audio/AudioServerApi"

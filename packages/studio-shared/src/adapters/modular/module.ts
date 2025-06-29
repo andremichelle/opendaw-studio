@@ -1,4 +1,4 @@
-import {Box, Vertex} from "opendaw-box"
+import {Box, Vertex} from "lib-box"
 import {
     BoxVisitor,
     ModularAudioInputBox,
@@ -7,7 +7,7 @@ import {
     ModuleGainBox,
     ModuleMultiplierBox
 } from "studio-boxes"
-import {asDefined, Selectable} from "opendaw-std"
+import {asDefined, Selectable} from "lib-std"
 import {Pointers} from "studio-enums"
 import {ModuleDelayAdapter} from "./modules/delay"
 import {ModularAudioOutputAdapter} from "./modules/audio-output"

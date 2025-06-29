@@ -1,11 +1,11 @@
 import {PanelContentFactory} from "@/ui/workspace/PanelContents.tsx"
-import {DomElement, replaceChildren} from "opendaw-jsx"
-import {assert, Option, Terminable, Terminator, UUID} from "opendaw-std"
+import {DomElement, replaceChildren} from "lib-jsx"
+import {assert, Option, Terminable, Terminator, UUID} from "lib-std"
 import {PanelType} from "@/ui/workspace/PanelType.ts"
 import {PanelState} from "@/ui/workspace/PanelState.ts"
 import {Surface} from "../surface/Surface"
 import {showInfoDialog} from "@/ui/components/dialogs.tsx"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 export type PlaceHolder = {
     panelState: PanelState

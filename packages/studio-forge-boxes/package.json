@@ -17,10 +17,10 @@
     "format": "prettier --write \"../studio-boxes/src/**/*.ts\" --ignore-path /dev/null"
   },
   "devDependencies": {
-    "opendaw-std": "*",
-    "opendaw-box": "*",
-    "opendaw-box-forge": "*",
-    "opendaw-dsp": "*",
+    "lib-std": "*",
+    "lib-box": "*",
+    "lib-box-forge": "*",
+    "lib-dsp": "*",
     "studio-enums": "*",
     "studio-shared": "*"
   }

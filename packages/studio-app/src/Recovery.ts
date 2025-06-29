@@ -1,9 +1,9 @@
 import {StudioService} from "@/service/StudioService.ts"
 import {ProjectSession} from "./project/ProjectSession"
-import {Promises} from "opendaw-runtime"
+import {Promises} from "lib-runtime"
 import {OpfsAgent} from "@/service/agents.ts"
 import {Project} from "@/project/Project.ts"
-import {Option, Provider, UUID} from "opendaw-std"
+import {Option, Provider, UUID} from "lib-std"
 import {ProjectMeta} from "@/project/ProjectMeta.ts"
 
 export class Recovery {

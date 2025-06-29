@@ -13,11 +13,11 @@ import {
     Subscription,
     Terminable,
     Terminator
-} from "opendaw-std"
+} from "lib-std"
 import {showInfoDialog} from "@/ui/components/dialogs"
 import {MidiData} from "@/midi/MidiData"
-import {RouteLocation} from "opendaw-jsx"
-import {AnimationFrame, Browser, ConsoleCommands, Events} from "opendaw-dom"
+import {RouteLocation} from "lib-jsx"
+import {AnimationFrame, Browser, ConsoleCommands, Events} from "lib-dom"
 
 export class MidiDeviceAccess {
     static get(): Option<MidiDeviceAccess> {return this.#instance}

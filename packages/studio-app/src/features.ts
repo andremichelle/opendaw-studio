@@ -1,4 +1,4 @@
-import {tryCatch} from "opendaw-std"
+import {tryCatch} from "lib-std"
 
 const requireProperty = <T extends {}>(object: T, key: keyof T): void => {
     const {status, value} = tryCatch(() => object instanceof Function ? object.name : object.constructor.name)

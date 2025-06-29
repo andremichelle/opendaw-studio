@@ -1,7 +1,7 @@
 import {AudioUnitBoxAdapter} from "studio-shared"
 import {EngineContext} from "./EngineContext.ts"
 import {InstrumentDeviceProcessor} from "./processors.ts"
-import {asInstanceOf, int, Option, Terminable, Terminator} from "opendaw-std"
+import {asInstanceOf, int, Option, Terminable, Terminator} from "lib-std"
 import {InstrumentDeviceProcessorFactory} from "./DeviceProcessorFactory.ts"
 import {AudioBusProcessor} from "./AudioBusProcessor.ts"
 import {AudioBuffer} from "./AudioBuffer.ts"

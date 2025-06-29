@@ -1,6 +1,6 @@
-import {asDefined, Exec, Procedure, Terminable, Terminator} from "opendaw-std"
+import {asDefined, Exec, Procedure, Terminable, Terminator} from "lib-std"
 import {Scale} from "@/ui/canvas/scale"
-import {AnimationFrame, Html} from "opendaw-dom"
+import {AnimationFrame, Html} from "lib-dom"
 
 export class CanvasPainter implements Terminable {
     readonly #rendering: CanvasRenderer

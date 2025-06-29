@@ -1,6 +1,6 @@
 import css from "./PitchEditor.sass?inline"
-import {Lifecycle, Nullable, Option, panic, Selection, UUID} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Lifecycle, Nullable, Option, panic, Selection, UUID} from "lib-std"
+import {createElement} from "lib-jsx"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {PitchPositioner} from "./PitchPositioner.ts"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
@@ -25,11 +25,11 @@ import {installContextMenu} from "@/ui/timeline/editors/notes/pitch/PitchContext
 import {NoteEventBox} from "studio-boxes"
 import {NoteCreateModifier} from "@/ui/timeline/editors/notes/NoteCreateModifier.ts"
 import {CanvasPainter} from "@/ui/canvas/painter.ts"
-import {BoxGraph, Editing} from "opendaw-box"
+import {BoxGraph, Editing} from "lib-box"
 import {BoxAdapters} from "studio-shared"
 import {NoteEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"
 import {NoteSender} from "studio-shared"
-import {CssUtils, Dragging, Events, Html, Keyboard} from "opendaw-dom"
+import {CssUtils, Dragging, Events, Html, Keyboard} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "PitchEditor")
 

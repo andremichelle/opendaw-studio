@@ -1,10 +1,10 @@
 import {BlockFlag, ProcessInfo} from "./processing.ts"
-import {Event} from "opendaw-dsp"
+import {Event} from "lib-dsp"
 import {EngineContext} from "./EngineContext.ts"
-import {Arrays, Bits, int, Terminable} from "opendaw-std"
+import {Arrays, Bits, int, Terminable} from "lib-std"
 import {AbstractProcessor} from "./AbstractProcessor.ts"
 import {EventBuffer} from "./EventBuffer.ts"
-import {Fragmentor} from "opendaw-dsp"
+import {Fragmentor} from "lib-dsp"
 import {UpdateClockRate} from "studio-shared"
 
 export interface UpdateEvent extends Event {type: "update-event"}

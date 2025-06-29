@@ -10,17 +10,17 @@ import {
     tryCatch,
     unitValue,
     UUID
-} from "opendaw-std"
+} from "lib-std"
 import {Project} from "@/project/Project.ts"
 import {NoteEventBox, NoteEventCollectionBox, NoteRegionBox, TrackBox} from "studio-boxes"
 import {TrackType} from "studio-shared"
 import {AudioUnitBoxAdapter} from "studio-shared"
-import {PPQN, ppqn} from "opendaw-dsp"
+import {PPQN, ppqn} from "lib-dsp"
 import {showInfoDialog, showProcessDialog} from "@/ui/components/dialogs.tsx"
 import {ColorCodes} from "@/ui/mixer/ColorCodes.ts"
 import {ControlType} from "@/midi/ControlType"
-import {Promises, Wait} from "opendaw-runtime"
-import {Errors, Files} from "opendaw-dom"
+import {Promises, Wait} from "lib-runtime"
+import {Errors, Files} from "lib-dom"
 
 export namespace MidiImport {
     export const toTracks = async (project: Project, audioUnitBoxAdapter: AudioUnitBoxAdapter) => {

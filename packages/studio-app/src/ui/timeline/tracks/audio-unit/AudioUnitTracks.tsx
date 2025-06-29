@@ -1,11 +1,11 @@
 import css from "./AudioUnitTracks.sass?inline"
-import {Lifecycle} from "opendaw-std"
+import {Lifecycle} from "lib-std"
 import {AudioUnitBoxAdapter} from "studio-shared"
-import {createElement} from "opendaw-jsx"
-import {Vertex} from "opendaw-box"
+import {createElement} from "lib-jsx"
+import {Vertex} from "lib-box"
 import {Project} from "@/project/Project"
 import {AudioUnitType} from "studio-enums"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 import {Devices} from "studio-shared"
 
 const className = Html.adoptStyleSheet(css, "AudioUnitTracks")

@@ -14,14 +14,14 @@ import {
     TerminableOwner,
     Terminator,
     tryCatch
-} from "opendaw-std"
-import {createElement, DomElement} from "opendaw-jsx"
+} from "lib-std"
+import {createElement, DomElement} from "lib-jsx"
 import {IconLibrary} from "@/ui/IconLibrary.tsx"
 import {ErrorHandler} from "@/errors/ErrorHandler.ts"
 import {ValueTooltip} from "@/ui/surface/ValueTooltip.tsx"
 import {TextTooltip} from "./TextTooltip"
 import {FloatingTextInput} from "@/ui/components/FloatingTextInput.tsx"
-import {AnimationFrame, CssUtils, Events, Html, Keyboard} from "opendaw-dom"
+import {AnimationFrame, CssUtils, Events, Html, Keyboard} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "Surface")
 

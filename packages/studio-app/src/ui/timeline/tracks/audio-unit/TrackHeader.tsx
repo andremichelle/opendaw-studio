@@ -1,6 +1,6 @@
 import css from "./TrackHeader.sass?inline"
-import {Lifecycle} from "opendaw-std"
-import {createElement, Group, Inject, replaceChildren} from "opendaw-jsx"
+import {Lifecycle} from "lib-std"
+import {createElement, Group, Inject, replaceChildren} from "lib-jsx"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {Colors} from "@/ui/Colors.ts"
 import {MenuButton} from "@/ui/components/MenuButton.tsx"
@@ -13,7 +13,7 @@ import {installTrackHeaderMenu} from "@/ui/timeline/tracks/audio-unit/TrackHeade
 import {TrackType} from "studio-shared"
 import {IconSymbol} from "studio-shared"
 import {ColorCodes} from "@/ui/mixer/ColorCodes"
-import {Events, Html, Keyboard} from "opendaw-dom"
+import {Events, Html, Keyboard} from "lib-dom"
 import {Modifier} from "@/ui/Modifier"
 
 const className = Html.adoptStyleSheet(css, "TrackHeader")

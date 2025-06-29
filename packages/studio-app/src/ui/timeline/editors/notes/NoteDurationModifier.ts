@@ -1,13 +1,13 @@
-import {int, Notifier, Observer, Option, Selection, Terminable, unitValue} from "opendaw-std"
+import {int, Notifier, Observer, Option, Selection, Terminable, unitValue} from "lib-std"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
-import {Editing} from "opendaw-box"
+import {Editing} from "lib-box"
 import {Line, NoteModifyStrategy} from "./NoteModifyStrategies"
 import {NoteEventBoxAdapter} from "studio-shared"
-import {EventCollection, ppqn} from "opendaw-dsp"
+import {EventCollection, ppqn} from "lib-dsp"
 import {NoteModifier} from "@/ui/timeline/editors/notes/NoteModifier.ts"
 import {NoteEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"
 import {UINoteEvent} from "./UINoteEvent"
-import {Dragging} from "opendaw-dom"
+import {Dragging} from "lib-dom"
 
 class SelectedModifyStrategy implements NoteModifyStrategy {
     readonly #tool: NoteDurationModifier

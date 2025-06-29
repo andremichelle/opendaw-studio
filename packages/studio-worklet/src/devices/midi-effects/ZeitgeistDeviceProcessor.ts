@@ -1,5 +1,5 @@
-import {assert, clamp, identity, int, Objects, Option, Terminable, UUID} from "opendaw-std"
-import {Event, Groove, NoteEvent, ppqn} from "opendaw-dsp"
+import {assert, clamp, identity, int, Objects, Option, Terminable, UUID} from "lib-std"
+import {Event, Groove, NoteEvent, ppqn} from "lib-dsp"
 import {MidiEffectProcessor} from "../../processors.ts"
 import {AutomatableParameter} from "../../AutomatableParameter.ts"
 import {NoteEventSource, NoteLifecycleEvent} from "../../NoteEventSource.ts"

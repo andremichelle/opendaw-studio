@@ -1,3 +1,3 @@
-import {byte} from "opendaw-std"
+import {byte} from "lib-std"
 
 export type Channel = byte

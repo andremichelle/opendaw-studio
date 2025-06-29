@@ -1,4 +1,4 @@
-import {EventCollection, LoopableRegion, ppqn, PPQN, RegionCollection} from "opendaw-dsp"
+import {EventCollection, LoopableRegion, ppqn, PPQN, RegionCollection} from "lib-dsp"
 import {
     Arrays,
     int,
@@ -12,8 +12,8 @@ import {
     Terminator,
     unitValue,
     UUID
-} from "opendaw-std"
-import {Address, Field, Propagation, Update} from "opendaw-box"
+} from "lib-std"
+import {Address, Field, Propagation, Update} from "lib-box"
 import {Pointers} from "studio-enums"
 import {TrackBoxAdapter} from "../TrackBoxAdapter"
 import {LoopableRegionBoxAdapter, RegionBoxAdapter, RegionBoxAdapterVisitor} from "../RegionBoxAdapter"

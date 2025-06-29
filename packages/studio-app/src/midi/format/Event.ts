@@ -1,4 +1,4 @@
-import {int} from "opendaw-std"
+import {int} from "lib-std"
 
 export interface Event<TYPE> {
     readonly ticks: int

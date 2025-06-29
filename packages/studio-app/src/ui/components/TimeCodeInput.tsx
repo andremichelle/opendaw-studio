@@ -1,8 +1,8 @@
 import css from "./TimeCodeInput.sass?inline"
-import {checkIndex, int, isDefined, isInstanceOf, Lifecycle, MutableObservableValue} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
-import {ppqn, PPQN} from "opendaw-dsp"
-import {Events, Html} from "opendaw-dom"
+import {checkIndex, int, isDefined, isInstanceOf, Lifecycle, MutableObservableValue} from "lib-std"
+import {createElement} from "lib-jsx"
+import {ppqn, PPQN} from "lib-dsp"
+import {Events, Html} from "lib-dom"
 
 const defaultClassName = Html.adoptStyleSheet(css, "TimeCodeInput")
 

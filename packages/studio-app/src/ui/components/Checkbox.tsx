@@ -1,7 +1,7 @@
-import {Lifecycle, MutableObservableValue} from "opendaw-std"
-import {createElement, JsxValue} from "opendaw-jsx"
+import {Lifecycle, MutableObservableValue} from "lib-std"
+import {createElement, JsxValue} from "lib-jsx"
 import {Appearance, ButtonCheckboxRadio} from "@/ui/components/ButtonCheckboxRadio.tsx"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 type Construct = {
     lifecycle: Lifecycle

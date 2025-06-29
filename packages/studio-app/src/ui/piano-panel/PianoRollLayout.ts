@@ -1,5 +1,5 @@
-import {MidiKeys} from "opendaw-dsp"
-import {Arrays, asDefined, int, Lazy, Size} from "opendaw-std"
+import {MidiKeys} from "lib-dsp"
+import {Arrays, asDefined, int, Lazy, Size} from "lib-std"
 
 export type KeyProperties = { key: int, x: number }
 

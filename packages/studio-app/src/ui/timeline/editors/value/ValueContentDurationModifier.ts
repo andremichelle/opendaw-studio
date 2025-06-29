@@ -1,11 +1,11 @@
-import {int, Notifier, Observer, Option, Terminable, unitValue} from "opendaw-std"
+import {int, Notifier, Observer, Option, Terminable, unitValue} from "lib-std"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
-import {Editing} from "opendaw-box"
+import {Editing} from "lib-box"
 import {ValueEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"
-import {Interpolation, ppqn, ValueEvent} from "opendaw-dsp"
+import {Interpolation, ppqn, ValueEvent} from "lib-dsp"
 import {ValueModifier} from "./ValueModifier"
 import {UIValueEvent} from "@/ui/timeline/editors/value/UIValueEvent.ts"
-import {Dragging} from "opendaw-dom"
+import {Dragging} from "lib-dom"
 
 type Construct = Readonly<{
     element: Element

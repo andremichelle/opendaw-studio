@@ -1,5 +1,5 @@
 import css from "./BusySlot.sass?inline"
-import {Events, Html, Keyboard} from "opendaw-dom"
+import {Events, Html, Keyboard} from "lib-dom"
 import {
     asDefined,
     DefaultObservableValue,
@@ -9,8 +9,8 @@ import {
     ObservableValue,
     Option,
     Terminable
-} from "opendaw-std"
-import {createElement, DomElement} from "opendaw-jsx"
+} from "lib-std"
+import {createElement, DomElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {PlayfieldDeviceBoxAdapter} from "studio-shared"
 import {NoteSender, NoteSustainer} from "studio-shared"
@@ -21,7 +21,7 @@ import {Icon} from "@/ui/components/Icon"
 import {IconSymbol} from "studio-shared"
 import {Checkbox} from "@/ui/components/Checkbox"
 import {Colors} from "@/ui/Colors"
-import {Editing} from "opendaw-box"
+import {Editing} from "lib-box"
 import {ContextMenu} from "@/ui/ContextMenu"
 import {MenuItem} from "@/ui/model/menu-item"
 import {EditWrapper} from "@/ui/wrapper/EditWrapper.ts"

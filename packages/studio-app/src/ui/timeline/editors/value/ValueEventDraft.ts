@@ -1,5 +1,5 @@
-import {EventCollection, ppqn, ValueEvent} from "opendaw-dsp"
-import {int, Nullable} from "opendaw-std"
+import {EventCollection, ppqn, ValueEvent} from "lib-dsp"
+import {int, Nullable} from "lib-std"
 import {ValueModifyStrategy} from "@/ui/timeline/editors/value/ValueModifyStrategies.ts"
 import {ValueEventBoxAdapter} from "studio-shared"
 import {UIValueEvent} from "./UIValueEvent"

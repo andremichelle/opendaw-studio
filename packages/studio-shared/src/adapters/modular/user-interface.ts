@@ -1,5 +1,5 @@
 import {DeviceInterfaceKnobBox} from "studio-boxes"
-import {Address, Box, PointerTypes, PrimitiveField} from "opendaw-box"
+import {Address, Box, PointerTypes, PrimitiveField} from "lib-box"
 import {ModuleAdapter, Modules} from "./module"
 import {BoxAdapter} from "../../BoxAdapter"
 import {AutomatableParameterFieldAdapter} from "../../AutomatableParameterFieldAdapter"

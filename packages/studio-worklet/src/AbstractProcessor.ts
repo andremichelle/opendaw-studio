@@ -1,5 +1,5 @@
-import {Arrays, Option, panic, Terminable, TerminableOwner, Terminator} from "opendaw-std"
-import {PointerField, PrimitiveValues} from "opendaw-box"
+import {Arrays, Option, panic, Terminable, TerminableOwner, Terminator} from "lib-std"
+import {PointerField, PrimitiveValues} from "lib-box"
 import {AutomatableParameter} from "./AutomatableParameter.ts"
 import {Pointers} from "studio-enums"
 import {ProcessInfo, Processor} from "./processing.ts"

@@ -1,4 +1,4 @@
-import {Arrays, int, Option, Terminable, UUID} from "opendaw-std"
+import {Arrays, int, Option, Terminable, UUID} from "lib-std"
 import {AbstractProcessor} from "./AbstractProcessor.ts"
 import {DeviceProcessor, InstrumentDeviceProcessor} from "./processors.ts"
 import {AudioBusBoxAdapter} from "studio-shared"

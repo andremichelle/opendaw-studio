@@ -1,14 +1,14 @@
 import css from "./TimelineHeader.sass?inline"
-import {Lifecycle} from "opendaw-std"
+import {Lifecycle} from "lib-std"
 import {StudioService} from "@/service/StudioService.ts"
 import {SnapSelector} from "@/ui/timeline/SnapSelector.tsx"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {FlexSpacer} from "@/ui/components/FlexSpacer.tsx"
 import {Colors} from "@/ui/Colors.ts"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {Checkbox} from "@/ui/components/Checkbox.tsx"
 import {IconSymbol} from "studio-shared"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "TimelineHeader")
 

@@ -1,5 +1,5 @@
-import {Coordinates, SelectableLocator} from "opendaw-std"
-import {ppqn} from "opendaw-dsp"
+import {Coordinates, SelectableLocator} from "lib-std"
+import {ppqn} from "lib-dsp"
 
 import {BoxAdapter} from "studio-shared"
 

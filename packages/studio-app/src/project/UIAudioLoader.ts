@@ -1,13 +1,13 @@
-import {ByteArrayInput, Exec, int, Notifier, Observer, Option, Progress, Subscription, Terminable, UUID} from "opendaw-std"
+import {ByteArrayInput, Exec, int, Notifier, Observer, Option, Progress, Subscription, Terminable, UUID} from "lib-std"
 import {AudioData} from "studio-shared"
-import {Peaks} from "opendaw-fusion"
+import {Peaks} from "lib-fusion"
 import {UIAudioManager} from "@/project/UIAudioManager"
 import {OpfsAgent} from "@/service/agents"
 import {AudioLoader, AudioLoaderState} from "studio-shared"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 import {AudioStorage} from "@/audio/AudioStorage"
 import {AudioPeaks} from "@/audio/AudioPeaks"
-import {Promises} from "opendaw-runtime"
+import {Promises} from "lib-runtime"
 import JSZip from "jszip"
 
 export class UIAudioLoader implements AudioLoader {

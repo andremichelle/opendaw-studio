@@ -1,4 +1,4 @@
-import {Box, Field} from "opendaw-box"
+import {Box, Field} from "lib-box"
 import {
     ArpeggioDeviceBox,
     DelayDeviceBox,
@@ -14,7 +14,7 @@ import {
     StereoToolDeviceBox,
     ZeitgeistDeviceBox
 } from "studio-boxes"
-import {int, INVERSE_SQRT_2, UUID} from "opendaw-std"
+import {int, INVERSE_SQRT_2, UUID} from "lib-std"
 import {Project} from "@/project/Project.ts"
 import {IconSymbol} from "studio-shared"
 import {EffectPointerType} from "studio-shared"

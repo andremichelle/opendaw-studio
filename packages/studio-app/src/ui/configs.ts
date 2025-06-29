@@ -1,4 +1,4 @@
-import {ValueMapping} from "opendaw-std"
+import {ValueMapping} from "lib-std"
 
 export const SnapCenter = {snap: {threshold: 0.5, snapLength: 12}}
 export const SnapCommonDecibel = {

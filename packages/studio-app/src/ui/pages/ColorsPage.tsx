@@ -1,4 +1,4 @@
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 
 export const ColorsPage = () => {
     const cssVars: Record<string, string> = {}

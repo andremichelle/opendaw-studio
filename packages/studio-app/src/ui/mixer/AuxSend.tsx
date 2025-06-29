@@ -1,6 +1,6 @@
 import css from "./AuxSend.sass?inline"
-import {DefaultObservableValue, Lifecycle} from "opendaw-std"
-import {createElement, DomElement, Inject} from "opendaw-jsx"
+import {DefaultObservableValue, Lifecycle} from "lib-std"
+import {createElement, DomElement, Inject} from "lib-jsx"
 import {AuxSendBoxAdapter} from "studio-shared"
 import {Knob, TinyDesign} from "@/ui/components/Knob.tsx"
 import {RelativeUnitValueDragging} from "@/ui/wrapper/RelativeUnitValueDragging.tsx"
@@ -9,9 +9,9 @@ import {MenuButton} from "@/ui/components/MenuButton.tsx"
 import {IconCartridge} from "@/ui/components/Icon.tsx"
 import {Colors} from "../Colors.ts"
 import {SnapCenter} from "@/ui/configs.ts"
-import {Editing} from "opendaw-box"
+import {Editing} from "lib-box"
 import {IconSymbol} from "studio-shared"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "AuxSend")
 

@@ -1,5 +1,5 @@
-import {Dragging, PointerCaptureTarget} from "opendaw-dom"
-import {Func, Option, safeExecute, Terminable, unitValue, ValueGuide} from "opendaw-std"
+import {Dragging, PointerCaptureTarget} from "lib-dom"
+import {Func, Option, safeExecute, Terminable, unitValue, ValueGuide} from "lib-std"
 
 export namespace ValueDragging {
     export interface Process {

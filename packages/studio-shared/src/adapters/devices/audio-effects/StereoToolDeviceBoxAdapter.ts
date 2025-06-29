@@ -1,5 +1,5 @@
-import {StringMapping, UUID, ValueMapping} from "opendaw-std"
-import {Address, BooleanField, Int32Field, PointerField, StringField} from "opendaw-box"
+import {StringMapping, UUID, ValueMapping} from "lib-std"
+import {Address, BooleanField, Int32Field, PointerField, StringField} from "lib-box"
 import {StereoToolDeviceBox} from "studio-boxes"
 import {Pointers} from "studio-enums"
 import {AudioEffectDeviceBoxAdapter, DeviceHost, Devices} from "../../../devices"

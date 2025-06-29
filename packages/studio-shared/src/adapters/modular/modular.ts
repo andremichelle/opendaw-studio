@@ -1,6 +1,6 @@
 import {ModularBox} from "studio-boxes"
-import {Address, Field, PointerField, StringField} from "opendaw-box"
-import {asDefined, ifDefined, Listeners, SortedSet, Subscription, Terminator, UUID} from "opendaw-std"
+import {Address, Field, PointerField, StringField} from "lib-box"
+import {asDefined, ifDefined, Listeners, SortedSet, Subscription, Terminator, UUID} from "lib-std"
 import {ModuleConnectionAdapter} from "./connection"
 import {Pointers} from "studio-enums"
 import {ModuleAdapter, Modules} from "./module"

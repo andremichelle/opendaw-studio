@@ -1,6 +1,6 @@
 import {EngineContext} from "./EngineContext.ts"
 import {TrackType} from "studio-shared"
-import {EventSpanRetainer, LoopableRegion, NoteEvent, ppqn} from "opendaw-dsp"
+import {EventSpanRetainer, LoopableRegion, NoteEvent, ppqn} from "lib-dsp"
 import {
     Bits,
     byte,
@@ -15,7 +15,7 @@ import {
     Terminator,
     unitValue,
     UUID
-} from "opendaw-std"
+} from "lib-std"
 import {NoteClipBoxAdapter} from "studio-shared"
 import {
     NoteEventCollectionBoxAdapter

@@ -1,5 +1,5 @@
-import {Event, PPQN} from "opendaw-dsp"
-import {assert, int, Nullish, panic} from "opendaw-std"
+import {Event, PPQN} from "lib-dsp"
+import {assert, int, Nullish, panic} from "lib-std"
 import {Block, ProcessInfo} from "./processing.ts"
 import {AbstractProcessor} from "./AbstractProcessor.ts"
 import {UpdateEvent} from "./UpdateClock.ts"

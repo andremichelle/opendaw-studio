@@ -1,13 +1,13 @@
 import css from "./AudioBusEditor.sass?inline"
-import {Lifecycle} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Lifecycle} from "lib-std"
+import {createElement} from "lib-jsx"
 import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
 import {Project} from "@/project/Project.ts"
 import {AudioBusBoxAdapter} from "studio-shared"
 import {MenuItems} from "@/ui/devices/menu-items.ts"
 import {IconSymbol} from "studio-shared"
 import {DevicePeakMeter} from "@/ui/devices/panel/DevicePeakMeter.tsx"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "Editor")
 

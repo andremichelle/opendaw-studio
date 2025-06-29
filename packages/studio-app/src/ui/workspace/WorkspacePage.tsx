@@ -1,13 +1,13 @@
 import css from "./WorkspacePage.sass?inline"
-import {isDefined, Iterables, Lifecycle, Nullable, Terminator, Unhandled} from "opendaw-std"
-import {appendChildren, createElement, PageContext, PageFactory} from "opendaw-jsx"
+import {isDefined, Iterables, Lifecycle, Nullable, Terminator, Unhandled} from "lib-std"
+import {appendChildren, createElement, PageContext, PageFactory} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {Workspace} from "@/ui/workspace/Workspace.ts"
 import {PanelPlaceholder} from "@/ui/workspace/PanelPlaceholder.tsx"
 import {PanelResizer} from "@/ui/workspace/PanelResizer.tsx"
 import {PanelContents} from "@/ui/workspace/PanelContents.tsx"
 import {ContentGlue} from "@/ui/workspace/ContentGlue.ts"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "WorkspacePage")
 

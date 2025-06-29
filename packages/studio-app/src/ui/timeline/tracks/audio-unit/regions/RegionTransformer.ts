@@ -3,7 +3,7 @@ import {NoteRegionBoxAdapter} from "studio-shared"
 import {AudioRegionBoxAdapter} from "studio-shared"
 import {ValueRegionBoxAdapter} from "studio-shared"
 import {AudioClipBox, NoteClipBox, ValueClipBox} from "studio-boxes"
-import {asDefined, UUID} from "opendaw-std"
+import {asDefined, UUID} from "lib-std"
 import {AnyClipBox} from "studio-shared"
 
 export namespace RegionTransformer {

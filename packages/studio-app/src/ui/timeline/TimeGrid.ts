@@ -1,5 +1,5 @@
-import {PPQN} from "opendaw-dsp"
-import {int, quantizeFloor} from "opendaw-std"
+import {PPQN} from "lib-dsp"
+import {int, quantizeFloor} from "lib-std"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 
 export namespace TimeGrid {

@@ -1,8 +1,8 @@
 import {AudioData} from "studio-shared"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 import {OpfsAgent} from "@/service/agents"
-import {Arrays, ByteArrayInput, EmptyExec, UUID} from "opendaw-std"
-import {Peaks} from "opendaw-fusion"
+import {Arrays, ByteArrayInput, EmptyExec, UUID} from "lib-std"
+import {Peaks} from "lib-fusion"
 import {AudioSample} from "@/audio/AudioSample"
 import {encodeWavFloat} from "@/wav"
 

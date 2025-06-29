@@ -1,4 +1,4 @@
-import {Terminable} from "opendaw-std"
+import {Terminable} from "lib-std"
 
 export interface FooterLabel extends Terminable {
     setTitle(value: string): void

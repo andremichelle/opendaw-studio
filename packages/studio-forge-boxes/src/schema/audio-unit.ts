@@ -1,6 +1,6 @@
 import {Pointers, AudioUnitType} from "studio-enums"
 import {DefaultParameterPointerRules} from "./defaults"
-import {BoxSchema} from "box-forge"
+import {BoxSchema} from "lib-box-forge"
 
 export const AudioUnitBox: BoxSchema<Pointers> = {
     type: "box",

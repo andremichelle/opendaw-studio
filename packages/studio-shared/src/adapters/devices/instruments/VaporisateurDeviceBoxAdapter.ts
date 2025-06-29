@@ -1,6 +1,6 @@
-import {StringMapping, UUID, ValueMapping} from "opendaw-std"
+import {StringMapping, UUID, ValueMapping} from "lib-std"
 import {VaporisateurDeviceBox} from "studio-boxes"
-import {Address, BooleanField, FieldKeys, StringField} from "opendaw-box"
+import {Address, BooleanField, FieldKeys, StringField} from "lib-box"
 import {DeviceHost, Devices, InstrumentDeviceBoxAdapter} from "../../../devices"
 import {BoxAdaptersContext} from "../../../BoxAdaptersContext"
 import {ParameterAdapterSet} from "../../../ParameterAdapterSet"

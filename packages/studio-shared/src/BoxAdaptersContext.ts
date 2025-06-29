@@ -1,12 +1,12 @@
 import {AudioLoaderManager} from "./AudioLoader"
 import {RootBoxAdapter} from "./RootBoxAdapter"
 import {TimelineBoxAdapter} from "./adapters/timeline/TimelineBoxAdapter"
-import {LiveStreamBroadcaster, LiveStreamReceiver} from "opendaw-fusion"
+import {LiveStreamBroadcaster, LiveStreamReceiver} from "lib-fusion"
 import {ClipSequencing} from "./ClipSequencing"
 import {ParameterFieldAdapters} from "./ParameterFieldAdapters"
 import {BoxAdapters} from "./BoxAdapters"
-import {Terminable} from "opendaw-std"
-import {BoxGraph} from "opendaw-box"
+import {Terminable} from "lib-std"
+import {BoxGraph} from "lib-box"
 
 export interface BoxAdaptersContext extends Terminable {
     get boxGraph(): BoxGraph

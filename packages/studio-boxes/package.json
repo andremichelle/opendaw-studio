@@ -16,7 +16,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "opendaw-std": "*",
-    "opendaw-box": "*"
+    "lib-std": "*",
+    "lib-box": "*"
   }
 } 

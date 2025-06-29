@@ -1,7 +1,7 @@
 import {PianoMode} from "studio-boxes"
-import {float, int, Observer, StringMapping, Subscription, ValueMapping} from "opendaw-std"
+import {float, int, Observer, StringMapping, Subscription, ValueMapping} from "lib-std"
 import {FieldAdapter} from "./FieldAdapter"
-import {Propagation} from "opendaw-box"
+import {Propagation} from "lib-box"
 
 export class PianoModeAdapter {
     readonly #object: PianoMode

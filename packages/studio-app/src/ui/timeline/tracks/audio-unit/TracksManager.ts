@@ -13,7 +13,7 @@ import {
     Terminable,
     Terminator,
     UUID
-} from "opendaw-std"
+} from "lib-std"
 import {AudioUnitBoxAdapter} from "studio-shared"
 import {IndexComparator} from "studio-shared"
 import {RegionModifier} from "@/ui/timeline/tracks/audio-unit/regions/RegionModifier.ts"
@@ -21,7 +21,7 @@ import {TrackBoxAdapter} from "studio-shared"
 import {StudioService} from "@/service/StudioService.ts"
 import {AudioUnitTracks} from "@/ui/timeline/tracks/audio-unit/AudioUnitTracks.tsx"
 import {ClipModifier} from "./clips/ClipModifier"
-import {Dragging} from "opendaw-dom"
+import {Dragging} from "lib-dom"
 import {ExtraSpace} from "@/ui/timeline/tracks/audio-unit/Constants"
 
 export interface TrackFactory {

@@ -1,4 +1,4 @@
-import {int} from "opendaw-std"
+import {int} from "lib-std"
 import {MidiTrack} from "./MidiTrack"
 
 export class MidiFileFormat {

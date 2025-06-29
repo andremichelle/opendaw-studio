@@ -1,6 +1,6 @@
 import {Pointers} from "studio-enums"
-import {Address, Field} from "opendaw-box"
-import {Arrays} from "opendaw-std"
+import {Address, Field} from "lib-box"
+import {Arrays} from "lib-std"
 import {BoxAdapters} from "../../BoxAdapters"
 import {ModuleConnectionAdapter} from "./connection"
 

@@ -1,10 +1,10 @@
 import css from "./SampleUploadPage.sass?inline"
-import {createElement, PageContext, PageFactory} from "opendaw-jsx"
+import {createElement, PageContext, PageFactory} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
-import {Files, Html} from "opendaw-dom"
+import {Files, Html} from "lib-dom"
 import {showInfoDialog} from "@/ui/components/dialogs.tsx"
 import {SampleApi} from "@/service/SampleApi.ts"
-import {estimateBpm} from "opendaw-dsp"
+import {estimateBpm} from "lib-dsp"
 import {encodeWavFloat} from "@/wav"
 import {FilePickerAcceptTypes} from "@/ui/FilePickerAcceptTypes.ts"
 

@@ -9,7 +9,7 @@ import {
     Terminator,
     unitValue,
     ValueAxis
-} from "opendaw-std"
+} from "lib-std"
 
 export class TimelineRange implements Terminable {
     readonly #terminator: Terminator

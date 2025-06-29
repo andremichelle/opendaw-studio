@@ -1,9 +1,9 @@
-import {DefaultObservableValue, isDefined, Lifecycle, Nullable, Terminator} from "opendaw-std"
-import {createElement, Group} from "opendaw-jsx"
+import {DefaultObservableValue, isDefined, Lifecycle, Nullable, Terminator} from "lib-std"
+import {createElement, Group} from "lib-jsx"
 import {AnyClipBoxAdapter} from "studio-shared"
 import {Clip} from "@/ui/timeline/tracks/audio-unit/clips/Clip.tsx"
 import {Project} from "@/project/Project.ts"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 type Construct = {
     lifecycle: Lifecycle

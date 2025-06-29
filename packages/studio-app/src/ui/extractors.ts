@@ -8,7 +8,7 @@ import {
     TapeDeviceBox,
     TrackBox
 } from "studio-boxes"
-import {Box, PointerField, PointerHub, PrimitiveField, PrimitiveValues, StringField} from "opendaw-box"
+import {Box, PointerField, PointerHub, PrimitiveField, PrimitiveValues, StringField} from "lib-box"
 import {
     Arrays,
     DefaultObservableValue,
@@ -19,7 +19,7 @@ import {
     ObservableValue,
     Option,
     Terminator
-} from "opendaw-std"
+} from "lib-std"
 import {Pointers} from "studio-enums"
 
 // TODO Is this completely obsolete?

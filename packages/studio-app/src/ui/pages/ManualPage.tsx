@@ -1,12 +1,12 @@
 import css from "./ManualPage.sass?inline"
-import {Await, createElement, LocalLink, PageContext, PageFactory} from "opendaw-jsx"
+import {Await, createElement, LocalLink, PageContext, PageFactory} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
-import {Nullable} from "opendaw-std"
+import {Nullable} from "lib-std"
 import {ThreeDots} from "@/ui/spinner/ThreeDots"
 import {BackButton} from "@/ui/pages/BackButton"
 import {Markdown} from "@/ui/Markdown"
 import {Manuals} from "@/ui/pages/Manuals"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "ManualPage")
 

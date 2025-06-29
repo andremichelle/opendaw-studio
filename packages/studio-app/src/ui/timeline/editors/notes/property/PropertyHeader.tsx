@@ -1,10 +1,10 @@
 import css from "./PropertyHeader.sass?inline"
-import {Lifecycle, MutableObservableValue} from "opendaw-std"
-import {createElement, Inject} from "opendaw-jsx"
+import {Lifecycle, MutableObservableValue} from "lib-std"
+import {createElement, Inject} from "lib-jsx"
 import {DropDown} from "@/ui/composite/DropDown.tsx"
 import {NotePropertyAccessors, PropertyAccessor} from "@/ui/timeline/editors/notes/property/PropertyAccessor.ts"
 import {FlexSpacer} from "@/ui/components/FlexSpacer.tsx"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "PropertyHeader")
 

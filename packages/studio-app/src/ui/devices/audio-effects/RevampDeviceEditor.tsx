@@ -3,8 +3,8 @@ import {
     Parameters,
     RevampDeviceBoxAdapter
 } from "studio-shared"
-import {asDefined, int, Lifecycle} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {asDefined, int, Lifecycle} from "lib-std"
+import {createElement} from "lib-jsx"
 import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
 import {Column} from "@/ui/devices/Column.tsx"
 import {Colors} from "@/ui/Colors.ts"
@@ -30,7 +30,7 @@ import {LinearScale} from "@/ui/canvas/scale.ts"
 import {DevicePeakMeter} from "@/ui/devices/panel/DevicePeakMeter.tsx"
 import {ControlIndicator} from "@/ui/components/ControlIndicator"
 import {attachParameterContextMenu} from "@/ui/menu/automation"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 import {Effects} from "@/service/Effects"
 import {DeviceHost} from "studio-shared"
 

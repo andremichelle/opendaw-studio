@@ -1,5 +1,5 @@
-import {assert, Func, int, Listeners, SortedSet, Subscription, Terminable, UUID} from "opendaw-std"
-import {Box, PointerField, PointerHub} from "opendaw-box"
+import {assert, Func, int, Listeners, SortedSet, Subscription, Terminable, UUID} from "lib-std"
+import {Box, PointerField, PointerHub} from "lib-box"
 import {Pointers} from "studio-enums"
 import {BoxAdapter} from "./BoxAdapter"
 

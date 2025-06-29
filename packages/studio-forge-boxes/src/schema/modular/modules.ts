@@ -1,4 +1,4 @@
-import {BoxSchema, FieldName, FieldSchema} from "box-forge"
+import {BoxSchema, FieldName, FieldSchema} from "lib-box-forge"
 import {Pointers} from "studio-enums"
 
 export const createVoltageConnector = (name: string): FieldSchema<Pointers.VoltageConnection> & FieldName => ({

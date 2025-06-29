@@ -1,8 +1,8 @@
 import css from "./Icon.sass?inline"
-import {Lifecycle, ObservableValue} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Lifecycle, ObservableValue} from "lib-std"
+import {createElement} from "lib-jsx"
 import {IconSymbol} from "studio-shared"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const defaultClassName = Html.adoptStyleSheet(css, "Icon")
 

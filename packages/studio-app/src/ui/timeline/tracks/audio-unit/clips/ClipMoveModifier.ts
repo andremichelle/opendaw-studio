@@ -1,12 +1,12 @@
 import {ClipModifier} from "@/ui/timeline/tracks/audio-unit/clips/ClipModifier.ts"
-import {Editing} from "opendaw-box"
-import {Arrays, asDefined, clamp, int, Option, panic, Selection, ValueAxis} from "opendaw-std"
+import {Editing} from "lib-box"
+import {Arrays, asDefined, clamp, int, Option, panic, Selection, ValueAxis} from "lib-std"
 import {AnyClipBoxAdapter} from "studio-shared"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"
 import {AnyClipBox} from "studio-shared"
 import {ClipModifyStrategy} from "@/ui/timeline/tracks/audio-unit/clips/ClipModifyStrategy.ts"
 import {showInfoDialog} from "@/ui/components/dialogs"
-import {Dragging} from "opendaw-dom"
+import {Dragging} from "lib-dom"
 
 class UnselectedModifyStrategy implements ClipModifyStrategy {
     readonly #tool: ClipMoveModifier

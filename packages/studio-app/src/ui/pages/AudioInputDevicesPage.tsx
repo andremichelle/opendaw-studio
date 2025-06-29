@@ -1,16 +1,16 @@
 import css from "./AudioInputDevicesPage.sass?inline"
-import {Await, createElement, Frag, PageContext, PageFactory} from "opendaw-jsx"
+import {Await, createElement, Frag, PageContext, PageFactory} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 import {AudioDevices} from "@/audio/AudioDevices"
 import {StreamPeakMeter} from "@/ui/pages/StreamPeakMeter"
 import {PeakMeterWorket} from "@/audio-engine/PeakMeterWorket"
-import {gainToDb} from "opendaw-dsp"
+import {gainToDb} from "lib-dsp"
 import {RadioGroup} from "../components/RadioGroup"
 import {Icon} from "@/ui/components/Icon"
 import {IconSymbol} from "studio-shared"
-import {DefaultObservableValue, Terminable, Terminator} from "opendaw-std"
-import {Promises} from "opendaw-runtime"
+import {DefaultObservableValue, Terminable, Terminator} from "lib-std"
+import {Promises} from "lib-runtime"
 
 const className = Html.adoptStyleSheet(css, "AudioInputDevicesPage")
 

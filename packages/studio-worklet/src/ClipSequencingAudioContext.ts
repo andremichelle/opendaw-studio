@@ -1,8 +1,8 @@
 import {AnyClipBoxAdapter} from "studio-shared"
-import {Arrays, identity, Option, quantizeFloor, SortedSet, UUID} from "opendaw-std"
-import {ppqn, PPQN} from "opendaw-dsp"
+import {Arrays, identity, Option, quantizeFloor, SortedSet, UUID} from "lib-std"
+import {ppqn, PPQN} from "lib-dsp"
 import {TrackBoxAdapter} from "studio-shared"
-import {BoxGraph, Update} from "opendaw-box"
+import {BoxGraph, Update} from "lib-box"
 import {ClipSequencing, Section} from "studio-shared"
 import {ClipSequencingUpdates} from "studio-shared"
 

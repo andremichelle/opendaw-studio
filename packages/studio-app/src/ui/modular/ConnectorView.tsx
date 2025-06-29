@@ -1,14 +1,14 @@
 import css from "./ConnectorView.sass?inline"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {ModuleConnectorAdapter} from "studio-shared"
-import {Lifecycle, Point, Rect, Terminator} from "opendaw-std"
+import {Lifecycle, Point, Rect, Terminator} from "lib-std"
 import {ConnectorViewAdapter, ModularEnvironment} from "@/ui/modular/ModularEnvironment.ts"
 import {ModuleAdapter} from "studio-shared"
 import {WiringFlyout} from "@/ui/modular/WiringFlyout.tsx"
 import {ContextMenu} from "@/ui/ContextMenu.ts"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {Surface} from "../surface/Surface.tsx"
-import {Events, Html} from "opendaw-dom"
+import {Events, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "Connector")
 

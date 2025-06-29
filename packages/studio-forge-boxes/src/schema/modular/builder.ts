@@ -1,6 +1,6 @@
-import {Objects} from "opendaw-std"
+import {Objects} from "lib-std"
 import {Pointers} from "studio-enums"
-import {BoxSchema, FieldRecord, mergeFields, reserveMany} from "box-forge"
+import {BoxSchema, FieldRecord, mergeFields, reserveMany} from "lib-box-forge"
 
 export const ModuleAttributes = {
     1: {

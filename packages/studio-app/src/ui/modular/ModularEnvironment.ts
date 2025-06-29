@@ -10,18 +10,18 @@ import {
     Terminable,
     Terminator,
     UUID
-} from "opendaw-std"
+} from "lib-std"
 import {Project} from "@/project/Project.ts"
 import {ModularAdapter} from "studio-shared"
 import {ModuleAdapter, Modules} from "studio-shared"
-import {Address, Vertex} from "opendaw-box"
+import {Address, Vertex} from "lib-box"
 import {Direction, ModuleConnectorAdapter} from "studio-shared"
 import {Pointers} from "studio-enums"
 import {ModuleConnectionBox} from "studio-boxes"
 import {ModuleConnectionAdapter} from "studio-shared"
 import {Camera} from "@/ui/modular/Camera.ts"
 import {Surface} from "@/ui/surface/Surface.tsx"
-import {Events} from "opendaw-dom"
+import {Events} from "lib-dom"
 
 export type ModuleViewAdapter = {
     moduleView: Element

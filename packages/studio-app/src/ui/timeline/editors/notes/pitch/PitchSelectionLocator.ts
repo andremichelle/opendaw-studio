@@ -2,7 +2,7 @@ import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {TimelineCoordinates, TimelineSelectableLocator} from "@/ui/timeline/TimelineSelectableLocator.ts"
 import {NoteEventBoxAdapter} from "studio-shared"
-import {Intervals, Iterables, ValueAxis} from "opendaw-std"
+import {Intervals, Iterables, ValueAxis} from "lib-std"
 import {PitchCaptureTarget} from "@/ui/timeline/editors/notes/pitch/PitchEventCapturing.ts"
 
 import {NoteEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"

@@ -1,10 +1,10 @@
 import {
     NoteEventCollectionBoxAdapter
 } from "studio-shared"
-import {ppqn} from "opendaw-dsp"
-import {mod, Observer, Option, Subscription} from "opendaw-std"
+import {ppqn} from "lib-dsp"
+import {mod, Observer, Option, Subscription} from "lib-std"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
-import {Propagation} from "opendaw-box"
+import {Propagation} from "lib-box"
 import {
     AudioEventOwnerReader,
     EventOwnerReader,

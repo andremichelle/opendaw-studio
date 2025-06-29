@@ -1,8 +1,8 @@
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {Dialog, DialogHandler} from "@/ui/components/Dialog"
 import {IconSymbol} from "studio-shared"
 import {Surface} from "@/ui/surface/Surface"
-import {Exec} from "opendaw-std"
+import {Exec} from "lib-std"
 
 export namespace MidiDialogs {
     export const showInfoDialog = (cancel: Exec): DialogHandler => {

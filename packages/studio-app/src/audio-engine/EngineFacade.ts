@@ -11,8 +11,8 @@ import {
     Terminator,
     unitValue,
     UUID
-} from "opendaw-std"
-import {ppqn} from "opendaw-dsp"
+} from "lib-std"
+import {ppqn} from "lib-dsp"
 import {EngineWorklet} from "@/audio-engine/EngineWorklet.ts"
 import {Engine} from "@/audio-engine/Engine.ts"
 import {ClipNotification} from "studio-shared"

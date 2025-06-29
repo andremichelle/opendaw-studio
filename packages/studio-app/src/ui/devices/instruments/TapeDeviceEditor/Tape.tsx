@@ -1,10 +1,10 @@
-import {Arrays, Circle, clamp, Geom, isDefined, Lifecycle, ObservableValue, ValueMapping} from "opendaw-std"
-import {createElement, Frag} from "opendaw-jsx"
+import {Arrays, Circle, clamp, Geom, isDefined, Lifecycle, ObservableValue, ValueMapping} from "lib-std"
+import {createElement, Frag} from "lib-jsx"
 import {Colors} from "@/ui/Colors.ts"
 import {Project} from "@/project/Project.ts"
-import {PPQN} from "opendaw-dsp"
+import {PPQN} from "lib-dsp"
 import {AudioUnitTracks} from "studio-shared"
-import {deferNextFrame} from "opendaw-dom"
+import {deferNextFrame} from "lib-dom"
 
 const tapeVelocity = 13.0 / PPQN.Bar // TapeDeviceEditor speed 4.76 cm/s converted into svg coordinates
 const rEmpty = 15

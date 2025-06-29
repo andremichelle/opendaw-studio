@@ -1,12 +1,12 @@
 import css from "./WiringFlyout.sass?inline"
-import {Point, Terminator} from "opendaw-std"
+import {Point, Terminator} from "lib-std"
 import {Icon} from "@/ui/components/Icon.tsx"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {ModuleConnectorAdapter} from "studio-shared"
 import {ModuleConnectionAdapter} from "studio-shared"
 import {ModularEnvironment} from "@/ui/modular/ModularEnvironment.ts"
 import {IconSymbol} from "studio-shared"
-import {Events, Html} from "opendaw-dom"
+import {Events, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "WiringFlyout")
 

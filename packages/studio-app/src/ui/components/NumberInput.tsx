@@ -1,7 +1,7 @@
 import css from "./NumberInput.sass?inline"
-import {Events, Html} from "opendaw-dom"
-import {int, isDefined, isInstanceOf, Lifecycle, MutableObservableValue, StringMapping} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Events, Html} from "lib-dom"
+import {int, isDefined, isInstanceOf, Lifecycle, MutableObservableValue, StringMapping} from "lib-std"
+import {createElement} from "lib-jsx"
 
 const defaultClassName = Html.adoptStyleSheet(css, "NumberInput")
 

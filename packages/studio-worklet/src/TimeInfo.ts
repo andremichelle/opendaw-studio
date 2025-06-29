@@ -1,4 +1,4 @@
-import {ppqn} from "opendaw-dsp"
+import {ppqn} from "lib-dsp"
 
 export class TimeInfo {
     #position: number = 0.0

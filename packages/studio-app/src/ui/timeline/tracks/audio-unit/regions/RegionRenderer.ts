@@ -1,5 +1,5 @@
-import {int, Option, quantizeFloor, unitValue} from "opendaw-std"
-import {LoopableRegion, PPQN, ValueEvent} from "opendaw-dsp"
+import {int, Option, quantizeFloor, unitValue} from "lib-std"
+import {LoopableRegion, PPQN, ValueEvent} from "lib-dsp"
 import {AudioRegionBoxAdapter} from "studio-shared"
 import {NoteRegionBoxAdapter} from "studio-shared"
 import {
@@ -13,7 +13,7 @@ import {RegionBound, RegionColors} from "@/ui/timeline/renderer/env.ts"
 import {renderAudio} from "@/ui/timeline/renderer/audio.ts"
 import {renderValueStream} from "@/ui/timeline/renderer/value.ts"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
-import {Context2d} from "opendaw-dom"
+import {Context2d} from "lib-dom"
 
 export const renderRegions = (context: CanvasRenderingContext2D,
                               tracks: TracksManager,

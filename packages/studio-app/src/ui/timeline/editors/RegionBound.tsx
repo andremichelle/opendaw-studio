@@ -1,14 +1,14 @@
 import css from "./RegionBound.sass?inline"
-import {Lifecycle, Option, Terminable, Terminator} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Lifecycle, Option, Terminable, Terminator} from "lib-std"
+import {createElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {CanvasPainter} from "@/ui/canvas/painter.ts"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
-import {LoopableRegion} from "opendaw-dsp"
+import {LoopableRegion} from "lib-dsp"
 import {AnyRegionBoxAdapter, RegionAdapters, UnionBoxTypes} from "studio-shared"
 import {createRegionCapturing} from "@/ui/timeline/editors/RegionCapturingTarget.ts"
 import {installCursor} from "@/ui/hooks/cursor.ts"
-import {Context2d, Html} from "opendaw-dom"
+import {Context2d, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "RegionBound")
 

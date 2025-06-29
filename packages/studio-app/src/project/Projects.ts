@@ -1,6 +1,6 @@
 import {Project} from "./Project"
 import {OpfsAgent} from "@/service/agents"
-import {asDefined, EmptyExec, isDefined, MutableObservableValue, Option, tryCatch, unitValue, UUID} from "opendaw-std"
+import {asDefined, EmptyExec, isDefined, MutableObservableValue, Option, tryCatch, unitValue, UUID} from "lib-std"
 import {StudioService} from "@/service/StudioService"
 import {ProjectMeta} from "@/project/ProjectMeta"
 import {AudioFileBox} from "studio-boxes"

@@ -11,10 +11,10 @@ import {
     Terminator,
     unitValue,
     ValueMapping
-} from "opendaw-std"
-import {Address, PrimitiveField, PrimitiveType, PrimitiveValues} from "opendaw-box"
+} from "lib-std"
+import {Address, PrimitiveField, PrimitiveType, PrimitiveValues} from "lib-box"
 import {TrackBoxAdapter} from "./adapters/timeline/TrackBoxAdapter"
-import {Browser} from "opendaw-dom"
+import {Browser} from "lib-dom"
 
 export class FieldAdapter<T extends PrimitiveValues = any> implements MutableObservableValue<T>, Terminable {
     readonly #field: PrimitiveField<T>

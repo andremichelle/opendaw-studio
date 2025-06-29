@@ -1,7 +1,7 @@
-import {Events, Html} from "opendaw-dom"
+import {Events, Html} from "lib-dom"
 import css from "./TextInput.sass?inline"
-import {int, isDefined, isInstanceOf, Lifecycle, MutableObservableValue} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {int, isDefined, isInstanceOf, Lifecycle, MutableObservableValue} from "lib-std"
+import {createElement} from "lib-jsx"
 
 const defaultClassName = Html.adoptStyleSheet(css, "TextInput")
 

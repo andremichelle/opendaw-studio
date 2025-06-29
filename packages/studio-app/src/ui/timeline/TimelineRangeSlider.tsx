@@ -1,9 +1,9 @@
 import css from "./TimelineRangeSlider.sass?inline"
-import {int, Lifecycle, Option, Terminator, unitValue} from "opendaw-std"
-import {createElement, Frag} from "opendaw-jsx"
+import {int, Lifecycle, Option, Terminator, unitValue} from "lib-std"
+import {createElement, Frag} from "lib-jsx"
 import {ValueDragging} from "@/ui/hooks/dragging.ts"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
-import {Events, Html} from "opendaw-dom"
+import {Events, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "TimelineRangeSlider")
 

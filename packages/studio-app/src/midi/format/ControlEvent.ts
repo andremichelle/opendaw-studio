@@ -1,4 +1,4 @@
-import {byte, Comparator, int, safeExecute} from "opendaw-std"
+import {byte, Comparator, int, safeExecute} from "lib-std"
 import {Event} from "@/midi/format/Event"
 import {ControlType} from "@/midi/ControlType"
 import {ControlEventVisitor} from "@/midi/format/ControlEventVisitor"

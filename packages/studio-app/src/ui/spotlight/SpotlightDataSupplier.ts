@@ -1,4 +1,4 @@
-import {Arrays, assert, Exec} from "opendaw-std"
+import {Arrays, assert, Exec} from "lib-std"
 
 import {IconSymbol} from "studio-shared"
 

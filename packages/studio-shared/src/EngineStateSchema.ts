@@ -1,4 +1,4 @@
-import {Schema} from "opendaw-std"
+import {Schema} from "lib-std"
 
 export const EngineStateSchema = Schema.createBuilder({
     position: Schema.float,

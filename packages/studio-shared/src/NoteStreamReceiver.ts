@@ -1,6 +1,6 @@
-import {LiveStreamReceiver} from "opendaw-fusion"
-import {Address} from "opendaw-box"
-import {Bits, byte, Notifier, Observer, Subscription, Terminable, Terminator} from "opendaw-std"
+import {LiveStreamReceiver} from "lib-fusion"
+import {Address} from "lib-box"
+import {Bits, byte, Notifier, Observer, Subscription, Terminable, Terminator} from "lib-std"
 
 export class NoteStreamReceiver implements Terminable {
     readonly #terminator = new Terminator()

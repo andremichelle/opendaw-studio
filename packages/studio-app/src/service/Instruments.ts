@@ -7,13 +7,13 @@ import {
     TrackBox,
     VaporisateurDeviceBox
 } from "studio-boxes"
-import {UUID} from "opendaw-std"
+import {UUID} from "lib-std"
 import {Utils} from "@/utils"
-import {BoxGraph} from "opendaw-box"
+import {BoxGraph} from "lib-box"
 import {TrackType} from "studio-shared"
 import {Project} from "@/project/Project.ts"
 import {IconSymbol} from "studio-shared"
-import {Waveform} from "opendaw-dsp"
+import {Waveform} from "lib-dsp"
 import {Modifier} from "@/ui/Modifier.ts"
 import {AudioUnitType} from "studio-enums"
 import {DeviceHost} from "studio-shared"

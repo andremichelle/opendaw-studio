@@ -1,5 +1,5 @@
 import {MenuItem} from "@/ui/model/menu-item"
-import {Procedure, UUID} from "opendaw-std"
+import {Procedure, UUID} from "lib-std"
 import {Project} from "@/project/Project.ts"
 import {AudioUnitBoxAdapter} from "studio-shared"
 import {TrackBoxAdapter} from "studio-shared"

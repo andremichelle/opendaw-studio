@@ -1,6 +1,6 @@
-import {DefaultObservableValue, Procedure, Terminator} from "opendaw-std"
+import {DefaultObservableValue, Procedure, Terminator} from "lib-std"
 import {Dialog} from "@/ui/components/Dialog.tsx"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {RadioGroup} from "@/ui/components/RadioGroup.tsx"
 import {IconSymbol} from "studio-shared"

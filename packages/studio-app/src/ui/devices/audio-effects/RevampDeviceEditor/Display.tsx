@@ -1,8 +1,8 @@
-import {Terminable} from "opendaw-std"
+import {Terminable} from "lib-std"
 import {Scale} from "@/ui/canvas/scale.ts"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {horizontalUnits, verticalUnits} from "./constants.ts"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 export const createDisplay = (xAxis: Scale, yAxis: Scale, svg: SVGSVGElement): Terminable => {
     return Html.watchResize(svg, () => {

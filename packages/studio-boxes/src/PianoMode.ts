@@ -1,4 +1,4 @@
-import "opendaw-std";
+import "lib-std";
 import {
   ObjectField,
   FieldConstruct,
@@ -7,7 +7,7 @@ import {
   Float32Field,
   BooleanField,
   UnreferenceableType,
-} from "opendaw-box";
+} from "lib-box";
 
 //
 //   ___          ___

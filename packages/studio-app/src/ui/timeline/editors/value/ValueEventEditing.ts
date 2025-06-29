@@ -1,9 +1,9 @@
 import {
     ValueEventCollectionBoxAdapter
 } from "studio-shared"
-import {Interpolation, ppqn, ValueEvent} from "opendaw-dsp"
+import {Interpolation, ppqn, ValueEvent} from "lib-dsp"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
-import {assert, panic, unitValue} from "opendaw-std"
+import {assert, panic, unitValue} from "lib-std"
 import {ValueEventBoxAdapter} from "studio-shared"
 
 export namespace ValueEventEditing {

@@ -1,6 +1,6 @@
-import {Lifecycle, panic} from "opendaw-std"
+import {Lifecycle, panic} from "lib-std"
 import {PanelContentFactory} from "@/ui/workspace/PanelContents.tsx"
-import {createElement, JsxValue} from "opendaw-jsx"
+import {createElement, JsxValue} from "lib-jsx"
 import {ContentEditor} from "@/ui/timeline/editors/ContentEditor.tsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {Timeline} from "@/ui/timeline/Timeline.tsx"

@@ -1,10 +1,10 @@
 import css from "./PropertyEditor.sass?inline"
-import {Lifecycle, Nullable, ObservableValue, Option, Selection, unitValue, ValueAxis} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Lifecycle, Nullable, ObservableValue, Option, Selection, unitValue, ValueAxis} from "lib-std"
+import {createElement} from "lib-jsx"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {NoteEventBoxAdapter} from "studio-shared"
 import {SelectionRectangle} from "@/ui/timeline/SelectionRectangle.tsx"
-import {Editing} from "opendaw-box"
+import {Editing} from "lib-box"
 import {createPropertySelectionLocator} from "@/ui/timeline/editors/notes/property/PropertySelectionLocator.ts"
 import {createPropertyCapturing} from "@/ui/timeline/editors/notes/property/PropertyEventCapturing.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
@@ -26,7 +26,7 @@ import {Cursor} from "@/ui/Cursors.ts"
 import {installValueInput} from "@/ui/timeline/editors/ValueInput.ts"
 
 import {NoteEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"
-import {Dragging, Html, Keyboard} from "opendaw-dom"
+import {Dragging, Html, Keyboard} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "PropertyEditor")
 

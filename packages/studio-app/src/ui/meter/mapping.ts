@@ -1,5 +1,5 @@
-import {dbToGain, gainToDb} from "opendaw-dsp"
-import {unitValue, ValueMapping} from "opendaw-std"
+import {dbToGain, gainToDb} from "lib-dsp"
+import {unitValue, ValueMapping} from "lib-std"
 
 export class GainMapping implements ValueMapping<number> {
     private readonly linear: ValueMapping<number>

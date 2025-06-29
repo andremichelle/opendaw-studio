@@ -1,4 +1,4 @@
-import {Arrays, Option, Procedure, Terminable} from "opendaw-std"
+import {Arrays, Option, Procedure, Terminable} from "lib-std"
 
 import {IconSymbol} from "studio-shared"
 

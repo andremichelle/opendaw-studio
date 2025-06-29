@@ -1,4 +1,4 @@
-import "opendaw-std";
+import "lib-std";
 import {
   ObjectField,
   FieldConstruct,
@@ -6,7 +6,7 @@ import {
   Float32Field,
   Int32Field,
   UnreferenceableType,
-} from "opendaw-box";
+} from "lib-box";
 import { Pointers } from "studio-enums";
 
 //

@@ -1,12 +1,12 @@
 import css from "./BrowserPanel.sass?inline"
-import {DefaultObservableValue, Lifecycle, Terminator} from "opendaw-std"
+import {DefaultObservableValue, Lifecycle, Terminator} from "lib-std"
 import {StudioService} from "@/service/StudioService.ts"
-import {createElement, DomElement, Group, replaceChildren} from "opendaw-jsx"
+import {createElement, DomElement, Group, replaceChildren} from "lib-jsx"
 import {RadioGroup} from "@/ui/components/RadioGroup.tsx"
 import {SampleBrowser} from "@/ui/browse/SampleBrowser.tsx"
 import {DevicesBrowser} from "@/ui/browse/DevicesBrowser.tsx"
 import {BrowseScope} from "@/ui/browse/BrowseScope"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "BrowserPanel")
 

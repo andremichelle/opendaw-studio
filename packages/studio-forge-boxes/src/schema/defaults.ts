@@ -1,5 +1,5 @@
-import {PointerRules, UnreferenceableType} from "opendaw-box"
-import {FieldName, FieldSchema, PointerFieldSchema, PrimitiveFieldSchema} from "box-forge"
+import {PointerRules, UnreferenceableType} from "lib-box"
+import {FieldName, FieldSchema, PointerFieldSchema, PrimitiveFieldSchema} from "lib-box-forge"
 import {Pointers} from "studio-enums"
 
 export const DefaultParameterPointerRules = {

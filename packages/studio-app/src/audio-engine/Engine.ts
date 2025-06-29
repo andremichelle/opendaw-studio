@@ -1,4 +1,4 @@
-import {ppqn} from "opendaw-dsp"
+import {ppqn} from "lib-dsp"
 import {
     byte,
     DefaultObservableValue,
@@ -10,7 +10,7 @@ import {
     Subscription,
     unitValue,
     UUID
-} from "opendaw-std"
+} from "lib-std"
 import {ClipNotification} from "studio-shared"
 
 export interface Engine {

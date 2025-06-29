@@ -11,17 +11,17 @@ import {
     ObservableValue,
     Option,
     Terminator
-} from "opendaw-std"
-import {createElement, Frag, Inject} from "opendaw-jsx"
+} from "lib-std"
+import {createElement, Frag, Inject} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
-import {parseTimeSignature, PPQN} from "opendaw-dsp"
+import {parseTimeSignature, PPQN} from "lib-dsp"
 import {DblClckTextInput} from "@/ui/wrapper/DblClckTextInput.tsx"
 import {ContextMenu} from "@/ui/ContextMenu.ts"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {ProjectSession} from "@/project/ProjectSession"
-import {Dragging, Html} from "opendaw-dom"
+import {Dragging, Html} from "lib-dom"
 import {FlexSpacer} from "@/ui/components/FlexSpacer.tsx"
-import {Propagation} from "opendaw-box"
+import {Propagation} from "lib-box"
 
 const className = Html.adoptStyleSheet(css, "time-display")
 

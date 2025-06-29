@@ -1,5 +1,5 @@
-import {PPQN} from "opendaw-dsp"
-import {BoxSchema} from "opendaw-box-forge"
+import {PPQN} from "lib-dsp"
+import {BoxSchema} from "lib-box-forge"
 import {Pointers} from "studio-enums"
 
 export const TimelineBox: BoxSchema<Pointers> = {

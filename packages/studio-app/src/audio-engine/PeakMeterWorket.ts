@@ -1,8 +1,8 @@
 import WorkletUrl from "studio-worklet/PeakMeterProcessor.ts?worker&url"
 import {WorkletFactory} from "@/audio-engine/WorkletFactory"
 import {PeakMeterProcessorOptions} from "studio-shared"
-import {int, Notifier, Observer, Schema, Subscription, SyncStream, Terminable, Terminator} from "opendaw-std"
-import {AnimationFrame} from "opendaw-dom"
+import {int, Notifier, Observer, Schema, Subscription, SyncStream, Terminable, Terminator} from "lib-std"
+import {AnimationFrame} from "lib-dom"
 
 export type PeakSchema = { peak: Float32Array, rms: Float32Array }
 

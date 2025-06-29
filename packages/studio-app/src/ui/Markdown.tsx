@@ -1,7 +1,7 @@
-import {Browser, Html, ModfierKeys} from "opendaw-dom"
+import {Browser, Html, ModfierKeys} from "lib-dom"
 import css from "./Markdown.sass?inline"
-import {isDefined} from "opendaw-std"
-import {createElement, RouteLocation} from "opendaw-jsx"
+import {isDefined} from "lib-std"
+import {createElement, RouteLocation} from "lib-jsx"
 import markdownit from "markdown-it"
 import {markdownItTable} from "markdown-it-table"
 

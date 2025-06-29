@@ -1,6 +1,6 @@
 import css from "./UpdateMessage.sass?inline"
-import {Html} from "opendaw-dom"
-import {createElement} from "opendaw-jsx"
+import {Html} from "lib-dom"
+import {createElement} from "lib-jsx"
 
 const className = Html.adoptStyleSheet(css, "UpdateMessage")
 

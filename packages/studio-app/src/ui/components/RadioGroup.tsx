@@ -1,8 +1,8 @@
-import {assert, getOrProvide, isDefined, Lifecycle, MutableObservableValue, ValueOrProvider} from "opendaw-std"
-import {createElement, DomElement} from "opendaw-jsx"
+import {assert, getOrProvide, isDefined, Lifecycle, MutableObservableValue, ValueOrProvider} from "lib-std"
+import {createElement, DomElement} from "lib-jsx"
 import {Appearance, ButtonCheckboxRadio} from "@/ui/components/ButtonCheckboxRadio.tsx"
 import {TextTooltip} from "@/ui/surface/TextTooltip.tsx"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 type Construct<VALUE> = {
     lifecycle: Lifecycle

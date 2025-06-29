@@ -1,7 +1,7 @@
 import css from "./Clip.sass?inline"
-import {asDefined, DefaultObservableValue, Lifecycle, Procedure, Terminator, UUID} from "opendaw-std"
+import {asDefined, DefaultObservableValue, Lifecycle, Procedure, Terminator, UUID} from "lib-std"
 import {NoteClipBoxAdapter} from "studio-shared"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {CanvasPainter} from "@/ui/canvas/painter.ts"
 import {createNoteClipPainter} from "@/ui/timeline/tracks/audio-unit/clips/painter/NoteClipPainter.ts"
 import {AnyClipBoxAdapter} from "studio-shared"
@@ -11,9 +11,9 @@ import {createAudioClipPainter} from "@/ui/timeline/tracks/audio-unit/clips/pain
 import {createValueClipPainter} from "@/ui/timeline/tracks/audio-unit/clips/painter/ValueClipPainter.ts"
 import {Project} from "@/project/Project.ts"
 import {ClipPlaybackButton} from "./ClipPlaybackButton"
-import {ppqn} from "opendaw-dsp"
+import {ppqn} from "lib-dsp"
 import {ClipNotification} from "studio-shared"
-import {Events, Html} from "opendaw-dom"
+import {Events, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "Clip")
 

@@ -1,5 +1,5 @@
-import {Event, NoteEvent, ppqn} from "opendaw-dsp"
-import {byte, float, Id, int, Terminable} from "opendaw-std"
+import {Event, NoteEvent, ppqn} from "lib-dsp"
+import {byte, float, Id, int, Terminable} from "lib-std"
 
 export type NoteCompleteEvent = Id<Event & {
     readonly type: "note-complete-event"

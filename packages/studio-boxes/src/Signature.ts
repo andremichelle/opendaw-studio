@@ -1,11 +1,11 @@
-import "opendaw-std";
+import "lib-std";
 import {
   ObjectField,
   FieldConstruct,
   NoPointers,
   Int32Field,
   UnreferenceableType,
-} from "opendaw-box";
+} from "lib-box";
 
 //
 //   ___          ___

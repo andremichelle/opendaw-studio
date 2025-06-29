@@ -1,14 +1,14 @@
 import {ProjectSession} from "@/project/ProjectSession"
-import {DefaultObservableValue, MutableObservableValue, ObservableValue, Observer, Option, Terminable, UUID} from "opendaw-std"
+import {DefaultObservableValue, MutableObservableValue, ObservableValue, Observer, Option, Terminable, UUID} from "lib-std"
 import {ProjectDialogs} from "@/project/ProjectDialogs"
 import {Projects} from "@/project/Projects"
 import {Project} from "@/project/Project"
 import {ProjectMeta} from "@/project/ProjectMeta"
 import {showApproveDialog, showInfoDialog, showProcessDialog, showProcessMonolog} from "@/ui/components/dialogs"
 import {StudioService} from "./StudioService"
-import {Promises} from "opendaw-runtime"
+import {Promises} from "lib-runtime"
 import {FilePickerAcceptTypes} from "@/ui/FilePickerAcceptTypes.ts"
-import {Errors, Files} from "opendaw-dom"
+import {Errors, Files} from "lib-dom"
 
 export class SessionService implements MutableObservableValue<Option<ProjectSession>> {
     readonly #service: StudioService

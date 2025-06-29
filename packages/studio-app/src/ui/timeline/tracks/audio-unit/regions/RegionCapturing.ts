@@ -4,7 +4,7 @@ import {
     UnionAdapterTypes
 } from "studio-shared"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
-import {BinarySearch, Nullable, NumberComparator} from "opendaw-std"
+import {BinarySearch, Nullable, NumberComparator} from "lib-std"
 import {PointerRadiusDistance} from "@/ui/timeline/constants.ts"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"

@@ -46,8 +46,8 @@ import {
   ModuleMultiplierBox,
   ModuleGainBox,
 } from ".";
-import { ByteArrayInput, panic, Procedure, UUID } from "opendaw-std";
-import { BoxGraph, Box } from "opendaw-box";
+import { ByteArrayInput, panic, Procedure, UUID } from "lib-std";
+import { BoxGraph, Box } from "lib-box";
 
 //
 //   ___          ___

@@ -1,5 +1,5 @@
-import {Terminable, Terminator} from "opendaw-std"
-import {AnimationFrame, Browser, Events} from "opendaw-dom"
+import {Terminable, Terminator} from "lib-std"
+import {AnimationFrame, Browser, Events} from "lib-dom"
 import {LogBuffer} from "@/errors/LogBuffer.ts"
 import {ErrorLog} from "@/errors/ErrorLog.ts"
 import {ErrorInfo} from "@/errors/ErrorInfo.ts"

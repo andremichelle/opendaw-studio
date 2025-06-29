@@ -1,10 +1,10 @@
 import css from "./ClipsHeader.sass?inline"
-import {DefaultObservableValue, Lifecycle, ObservableValue, Option, Terminator, UUID} from "opendaw-std"
-import {createElement, DomElement} from "opendaw-jsx"
+import {DefaultObservableValue, Lifecycle, ObservableValue, Option, Terminator, UUID} from "lib-std"
+import {createElement, DomElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {IconSymbol} from "studio-shared"
-import {deferNextFrame, Dragging, Events, Html} from "opendaw-dom"
+import {deferNextFrame, Dragging, Events, Html} from "lib-dom"
 import {TextTooltip} from "@/ui/surface/TextTooltip"
 
 const className = Html.adoptStyleSheet(css, "ClipsHeader")

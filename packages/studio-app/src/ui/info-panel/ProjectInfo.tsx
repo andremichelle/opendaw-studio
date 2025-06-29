@@ -1,9 +1,9 @@
 import css from "./ProjectInfo.sass?inline"
-import {DefaultObservableValue, Lifecycle} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {DefaultObservableValue, Lifecycle} from "lib-std"
+import {createElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {Cover} from "./Cover"
-import {Events, Html} from "opendaw-dom"
+import {Events, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "ProjectInfo")
 

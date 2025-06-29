@@ -1,4 +1,4 @@
-import {Arrays, Terminable, UUID} from "opendaw-std"
+import {Arrays, Terminable, UUID} from "lib-std"
 import {AudioProcessor} from "../../../AudioProcessor.ts"
 import {AudioDeviceProcessor} from "../../../processors.ts"
 import {AudioGenerator, Processor} from "../../../processing.ts"

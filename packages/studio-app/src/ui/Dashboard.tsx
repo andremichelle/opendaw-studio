@@ -1,9 +1,9 @@
 import css from "./Dashboard.sass?inline"
-import {Lifecycle, TimeSpan} from "opendaw-std"
-import {createElement, LocalLink} from "opendaw-jsx"
+import {Lifecycle, TimeSpan} from "lib-std"
+import {createElement, LocalLink} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {Colors} from "@/ui/Colors.ts"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 import {ProjectBrowser} from "@/project/ProjectBrowser"
 import {showProcessMonolog} from "@/ui/components/dialogs"
 

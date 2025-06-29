@@ -10,8 +10,8 @@ import {
     Nullable,
     Option,
     Terminator
-} from "opendaw-std"
-import {createElement, Group} from "opendaw-jsx"
+} from "lib-std"
+import {createElement, Group} from "lib-jsx"
 import {TrackBoxAdapter} from "studio-shared"
 import {NoteClipBoxAdapter} from "studio-shared"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"
@@ -19,7 +19,7 @@ import {ClipPlaceholder} from "@/ui/timeline/tracks/audio-unit/clips/ClipPlaceho
 import {AnyClipBoxAdapter} from "studio-shared"
 import {ClipModifyStrategies, ClipModifyStrategy} from "@/ui/timeline/tracks/audio-unit/clips/ClipModifyStrategy.ts"
 import {StudioService} from "@/service/StudioService.ts"
-import {deferNextFrame, Html} from "opendaw-dom"
+import {deferNextFrame, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "ClipLane")
 

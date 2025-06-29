@@ -1,5 +1,5 @@
 import {Pointers} from "studio-enums"
-import {Notifier, Observer, Subscription, Terminable, Terminator} from "opendaw-std"
+import {Notifier, Observer, Subscription, Terminable, Terminator} from "lib-std"
 import {TrackBoxAdapter} from "./TrackBoxAdapter"
 import {SortedBoxAdapterCollection} from "../../SortedBoxAdapterCollection"
 import {AnyClipBoxAdapter} from "../../UnionAdapterTypes"

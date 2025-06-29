@@ -1,6 +1,6 @@
 import css from "./GenericModuleView.sass?inline"
-import {ifDefined, Lifecycle, Option, UUID} from "opendaw-std"
-import {appendChildren, createElement, Frag, Inject, JsxValue} from "opendaw-jsx"
+import {ifDefined, Lifecycle, Option, UUID} from "lib-std"
+import {appendChildren, createElement, Frag, Inject, JsxValue} from "lib-jsx"
 import {ModuleAdapter} from "studio-shared"
 import {Colors} from "@/ui/Colors.ts"
 import {Icon} from "@/ui/components/Icon.tsx"
@@ -9,7 +9,7 @@ import {MenuItem} from "../model/menu-item"
 import {ConnectorView} from "@/ui/modular/ConnectorView.tsx"
 import {ModularEnvironment} from "@/ui/modular/ModularEnvironment.ts"
 import {Direction, ModuleConnectorAdapter} from "studio-shared"
-import {PrimitiveType} from "opendaw-box"
+import {PrimitiveType} from "lib-box"
 import {Checkbox} from "@/ui/components/Checkbox.tsx"
 import {AutomatableParameterFieldAdapter} from "studio-shared"
 import {ParameterLabel} from "@/ui/components/ParameterLabel.tsx"
@@ -17,7 +17,7 @@ import {RelativeUnitValueDragging} from "@/ui/wrapper/RelativeUnitValueDragging.
 import {ContextMenu} from "@/ui/ContextMenu.ts"
 import {DeviceInterfaceKnobBox} from "studio-boxes"
 import {IconSymbol} from "studio-shared"
-import {Events, Html} from "opendaw-dom"
+import {Events, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "GenericModuleView")
 

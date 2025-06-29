@@ -4,7 +4,7 @@ import {
     UnionAdapterTypes
 } from "studio-shared"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
-import {isDefined, Nullable, Option, Provider} from "opendaw-std"
+import {isDefined, Nullable, Option, Provider} from "lib-std"
 import {PointerRadiusDistance} from "@/ui/timeline/constants.ts"
 import {TimelineRange} from "../TimelineRange"
 

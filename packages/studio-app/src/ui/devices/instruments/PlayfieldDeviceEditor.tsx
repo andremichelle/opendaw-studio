@@ -1,5 +1,5 @@
-import {byte, DefaultObservableValue, float, Lifecycle} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {byte, DefaultObservableValue, float, Lifecycle} from "lib-std"
+import {createElement} from "lib-jsx"
 import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
 import {MenuItems} from "@/ui/devices/menu-items.ts"
 import {Project} from "@/project/Project.ts"

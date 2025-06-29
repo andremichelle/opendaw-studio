@@ -1,4 +1,4 @@
-import {Arrays, assert, SortedSet, Subscription, Terminator, UUID} from "opendaw-std"
+import {Arrays, assert, SortedSet, Subscription, Terminator, UUID} from "lib-std"
 import {AudioDeviceProcessor, AudioEffectDeviceProcessor, DeviceProcessor} from "./processors.ts"
 import {AudioEffectDeviceBoxAdapter} from "studio-shared"
 import {AudioEffectDeviceProcessorFactory} from "./DeviceProcessorFactory.ts"

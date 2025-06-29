@@ -11,9 +11,9 @@ import {
     Terminator,
     unitValue,
     UUID
-} from "opendaw-std"
-import {Address, BooleanField, Int32Field, PointerField, StringField} from "opendaw-box"
-import {ppqn} from "opendaw-dsp"
+} from "lib-std"
+import {Address, BooleanField, Int32Field, PointerField, StringField} from "lib-box"
+import {ppqn} from "lib-dsp"
 import {BoxAdapter} from "../../BoxAdapter"
 import {BoxAdaptersContext} from "../../BoxAdaptersContext"
 import {TrackClips} from "./TrackClips"

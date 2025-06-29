@@ -1,4 +1,4 @@
-import {clamp, Notifier, Observer, Subscription, Terminable} from "opendaw-std"
+import {clamp, Notifier, Observer, Subscription, Terminable} from "lib-std"
 
 export class ScrollModel implements Terminable {
     static readonly #MinThumbSize = 16.0

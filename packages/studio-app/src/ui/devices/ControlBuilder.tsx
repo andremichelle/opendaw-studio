@@ -1,12 +1,12 @@
 import {DeviceBoxAdapter} from "studio-shared"
 import {AutomatableParameterFieldAdapter} from "studio-shared"
 import {Column} from "@/ui/devices/Column.tsx"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {LKR} from "@/ui/devices/constants.ts"
 import {Colors} from "@/ui/Colors.ts"
 import {ParameterLabelKnob} from "@/ui/devices/ParameterLabelKnob.tsx"
-import {TerminableOwner, ValueGuide} from "opendaw-std"
-import {Editing, PrimitiveValues} from "opendaw-box"
+import {TerminableOwner, ValueGuide} from "lib-std"
+import {Editing, PrimitiveValues} from "lib-box"
 import {MidiDevices} from "@/midi/devices/MidiDevices"
 
 type Creation<T extends PrimitiveValues> = {

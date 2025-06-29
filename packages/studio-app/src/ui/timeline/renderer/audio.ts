@@ -1,7 +1,7 @@
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {RegionBound, RegionColors} from "@/ui/timeline/renderer/env.ts"
-import {dbToGain, LoopableRegion} from "opendaw-dsp"
-import {Peaks, PeaksPainter} from "opendaw-fusion"
+import {dbToGain, LoopableRegion} from "lib-dsp"
+import {Peaks, PeaksPainter} from "lib-fusion"
 import {AudioFileBoxAdapter} from "studio-shared"
 
 export const renderAudio = (context: CanvasRenderingContext2D,

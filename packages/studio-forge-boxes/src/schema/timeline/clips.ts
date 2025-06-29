@@ -1,5 +1,5 @@
 import {Pointers} from "studio-enums"
-import { ClassSchema } from "box-forge"
+import { ClassSchema } from "lib-box-forge"
 
 export const ClipPlaybackFields = {
 	name: "ClipPlaybackFields",

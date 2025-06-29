@@ -1,7 +1,7 @@
-import {Lifecycle, Procedure} from "opendaw-std"
-import {createElement, JsxValue} from "opendaw-jsx"
+import {Lifecycle, Procedure} from "lib-std"
+import {createElement, JsxValue} from "lib-jsx"
 import {Appearance, ButtonCheckboxRadio} from "@/ui/components/ButtonCheckboxRadio"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 export type ButtonParameters = {
     lifecycle: Lifecycle

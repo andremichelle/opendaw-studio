@@ -5,7 +5,7 @@
       "@core/*": [
         "packages/studio-core/src/*"
       ],
-      "box-forge": [
+      "lib-box-forge": [
         "packages/box-forge/src"
       ]
     },

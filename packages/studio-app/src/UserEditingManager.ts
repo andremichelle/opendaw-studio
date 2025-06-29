@@ -1,7 +1,7 @@
 import {UserInterfaceBox} from "studio-boxes"
-import {Editing, PointerField, Vertex} from "opendaw-box"
+import {Editing, PointerField, Vertex} from "lib-box"
 import {Pointers} from "studio-enums"
-import {Notifier, Observer, Option, Subscription, Terminable, Terminator} from "opendaw-std"
+import {Notifier, Observer, Option, Subscription, Terminable, Terminator} from "lib-std"
 
 export class UserEditing implements Terminable {
     readonly #editing: Editing

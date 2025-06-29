@@ -1,13 +1,13 @@
 import css from "./ModularWires.sass?inline"
-import {assert, Lifecycle, Point, SortedSet, Subscription, Terminable, Terminator, UUID, VitalSigns} from "opendaw-std"
-import {appendChildren, createElement} from "opendaw-jsx"
+import {assert, Lifecycle, Point, SortedSet, Subscription, Terminable, Terminator, UUID, VitalSigns} from "lib-std"
+import {appendChildren, createElement} from "lib-jsx"
 import {ConnectorViewAdapter, ModularEnvironment, WiringPreview} from "@/ui/modular/ModularEnvironment.ts"
 import {ModuleConnectionAdapter} from "studio-shared"
 import {Colors} from "@/ui/Colors.ts"
 import {ModuleAdapter} from "studio-shared"
 import {ModuleConnectorAdapter} from "studio-shared"
 import {Camera} from "@/ui/modular/Camera.ts"
-import {AnimationFrame, deferNextFrame, Html} from "opendaw-dom"
+import {AnimationFrame, deferNextFrame, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "ModularWires")
 

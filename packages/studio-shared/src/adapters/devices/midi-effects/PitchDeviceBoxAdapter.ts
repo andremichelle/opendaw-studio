@@ -1,6 +1,6 @@
 import {Pointers} from "studio-enums"
-import {StringMapping, UUID, ValueMapping} from "opendaw-std"
-import {Address, BooleanField, FieldKeys, Int32Field, PointerField, StringField} from "opendaw-box"
+import {StringMapping, UUID, ValueMapping} from "lib-std"
+import {Address, BooleanField, FieldKeys, Int32Field, PointerField, StringField} from "lib-box"
 import {PitchDeviceBox} from "studio-boxes"
 import {DeviceHost, Devices, MidiEffectDeviceAdapter} from "../../../devices"
 import {BoxAdaptersContext} from "../../../BoxAdaptersContext"

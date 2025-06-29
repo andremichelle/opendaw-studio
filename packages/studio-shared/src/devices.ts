@@ -1,6 +1,6 @@
-import {BooleanField, Box, Field, Int32Field, PointerField, StringField} from "opendaw-box"
+import {BooleanField, Box, Field, Int32Field, PointerField, StringField} from "lib-box"
 import {Pointers} from "studio-enums"
-import {Arrays, asDefined, assert, AssertType, int, Option, panic, UUID} from "opendaw-std"
+import {Arrays, asDefined, assert, AssertType, int, Option, panic, UUID} from "lib-std"
 import {
     ArpeggioDeviceBox,
     BoxVisitor,

@@ -1,9 +1,9 @@
 import css from "./EmptyModular.sass?inline"
-import {Lifecycle} from "opendaw-std"
+import {Lifecycle} from "lib-std"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {IconSymbol} from "studio-shared"
-import {createElement} from "opendaw-jsx"
-import {Html} from "opendaw-dom"
+import {createElement} from "lib-jsx"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "EmptyModular")
 

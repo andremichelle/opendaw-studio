@@ -1,15 +1,15 @@
 import css from "./OutputSelector.sass?inline"
-import {createElement} from "opendaw-jsx"
-import {Html} from "opendaw-dom"
+import {createElement} from "lib-jsx"
+import {Html} from "lib-dom"
 import {AudioOutputDevice} from "@/audio/AudioOutputDevice"
 import {Surface} from "@/ui/surface/Surface"
 import {IconSymbol} from "studio-shared"
 import {Dialog} from "@/ui/components/Dialog"
 import {AudioOutputDevices} from "@/ui/mixer/AudioOutputDevices"
-import {Promises} from "opendaw-runtime"
+import {Promises} from "lib-runtime"
 import {showInfoDialog} from "@/ui/components/dialogs"
 import {TextScroller} from "@/ui/TextScroller"
-import {Lifecycle} from "opendaw-std"
+import {Lifecycle} from "lib-std"
 
 const className = Html.adoptStyleSheet(css, "OutputSelector")
 

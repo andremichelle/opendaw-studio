@@ -3,13 +3,13 @@ import {TrackType} from "studio-shared"
 import {AudioFileBox} from "studio-boxes"
 import {ClipCaptureTarget} from "@/ui/timeline/tracks/audio-unit/clips/ClipCapturing.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
-import {isDefined, Nullable, Option, panic, UUID} from "opendaw-std"
+import {isDefined, Nullable, Option, panic, UUID} from "lib-std"
 import {TrackBoxAdapter} from "studio-shared"
 import {Instruments} from "@/service/Instruments.ts"
 import {RegionCaptureTarget} from "./regions/RegionCapturing"
 import {Project} from "@/project/Project"
 import {AudioSample} from "@/audio/AudioSample"
-import {Promises} from "opendaw-runtime"
+import {Promises} from "lib-runtime"
 
 export type CreateParameters = {
     event: DragEvent

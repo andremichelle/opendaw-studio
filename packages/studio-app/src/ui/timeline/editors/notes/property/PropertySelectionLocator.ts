@@ -2,7 +2,7 @@ import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {TimelineCoordinates, TimelineSelectableLocator} from "@/ui/timeline/TimelineSelectableLocator.ts"
 import {NoteEventBoxAdapter} from "studio-shared"
-import {Intervals, Iterables, ObservableValue, ValueAxis} from "opendaw-std"
+import {Intervals, Iterables, ObservableValue, ValueAxis} from "lib-std"
 import {PropertyAccessor} from "@/ui/timeline/editors/notes/property/PropertyAccessor.ts"
 import {NoteModifyStrategy} from "@/ui/timeline/editors/notes/NoteModifyStrategies.ts"
 

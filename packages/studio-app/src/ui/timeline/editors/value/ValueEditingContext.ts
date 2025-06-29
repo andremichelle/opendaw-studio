@@ -10,9 +10,9 @@ import {
     Terminator,
     unitValue,
     ValueMapping
-} from "opendaw-std"
+} from "lib-std"
 import {ValueAssignment} from "@/ui/timeline/editors/value/ValueAssignment.tsx"
-import {PointerField, PrimitiveValues} from "opendaw-box"
+import {PointerField, PrimitiveValues} from "lib-box"
 import {TrackBoxAdapter} from "studio-shared"
 import {TrackType} from "studio-shared"
 import {Pointers} from "studio-enums"

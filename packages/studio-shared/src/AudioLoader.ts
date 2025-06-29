@@ -1,6 +1,6 @@
 import {AudioData} from "./AudioData"
-import {Peaks} from "opendaw-fusion"
-import {Observer, Option, Subscription, unitValue, UUID} from "opendaw-std"
+import {Peaks} from "lib-fusion"
+import {Observer, Option, Subscription, unitValue, UUID} from "lib-std"
 
 export interface AudioLoaderManager {
     getOrCreateAudioLoader(uuid: UUID.Format): AudioLoader

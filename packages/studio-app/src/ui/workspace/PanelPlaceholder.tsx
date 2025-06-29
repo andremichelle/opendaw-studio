@@ -1,7 +1,7 @@
 import css from "./PanelPlaceholder.sass?inline"
-import {DefaultObservableValue, Lifecycle} from "opendaw-std"
+import {DefaultObservableValue, Lifecycle} from "lib-std"
 import {Icon} from "@/ui/components/Icon.tsx"
-import {appendChildren, createElement, DomElement, Frag, Group} from "opendaw-jsx"
+import {appendChildren, createElement, DomElement, Frag, Group} from "lib-jsx"
 import {PanelContents} from "@/ui/workspace/PanelContents.tsx"
 import {Workspace} from "@/ui/workspace/Workspace.ts"
 import {PanelState} from "@/ui/workspace/PanelState.ts"
@@ -10,7 +10,7 @@ import {ContextMenu} from "@/ui/ContextMenu.ts"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {ContentGlue} from "@/ui/workspace/ContentGlue.ts"
 import {IconSymbol} from "studio-shared"
-import {Browser, Events, Html} from "opendaw-dom"
+import {Browser, Events, Html} from "lib-dom"
 import FlexLayoutConstrains = Workspace.FlexLayoutConstrains
 
 const className = Html.adoptStyleSheet(css, "PanelPlaceholder")

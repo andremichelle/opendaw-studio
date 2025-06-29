@@ -1,5 +1,5 @@
-import {asDefined, assert, AssertType, Class, isDefined, panic, SortedSet, Subscription, Terminable, UUID} from "opendaw-std"
-import {Box, Update} from "opendaw-box"
+import {asDefined, assert, AssertType, Class, isDefined, panic, SortedSet, Subscription, Terminable, UUID} from "lib-std"
+import {Box, Update} from "lib-box"
 import {
     ArpeggioDeviceBox,
     AudioBusBox,

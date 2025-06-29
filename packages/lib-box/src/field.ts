@@ -1,0 +1,79 @@
+import {Address} from "./address"
+import {Box} from "./box"
+import {DataInput, DataOutput, Iterables, Lazy, Nullish, Option, panic, safeExecute, short} from "lib-std"
+import {PointerRules, Vertex, VertexVisitor} from "./vertex"
+import {PointerTypes} from "./pointer"
+import {PointerHub} from "./pointer-hub"
+import {BoxGraph} from "./graph"
+
+export type FieldKey = number // i16 should be sufficient for larger arrays
+export type FieldKeys = Readonly<Int16Array>
+export type Fields = Record<FieldKey, Field>
+export type FieldConstruct<T extends PointerTypes> = {
+    parent: Vertex
+    fieldKey: FieldKey
+    fieldName: string
+    pointerRules: PointerRules<T>
+}
+
+export class Field<P extends PointerTypes = PointerTypes, F extends Fields = Fields> implements Vertex<P, F> {
+    static hook<P extends PointerTypes>(construct: FieldConstruct<P>) {
+        return new Field<P>(construct)
+    }
+
+    readonly #parent: Vertex
+    readonly #fieldKey: short
+    readonly #fieldName: string
+    readonly #pointerRules: PointerRules<P>
+
+    protected constructor({parent, fieldKey, fieldName, pointerRules}: FieldConstruct<P>) {
+        this.#parent = parent
+        this.#fieldKey = fieldKey
+        this.#fieldName = fieldName
+        this.#pointerRules = pointerRules
+
+        if (pointerRules.mandatory) {this.graph.edges().watchVertex(this)}
+    }
+
+    accept<RETURN>(visitor: VertexVisitor<RETURN>): Nullish<RETURN> {
+        return safeExecute(visitor.visitField, this as Field)
+    }
+
+    get box(): Box {return this.#parent.box}
+    get graph(): BoxGraph {return this.#parent.graph}
+    get parent(): Vertex {return this.#parent}
+    get fieldKey(): short {return this.#fieldKey}
+    get fieldName(): string {return this.#fieldName}
+    get pointerRules(): PointerRules<P> {return this.#pointerRules}
+
+    @Lazy
+    get pointerHub(): PointerHub {return new PointerHub(this)}
+
+    @Lazy
+    get address(): Address {return this.#parent.address.append(this.#fieldKey)}
+
+    @Lazy
+    get debugPath(): string {
+        return `${this.box.name}:${this.box.mapFields(field => field.fieldName, ...this.address.fieldKeys).join("/")}`
+    }
+
+    isBox(): this is Box {return false}
+    isField(): this is Field {return true}
+    isAttached(): boolean {return this.graph.findBox(this.address.uuid).nonEmpty()}
+    fields(): Iterable<Field> {return Iterables.empty()}
+    getField(_key: keyof F): F[keyof F] {return panic()}
+    optField(_key: keyof F): Option<F[keyof F]> {return Option.None}
+    read(_input: DataInput): void {}
+    write(_output: DataOutput): void {}
+    disconnect(): void {
+        if (this.pointerHub.isEmpty()) {return}
+        const incoming = this.pointerHub.incoming()
+        incoming.forEach(pointer => {
+            pointer.defer()
+            if (pointer.mandatory || (this.pointerRules.mandatory && incoming.length === 1)) {
+                pointer.box.delete()
+            }
+        })
+    }
+    toString(): string {return `{${this.box.constructor.name}:${this.constructor.name} (${this.fieldName}) ${this.address.toString()}`}
+}

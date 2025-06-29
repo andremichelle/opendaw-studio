@@ -1,9 +1,9 @@
-import {Arrays, asDefined, DefaultObservableValue, panic, Procedure, tryCatch, unitValue, UUID} from "opendaw-std"
+import {Arrays, asDefined, DefaultObservableValue, panic, Procedure, tryCatch, unitValue, UUID} from "lib-std"
 import {AudioData} from "studio-shared"
 import {showInfoDialog, showProcessDialog} from "@/ui/components/dialogs.tsx"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 import {AudioSample} from "@/audio/AudioSample"
-import {network, Promises} from "opendaw-runtime"
+import {network, Promises} from "lib-runtime"
 
 const username = "openDAW"
 const password = "prototype"

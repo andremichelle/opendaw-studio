@@ -1,8 +1,8 @@
 import {Dialog} from "@/ui/components/Dialog"
 import { IconSymbol } from "studio-shared"
 import {Surface} from "@/ui/surface/Surface"
-import {Promises} from "opendaw-runtime"
-import {createElement} from "opendaw-jsx"
+import {Promises} from "lib-runtime"
+import {createElement} from "lib-jsx"
 import {Colors} from "@/ui/Colors"
 
 export const showStoragePersistDialog = (): Promise<void> => {

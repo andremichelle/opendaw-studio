@@ -1,4 +1,4 @@
-import {isDefined} from "opendaw-std"
+import {isDefined} from "lib-std"
 
 export type ErrorInfo = {
     name: string

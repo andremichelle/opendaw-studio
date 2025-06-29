@@ -11,8 +11,8 @@ import {
     Subscription,
     Terminable,
     UUID
-} from "opendaw-std"
-import {Box, Field, Int32Field, PointerField} from "opendaw-box"
+} from "lib-std"
+import {Box, Field, Int32Field, PointerField} from "lib-box"
 import {Pointers} from "studio-enums"
 import {AdapterCollectionListener} from "./BoxAdapterCollection"
 import {IndexComparator} from "./IndexComparator"

@@ -1,5 +1,5 @@
-import { Nullish, safeExecute, UUID, Procedure } from "opendaw-std";
-import { Box, BoxConstruct, BoxGraph, NoPointers, Field } from "opendaw-box";
+import { Nullish, safeExecute, UUID, Procedure } from "lib-std";
+import { Box, BoxConstruct, BoxGraph, NoPointers, Field } from "lib-box";
 import { ModuleAttributes } from "./ModuleAttributes";
 import { BoxVisitor } from ".";
 import { Pointers } from "studio-enums";

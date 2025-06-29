@@ -1,4 +1,4 @@
-import {BoxGraph, Editing} from "opendaw-box"
+import {BoxGraph, Editing} from "lib-box"
 import {
     AudioBusBox,
     AudioFileBox,
@@ -36,22 +36,22 @@ import {
     TerminableOwner,
     Terminator,
     UUID
-} from "opendaw-std"
+} from "lib-std"
 import {UserEditingManager} from "@/UserEditingManager.ts"
 import {StudioService} from "@/service/StudioService.ts"
 import {Colors} from "@/ui/Colors"
-import {ppqn} from "opendaw-dsp"
+import {ppqn} from "lib-dsp"
 import {showInfoDialog} from "@/ui/components/dialogs.tsx"
-import {LiveStreamBroadcaster, LiveStreamReceiver} from "opendaw-fusion"
+import {LiveStreamBroadcaster, LiveStreamReceiver} from "lib-fusion"
 import {MidiDevices} from "@/midi/devices/MidiDevices"
 import {VertexSelection} from "@/ui/selection/VertexSelection"
 import {Mixer} from "@/project/Mixer"
 import {AudioSample} from "@/audio/AudioSample"
 import {SampleApi} from "@/service/SampleApi"
 import {AudioStorage} from "@/audio/AudioStorage"
-import {Promises} from "opendaw-runtime"
+import {Promises} from "lib-runtime"
 import {SampleDialogs} from "@/ui/browse/SampleDialogs"
-import {Errors} from "opendaw-dom"
+import {Errors} from "lib-dom"
 import {AudioUnitType} from "studio-enums"
 
 // Main Entry Point for a Project

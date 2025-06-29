@@ -1,7 +1,7 @@
 import css from "./DevicesBrowser.sass?inline"
-import {Lifecycle, Objects, panic} from "opendaw-std"
+import {Lifecycle, Objects, panic} from "lib-std"
 import {StudioService} from "@/service/StudioService.ts"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {Instruments} from "@/service/Instruments.ts"
 import {DragAndDrop} from "@/ui/DragAndDrop"
 import {DragDevice} from "@/ui/AnyDragData"
@@ -9,7 +9,7 @@ import {Effects} from "@/service/Effects"
 import {TextTooltip} from "@/ui/surface/TextTooltip"
 import {Icon} from "../components/Icon"
 import {Project} from "@/project/Project"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 import {DeviceHost, Devices} from "studio-shared"
 
 const className = Html.adoptStyleSheet(css, "DevicesBrowser")

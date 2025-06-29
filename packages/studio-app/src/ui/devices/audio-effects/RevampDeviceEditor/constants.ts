@@ -1,6 +1,6 @@
 import {LinearScale, LogScale} from "@/ui/canvas/scale.ts"
-import {BiquadCoeff} from "opendaw-dsp"
-import {Arrays, ValueGuide, ValueMapping} from "opendaw-std"
+import {BiquadCoeff} from "lib-dsp"
+import {Arrays, ValueGuide, ValueMapping} from "lib-std"
 import {ColorSet} from "./Curves.ts"
 import {IconSymbol} from "studio-shared"
 

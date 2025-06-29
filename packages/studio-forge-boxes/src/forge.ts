@@ -1,4 +1,4 @@
-import {BoxForge} from "opendaw-box-forge"
+import {BoxForge} from "lib-box-forge"
 import {StepAutomationBox} from "./schema/step-automation"
 import {AudioBusBox, AudioUnitBox, AuxSendBox} from "./schema/audio-unit"
 import {TimelineBox} from "./schema/timeline/timeline"

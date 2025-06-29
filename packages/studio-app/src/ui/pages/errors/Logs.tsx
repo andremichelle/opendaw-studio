@@ -1,7 +1,7 @@
 import css from "./Logs.sass?inline"
-import {Html} from "opendaw-dom"
-import {isDefined, TimeSpan} from "opendaw-std"
-import {createElement, Group} from "opendaw-jsx"
+import {Html} from "lib-dom"
+import {isDefined, TimeSpan} from "lib-std"
+import {createElement, Group} from "lib-jsx"
 import {LogBuffer} from "@/errors/LogBuffer.ts"
 
 const className = Html.adoptStyleSheet(css, "Logs")

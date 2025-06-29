@@ -1,10 +1,10 @@
-import {Arrays, asDefined, EmptyExec, SortedSet, Subscription, Terminable, Terminator, UUID} from "opendaw-std"
+import {Arrays, asDefined, EmptyExec, SortedSet, Subscription, Terminable, Terminator, UUID} from "lib-std"
 import {Pointers} from "studio-enums"
 import {AudioUnitBox, AuxSendBox, BoxVisitor} from "studio-boxes"
 import {AudioUnitBoxAdapter} from "studio-shared"
-import {DeferExec, deferNextFrame} from "opendaw-dom"
+import {DeferExec, deferNextFrame} from "lib-dom"
 import {SortedBoxAdapterCollection} from "studio-shared"
-import {Box} from "opendaw-box"
+import {Box} from "lib-box"
 
 export interface ChannelStripView {
     silent(value: boolean): void

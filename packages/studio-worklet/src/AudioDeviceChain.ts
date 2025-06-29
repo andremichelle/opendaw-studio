@@ -1,4 +1,4 @@
-import {Arrays, assert, SortedSet, Subscription, Terminator, UUID} from "opendaw-std"
+import {Arrays, assert, SortedSet, Subscription, Terminator, UUID} from "lib-std"
 import {AudioDeviceProcessor, AudioEffectDeviceProcessor} from "./processors.ts"
 import {AuxSendProcessor} from "./AuxSendProcessor.ts"
 import {ChannelStripProcessor} from "./ChannelStripProcessor.ts"

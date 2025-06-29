@@ -1,7 +1,7 @@
-import {EmptyExec, Func, Nullable, Point, Procedure, Selection, Terminable} from "opendaw-std"
+import {EmptyExec, Func, Nullable, Point, Procedure, Selection, Terminable} from "lib-std"
 import {Surface} from "@/ui/surface/Surface.tsx"
 import {FloatingTextInput} from "@/ui/components/FloatingTextInput.tsx"
-import {Events} from "opendaw-dom"
+import {Events} from "lib-dom"
 
 export type Construct<T> = {
     element: Element

@@ -1,4 +1,4 @@
-import {assert, SortedSet, Subscription, Terminator, UUID} from "opendaw-std"
+import {assert, SortedSet, Subscription, Terminator, UUID} from "lib-std"
 import {MidiEffectProcessor} from "./processors.ts"
 import {NoteSequencer} from "./NoteSequencer.ts"
 import {ProcessPhase} from "./processing.ts"

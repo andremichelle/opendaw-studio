@@ -1,8 +1,8 @@
-import {Arrays, clamp, int, Option, Selection} from "opendaw-std"
+import {Arrays, clamp, int, Option, Selection} from "lib-std"
 import {AnyLoopableRegionBoxAdapter, AnyRegionBoxAdapter} from "studio-shared"
-import {ppqn, RegionCollection} from "opendaw-dsp"
+import {ppqn, RegionCollection} from "lib-dsp"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
-import {Editing} from "opendaw-box"
+import {Editing} from "lib-box"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"
 import {TrackBoxAdapter} from "studio-shared"
 import {RegionClipResolver} from "@/ui/timeline/tracks/audio-unit/regions/RegionClipResolver.ts"
@@ -11,7 +11,7 @@ import {
     RegionModifyStrategy
 } from "@/ui/timeline/tracks/audio-unit/regions/RegionModifyStrategies.ts"
 import {showInfoDialog} from "@/ui/components/dialogs.tsx"
-import {Dragging} from "opendaw-dom"
+import {Dragging} from "lib-dom"
 
 class SelectedModifyStrategy implements RegionModifyStrategy {
     readonly #tool: RegionMoveModifier

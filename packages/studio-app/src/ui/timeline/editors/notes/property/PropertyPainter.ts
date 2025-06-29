@@ -1,5 +1,5 @@
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
-import {Arrays, ObservableValue, Option, Procedure, ValueAxis} from "opendaw-std"
+import {Arrays, ObservableValue, Option, Procedure, ValueAxis} from "lib-std"
 import {CanvasPainter} from "@/ui/canvas/painter.ts"
 import {PropertyNodeSize} from "@/ui/timeline/editors/notes/Constants.ts"
 import {renderTimeGrid} from "@/ui/timeline/editors/TimeGridRenderer.ts"

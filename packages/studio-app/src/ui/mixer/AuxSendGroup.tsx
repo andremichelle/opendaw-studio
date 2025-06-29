@@ -1,9 +1,9 @@
 import css from "./AuxSendGroup.sass?inline"
-import {Lifecycle, SortedSet, StringComparator, Terminator, UUID} from "opendaw-std"
+import {Lifecycle, SortedSet, StringComparator, Terminator, UUID} from "lib-std"
 import {AudioUnitBoxAdapter} from "studio-shared"
 import {AuxSendBoxAdapter} from "studio-shared"
 import {AuxSend} from "@/ui/mixer/AuxSend.tsx"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {AuxSendBox} from "studio-boxes"
 import {MenuButton} from "@/ui/components/MenuButton.tsx"
@@ -14,7 +14,7 @@ import {AudioUnitType} from "studio-enums"
 import {Project} from "@/project/Project.ts"
 import {Modifier} from "@/ui/Modifier.ts"
 import {IconSymbol} from "studio-shared"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "AuxSendGroup")
 

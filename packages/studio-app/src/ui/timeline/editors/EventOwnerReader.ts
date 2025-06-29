@@ -1,5 +1,5 @@
-import {ppqn} from "opendaw-dsp"
-import {int, Observer, Option, Subscription} from "opendaw-std"
+import {ppqn} from "lib-dsp"
+import {int, Observer, Option, Subscription} from "lib-std"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {TimeAxisCursorMapper} from "@/ui/timeline/TimeAxis.tsx"
 import {

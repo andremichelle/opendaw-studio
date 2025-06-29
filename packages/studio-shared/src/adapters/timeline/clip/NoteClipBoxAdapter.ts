@@ -11,9 +11,9 @@ import {
     Terminable,
     Terminator,
     UUID
-} from "opendaw-std"
-import {EventCollection, ppqn, PPQN} from "opendaw-dsp"
-import {Address, Int32Field, Propagation, Update} from "opendaw-box"
+} from "lib-std"
+import {EventCollection, ppqn, PPQN} from "lib-dsp"
+import {Address, Int32Field, Propagation, Update} from "lib-box"
 import {NoteClipBox} from "studio-boxes"
 import {NoteEventCollectionBoxAdapter} from "../collection/NoteEventCollectionBoxAdapter"
 import {ClipBoxAdapter, ClipBoxAdapterVisitor} from "../ClipBoxAdapter"

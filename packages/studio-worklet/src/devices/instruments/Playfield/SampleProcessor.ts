@@ -1,5 +1,5 @@
-import {int, UUID} from "opendaw-std"
-import {Event} from "opendaw-dsp"
+import {int, UUID} from "lib-std"
+import {Event} from "lib-dsp"
 import {PlayfieldSampleBoxAdapter} from "studio-shared"
 import {AudioProcessor} from "../../../AudioProcessor.ts"
 import {DeviceProcessor} from "../../../processors.ts"

@@ -1,6 +1,6 @@
 import {AutomatableParameterFieldAdapter} from "studio-shared"
-import {Editing, PrimitiveValues} from "opendaw-box"
-import {MutableObservableValue, ObservableValue, Observer, Subscription} from "opendaw-std"
+import {Editing, PrimitiveValues} from "lib-box"
+import {MutableObservableValue, ObservableValue, Observer, Subscription} from "lib-std"
 
 export namespace EditWrapper {
     export const forValue = <T extends PrimitiveValues>(

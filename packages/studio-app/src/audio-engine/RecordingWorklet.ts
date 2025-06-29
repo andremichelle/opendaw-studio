@@ -2,8 +2,8 @@ import {WorkletFactory} from "@/audio-engine/WorkletFactory"
 import WorkletUrl from "studio-worklet/RecordingProcessor.ts?worker&url"
 import {mergeChunkPlanes, RingBuffer} from "studio-shared"
 import {encodeWavFloat} from "@/wav"
-import {EmptyExec, int} from "opendaw-std"
-import {Files} from "opendaw-dom"
+import {EmptyExec, int} from "lib-std"
+import {Files} from "lib-dom"
 
 const RenderQuantum = 128
 

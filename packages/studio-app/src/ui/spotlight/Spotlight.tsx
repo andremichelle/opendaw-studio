@@ -1,11 +1,11 @@
 import css from "./Spotlight.sass?inline"
-import {int, Nullable, Option, Point, Terminable, Terminator} from "opendaw-std"
+import {int, Nullable, Option, Point, Terminable, Terminator} from "lib-std"
 import {StudioService} from "@/service/StudioService.ts"
-import {appendChildren, createElement, replaceChildren} from "opendaw-jsx"
+import {appendChildren, createElement, replaceChildren} from "lib-jsx"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {Surface} from "@/ui/surface/Surface.tsx"
 import {IconSymbol} from "studio-shared"
-import {Dragging, Events, Html, Keyboard} from "opendaw-dom"
+import {Dragging, Events, Html, Keyboard} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "Spotlight")
 

@@ -1,5 +1,5 @@
 import {Project} from "@/project/Project.ts"
-import {createElement, JsxValue} from "opendaw-jsx"
+import {createElement, JsxValue} from "lib-jsx"
 import {
     ArpeggioDeviceBox,
     AudioBusBox,
@@ -27,8 +27,8 @@ import {RevampDeviceEditor} from "@/ui/devices/audio-effects/RevampDeviceEditor.
 import {RevampDeviceBoxAdapter} from "studio-shared"
 import {ModularDeviceEditor} from "@/ui/devices/audio-effects/ModularDeviceEditor.tsx"
 import {ModularDeviceBoxAdapter} from "studio-shared"
-import {asDefined, Lifecycle} from "opendaw-std"
-import {Box} from "opendaw-box"
+import {asDefined, Lifecycle} from "lib-std"
+import {Box} from "lib-box"
 import {PitchDeviceEditor} from "./midi-effects/PitchDeviceEditor"
 import {PitchDeviceBoxAdapter} from "studio-shared"
 import {TapeDeviceEditor} from "@/ui/devices/instruments/TapeDeviceEditor.tsx"

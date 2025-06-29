@@ -1,6 +1,6 @@
-import {AnimationFrame} from "opendaw-dom"
+import {AnimationFrame} from "lib-dom"
 import {Surface} from "./Surface"
-import {int, Option, Provider, Terminable} from "opendaw-std"
+import {int, Option, Provider, Terminable} from "lib-std"
 
 export type ClientPosition = { clientX: number, clientY: number }
 

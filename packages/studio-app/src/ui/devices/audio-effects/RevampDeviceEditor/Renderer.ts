@@ -1,5 +1,5 @@
 import {CanvasUnitPainter} from "@/ui/canvas/painter.ts"
-import {int, linear, Nullable, Terminable} from "opendaw-std"
+import {int, linear, Nullable, Terminable} from "lib-std"
 import {RevampDeviceBoxAdapter} from "studio-shared"
 import {Scale} from "@/ui/canvas/scale.ts"
 import {
@@ -11,7 +11,7 @@ import {
     LowShelf
 } from "@/ui/devices/audio-effects/RevampDeviceEditor/Curves.ts"
 import {ColorSets, curveSampleRate} from "./constants.ts"
-import {gainToDb} from "opendaw-dsp"
+import {gainToDb} from "lib-dsp"
 
 export const plotSpectrum = (context: CanvasRenderingContext2D,
                              xAxis: Scale,

@@ -1,4 +1,4 @@
-import {EventCollection, ppqn, PPQN} from "opendaw-dsp"
+import {EventCollection, ppqn, PPQN} from "lib-dsp"
 import {
     DefaultObservableValue,
     int,
@@ -13,8 +13,8 @@ import {
     Terminator,
     unitValue,
     UUID
-} from "opendaw-std"
-import {Address, Int32Field, Propagation, Update} from "opendaw-box"
+} from "lib-std"
+import {Address, Int32Field, Propagation, Update} from "lib-box"
 import {ClipBoxAdapter, ClipBoxAdapterVisitor} from "../ClipBoxAdapter"
 import {TrackBoxAdapter} from "../TrackBoxAdapter"
 import {ValueEventCollectionBoxAdapter} from "../collection/ValueEventCollectionBoxAdapter"

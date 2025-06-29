@@ -1,4 +1,4 @@
 import {Pointers} from "studio-enums"
-import {Vertex} from "opendaw-box"
+import {Vertex} from "lib-box"
 
 export type SelectableVertex = Vertex<Pointers.Selection | any>

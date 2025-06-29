@@ -1,5 +1,5 @@
-import {ppqn} from "opendaw-dsp"
-import {byte, int, Nullable, Terminable, unitValue, UUID} from "opendaw-std"
+import {ppqn} from "lib-dsp"
+import {byte, int, Nullable, Terminable, unitValue, UUID} from "lib-std"
 import {AudioData} from "./AudioData"
 import { ClipSequencingUpdates } from "./ClipNotifications"
 

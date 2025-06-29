@@ -1,4 +1,4 @@
-import {StringMapping, unitValue, ValueMapping} from "opendaw-std"
+import {StringMapping, unitValue, ValueMapping} from "lib-std"
 import {PropertyParameters} from "@/ui/timeline/editors/notes/property/PropertyParameters.ts"
 import {NoteModifyStrategy} from "@/ui/timeline/editors/notes/NoteModifyStrategies.ts"
 import {NoteEventBox} from "studio-boxes"

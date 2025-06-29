@@ -1,7 +1,7 @@
-import {Peaks} from "opendaw-fusion"
+import {Peaks} from "lib-fusion"
 import {PeakAgent} from "@/service/agents"
 import {AudioData} from "studio-shared"
-import {ProgressHandler} from "opendaw-std"
+import {ProgressHandler} from "lib-std"
 
 export namespace AudioPeaks {
     export const generate = async (audio: AudioData, progress: ProgressHandler): Promise<ArrayBuffer> => {

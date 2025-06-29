@@ -1,5 +1,5 @@
-import {DefaultObservableValue, int, Lifecycle, ObservableValue, Option, Terminator, UUID} from "opendaw-std"
-import {createElement, replaceChildren} from "opendaw-jsx"
+import {DefaultObservableValue, int, Lifecycle, ObservableValue, Option, Terminator, UUID} from "lib-std"
+import {createElement, replaceChildren} from "lib-jsx"
 import {PlayfieldDeviceBoxAdapter} from "studio-shared"
 import {NoteSender} from "studio-shared"
 import {StudioService} from "@/service/StudioService"

@@ -1,7 +1,7 @@
 import css from "./FloatingTextInput.sass?inline"
-import {isDefined, Point} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
-import {Html} from "opendaw-dom"
+import {isDefined, Point} from "lib-std"
+import {createElement} from "lib-jsx"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "TextInput")
 

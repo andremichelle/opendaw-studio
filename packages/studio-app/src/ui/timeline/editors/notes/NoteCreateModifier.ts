@@ -1,13 +1,13 @@
-import {Generators, int, Mutable, Notifier, Observer, Option, Selection, Terminable} from "opendaw-std"
+import {Generators, int, Mutable, Notifier, Observer, Option, Selection, Terminable} from "lib-std"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
-import {Editing} from "opendaw-box"
+import {Editing} from "lib-box"
 import {Line, NoteModifyStrategy} from "./NoteModifyStrategies"
-import {EventCollection, ppqn} from "opendaw-dsp"
+import {EventCollection, ppqn} from "lib-dsp"
 import {NoteModifier} from "@/ui/timeline/editors/notes/NoteModifier.ts"
 import {NoteEventBoxAdapter} from "studio-shared"
 import {NoteEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"
 import {UINoteEvent} from "@/ui/timeline/editors/notes/UINoteEvent.ts"
-import {Dragging} from "opendaw-dom"
+import {Dragging} from "lib-dom"
 
 type Construct = Readonly<{
     element: Element

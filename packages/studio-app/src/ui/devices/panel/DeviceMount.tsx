@@ -6,9 +6,9 @@ import {
     MidiEffectDeviceAdapter
 } from "studio-shared"
 import {DeviceEditorFactory} from "@/ui/devices/DeviceEditorFactory"
-import {Exec, Lifecycle, Option, Subscription, Terminable, Terminator, UUID} from "opendaw-std"
-import {JsxValue} from "opendaw-jsx"
-import {Box} from "opendaw-box"
+import {Exec, Lifecycle, Option, Subscription, Terminable, Terminator, UUID} from "lib-std"
+import {JsxValue} from "lib-jsx"
+import {Box} from "lib-box"
 
 type DeviceFactory = (project: Project, lifecycle: Lifecycle, box: Box, deviceHost: DeviceHost) => JsxValue
 

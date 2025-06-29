@@ -1,5 +1,5 @@
-import {assert, Bits, isInstanceOf, Option, UUID} from "opendaw-std"
-import {LoopableRegion} from "opendaw-dsp"
+import {assert, Bits, isInstanceOf, Option, UUID} from "lib-std"
+import {LoopableRegion} from "lib-dsp"
 import {AudioClipBoxAdapter, AudioData, AudioRegionBoxAdapter, TapeDeviceBoxAdapter, TrackType} from "studio-shared"
 import {RenderQuantum} from "../../constants.ts"
 import {EngineContext} from "../../EngineContext.ts"

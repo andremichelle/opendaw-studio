@@ -1,7 +1,7 @@
-import {isDefined, Lifecycle, Parameter, PI_HALF, TAU, unitValue} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {isDefined, Lifecycle, Parameter, PI_HALF, TAU, unitValue} from "lib-std"
+import {createElement} from "lib-jsx"
 import css from "./Knob.sass?inline"
-import {Html, Svg} from "opendaw-dom"
+import {Html, Svg} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "knob")
 

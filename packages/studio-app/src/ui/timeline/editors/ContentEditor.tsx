@@ -1,6 +1,6 @@
 import css from "./ContentEditor.sass?inline"
-import {Lifecycle, Option, Terminator} from "opendaw-std"
-import {createElement, Frag, replaceChildren} from "opendaw-jsx"
+import {Lifecycle, Option, Terminator} from "lib-std"
+import {createElement, Frag, replaceChildren} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {
     AudioClipBox,
@@ -13,7 +13,7 @@ import {
 } from "studio-boxes"
 import {NoteEditor} from "@/ui/timeline/editors/notes/NoteEditor.tsx"
 import {NoteRegionBoxAdapter} from "studio-shared"
-import {Box, PointerField, Vertex} from "opendaw-box"
+import {Box, PointerField, Vertex} from "lib-box"
 import {SnapSelector} from "@/ui/timeline/SnapSelector.tsx"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
@@ -23,7 +23,7 @@ import {ValueEventsEditor} from "./value/ValueEventsEditor.tsx"
 import {ValueRegionBoxAdapter} from "studio-shared"
 import {FlexSpacer} from "@/ui/components/FlexSpacer.tsx"
 import {AudioRegionBoxAdapter} from "studio-shared"
-import {PPQN} from "opendaw-dsp"
+import {PPQN} from "lib-dsp"
 import {AudioEditor} from "@/ui/timeline/editors/audio/AudioEditor.tsx"
 import {Colors} from "@/ui/Colors.ts"
 import {MenuButton} from "@/ui/components/MenuButton"
@@ -44,7 +44,7 @@ import {AudioClipBoxAdapter} from "studio-shared"
 import {ValueClipBoxAdapter} from "studio-shared"
 import {Pointers} from "studio-enums"
 import {ValueEditingContext} from "@/ui/timeline/editors/value/ValueEditingContext.ts"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "ContentEditor")
 

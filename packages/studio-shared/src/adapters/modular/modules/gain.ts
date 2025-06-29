@@ -1,6 +1,6 @@
 import {ModuleGainBox} from "studio-boxes"
 import {Pointers} from "studio-enums"
-import {StringMapping, ValueMapping} from "opendaw-std"
+import {StringMapping, ValueMapping} from "lib-std"
 import {AbstractModuleAdapter} from "../abstract"
 import { ModuleAdapter } from "../module"
 import { AutomatableParameterFieldAdapter } from "src/AutomatableParameterFieldAdapter"

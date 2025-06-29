@@ -13,9 +13,9 @@ import {
     Terminator,
     unitValue,
     UUID
-} from "opendaw-std"
-import {Address, Box} from "opendaw-box"
-import {EventCollection, Interpolation, ppqn, ValueEvent} from "opendaw-dsp"
+} from "lib-std"
+import {Address, Box} from "lib-box"
+import {EventCollection, Interpolation, ppqn, ValueEvent} from "lib-dsp"
 import {Pointers} from "studio-enums"
 import {BoxAdapter} from "../../../BoxAdapter"
 import {BoxAdaptersContext} from "../../../BoxAdaptersContext"

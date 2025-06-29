@@ -1,6 +1,6 @@
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {ModuleDelayBox, ModuleGainBox, ModuleMultiplierBox} from "studio-boxes"
-import {quantizeRound, UUID} from "opendaw-std"
+import {quantizeRound, UUID} from "lib-std"
 import {Camera} from "@/ui/modular/Camera.ts"
 import {Project} from "@/project/Project.ts"
 import {ModularAdapter} from "studio-shared"

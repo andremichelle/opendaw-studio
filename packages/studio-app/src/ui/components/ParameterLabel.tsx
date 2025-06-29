@@ -1,10 +1,10 @@
 import css from "./ParameterLabel.sass?inline"
-import {ControlSource, Lifecycle, Terminable} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {ControlSource, Lifecycle, Terminable} from "lib-std"
+import {createElement} from "lib-jsx"
 import {attachParameterContextMenu} from "@/ui/menu/automation.ts"
 import {AutomatableParameterFieldAdapter, DeviceBoxAdapter} from "opendaw-core"
-import {Editing} from "opendaw-box"
-import {Html} from "opendaw-dom"
+import {Editing} from "lib-box"
+import {Html} from "lib-dom"
 import {MidiDevices} from "@/midi/devices/MidiDevices"
 
 const className = Html.adoptStyleSheet(css, "ParameterLabel")

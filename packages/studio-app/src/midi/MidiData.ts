@@ -1,4 +1,4 @@
-import {byte, Nullable} from "opendaw-std"
+import {byte, Nullable} from "lib-std"
 
 export namespace MidiData {
     export const enum Command {NoteOn = 0x90, NoteOff = 0x80, PitchBend = 0xE0, Controller = 0xB0}

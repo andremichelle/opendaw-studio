@@ -1,5 +1,5 @@
-import {FieldKeys, PointerTypes, PrimitiveField, PrimitiveValues} from "opendaw-box"
-import {assert, NumberArrayComparator, SortedSet, StringMapping, Terminable, unitValue, ValueMapping} from "opendaw-std"
+import {FieldKeys, PointerTypes, PrimitiveField, PrimitiveValues} from "lib-box"
+import {assert, NumberArrayComparator, SortedSet, StringMapping, Terminable, unitValue, ValueMapping} from "lib-std"
 import {AutomatableParameterFieldAdapter} from "./AutomatableParameterFieldAdapter"
 
 import {BoxAdaptersContext} from "./BoxAdaptersContext"

@@ -1,5 +1,5 @@
-import {Address, Box, PointerTypes} from "opendaw-box"
-import {Terminable, Terminator} from "opendaw-std"
+import {Address, Box, PointerTypes} from "lib-box"
+import {Terminable, Terminator} from "lib-std"
 import {Pointers} from "studio-enums"
 import {ModuleAttributes} from "studio-boxes"
 import {ModuleAdapter} from "./module"

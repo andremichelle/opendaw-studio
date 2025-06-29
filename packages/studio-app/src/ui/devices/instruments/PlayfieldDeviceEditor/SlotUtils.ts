@@ -1,5 +1,5 @@
-import {int} from "opendaw-std"
-import {PeaksPainter} from "opendaw-fusion"
+import {int} from "lib-std"
+import {PeaksPainter} from "lib-fusion"
 import {CanvasPainter} from "@/ui/canvas/painter"
 
 import {

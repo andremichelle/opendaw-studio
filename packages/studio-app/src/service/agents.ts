@@ -1,7 +1,7 @@
-import {FloatArray, int, Procedure} from "opendaw-std"
+import {FloatArray, int, Procedure} from "lib-std"
 import WorkerUrl from "../worker/agents.ts?worker&url"
-import {Entry, OpfsProtocol, PeakProtocol} from "opendaw-fusion"
-import {Communicator, Messenger} from "opendaw-runtime"
+import {Entry, OpfsProtocol, PeakProtocol} from "lib-fusion"
+import {Communicator, Messenger} from "lib-runtime"
 
 const messenger = Messenger.for(new Worker(WorkerUrl, {type: "module"}))
 

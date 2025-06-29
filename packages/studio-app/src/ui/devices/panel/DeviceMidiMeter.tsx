@@ -1,10 +1,10 @@
 import css from "./DeviceMidiMeter.sass?inline"
-import {Lifecycle} from "opendaw-std"
-import {createElement, DomElement} from "opendaw-jsx"
-import {Address} from "opendaw-box"
-import {LiveStreamReceiver} from "opendaw-fusion"
+import {Lifecycle} from "lib-std"
+import {createElement, DomElement} from "lib-jsx"
+import {Address} from "lib-box"
+import {LiveStreamReceiver} from "lib-fusion"
 import {Colors} from "@/ui/Colors.ts"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 import {NoteStreamReceiver} from "studio-shared"
 
 const className = Html.adoptStyleSheet(css, "DeviceMidiMeter")

@@ -1,11 +1,11 @@
 import css from "./Menu.sass?inline"
 import {DefaultMenuData, MenuItem} from "@/ui/model/menu-item.ts"
-import {createElement, Frag} from "opendaw-jsx"
-import {int, isDefined, Lifecycle, Nullable, Option, panic, Terminable, Terminator} from "opendaw-std"
+import {createElement, Frag} from "lib-jsx"
+import {int, isDefined, Lifecycle, Nullable, Option, panic, Terminable, Terminator} from "lib-std"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {Surface} from "@/ui/surface/Surface.tsx"
 import {IconSymbol} from "studio-shared"
-import {AnimationFrame, Events, Html} from "opendaw-dom"
+import {AnimationFrame, Events, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "menu")
 

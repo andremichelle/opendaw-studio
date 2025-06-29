@@ -1,14 +1,14 @@
 import css from "./ArpeggioDeviceEditor.sass?inline"
 import {ArpeggioDeviceBoxAdapter} from "studio-shared"
-import {Lifecycle} from "opendaw-std"
+import {Lifecycle} from "lib-std"
 import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
 import {MenuItems} from "@/ui/devices/menu-items.ts"
 import {Project} from "@/project/Project.ts"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {ControlBuilder} from "@/ui/devices/ControlBuilder.tsx"
 import {DeviceMidiMeter} from "@/ui/devices/panel/DeviceMidiMeter.tsx"
 import {Effects} from "@/service/Effects"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 import {DeviceHost} from "studio-shared"
 
 const className = Html.adoptStyleSheet(css, "ArpeggioDeviceEditor")

@@ -1,10 +1,10 @@
 import css from "./SelectionRectangle.sass?inline"
-import {createElement} from "opendaw-jsx"
-import {EmptyExec, Lifecycle, Option, Selection, SortedSet, UUID, ValueAxis} from "opendaw-std"
+import {createElement} from "lib-jsx"
+import {EmptyExec, Lifecycle, Option, Selection, SortedSet, UUID, ValueAxis} from "lib-std"
 import {Colors} from "@/ui/Colors.ts"
-import {Editing} from "opendaw-box"
+import {Editing} from "lib-box"
 import {TimelineSelectableLocator} from "@/ui/timeline/TimelineSelectableLocator.ts"
-import {Dragging, Html, PointerCaptureTarget} from "opendaw-dom"
+import {Dragging, Html, PointerCaptureTarget} from "lib-dom"
 import {BoxAdapter} from "studio-shared"
 
 const className = Html.adoptStyleSheet(css, "SelectionRectangle")

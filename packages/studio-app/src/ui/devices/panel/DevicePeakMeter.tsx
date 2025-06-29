@@ -1,11 +1,11 @@
 import css from "./DevicePeakMeter.sass?inline"
-import {Arrays, int, Lifecycle, Terminator, ValueMapping} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Arrays, int, Lifecycle, Terminator, ValueMapping} from "lib-std"
+import {createElement} from "lib-jsx"
 import {Colors} from "@/ui/Colors.ts"
-import {Address} from "opendaw-box"
-import {gainToDb} from "opendaw-dsp"
-import {LiveStreamReceiver} from "opendaw-fusion"
-import {Html} from "opendaw-dom"
+import {Address} from "lib-box"
+import {gainToDb} from "lib-dsp"
+import {LiveStreamReceiver} from "lib-fusion"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "DevicePeakMeter")
 

@@ -1,4 +1,4 @@
-import {int} from "opendaw-std"
+import {int} from "lib-std"
 import {BuildInfo} from "@/BuildInfo.ts"
 import {LogBuffer} from "@/errors/LogBuffer.ts"
 import {ErrorInfo} from "@/errors/ErrorInfo.ts"

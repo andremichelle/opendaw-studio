@@ -1,16 +1,16 @@
 import css from "./MarkerTrackBody.sass?inline"
-import {int, isDefined, Lifecycle, Nullable, Option, UUID} from "opendaw-std"
+import {int, isDefined, Lifecycle, Nullable, Option, UUID} from "lib-std"
 import {StudioService} from "@/service/StudioService.ts"
 import {TimelineBoxAdapter} from "studio-shared"
 import {MarkerBoxAdapter} from "studio-shared"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {MarkerBox} from "studio-boxes"
 import {MarkerRenderer} from "@/ui/timeline/tracks/primary/marker/MarkerRenderer"
 import {MarkerTrackAdapter} from "studio-shared"
 import {MarkerContextMenu} from "@/ui/timeline/tracks/primary/marker/MarkerContextMenu"
 import {Markers} from "@/ui/timeline/tracks/primary/marker/Markers"
-import {Dragging, Events, Html} from "opendaw-dom"
+import {Dragging, Events, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "marker-track-body")
 

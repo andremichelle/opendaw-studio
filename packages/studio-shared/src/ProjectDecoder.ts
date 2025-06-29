@@ -1,6 +1,6 @@
 import {AudioBusBox, AudioUnitBox, BoxIO, RootBox, TimelineBox, UserInterfaceBox} from "studio-boxes"
-import {BoxGraph} from "opendaw-box"
-import {assert, ByteArrayInput, Option, UUID} from "opendaw-std"
+import {BoxGraph} from "lib-box"
+import {assert, ByteArrayInput, Option, UUID} from "lib-std"
 import {MandatoryBoxes} from "./ManadatoryBoxes"
 
 export namespace ProjectDecoder {

@@ -1,5 +1,5 @@
-import {createElement, JsxValue} from "opendaw-jsx"
-import {assertInstanceOf, isDefined, Option, Point, PrintValue, Provider} from "opendaw-std"
+import {createElement, JsxValue} from "lib-jsx"
+import {assertInstanceOf, isDefined, Option, Point, PrintValue, Provider} from "lib-std"
 import {FloatingTextInput} from "@/ui/components/FloatingTextInput.tsx"
 
 type Construct = {

@@ -1,6 +1,6 @@
 import {AnyClipBoxAdapter} from "studio-shared"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
-import {BinarySearch, int, Nullable, NumberComparator} from "opendaw-std"
+import {BinarySearch, int, Nullable, NumberComparator} from "lib-std"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"
 import {ClipWidth} from "@/ui/timeline/tracks/audio-unit/clips/constants.ts"
 import {TrackContext} from "@/ui/timeline/tracks/audio-unit/TrackContext.ts"

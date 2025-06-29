@@ -1,6 +1,6 @@
 import css from "./Column.sass?inline"
-import {Html} from "opendaw-dom"
-import {createElement, JsxValue} from "opendaw-jsx"
+import {Html} from "lib-dom"
+import {createElement, JsxValue} from "lib-jsx"
 
 const className = Html.adoptStyleSheet(css, "Column")
 

@@ -1,4 +1,4 @@
-import {ArrayMultimap, DefaultObservableValue, EmptyExec, Option, Procedure, Subscription, unitValue, UUID} from "opendaw-std"
+import {ArrayMultimap, DefaultObservableValue, EmptyExec, Option, Procedure, Subscription, unitValue, UUID} from "lib-std"
 import {SampleApi} from "./SampleApi"
 import {AudioStorage} from "@/audio/AudioStorage"
 import {encodeWavFloat} from "@/wav"

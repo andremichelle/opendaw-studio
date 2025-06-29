@@ -1,4 +1,4 @@
-import {Address, Box, Int32Field} from "opendaw-box"
+import {Address, Box, Int32Field} from "lib-box"
 import {
     float,
     Notifier,
@@ -10,7 +10,7 @@ import {
     Terminator,
     UUID,
     ValueMapping
-} from "opendaw-std"
+} from "lib-std"
 import {AudioBusBox, AuxSendBox, BoxVisitor} from "studio-boxes"
 import {BoxAdapter} from "../../BoxAdapter"
 import {AudioBusBoxAdapter} from "./AudioBusBoxAdapter"

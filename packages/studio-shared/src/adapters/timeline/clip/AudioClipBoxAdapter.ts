@@ -1,4 +1,4 @@
-import {ppqn, PPQN} from "opendaw-dsp"
+import {ppqn, PPQN} from "lib-dsp"
 import {
     DefaultObservableValue,
     int,
@@ -11,9 +11,9 @@ import {
     Subscription,
     Terminator,
     UUID
-} from "opendaw-std"
+} from "lib-std"
 import {AudioClipBox} from "studio-boxes"
-import {Address, Int32Field, PointerField, Propagation, Update} from "opendaw-box"
+import {Address, Int32Field, PointerField, Propagation, Update} from "lib-box"
 import {ClipBoxAdapter, ClipBoxAdapterVisitor} from "../ClipBoxAdapter"
 import {Pointers} from "studio-enums"
 import {TrackBoxAdapter} from "../TrackBoxAdapter"

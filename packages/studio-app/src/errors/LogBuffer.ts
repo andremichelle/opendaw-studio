@@ -1,4 +1,4 @@
-import {int} from "opendaw-std"
+import {int} from "lib-std"
 
 export namespace LogBuffer {
     export type Entry = {

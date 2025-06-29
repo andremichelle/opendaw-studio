@@ -1,6 +1,6 @@
 import {VertexSelection} from "@/ui/selection/VertexSelection"
 import {SelectableVertex} from "@/ui/selection/SelectableVertex"
-import {Address, Addressable} from "opendaw-box"
+import {Address, Addressable} from "lib-box"
 import {
     Bijective,
     int,
@@ -11,7 +11,7 @@ import {
     SortedSet,
     Subscription,
     Terminable
-} from "opendaw-std"
+} from "lib-std"
 
 export class FilteredSelection<T extends Addressable> implements Selection<T>, Terminable {
     readonly #selection: VertexSelection

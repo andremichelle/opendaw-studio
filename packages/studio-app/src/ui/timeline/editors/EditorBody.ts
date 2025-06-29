@@ -1,11 +1,11 @@
-import {Terminable} from "opendaw-std"
+import {Terminable} from "lib-std"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
-import {PPQN} from "opendaw-dsp"
+import {PPQN} from "lib-dsp"
 import {attachWheelScroll} from "@/ui/timeline/editors/WheelScroll.ts"
 import {installAutoScroll} from "@/ui/AutoScroll.ts"
 import {Config} from "@/ui/timeline/Config.ts"
 import {EventOwnerReader} from "./EventOwnerReader.ts"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 export type Construct = {
     element: Element

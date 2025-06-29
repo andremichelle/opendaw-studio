@@ -1,11 +1,11 @@
 import {ContextMenu} from "@/ui/ContextMenu.ts"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
-import {Editing} from "opendaw-box"
-import {Objects, Selection} from "opendaw-std"
+import {Editing} from "lib-box"
+import {Objects, Selection} from "lib-std"
 import {ValueEventBoxAdapter} from "studio-shared"
 import {ValueCaptureTarget} from "@/ui/timeline/editors/value/ValueEventCapturing.ts"
-import {Interpolation} from "opendaw-dsp"
+import {Interpolation} from "lib-dsp"
 import {DebugMenus} from "@/ui/menu/debug.ts"
 
 type Construct = {

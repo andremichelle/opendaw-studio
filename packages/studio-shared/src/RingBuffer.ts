@@ -1,4 +1,4 @@
-import {Arrays, assert, int, panic, Procedure} from "opendaw-std"
+import {Arrays, assert, int, panic, Procedure} from "lib-std"
 
 declare let document: any
 

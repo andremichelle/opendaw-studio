@@ -2,7 +2,7 @@ import {Dialog} from "@/ui/components/Dialog"
 import {IconSymbol} from "studio-shared"
 import {Surface} from "@/ui/surface/Surface"
 import {AudioMetaData} from "@/audio/AudioMetaData"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 
 export namespace AudioDialogs {
     export const showImportSample = async ({

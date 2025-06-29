@@ -1,9 +1,9 @@
 import css from "./PianoRoll.sass?inline"
-import {Events, Html} from "opendaw-dom"
-import {createElement, Group} from "opendaw-jsx"
+import {Events, Html} from "lib-dom"
+import {createElement, Group} from "lib-jsx"
 import {PianoRollLayout} from "@/ui/piano-panel/PianoRollLayout.ts"
-import {isDefined, isInstanceOf, Lifecycle, Notifier} from "opendaw-std"
-import {LoopableRegion, PPQN, ppqn} from "opendaw-dsp"
+import {isDefined, isInstanceOf, Lifecycle, Notifier} from "lib-std"
+import {LoopableRegion, PPQN, ppqn} from "lib-dsp"
 import {NoteRegionBoxAdapter} from "studio-shared"
 import {Project} from "@/project/Project.ts"
 

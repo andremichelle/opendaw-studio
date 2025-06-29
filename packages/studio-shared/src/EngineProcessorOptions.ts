@@ -1,4 +1,4 @@
-import {int, Option} from "opendaw-std"
+import {int, Option} from "lib-std"
 
 // This is the type for passing over information to the main audio-worklet
 export type EngineProcessorOptions = {

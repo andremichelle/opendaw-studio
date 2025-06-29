@@ -2,12 +2,12 @@ import {AudioSample} from "@/audio/AudioSample"
 import {Dialog} from "@/ui/components/Dialog"
 import {IconSymbol} from "studio-shared"
 import {Surface} from "@/ui/surface/Surface"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {showInfoDialog} from "@/ui/components/dialogs"
-import {isDefined, UUID} from "opendaw-std"
+import {isDefined, UUID} from "lib-std"
 import {StudioService} from "@/service/StudioService"
-import {Promises} from "opendaw-runtime"
-import {Errors, Files} from "opendaw-dom"
+import {Promises} from "lib-runtime"
+import {Errors, Files} from "lib-dom"
 
 const SampleFileTypes: Array<FilePickerAcceptType> = [
     {description: "openDAW audio-files", accept: {"application/octet-stream": [".wav"]}}

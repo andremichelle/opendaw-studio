@@ -1,7 +1,7 @@
 import {Pointers} from "studio-enums"
 import {PlayfieldSampleBox} from "studio-boxes"
-import {int, Option, StringMapping, Terminator, UUID, ValueMapping} from "opendaw-std"
-import {Address, BooleanField, Field, Int32Field, StringField} from "opendaw-box"
+import {int, Option, StringMapping, Terminator, UUID, ValueMapping} from "lib-std"
+import {Address, BooleanField, Field, Int32Field, StringField} from "lib-box"
 import {
     AudioEffectDeviceBoxAdapter,
     DeviceAccepts,

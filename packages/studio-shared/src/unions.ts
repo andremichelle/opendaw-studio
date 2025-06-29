@@ -7,7 +7,7 @@ import {
     ValueClipBox,
     ValueRegionBox
 } from "studio-boxes"
-import {Box} from "opendaw-box"
+import {Box} from "lib-box"
 
 export type AnyClipBox = NoteClipBox | ValueClipBox | AudioClipBox
 export type AnyRegionBox = AudioRegionBox | NoteRegionBox | ValueRegionBox

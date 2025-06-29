@@ -1,4 +1,4 @@
-import {Arrays} from "opendaw-std"
+import {Arrays} from "lib-std"
 
 export const encodeWavFloat = (audio: {
     channels: ReadonlyArray<Float32Array>,

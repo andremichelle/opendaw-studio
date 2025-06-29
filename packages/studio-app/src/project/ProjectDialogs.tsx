@@ -1,15 +1,15 @@
 import {Dialog} from "@/ui/components/Dialog"
 import {IconSymbol} from "studio-shared"
 import {Surface} from "@/ui/surface/Surface"
-import {createElement} from "opendaw-jsx"
-import {isDefined, Objects, Terminator, UUID} from "opendaw-std"
+import {createElement} from "lib-jsx"
+import {isDefined, Objects, Terminator, UUID} from "lib-std"
 import {ProjectMeta} from "@/project/ProjectMeta"
 import {StudioService} from "@/service/StudioService"
 import {ProjectBrowser} from "@/project/ProjectBrowser"
 import {ExportStemsConfiguration} from "studio-shared"
 import {EditableExportStemsConfiguration, ExportStemsConfigurator} from "@/service/ExportStemsConfigurator"
 import {Project} from "./Project"
-import {Errors} from "opendaw-dom"
+import {Errors} from "lib-dom"
 
 export namespace ProjectDialogs {
 

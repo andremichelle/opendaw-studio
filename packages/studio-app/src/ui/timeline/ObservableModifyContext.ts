@@ -1,8 +1,8 @@
-import {Notifier, Observer, Option, Subscription, Terminator} from "opendaw-std"
-import {Editing} from "opendaw-box"
+import {Notifier, Observer, Option, Subscription, Terminator} from "lib-std"
+import {Editing} from "lib-box"
 
 import {ObservableModifier} from "@/ui/timeline/ObservableModifier.ts"
-import {Dragging} from "opendaw-dom"
+import {Dragging} from "lib-dom"
 
 export class ObservableModifyContext<MODIFIER extends ObservableModifier> {
     readonly #editing: Editing

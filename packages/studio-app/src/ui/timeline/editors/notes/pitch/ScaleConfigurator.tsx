@@ -1,8 +1,8 @@
 import css from "./ScaleConfigurator.sass?inline"
-import {Arrays, int, Lifecycle} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Arrays, int, Lifecycle} from "lib-std"
+import {createElement} from "lib-jsx"
 import {ScaleConfig} from "@/ui/timeline/editors/notes/pitch/ScaleConfig.ts"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "ScaleConfigurator")
 

@@ -1,11 +1,11 @@
 import css from "./Dialog.sass?inline"
-import {Exec, Procedure, safeExecute, Terminator} from "opendaw-std"
-import {createElement, JsxValue} from "opendaw-jsx"
+import {Exec, Procedure, safeExecute, Terminator} from "lib-std"
+import {createElement, JsxValue} from "lib-jsx"
 import {Button} from "@/ui/components/Button.tsx"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {Colors} from "@/ui/Colors.ts"
 import {IconSymbol} from "studio-shared"
-import {Events, Html} from "opendaw-dom"
+import {Events, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "Dialog")
 

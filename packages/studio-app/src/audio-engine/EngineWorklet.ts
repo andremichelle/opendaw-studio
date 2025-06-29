@@ -16,17 +16,17 @@ import {
     Terminator,
     unitValue,
     UUID
-} from "opendaw-std"
-import {ppqn} from "opendaw-dsp"
+} from "lib-std"
+import {ppqn} from "lib-dsp"
 import {Engine} from "@/audio-engine/Engine.ts"
 import {EngineProcessorOptions, ExportStemsConfiguration} from "studio-shared"
 import {AudioData} from "studio-shared"
 import {ClipNotification, ClipSequencingUpdates} from "studio-shared"
-import {SyncSource} from "opendaw-box"
-import {Communicator, Messenger} from "opendaw-runtime"
+import {SyncSource} from "lib-box"
+import {Communicator, Messenger} from "lib-runtime"
 import {WorkletFactory} from "@/audio-engine/WorkletFactory"
 import {EngineState, EngineStateSchema} from "studio-shared"
-import {AnimationFrame} from "opendaw-dom"
+import {AnimationFrame} from "lib-dom"
 import {EngineCommands, EngineToClient} from "studio-shared"
 
 export class EngineWorklet extends AudioWorkletNode implements Engine {

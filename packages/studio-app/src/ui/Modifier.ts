@@ -1,5 +1,5 @@
-import {assert, int, Option, panic, UUID} from "opendaw-std"
-import {Field} from "opendaw-box"
+import {assert, int, Option, panic, UUID} from "lib-std"
+import {Field} from "lib-box"
 import {Project} from "@/project/Project.ts"
 import {
     AudioBusBox,
@@ -20,7 +20,7 @@ import {AnyClipBox} from "studio-shared"
 import {TrackType} from "studio-shared"
 import {ColorCodes} from "@/ui/mixer/ColorCodes.ts"
 import {TrackClips} from "studio-shared"
-import {ppqn, PPQN} from "opendaw-dsp"
+import {ppqn, PPQN} from "lib-dsp"
 import {showInfoDialog} from "./components/dialogs"
 import {TrackRegions} from "studio-shared"
 import {AudioUnitType} from "studio-enums"

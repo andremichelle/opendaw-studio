@@ -1,5 +1,5 @@
-import {clamp, int, Notifier, Observable, Observer, Subscription} from "opendaw-std"
-import {ppqn, PPQN} from "opendaw-dsp"
+import {clamp, int, Notifier, Observable, Observer, Subscription} from "lib-std"
+import {ppqn, PPQN} from "lib-dsp"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {MenuItem, MenuRootData} from "@/ui/model/menu-item"
 

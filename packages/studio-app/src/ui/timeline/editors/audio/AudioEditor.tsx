@@ -1,5 +1,5 @@
-import {Lifecycle} from "opendaw-std"
-import {createElement, Frag} from "opendaw-jsx"
+import {Lifecycle} from "lib-std"
+import {createElement, Frag} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {AudioEditorHeader} from "@/ui/timeline/editors/audio/AudioEditorHeader.tsx"
 import {AudioEditorCanvas} from "@/ui/timeline/editors/audio/AudioEditorCanvas.tsx"

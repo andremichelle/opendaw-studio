@@ -1,10 +1,10 @@
-import {Lifecycle, unitValue} from "opendaw-std"
+import {Lifecycle, unitValue} from "lib-std"
 import {Knob} from "@/ui/components/Knob.tsx"
 import {ParameterLabel} from "@/ui/components/ParameterLabel.tsx"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {AutomatableParameterFieldAdapter} from "studio-shared"
 import {DeviceBoxAdapter} from "studio-shared"
-import {Editing} from "opendaw-box"
+import {Editing} from "lib-box"
 import {MidiDevices} from "@/midi/devices/MidiDevices"
 
 type Construct = {

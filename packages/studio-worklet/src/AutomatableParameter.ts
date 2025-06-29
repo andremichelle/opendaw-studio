@@ -1,7 +1,7 @@
-import {PrimitiveValues} from "opendaw-box"
+import {PrimitiveValues} from "lib-box"
 import {AutomatableParameterFieldAdapter} from "studio-shared"
-import {assert, Notifier, Observer, Option, Subscription, Terminable, TerminableOwner, Terminator, unitValue} from "opendaw-std"
-import {ppqn} from "opendaw-dsp"
+import {assert, Notifier, Observer, Option, Subscription, Terminable, TerminableOwner, Terminator, unitValue} from "lib-std"
+import {ppqn} from "lib-dsp"
 import {EngineContext} from "./EngineContext.ts"
 
 export class AutomatableParameter<T extends PrimitiveValues = any> implements TerminableOwner, Terminable {

@@ -1,5 +1,5 @@
 import {ChannelStripProcessor} from "./ChannelStripProcessor.ts"
-import {asDefined, SortedSet, Terminable, UUID} from "opendaw-std"
+import {asDefined, SortedSet, Terminable, UUID} from "lib-std"
 import {Pointers} from "studio-enums"
 import {AudioUnitBox, AuxSendBox, BoxVisitor} from "studio-boxes"
 

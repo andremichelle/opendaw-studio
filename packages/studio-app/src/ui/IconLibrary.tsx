@@ -1,4 +1,4 @@
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {IconSymbol} from "studio-shared"
 
 export const IconLibrary = () => (

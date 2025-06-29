@@ -1,4 +1,4 @@
-import {Box} from "opendaw-box"
+import {Box} from "lib-box"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {showDebugBoxDialog} from "@/ui/components/dialogs.tsx"
 

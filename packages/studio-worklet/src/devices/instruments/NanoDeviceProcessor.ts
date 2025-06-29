@@ -1,5 +1,5 @@
-import {Id, int, Option, Terminable, UUID} from "opendaw-std"
-import {dbToGain, Event, NoteEvent} from "opendaw-dsp"
+import {Id, int, Option, Terminable, UUID} from "lib-std"
+import {dbToGain, Event, NoteEvent} from "lib-dsp"
 import {AudioData, AudioLoader, NanoDeviceBoxAdapter} from "studio-shared"
 import {EngineContext} from "../../EngineContext.ts"
 import {DeviceProcessor, InstrumentDeviceProcessor} from "../../processors.ts"

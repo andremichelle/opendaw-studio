@@ -1,5 +1,5 @@
-import {int, Option, Terminable, UUID} from "opendaw-std"
-import {dbToGain, Ramp, StereoMatrix} from "opendaw-dsp"
+import {int, Option, Terminable, UUID} from "lib-std"
+import {dbToGain, Ramp, StereoMatrix} from "lib-dsp"
 import {AudioEffectDeviceBoxAdapter, StereoToolDeviceBoxAdapter} from "studio-shared"
 import {AudioEffectDeviceProcessor} from "../../processors.ts"
 import {EngineContext} from "../../EngineContext.ts"

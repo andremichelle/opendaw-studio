@@ -1,6 +1,6 @@
 import {AudioData, Gate, PlayfieldSampleBoxAdapter} from "studio-shared"
-import {NoteEvent, velocityToGain} from "opendaw-dsp"
-import {Id, int} from "opendaw-std"
+import {NoteEvent, velocityToGain} from "lib-dsp"
+import {Id, int} from "lib-std"
 import {AutomatableParameters} from "./AutomatableParameters.ts"
 
 const FAST_RELEASE = Math.floor(0.005 * sampleRate)

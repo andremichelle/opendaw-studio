@@ -1,5 +1,5 @@
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
-import {EmptyExec, Selection, Terminable} from "opendaw-std"
+import {EmptyExec, Selection, Terminable} from "lib-std"
 import {ContextMenu} from "@/ui/ContextMenu.ts"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {AnyRegionBoxAdapter} from "studio-shared"
@@ -13,8 +13,8 @@ import {NameValidator} from "@/ui/validator/name.ts"
 import {DebugMenus} from "@/ui/menu/debug"
 import {exportNotesToMidiFile} from "@/ui/timeline/editors/notes/NoteUtils"
 import {ColorMenu} from "@/ui/timeline/ColorMenu"
-import {BPMTools} from "opendaw-dsp"
-import {Browser} from "opendaw-dom"
+import {BPMTools} from "lib-dsp"
+import {Browser} from "lib-dom"
 import {showInfoDialog} from "@/ui/components/dialogs.tsx"
 
 type Construct = {

@@ -1,5 +1,5 @@
-import {Terminator} from "opendaw-std"
-import {createElement, Frag, Router} from "opendaw-jsx"
+import {Terminator} from "lib-std"
+import {createElement, Frag, Router} from "lib-jsx"
 import {WorkspacePage} from "@/ui/workspace/WorkspacePage.tsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {ComponentsPage} from "@/ui/pages/ComponentsPage.tsx"

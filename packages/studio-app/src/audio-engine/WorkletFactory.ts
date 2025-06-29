@@ -1,5 +1,5 @@
-import {Promises} from "opendaw-runtime"
-import {Func} from "opendaw-std"
+import {Promises} from "lib-runtime"
+import {Func} from "lib-std"
 
 export class WorkletFactory<W extends AudioWorkletNode> {
     static boot<W extends AudioWorkletNode>(context: BaseAudioContext,

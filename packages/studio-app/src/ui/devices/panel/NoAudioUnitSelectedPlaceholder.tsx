@@ -1,7 +1,7 @@
 import css from "./NoAudioUnitSelectedPlaceholder.sass?inline"
-import {Html} from "opendaw-dom"
-import {Lifecycle} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Html} from "lib-dom"
+import {Lifecycle} from "lib-std"
+import {createElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {TextButton} from "@/ui/components/TextButton"
 

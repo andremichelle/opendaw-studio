@@ -1,5 +1,5 @@
-import {asDefined, DefaultObservableValue, Option, Strings} from "opendaw-std"
-import {Promises} from "opendaw-runtime"
+import {asDefined, DefaultObservableValue, Option, Strings} from "lib-std"
+import {Promises} from "lib-runtime"
 import {AudioDevices} from "@/audio/AudioDevices"
 
 export class AudioOutputDevice {

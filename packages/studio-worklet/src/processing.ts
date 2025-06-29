@@ -1,5 +1,5 @@
-import {int, Terminable} from "opendaw-std"
-import {NoteEvent, ppqn} from "opendaw-dsp"
+import {int, Terminable} from "lib-std"
+import {NoteEvent, ppqn} from "lib-dsp"
 import {EventBuffer} from "./EventBuffer.ts"
 import {AudioBuffer} from "./AudioBuffer.ts"
 import {UpdateEvent} from "./UpdateClock.ts"

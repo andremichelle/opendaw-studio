@@ -13,11 +13,11 @@ import {
     Terminable,
     unitValue,
     ValueAxis
-} from "opendaw-std"
+} from "lib-std"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
-import {Editing} from "opendaw-box"
+import {Editing} from "lib-box"
 import {ValueEventBoxAdapter} from "studio-shared"
-import {EventCollection, Interpolation, ppqn, ValueEvent} from "opendaw-dsp"
+import {EventCollection, Interpolation, ppqn, ValueEvent} from "lib-dsp"
 import {ValueModifier} from "./ValueModifier"
 import {ValueEventDraft} from "./ValueEventDraft.ts"
 import {
@@ -25,7 +25,7 @@ import {
 } from "studio-shared"
 import {ValueEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"
 import {AutomatableParameterFieldAdapter} from "studio-shared"
-import {Dragging} from "opendaw-dom"
+import {Dragging} from "lib-dom"
 import {UIValueEvent} from "@/ui/timeline/editors/value/UIValueEvent.ts"
 
 type Construct = Readonly<{

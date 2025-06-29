@@ -1,5 +1,5 @@
 import {NoteRegionBoxAdapter} from "studio-shared"
-import {LoopableRegion} from "opendaw-dsp"
+import {LoopableRegion} from "lib-dsp"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {RegionBound, RegionColors} from "@/ui/timeline/renderer/env.ts"
 

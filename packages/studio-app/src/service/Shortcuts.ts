@@ -1,6 +1,6 @@
 import {StudioService} from "@/service/StudioService"
 import {PanelType} from "@/ui/workspace/PanelType"
-import {Events, Keyboard} from "opendaw-dom"
+import {Events, Keyboard} from "lib-dom"
 
 export class Shortcuts {
     constructor(service: StudioService) {

@@ -1,6 +1,6 @@
 import css from "./Timeline.sass?inline"
-import {Lifecycle} from "opendaw-std"
-import {createElement, Inject} from "opendaw-jsx"
+import {Lifecycle} from "lib-std"
+import {createElement, Inject} from "lib-jsx"
 import {StudioService} from "@/service/StudioService"
 import {TracksFooter} from "@/ui/timeline/tracks/footer/TracksFooter.tsx"
 import {TimelineHeader} from "@/ui/timeline/TimelineHeader.tsx"
@@ -8,8 +8,8 @@ import {TimelineNavigation} from "@/ui/timeline/TimelineNavigation.tsx"
 import {PrimaryTracks} from "./tracks/primary/PrimaryTracks"
 import {AudioUnitsTimeline} from "./tracks/audio-unit/AudioUnitsTimeline.tsx"
 import {ClipsHeader} from "@/ui/timeline/tracks/audio-unit/clips/ClipsHeader.tsx"
-import {ppqn} from "opendaw-dsp"
-import {Html} from "opendaw-dom"
+import {ppqn} from "lib-dsp"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "Timeline")
 

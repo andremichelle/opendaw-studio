@@ -1,5 +1,5 @@
 import {AudioSample} from "@/audio/AudioSample"
-import {byte, int} from "opendaw-std"
+import {byte, int} from "lib-std"
 import {Effects} from "@/service/Effects"
 import {Instruments} from "@/service/Instruments"
 

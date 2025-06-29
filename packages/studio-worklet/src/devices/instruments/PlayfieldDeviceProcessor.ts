@@ -1,4 +1,4 @@
-import {byte, Option, SortedSet, Terminable, Terminator, UUID} from "opendaw-std"
+import {byte, Option, SortedSet, Terminable, Terminator, UUID} from "lib-std"
 import {PlayfieldDeviceBoxAdapter, PlayfieldSampleBoxAdapter} from "studio-shared"
 import {EngineContext} from "../../EngineContext.ts"
 import {DeviceProcessor} from "../../processors.ts"

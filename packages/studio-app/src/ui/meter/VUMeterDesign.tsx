@@ -1,7 +1,7 @@
-import {ObservableValue, Point} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {ObservableValue, Point} from "lib-std"
+import {createElement} from "lib-jsx"
 import {GainMapping} from "@/ui/meter/mapping.ts"
-import {gainToDb} from "opendaw-dsp"
+import {gainToDb} from "lib-dsp"
 import {VUMeter} from "./VUMeter"
 
 export namespace VUMeterDesign {

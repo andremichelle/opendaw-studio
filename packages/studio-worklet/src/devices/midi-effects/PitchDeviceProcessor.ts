@@ -1,6 +1,6 @@
-import {assert, int, Objects, Option, Terminable, UUID} from "opendaw-std"
+import {assert, int, Objects, Option, Terminable, UUID} from "lib-std"
 import {NoteBroadcaster, PitchDeviceBoxAdapter} from "studio-shared"
-import {Event, NoteEvent, ppqn} from "opendaw-dsp"
+import {Event, NoteEvent, ppqn} from "lib-dsp"
 import {EngineContext} from "../../EngineContext.ts"
 import {EventProcessor} from "../../EventProcessor.ts"
 import {MidiEffectProcessor} from "../../processors.ts"

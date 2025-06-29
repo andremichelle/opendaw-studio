@@ -1,8 +1,8 @@
-import {ppqn, PPQN} from "opendaw-dsp"
+import {ppqn, PPQN} from "lib-dsp"
 import {Block, BlockFlags, ProcessInfo} from "./processing.ts"
 import {RenderQuantum} from "./constants.ts"
 import {EngineContext} from "./EngineContext.ts"
-import {Exec, int, isDefined, Iterables, Nullable, Procedure, SetMultimap, Terminable} from "opendaw-std"
+import {Exec, int, isDefined, Iterables, Nullable, Procedure, SetMultimap, Terminable} from "lib-std"
 import {MarkerBoxAdapter} from "studio-shared"
 
 type Action = null

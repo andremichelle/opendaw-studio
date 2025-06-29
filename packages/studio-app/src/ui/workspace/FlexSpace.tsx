@@ -1,6 +1,6 @@
 import css from "./FlexSpace.sass?inline"
-import {createElement} from "opendaw-jsx"
-import {Html} from "opendaw-dom"
+import {createElement} from "lib-jsx"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "FlexSpace")
 

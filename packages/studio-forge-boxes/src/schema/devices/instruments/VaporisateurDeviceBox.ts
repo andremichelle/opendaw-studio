@@ -1,4 +1,4 @@
-import { BoxSchema } from "box-forge"
+import { BoxSchema } from "lib-box-forge"
 import { Pointers } from "studio-pointers"
 import { createInstrumentDevice } from "../builder"
 import { DefaultParameterPointerRules } from "../../defaults"

@@ -1,6 +1,6 @@
-import {assert, Notifier, Observer, SortedSet, Subscription, Terminable, UUID} from "opendaw-std"
+import {assert, Notifier, Observer, SortedSet, Subscription, Terminable, UUID} from "lib-std"
 import {BoxAdaptersContext} from "../../BoxAdaptersContext"
-import {EventCollection} from "opendaw-dsp"
+import {EventCollection} from "lib-dsp"
 import {MarkerBoxAdapter} from "./MarkerBoxAdapter"
 import {MarkerBox, MarkerTrack} from "studio-boxes"
 

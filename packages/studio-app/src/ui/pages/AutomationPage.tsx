@@ -1,12 +1,12 @@
 import css from "./AutomationPage.sass?inline"
-import {createElement, PageContext, PageFactory} from "opendaw-jsx"
+import {createElement, PageContext, PageFactory} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
-import {TAU, unitValue} from "opendaw-std"
-import {EventCollection, Interpolation, LoopableRegion, PPQN, ValueEvent} from "opendaw-dsp"
+import {TAU, unitValue} from "lib-std"
+import {EventCollection, Interpolation, LoopableRegion, PPQN, ValueEvent} from "lib-dsp"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {renderValueStream} from "@/ui/timeline/renderer/value.ts"
 import {RegionColors} from "@/ui/timeline/renderer/env.ts"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "AutomationPage")
 

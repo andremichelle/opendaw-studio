@@ -1,4 +1,4 @@
-import {int, nextPowOf2} from "opendaw-std"
+import {int, nextPowOf2} from "lib-std"
 import {AudioBuffer} from "./AudioBuffer.ts"
 
 export class FreeVerb {

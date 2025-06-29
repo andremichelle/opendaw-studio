@@ -1,14 +1,14 @@
 import css from "./Modular.sass?inline"
-import {assert, Lifecycle, SortedSet, Terminable, Terminator, UUID} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {assert, Lifecycle, SortedSet, Terminable, Terminator, UUID} from "lib-std"
+import {createElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {ModularBox} from "studio-boxes"
 import {ModularAdapter} from "studio-shared"
-import {PointerField, Vertex} from "opendaw-box"
+import {PointerField, Vertex} from "lib-box"
 import {ModularTabButton} from "@/ui/modular/ModularTabButton.tsx"
 import {ModularView} from "./ModularView.tsx"
 import {EmptyModular} from "@/ui/modular/EmptyModular.tsx"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "Modular")
 

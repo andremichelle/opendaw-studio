@@ -1,6 +1,6 @@
-import {Arrays, Client, InaccessibleProperty, int, isDefined, Nullable, Option, Provider, Terminable} from "opendaw-std"
+import {Arrays, Client, InaccessibleProperty, int, isDefined, Nullable, Option, Provider, Terminable} from "lib-std"
 import {AnyDragData, DragFile} from "@/ui/AnyDragData"
-import {Events, Keyboard} from "opendaw-dom"
+import {Events, Keyboard} from "lib-dom"
 
 export namespace DragAndDrop {
     let dragging: Option<AnyDragData> = Option.None

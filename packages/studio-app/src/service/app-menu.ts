@@ -1,9 +1,9 @@
 import {MenuItem} from "@/ui/model/menu-item"
 import {StudioService} from "@/service/StudioService"
 import {showDebugBoxesDialog} from "@/ui/components/dialogs.tsx"
-import {RouteLocation} from "opendaw-jsx"
-import {isDefined, panic} from "opendaw-std"
-import {Browser, ModfierKeys} from "opendaw-dom"
+import {RouteLocation} from "lib-jsx"
+import {isDefined, panic} from "lib-std"
+import {Browser, ModfierKeys} from "lib-dom"
 import {SyncLogService} from "@/service/SyncLogService"
 
 export const initAppMenu = (service: StudioService) => {

@@ -1,5 +1,5 @@
-import {ppqn, Region, RegionCollection} from "opendaw-dsp"
-import {int} from "opendaw-std"
+import {ppqn, Region, RegionCollection} from "lib-dsp"
+import {int} from "lib-std"
 import {AnyLoopableRegionBoxAdapter, AnyRegionBoxAdapter} from "studio-shared"
 
 export interface RegionModifyStrategies {

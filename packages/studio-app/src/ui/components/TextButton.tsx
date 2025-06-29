@@ -1,7 +1,7 @@
 import css from "./TextButton.sass?inline"
-import {Exec} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
-import {Html} from "opendaw-dom"
+import {Exec} from "lib-std"
+import {createElement} from "lib-jsx"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "TextButton")
 

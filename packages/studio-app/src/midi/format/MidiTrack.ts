@@ -1,9 +1,9 @@
 import {Channel} from "@/midi/Channel"
 import {ControlEvent} from "@/midi/format/ControlEvent"
 import {MetaEvent, MetaType} from "@/midi/format/MetaType"
-import {ArrayMultimap, ByteArrayOutput, int, isDefined} from "opendaw-std"
+import {ArrayMultimap, ByteArrayOutput, int, isDefined} from "lib-std"
 import {MidiFileDecoder} from "./MidiFileDecoder"
-import {EventCollection, EventSpan, NoteEvent, ppqn, PPQN} from "opendaw-dsp"
+import {EventCollection, EventSpan, NoteEvent, ppqn, PPQN} from "lib-dsp"
 import {ControlType} from "../ControlType"
 
 export class MidiTrack {

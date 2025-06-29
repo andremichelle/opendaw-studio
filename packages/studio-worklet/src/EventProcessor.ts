@@ -1,6 +1,6 @@
 import {Block, ProcessInfo} from "./processing.ts"
-import {Event, ppqn} from "opendaw-dsp"
-import {Nullish} from "opendaw-std"
+import {Event, ppqn} from "lib-dsp"
+import {Nullish} from "lib-std"
 import {AbstractProcessor} from "./AbstractProcessor.ts"
 import {UpdateEvent} from "./UpdateClock.ts"
 

@@ -1,5 +1,5 @@
 import {CanvasPainter} from "@/ui/canvas/painter.ts"
-import {PI_HALF, Procedure, TAU} from "opendaw-std"
+import {PI_HALF, Procedure, TAU} from "lib-std"
 import {NoteClipBoxAdapter} from "studio-shared"
 
 export const createNoteClipPainter = (adapter: NoteClipBoxAdapter): Procedure<CanvasPainter> => painter => {

@@ -8,8 +8,8 @@ import {
     Subscription,
     Terminable,
     Terminator
-} from "opendaw-std"
-import {PointerHub} from "opendaw-box"
+} from "lib-std"
+import {PointerHub} from "lib-box"
 import {AudioBusBox} from "studio-boxes"
 import {Pointers} from "studio-enums"
 import {IconSymbol} from "../../IconSymbol"

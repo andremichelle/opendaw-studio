@@ -1,10 +1,10 @@
 import {DeviceHost, Devices, EffectDeviceBoxAdapter} from "studio-shared"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {Effects} from "@/service/Effects.ts"
-import {Editing, PrimitiveField, PrimitiveValues, StringField} from "opendaw-box"
+import {Editing, PrimitiveField, PrimitiveValues, StringField} from "lib-box"
 import {Project} from "@/project/Project.ts"
 import {Modifier} from "@/ui/Modifier.ts"
-import {EmptyExec, panic} from "opendaw-std"
+import {EmptyExec, panic} from "lib-std"
 import {Surface} from "@/ui/surface/Surface"
 import {FloatingTextInput} from "@/ui/components/FloatingTextInput"
 

@@ -1,7 +1,7 @@
-import {Arrays, int, Terminable} from "opendaw-std"
-import {Address} from "opendaw-box"
-import {RMS, StereoMatrix} from "opendaw-dsp"
-import {LiveStreamBroadcaster} from "opendaw-fusion"
+import {Arrays, int, Terminable} from "lib-std"
+import {Address} from "lib-box"
+import {RMS, StereoMatrix} from "lib-dsp"
+import {LiveStreamBroadcaster} from "lib-fusion"
 import {RenderQuantum} from "./constants.ts"
 
 export class PeakBroadcaster implements Terminable {

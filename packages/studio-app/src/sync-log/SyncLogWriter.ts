@@ -1,5 +1,5 @@
-import {BoxGraph, Update} from "opendaw-box"
-import {Func, isDefined, Observer, Subscription, Terminable} from "opendaw-std"
+import {BoxGraph, Update} from "lib-box"
+import {Func, isDefined, Observer, Subscription, Terminable} from "lib-std"
 import {Commit} from "./Commit"
 import {Project} from "@/project/Project"
 

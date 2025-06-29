@@ -1,5 +1,5 @@
-import {Option, SortedSet, Terminable} from "opendaw-std"
-import {Address} from "opendaw-box"
+import {Option, SortedSet, Terminable} from "lib-std"
+import {Address} from "lib-box"
 import {AutomatableParameterFieldAdapter} from "./AutomatableParameterFieldAdapter"
 
 export class ParameterFieldAdapters {

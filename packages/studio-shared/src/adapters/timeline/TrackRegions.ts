@@ -1,5 +1,5 @@
-import {RegionCollection} from "opendaw-dsp"
-import {assert, Notifier, Observer, SortedSet, Subscription, Terminator, UUID} from "opendaw-std"
+import {RegionCollection} from "lib-dsp"
+import {assert, Notifier, Observer, SortedSet, Subscription, Terminator, UUID} from "lib-std"
 import {Pointers} from "studio-enums"
 import {TrackBoxAdapter} from "./TrackBoxAdapter"
 import {AnyRegionBoxAdapter} from "../../UnionAdapterTypes"

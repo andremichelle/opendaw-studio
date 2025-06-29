@@ -1,5 +1,5 @@
-import {Func, int, Option, panic} from "opendaw-std"
-import {Promises} from "opendaw-runtime"
+import {Func, int, Option, panic} from "lib-std"
+import {Promises} from "lib-runtime"
 import {showInfoDialog} from "@/ui/components/dialogs"
 import {Button} from "@/ui/components/Dialog"
 

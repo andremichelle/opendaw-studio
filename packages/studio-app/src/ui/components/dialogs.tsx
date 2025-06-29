@@ -1,15 +1,15 @@
-import {createElement, JsxValue} from "opendaw-jsx"
+import {createElement, JsxValue} from "lib-jsx"
 import {Button, Dialog, DialogHandler} from "@/ui/components/Dialog.tsx"
-import {Arrays, Exec, isDefined, ObservableValue, Option, Procedure, Provider, Terminator, unitValue} from "opendaw-std"
+import {Arrays, Exec, isDefined, ObservableValue, Option, Procedure, Provider, Terminator, unitValue} from "lib-std"
 import {Surface} from "@/ui/surface/Surface.tsx"
 import {IconSymbol} from "studio-shared"
-import {Box, BoxGraph} from "opendaw-box"
+import {Box, BoxGraph} from "lib-box"
 import {BoxDebugView} from "./BoxDebugView"
 import {BoxesDebugView} from "@/ui/components/BoxesDebugView.tsx"
 import {ProgressBar} from "@/ui/components/ProgressBar.tsx"
 import {Colors} from "../Colors"
 import EmailBody from "@/ErrorMail.txt?raw"
-import {Errors} from "opendaw-dom"
+import {Errors} from "lib-dom"
 
 export const showDialog = async ({headline, content, okText, buttons, origin}: {
     headline?: string,

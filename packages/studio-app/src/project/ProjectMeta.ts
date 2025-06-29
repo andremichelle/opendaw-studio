@@ -1,4 +1,4 @@
-import {JSONValue} from "opendaw-std"
+import {JSONValue} from "lib-std"
 
 export type ProjectMeta = {
     name: string

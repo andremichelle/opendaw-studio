@@ -1,4 +1,4 @@
-import {byte, Terminable, unitValue} from "opendaw-std"
+import {byte, Terminable, unitValue} from "lib-std"
 
 export interface NoteSender {
     noteOn(note: byte, velocity: unitValue): void

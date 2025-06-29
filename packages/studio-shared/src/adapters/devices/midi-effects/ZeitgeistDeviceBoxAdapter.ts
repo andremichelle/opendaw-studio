@@ -1,6 +1,6 @@
 import {Pointers} from "studio-enums"
-import {Observer, Subscription, UUID} from "opendaw-std"
-import {Address, BooleanField, Int32Field, PointerField, StringField} from "opendaw-box"
+import {Observer, Subscription, UUID} from "lib-std"
+import {Address, BooleanField, Int32Field, PointerField, StringField} from "lib-box"
 import {ZeitgeistDeviceBox} from "studio-boxes"
 import {DeviceHost, Devices, MidiEffectDeviceAdapter} from "../../../devices"
 import {BoxAdaptersContext} from "../../../BoxAdaptersContext"

@@ -1,4 +1,4 @@
-import {asDefined, panic, Terminable} from "opendaw-std"
+import {asDefined, panic, Terminable} from "lib-std"
 import {DragAndDrop} from "@/ui/DragAndDrop"
 import {AnyDragData} from "@/ui/AnyDragData"
 import {Instruments} from "@/service/Instruments"

@@ -1,4 +1,4 @@
-import {int, Option, Terminable, UUID} from "opendaw-std"
+import {int, Option, Terminable, UUID} from "lib-std"
 import {AudioGenerator, AudioInput, Processor} from "./processing.ts"
 import {AudioEffectDeviceBoxAdapter, MidiEffectDeviceAdapter} from "studio-shared"
 import {NoteEventSource, NoteEventTarget} from "./NoteEventSource.ts"

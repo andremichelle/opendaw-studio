@@ -1,11 +1,11 @@
-import {EmptyExec, Lifecycle, Nullable, Option, panic, Parameter, Primitive, Strings, unitValue, ValueGuide} from "opendaw-std"
-import {createElement, Group, JsxValue} from "opendaw-jsx"
+import {EmptyExec, Lifecycle, Nullable, Option, panic, Parameter, Primitive, Strings, unitValue, ValueGuide} from "lib-std"
+import {createElement, Group, JsxValue} from "lib-jsx"
 import {ValueDragging} from "@/ui/hooks/dragging"
 import {FloatingTextInput} from "@/ui/components/FloatingTextInput.tsx"
 import {ValueTooltip} from "@/ui/surface/ValueTooltip.tsx"
 import {Surface} from "../surface/Surface"
-import {Editing} from "opendaw-box"
-import {Events} from "opendaw-dom"
+import {Editing} from "lib-box"
+import {Events} from "lib-dom"
 
 type Construct = {
     lifecycle: Lifecycle

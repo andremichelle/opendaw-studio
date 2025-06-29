@@ -1,10 +1,10 @@
 import css from "./ModularTabButton.sass?inline"
-import {Lifecycle} from "opendaw-std"
+import {Lifecycle} from "lib-std"
 import {ModularAdapter} from "studio-shared"
 import {UserEditing} from "@/UserEditingManager.ts"
-import {Vertex} from "opendaw-box"
-import {createElement, Inject} from "opendaw-jsx"
-import {Html} from "opendaw-dom"
+import {Vertex} from "lib-box"
+import {createElement, Inject} from "lib-jsx"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "ModularTabButton")
 

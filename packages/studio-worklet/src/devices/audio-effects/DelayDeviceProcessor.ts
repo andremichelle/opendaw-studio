@@ -1,6 +1,6 @@
 import {AudioEffectDeviceBoxAdapter, DelayDeviceBoxAdapter} from "studio-shared"
-import {Bits, int, Option, Terminable, UUID} from "opendaw-std"
-import {dbToGain, Event, Fraction, PPQN, StereoMatrix} from "opendaw-dsp"
+import {Bits, int, Option, Terminable, UUID} from "lib-std"
+import {dbToGain, Event, Fraction, PPQN, StereoMatrix} from "lib-dsp"
 import {AudioEffectDeviceProcessor} from "../../processors.ts"
 import {EngineContext} from "../../EngineContext.ts"
 import {Block, BlockFlag, Processor} from "../../processing.ts"

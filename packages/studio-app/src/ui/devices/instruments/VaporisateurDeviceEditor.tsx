@@ -1,6 +1,6 @@
 import css from "./VaporisateurDeviceEditor.sass?inline"
-import {Lifecycle} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Lifecycle} from "lib-std"
+import {createElement} from "lib-jsx"
 import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
 import {MenuItems} from "@/ui/devices/menu-items.ts"
 import {Project} from "@/project/Project.ts"
@@ -9,7 +9,7 @@ import {
 } from "studio-shared"
 import {ControlBuilder} from "@/ui/devices/ControlBuilder.tsx"
 import {DevicePeakMeter} from "@/ui/devices/panel/DevicePeakMeter.tsx"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 import {Instruments} from "@/service/Instruments"
 import {DeviceHost} from "studio-shared"
 

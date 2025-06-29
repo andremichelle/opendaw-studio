@@ -1,5 +1,5 @@
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
-import {isDefined, Nullable} from "opendaw-std"
+import {isDefined, Nullable} from "lib-std"
 import {PointerRadiusDistance} from "@/ui/timeline/constants.ts"
 import {PitchPositioner} from "@/ui/timeline/editors/notes/pitch/PitchPositioner.ts"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"

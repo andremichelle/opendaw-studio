@@ -1,5 +1,5 @@
-import {Arrays, int, Option, Terminable, UUID} from "opendaw-std"
-import {BiquadCoeff, BiquadMono, BiquadProcessor, BiquadStack} from "opendaw-dsp"
+import {Arrays, int, Option, Terminable, UUID} from "lib-std"
+import {BiquadCoeff, BiquadMono, BiquadProcessor, BiquadStack} from "lib-dsp"
 import {AudioEffectDeviceBoxAdapter, RevampDeviceBoxAdapter} from "studio-shared"
 import {AudioEffectDeviceProcessor} from "../../processors.ts"
 import {EngineContext} from "../../EngineContext.ts"

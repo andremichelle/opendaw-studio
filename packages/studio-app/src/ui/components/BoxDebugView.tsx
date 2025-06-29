@@ -1,8 +1,8 @@
 import css from "./BoxDebugView.sass?inline"
-import {UUID} from "opendaw-std"
-import {ArrayField, Box, Field, ObjectField, PointerField, PrimitiveField, Vertex} from "opendaw-box"
-import {createElement, JsxValue, replaceChildren} from "opendaw-jsx"
-import {Html} from "opendaw-dom"
+import {UUID} from "lib-std"
+import {ArrayField, Box, Field, ObjectField, PointerField, PrimitiveField, Vertex} from "lib-box"
+import {createElement, JsxValue, replaceChildren} from "lib-jsx"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "BoxDebugView")
 

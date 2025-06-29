@@ -1,7 +1,7 @@
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {RegionColors} from "@/ui/timeline/renderer/env.ts"
-import {LoopableRegion, ValueEvent} from "opendaw-dsp"
-import {asDefined, assert, Curve, Func, unitValue} from "opendaw-std"
+import {LoopableRegion, ValueEvent} from "lib-dsp"
+import {asDefined, assert, Curve, Func, unitValue} from "lib-std"
 
 export const renderValueStream = (context: CanvasRenderingContext2D,
                                   range: TimelineRange,

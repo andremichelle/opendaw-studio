@@ -1,14 +1,14 @@
 import css from "./PianoRoll.sass?inline"
-import {int, Lifecycle, Option} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {int, Lifecycle, Option} from "lib-std"
+import {createElement} from "lib-jsx"
 import {CanvasPainter} from "@/ui/canvas/painter.ts"
 import {PitchPositioner} from "@/ui/timeline/editors/notes/pitch/PitchPositioner.ts"
-import {MidiKeys} from "opendaw-dsp"
+import {MidiKeys} from "lib-dsp"
 import {ScaleConfig} from "@/ui/timeline/editors/notes/pitch/ScaleConfig.ts"
 import {NoteStreamReceiver} from "studio-shared"
 import {Colors} from "@/ui/Colors"
 import {NoteSender} from "studio-shared"
-import {Dragging, Events, Html} from "opendaw-dom"
+import {Dragging, Events, Html} from "lib-dom"
 import {Fonts} from "@/ui/Fonts"
 
 const className = Html.adoptStyleSheet(css, "PianoRoll")

@@ -1,8 +1,8 @@
 import {Pointers} from "studio-enums"
-import {Int32Field} from "opendaw-box"
-import {Interpolation} from "opendaw-dsp"
+import {Int32Field} from "lib-box"
+import {Interpolation} from "lib-dsp"
 import {ValueEventCurveBox} from "studio-boxes"
-import {assertInstanceOf, isDefined, panic, UUID} from "opendaw-std"
+import {assertInstanceOf, isDefined, panic, UUID} from "lib-std"
 
 export namespace InterpolationFieldAdapter {
     export const write = (field: Int32Field<Pointers.ValueInterpolation>, value: Interpolation): void => {

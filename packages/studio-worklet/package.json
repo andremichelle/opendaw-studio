@@ -18,8 +18,8 @@
     "studio-enums": "*",
     "studio-boxes": "*",
     "studio-shared": "*",
-    "opendaw-std": "*",
-    "opendaw-box": "*",
-    "opendaw-fusion": "*"
+    "lib-std": "*",
+    "lib-box": "*",
+    "lib-fusion": "*"
   }
 }

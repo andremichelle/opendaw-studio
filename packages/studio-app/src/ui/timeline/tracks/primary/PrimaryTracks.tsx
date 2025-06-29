@@ -1,9 +1,9 @@
 import css from "./PrimaryTracks.sass?inline"
-import {Lifecycle, ObservableValue, Terminator} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Lifecycle, ObservableValue, Terminator} from "lib-std"
+import {createElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {MarkerTrack} from "./marker/MarkerTrack"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "primary-tracks")
 

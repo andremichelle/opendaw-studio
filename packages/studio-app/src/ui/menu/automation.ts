@@ -1,7 +1,7 @@
 import {ContextMenu} from "@/ui/ContextMenu.ts"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {TrackType} from "studio-shared"
-import {Editing, PrimitiveValues} from "opendaw-box"
+import {Editing, PrimitiveValues} from "lib-box"
 import {AudioUnitTracks} from "studio-shared"
 import {MidiDevices} from "@/midi/devices/MidiDevices"
 import {AutomatableParameterFieldAdapter} from "studio-shared"

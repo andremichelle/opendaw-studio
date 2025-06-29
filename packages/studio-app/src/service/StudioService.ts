@@ -16,7 +16,7 @@ import {
     Subscription,
     Terminator,
     UUID
-} from "opendaw-std"
+} from "lib-std"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {initAppMenu} from "@/service/app-menu"
 import {UIAudioManager} from "@/project/UIAudioManager"
@@ -44,16 +44,16 @@ import {SampleDialogs} from "@/ui/browse/SampleDialogs"
 import {TextTooltip} from "@/ui/surface/TextTooltip"
 import {AudioOutputDevice} from "@/audio/AudioOutputDevice"
 import {FooterLabel} from "@/service/FooterLabel"
-import {RouteLocation} from "opendaw-jsx"
-import {PPQN} from "opendaw-dsp"
-import {Browser, ConsoleCommands, Errors} from "opendaw-dom"
-import {Promises} from "opendaw-runtime"
+import {RouteLocation} from "lib-jsx"
+import {PPQN} from "lib-dsp"
+import {Browser, ConsoleCommands, Errors} from "lib-dom"
+import {Promises} from "lib-runtime"
 import {EngineOfflineRenderer} from "@/audio-engine/EngineOfflineRenderer"
 import {ExportStemsConfiguration} from "studio-shared"
 import {ProjectDialogs} from "@/project/ProjectDialogs"
 import {AudioImporter} from "@/audio/AudioImport"
 import {AudioWorklets} from "@/audio-engine/AudioWorklets"
-import {Address} from "opendaw-box"
+import {Address} from "lib-box"
 import {Recovery} from "@/Recovery.ts"
 
 /**

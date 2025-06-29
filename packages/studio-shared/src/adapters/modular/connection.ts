@@ -1,5 +1,5 @@
 import {ModuleConnectionBox} from "studio-boxes"
-import {Address, Vertex} from "opendaw-box"
+import {Address, Vertex} from "lib-box"
 import {BoxAdapter} from "../../BoxAdapter"
 import {BoxAdaptersContext} from "../../BoxAdaptersContext"
 

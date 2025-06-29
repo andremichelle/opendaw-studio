@@ -1,7 +1,7 @@
 import {PeakMeterProcessorOptions} from "studio-shared"
 import {RenderQuantum} from "./constants.ts"
-import {RMS} from "opendaw-dsp"
-import {Arrays, int, Schema, SyncStream} from "opendaw-std"
+import {RMS} from "lib-dsp"
+import {Arrays, int, Schema, SyncStream} from "lib-std"
 
 registerProcessor("peak-meter-processor", class extends AudioWorkletProcessor {
     readonly #numberOfChannels: int

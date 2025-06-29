@@ -1,13 +1,13 @@
 import css from "./ParameterLabelKnob.sass?inline"
-import {Lifecycle, unitValue, ValueGuide} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Lifecycle, unitValue, ValueGuide} from "lib-std"
+import {createElement} from "lib-jsx"
 import {RelativeUnitValueDragging} from "@/ui/wrapper/RelativeUnitValueDragging.tsx"
 import {LabelKnob} from "@/ui/composite/LabelKnob.tsx"
 import {AutomatableParameterFieldAdapter} from "studio-shared"
 import {DeviceBoxAdapter} from "studio-shared"
-import {Editing} from "opendaw-box"
+import {Editing} from "lib-box"
 import {attachParameterContextMenu} from "@/ui/menu/automation.ts"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 import {MidiDevices} from "@/midi/devices/MidiDevices"
 
 const className = Html.adoptStyleSheet(css, "ParameterLabelKnob")

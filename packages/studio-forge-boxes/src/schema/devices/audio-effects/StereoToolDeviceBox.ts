@@ -1,8 +1,8 @@
-import { BoxSchema } from "box-forge"
+import { BoxSchema } from "lib-box-forge"
 import {Pointers} from "studio-enums"
 import { DefaultParameterPointerRules } from "../../defaults"
 import { createAudioEffectDevice } from "../builder"
-import { StereoMatrix } from "opendaw-dsp"
+import { StereoMatrix } from "lib-dsp"
 
 export const StereoToolDeviceBox: BoxSchema<Pointers> = createAudioEffectDevice("StereoToolDeviceBox", {
 	10: { type: "float32", name: "volume", pointerRules: DefaultParameterPointerRules },

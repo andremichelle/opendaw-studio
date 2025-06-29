@@ -1,6 +1,6 @@
 import {Project} from "@/project/Project"
-import {Update} from "opendaw-box"
-import {assert, ByteArrayInput, ByteArrayOutput, Hash} from "opendaw-std"
+import {Update} from "lib-box"
+import {assert, ByteArrayInput, ByteArrayOutput, Hash} from "lib-std"
 
 // TODO Update Meta as well?
 export const enum CommitType { Init, Open, Updates, NewVersion }

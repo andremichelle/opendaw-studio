@@ -1,4 +1,4 @@
-import { VertexVisitor } from "opendaw-box";
+import { VertexVisitor } from "lib-box";
 import {
   RootBox,
   SelectionBox,

@@ -1,4 +1,4 @@
-import {BoxSchema, FieldRecord, mergeFields, reserveMany} from "box-forge"
+import {BoxSchema, FieldRecord, mergeFields, reserveMany} from "lib-box-forge"
 import {Pointers} from "studio-enums"
 import {createAudioEffectDevice} from "./builder"
 

@@ -1,6 +1,6 @@
 import css from "./DeviceEditor.sass?inline"
-import {Lifecycle, ObservableValue, Procedure, Provider} from "opendaw-std"
-import {createElement, Group, JsxValue} from "opendaw-jsx"
+import {Lifecycle, ObservableValue, Procedure, Provider} from "lib-std"
+import {createElement, Group, JsxValue} from "lib-jsx"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {MenuButton} from "@/ui/components/MenuButton.tsx"
 import {MenuItem} from "@/ui/model/menu-item"
@@ -11,9 +11,9 @@ import {DeviceBoxAdapter, DeviceType, EffectDeviceBoxAdapter} from "studio-share
 import {DebugMenus} from "@/ui/menu/debug.ts"
 import {DragDevice} from "@/ui/AnyDragData"
 import {DragAndDrop} from "@/ui/DragAndDrop"
-import {Events, Html} from "opendaw-dom"
+import {Events, Html} from "lib-dom"
 import {TextScroller} from "@/ui/TextScroller"
-import {StringField} from "opendaw-box"
+import {StringField} from "lib-box"
 
 const className = Html.adoptStyleSheet(css, "DeviceEditor")
 

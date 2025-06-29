@@ -1,4 +1,4 @@
-import {Nullable} from "opendaw-std"
+import {Nullable} from "lib-std"
 
 export interface Capturing<T> {capture(localX: number, localY: number): Nullable<T>}
 

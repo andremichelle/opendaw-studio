@@ -1,6 +1,6 @@
 import css from "./ModularView.sass?inline"
-import {Lifecycle, Option, quantizeRound, Selection, Terminator} from "opendaw-std"
-import {appendChildren, createElement} from "opendaw-jsx"
+import {Lifecycle, Option, quantizeRound, Selection, Terminator} from "lib-std"
+import {appendChildren, createElement} from "lib-jsx"
 import {ModularAdapter} from "studio-shared"
 import {ModuleAdapter} from "studio-shared"
 import {GenericModuleView} from "@/ui/modular/GenericModuleView.tsx"
@@ -11,7 +11,7 @@ import {ModularWires} from "@/ui/modular/ModularWires.tsx"
 import {ModuleAttributes} from "studio-boxes"
 import {ContextMenu} from "@/ui/ContextMenu.ts"
 import {ModuleShelf} from "@/ui/modular/ModuleShelf.ts"
-import {Dragging, Html} from "opendaw-dom"
+import {Dragging, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "ModularView")
 

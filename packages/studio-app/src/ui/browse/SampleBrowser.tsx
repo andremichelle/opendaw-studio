@@ -1,7 +1,7 @@
 import css from "./SampleBrowser.sass?inline"
-import {clamp, DefaultObservableValue, Lifecycle, StringComparator, Terminator} from "opendaw-std"
+import {clamp, DefaultObservableValue, Lifecycle, StringComparator, Terminator} from "lib-std"
 import {StudioService} from "@/service/StudioService.ts"
-import {Await, createElement, Frag, Hotspot, HotspotUpdater, Inject, replaceChildren} from "opendaw-jsx"
+import {Await, createElement, Frag, Hotspot, HotspotUpdater, Inject, replaceChildren} from "lib-jsx"
 import {ThreeDots} from "@/ui/spinner/ThreeDots.tsx"
 import {Button} from "@/ui/components/Button.tsx"
 import {SampleApi} from "@/service/SampleApi.ts"
@@ -14,8 +14,8 @@ import {IconSymbol} from "studio-shared"
 import {SampleLocation} from "@/ui/browse/SampleLocation"
 import {HTMLSelection} from "@/ui/HTMLSelection"
 import {SampleService} from "@/ui/browse/SampleService"
-import {Events, Html, Keyboard} from "opendaw-dom"
-import {Runtime} from "opendaw-runtime"
+import {Events, Html, Keyboard} from "lib-dom"
+import {Runtime} from "lib-runtime"
 
 const className = Html.adoptStyleSheet(css, "Samples")
 

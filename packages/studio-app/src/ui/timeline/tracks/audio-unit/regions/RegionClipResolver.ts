@@ -1,8 +1,8 @@
 import {TrackBoxAdapter} from "studio-shared"
-import {Event, EventCollection, ppqn} from "opendaw-dsp"
+import {Event, EventCollection, ppqn} from "lib-dsp"
 import {RegionModifyStrategies} from "@/ui/timeline/tracks/audio-unit/regions/RegionModifyStrategies.ts"
 import {AnyRegionBoxAdapter, UnionAdapterTypes} from "studio-shared"
-import {asDefined, assert, Exec, int, mod, panic} from "opendaw-std"
+import {asDefined, assert, Exec, int, mod, panic} from "lib-std"
 import {RegionEditing} from "studio-shared"
 import {TrackType} from "studio-shared"
 

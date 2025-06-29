@@ -3,8 +3,8 @@ import {
 } from "studio-shared"
 import {MidiFile} from "@/midi/format/MidiFile"
 import {MidiTrack} from "@/midi/format/MidiTrack"
-import {Promises} from "opendaw-runtime"
-import {Files} from "opendaw-dom"
+import {Promises} from "lib-runtime"
+import {Files} from "lib-dom"
 
 export const exportNotesToMidiFile = async (collection: NoteEventCollectionBoxAdapter, suggestedName: string) => {
     const encoder = MidiFile.encoder()

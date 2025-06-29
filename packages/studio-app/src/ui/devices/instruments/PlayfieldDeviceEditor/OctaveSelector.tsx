@@ -1,9 +1,9 @@
 import css from "./OctaveSelector.sass?inline"
-import {Events, Html} from "opendaw-dom"
-import {int, Lifecycle, MutableObservableValue, ObservableValue, Terminable} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Events, Html} from "lib-dom"
+import {int, Lifecycle, MutableObservableValue, ObservableValue, Terminable} from "lib-std"
+import {createElement} from "lib-jsx"
 import {SlotState} from "@/ui/devices/instruments/PlayfieldDeviceEditor/SlotState"
-import {Runtime} from "opendaw-runtime"
+import {Runtime} from "lib-runtime"
 import {SlotUtils} from "@/ui/devices/instruments/PlayfieldDeviceEditor/SlotUtils"
 
 const className = Html.adoptStyleSheet(css, "OctaveSelector")

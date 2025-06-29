@@ -1,4 +1,4 @@
-import {UUID} from "opendaw-std"
+import {UUID} from "lib-std"
 
 export type ClipSequencingUpdates = {
     started: ReadonlyArray<UUID.Format>

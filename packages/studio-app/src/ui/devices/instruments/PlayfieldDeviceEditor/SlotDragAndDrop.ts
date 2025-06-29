@@ -1,8 +1,8 @@
-import {asInstanceOf, int, ObservableValue, Option, Terminable, UUID} from "opendaw-std"
+import {asInstanceOf, int, ObservableValue, Option, Terminable, UUID} from "lib-std"
 import {DragAndDrop} from "@/ui/DragAndDrop"
 import {AnyDragData} from "@/ui/AnyDragData"
 import {PlayfieldSampleBox} from "studio-boxes"
-import {Keyboard} from "opendaw-dom"
+import {Keyboard} from "lib-dom"
 import {Project} from "@/project/Project"
 import {
     PlayfieldSampleBoxAdapter

@@ -1,4 +1,4 @@
-import {Notifier, Nullable, Observer, Subscription, Terminable} from "opendaw-std"
+import {Notifier, Nullable, Observer, Subscription, Terminable} from "lib-std"
 import {CanvasUnitPainter} from "@/ui/canvas/painter.ts"
 import {
     BellParameters,
@@ -8,7 +8,7 @@ import {
 } from "studio-shared"
 import {AutomatableParameterFieldAdapter} from "studio-shared"
 import {biquad} from "@/ui/devices/audio-effects/RevampDeviceEditor/constants.ts"
-import {gainToDb} from "opendaw-dsp"
+import {gainToDb} from "lib-dsp"
 
 export type ColorSet = {
     full: string

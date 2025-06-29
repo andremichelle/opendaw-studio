@@ -1,10 +1,10 @@
 import css from "./MarkerTrack.sass?inline"
-import {Lifecycle, ObservableValue} from "opendaw-std"
-import {createElement, Inject} from "opendaw-jsx"
+import {Lifecycle, ObservableValue} from "lib-std"
+import {createElement, Inject} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {MarkerTrackBody} from "@/ui/timeline/tracks/primary/marker/MarkerTrackBody.tsx"
 import {MarkerTrackHeader} from "@/ui/timeline/tracks/primary/marker/MarkerTrackHeader.tsx"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "MarkerTrack")
 

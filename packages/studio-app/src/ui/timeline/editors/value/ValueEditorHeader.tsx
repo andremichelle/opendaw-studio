@@ -1,9 +1,9 @@
 import css from "./ValueEditorHeader.sass?inline"
-import {Lifecycle} from "opendaw-std"
+import {Lifecycle} from "lib-std"
 import {StudioService} from "@/service/StudioService.ts"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {ValueEditingContext} from "@/ui/timeline/editors/value/ValueEditingContext.ts"
-import {Html, ModfierKeys} from "opendaw-dom"
+import {Html, ModfierKeys} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "ValueEditorHeader")
 

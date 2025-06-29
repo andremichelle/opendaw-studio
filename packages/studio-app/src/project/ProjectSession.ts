@@ -1,9 +1,9 @@
 import {ProjectMeta} from "@/project/ProjectMeta"
 import {Project} from "./Project"
-import {Notifier, Observer, Option, Subscription, UUID} from "opendaw-std"
+import {Notifier, Observer, Option, Subscription, UUID} from "lib-std"
 import {Projects} from "@/project/Projects"
 import {showApproveDialog} from "@/ui/components/dialogs"
-import {Promises} from "opendaw-runtime"
+import {Promises} from "lib-runtime"
 import {MidiDeviceAccess} from "@/midi/devices/MidiDeviceAccess"
 
 export class ProjectSession {

@@ -1,18 +1,18 @@
 import css from "./AutoGainButton.sass?inline"
-import {Events, Html} from "opendaw-dom"
-import {Lifecycle, Terminator} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Events, Html} from "lib-dom"
+import {Lifecycle, Terminator} from "lib-std"
+import {createElement} from "lib-jsx"
 import {LKR} from "@/ui/devices/constants"
 import {Colors} from "@/ui/Colors"
 import {Column} from "@/ui/devices/Column"
 import {Icon} from "@/ui/components/Icon"
 import {IconSymbol} from "studio-shared"
-import {gainToDb} from "opendaw-dsp"
+import {gainToDb} from "lib-dsp"
 import {Project} from "@/project/Project"
 import {
     StereoToolDeviceBoxAdapter
 } from "studio-shared"
-import {Runtime} from "opendaw-runtime"
+import {Runtime} from "lib-runtime"
 
 const className = Html.adoptStyleSheet(css, "AutoGainButton")
 

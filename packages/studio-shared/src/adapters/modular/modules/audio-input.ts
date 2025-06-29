@@ -1,6 +1,6 @@
 import {ModularAudioInputBox} from "studio-boxes"
 import {Pointers} from "studio-enums"
-import {Arrays} from "opendaw-std"
+import {Arrays} from "lib-std"
 import {AbstractModuleAdapter} from "../abstract"
 import {ModuleAdapter} from "../module"
 import {Direction, ModuleConnectorAdapter} from "../connector"

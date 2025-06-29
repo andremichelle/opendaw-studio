@@ -1,6 +1,6 @@
 import css from "./AudioUnitsTimeline.sass?inline"
-import {Lifecycle} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Lifecycle} from "lib-std"
+import {createElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {Scroller} from "@/ui/components/Scroller.tsx"
 import {ScrollModel} from "@/ui/components/ScrollModel.ts"
@@ -10,7 +10,7 @@ import {RegionsArea} from "./regions/RegionsArea.tsx"
 import {ClipsArea} from "./clips/ClipsArea.tsx"
 import {AudioUnitBoxAdapter} from "studio-shared"
 import {TrackBoxAdapter} from "studio-shared"
-import {AnimationFrame, Events, Html} from "opendaw-dom"
+import {AnimationFrame, Events, Html} from "lib-dom"
 import {ExtraSpace} from "./Constants.ts"
 
 const className = Html.adoptStyleSheet(css, "AudioUnitsTimeline")

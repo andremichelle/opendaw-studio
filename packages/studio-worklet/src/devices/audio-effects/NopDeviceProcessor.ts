@@ -1,4 +1,4 @@
-import {int, Option, Terminable, UUID} from "opendaw-std"
+import {int, Option, Terminable, UUID} from "lib-std"
 import {AudioEffectDeviceBoxAdapter} from "studio-shared"
 import {AudioEffectDeviceProcessor} from "../../processors.ts"
 import {EngineContext} from "../../EngineContext.ts"

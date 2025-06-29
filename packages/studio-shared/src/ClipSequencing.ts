@@ -1,5 +1,5 @@
-import {Option, Terminable, UUID} from "opendaw-std"
-import {ppqn} from "opendaw-dsp"
+import {Option, Terminable, UUID} from "lib-std"
+import {ppqn} from "lib-dsp"
 import {AnyClipBoxAdapter} from "./UnionAdapterTypes"
 
 export type Section = {

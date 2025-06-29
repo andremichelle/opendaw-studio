@@ -1,8 +1,8 @@
-import {clamp, Notifier, Observer, Option, Selection, Terminable, unitValue, ValueAxis} from "opendaw-std"
-import {Editing} from "opendaw-box"
+import {clamp, Notifier, Observer, Option, Selection, Terminable, unitValue, ValueAxis} from "lib-std"
+import {Editing} from "lib-box"
 import {Line, NoteModifyStrategy, Point} from "../NoteModifyStrategies.ts"
 import {NoteEventBoxAdapter} from "studio-shared"
-import {EventCollection, ppqn} from "opendaw-dsp"
+import {EventCollection, ppqn} from "lib-dsp"
 import {NoteModifier} from "@/ui/timeline/editors/notes/NoteModifier.ts"
 import {
     NotePropertyCent,
@@ -14,7 +14,7 @@ import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 
 import {NoteEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"
 import {UINoteEvent} from "@/ui/timeline/editors/notes/UINoteEvent.ts"
-import {Dragging} from "opendaw-dom"
+import {Dragging} from "lib-dom"
 
 type Construct = Readonly<{
     element: Element

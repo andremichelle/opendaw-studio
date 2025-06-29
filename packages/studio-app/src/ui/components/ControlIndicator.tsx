@@ -1,6 +1,6 @@
-import {Lifecycle} from "opendaw-std"
+import {Lifecycle} from "lib-std"
 import {AutomatableParameterFieldAdapter} from "studio-shared"
-import {createElement, Group, JsxValue} from "opendaw-jsx"
+import {createElement, Group, JsxValue} from "lib-jsx"
 
 type Construct = {
     lifecycle: Lifecycle

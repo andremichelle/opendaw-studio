@@ -1,4 +1,4 @@
-import {clamp, Id, int, Option, Terminable, UUID} from "opendaw-std"
+import {clamp, Id, int, Option, Terminable, UUID} from "lib-std"
 import {
     BandLimitedOscillator,
     BiquadCoeff,
@@ -9,7 +9,7 @@ import {
     NoteEvent,
     velocityToGain,
     Waveform
-} from "opendaw-dsp"
+} from "lib-dsp"
 import {VaporisateurDeviceBoxAdapter} from "studio-shared"
 import {RenderQuantum} from "../../constants.ts"
 import {EngineContext} from "../../EngineContext.ts"

@@ -1,6 +1,6 @@
 import {NanoDeviceBox} from "studio-boxes"
-import {StringMapping, UUID, ValueMapping} from "opendaw-std"
-import {Address, BooleanField, FieldKeys, StringField} from "opendaw-box"
+import {StringMapping, UUID, ValueMapping} from "lib-std"
+import {Address, BooleanField, FieldKeys, StringField} from "lib-box"
 import {DeviceHost, Devices, InstrumentDeviceBoxAdapter} from "../../../devices"
 import {BoxAdaptersContext} from "../../../BoxAdaptersContext"
 import {ParameterAdapterSet} from "../../../ParameterAdapterSet"

@@ -1,10 +1,10 @@
 import css from "./MenuButton.sass?inline"
-import {createElement, JsxValue} from "opendaw-jsx"
+import {createElement, JsxValue} from "lib-jsx"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {Menu} from "@/ui/components/Menu.tsx"
-import {isDefined, Option} from "opendaw-std"
+import {isDefined, Option} from "lib-std"
 import {Surface} from "@/ui/surface/Surface.tsx"
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "MenuButton")
 

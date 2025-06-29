@@ -1,8 +1,8 @@
 import css from "./ButtonCheckboxRadio.sass?inline"
-import {isDefined, Lifecycle} from "opendaw-std"
-import {createElement, JsxValue} from "opendaw-jsx"
+import {isDefined, Lifecycle} from "lib-std"
+import {createElement, JsxValue} from "lib-jsx"
 import {TextTooltip} from "@/ui/surface/TextTooltip.tsx"
-import {CssUtils, Html} from "opendaw-dom"
+import {CssUtils, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "ButtonCheckboxRadio")
 

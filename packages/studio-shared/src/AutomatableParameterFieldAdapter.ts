@@ -17,10 +17,10 @@ import {
     Terminator,
     unitValue,
     ValueMapping
-} from "opendaw-std"
-import {ppqn} from "opendaw-dsp"
-import {Browser} from "opendaw-dom"
-import {Address, PointerField, PointerTypes, PrimitiveField, PrimitiveType, PrimitiveValues} from "opendaw-box"
+} from "lib-std"
+import {ppqn} from "lib-dsp"
+import {Browser} from "lib-dom"
+import {Address, PointerField, PointerTypes, PrimitiveField, PrimitiveType, PrimitiveValues} from "lib-box"
 import {Pointers} from "studio-enums"
 import {BoxVisitor, TrackBox} from "studio-boxes"
 import {TrackBoxAdapter} from "./adapters/timeline/TrackBoxAdapter"

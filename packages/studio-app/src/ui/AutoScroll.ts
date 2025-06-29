@@ -1,6 +1,6 @@
-import {AABB, Client, Option, Padding, Provider, Terminable, Terminator} from "opendaw-std"
+import {AABB, Client, Option, Padding, Provider, Terminable, Terminator} from "lib-std"
 import {Surface} from "@/ui/surface/Surface.tsx"
-import {AnimationFrame, Events} from "opendaw-dom"
+import {AnimationFrame, Events} from "lib-dom"
 
 export type AutoScroller = (deltaX: number, deltaY: number) => void
 

@@ -1,8 +1,8 @@
-import {asDefined, Lifecycle, quantizeFloor} from "opendaw-std"
-import {deferNextFrame, Html} from "opendaw-dom"
-import {PPQN} from "opendaw-dsp"
+import {asDefined, Lifecycle, quantizeFloor} from "lib-std"
+import {deferNextFrame, Html} from "lib-dom"
+import {PPQN} from "lib-dsp"
 import {Colors} from "@/ui/Colors.ts"
-import {createElement} from "opendaw-jsx"
+import {createElement} from "lib-jsx"
 import {Project} from "@/project/Project.ts"
 import {AudioUnitTracks} from "studio-shared"
 

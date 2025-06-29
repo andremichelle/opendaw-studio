@@ -1,4 +1,4 @@
-import {clamp, int, Notifier, Observer, Subscription, Terminable, Terminator, ValueAxis} from "opendaw-std"
+import {clamp, int, Notifier, Observer, Subscription, Terminable, Terminator, ValueAxis} from "lib-std"
 import {ScrollModel} from "@/ui/components/ScrollModel.ts"
 
 export class PitchPositioner implements Terminable {

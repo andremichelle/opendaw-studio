@@ -1,5 +1,5 @@
-import {Dragging} from "opendaw-dom"
-import {Editing} from "opendaw-box"
+import {Dragging} from "lib-dom"
+import {Editing} from "lib-box"
 
 export interface Modifier {
     update(event: Dragging.Event): void

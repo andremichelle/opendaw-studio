@@ -1,6 +1,6 @@
 import {AudioUnitBox} from "studio-boxes"
-import {int, Option, StringMapping, Terminator, UUID, ValueMapping} from "opendaw-std"
-import {Address, BooleanField, Field, Int32Field} from "opendaw-box"
+import {int, Option, StringMapping, Terminator, UUID, ValueMapping} from "lib-std"
+import {Address, BooleanField, Field, Int32Field} from "lib-box"
 import {AudioUnitType, Pointers} from "studio-enums"
 import {AudioEffectDeviceBoxAdapter, DeviceHost, Devices, MidiEffectDeviceAdapter} from "../../devices"
 import {AudioUnitTracks} from "./AudioUnitTracks"

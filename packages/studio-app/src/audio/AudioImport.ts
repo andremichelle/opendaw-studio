@@ -3,9 +3,9 @@ import {AudioData} from "studio-shared"
 import {AudioPeaks} from "@/audio/AudioPeaks"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 import {AudioStorage} from "@/audio/AudioStorage"
-import {Arrays, ProgressHandler, UUID} from "opendaw-std"
-import {Promises} from "opendaw-runtime"
-import {estimateBpm} from "opendaw-dsp"
+import {Arrays, ProgressHandler, UUID} from "lib-std"
+import {Promises} from "lib-runtime"
+import {estimateBpm} from "lib-dsp"
 
 export namespace AudioImporter {
     export type Creation = {

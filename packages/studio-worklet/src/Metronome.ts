@@ -1,9 +1,9 @@
 import {BlockFlag, ProcessInfo} from "./processing.ts"
-import {PPQN} from "opendaw-dsp"
-import {assert, Bits, int, TAU} from "opendaw-std"
+import {PPQN} from "lib-dsp"
+import {assert, Bits, int, TAU} from "lib-std"
 import {RenderQuantum} from "./constants.ts"
 import {AudioBuffer} from "./AudioBuffer.ts"
-import {Fragmentor} from "opendaw-dsp"
+import {Fragmentor} from "lib-dsp"
 
 export class Metronome {
     readonly #output = new AudioBuffer()

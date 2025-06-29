@@ -1,4 +1,4 @@
-import {Exec, Procedure} from "opendaw-std"
+import {Exec, Procedure} from "lib-std"
 
 export interface Result<T> {
     success: Procedure<T>

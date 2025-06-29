@@ -1,5 +1,5 @@
 import {AnyClipBoxAdapter} from "studio-shared"
-import {int} from "opendaw-std"
+import {int} from "lib-std"
 
 export interface ClipModifyStrategies {
     showOrigin(): boolean

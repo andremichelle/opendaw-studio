@@ -1,7 +1,7 @@
-import {Html} from "opendaw-dom"
+import {Html} from "lib-dom"
 import css from "./SearchInput.sass?inline"
-import {Lifecycle, MutableObservableValue} from "opendaw-std"
-import {createElement} from "opendaw-jsx"
+import {Lifecycle, MutableObservableValue} from "lib-std"
+import {createElement} from "lib-jsx"
 
 const className = Html.adoptStyleSheet(css, "SearchInput")
 

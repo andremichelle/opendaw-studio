@@ -1,5 +1,5 @@
-import {Terminable} from "opendaw-std"
-import {Event} from "opendaw-dsp"
+import {Terminable} from "lib-std"
+import {Event} from "lib-dsp"
 import {Block} from "../../../processing.ts"
 import {EngineContext} from "../../../EngineContext.ts"
 import {EventProcessor} from "../../../EventProcessor.ts"

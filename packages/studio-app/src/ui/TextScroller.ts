@@ -1,5 +1,5 @@
-import {clamp, Terminable, Terminator} from "opendaw-std"
-import {AnimationFrame, Events} from "opendaw-dom"
+import {clamp, Terminable, Terminator} from "lib-std"
+import {AnimationFrame, Events} from "lib-dom"
 
 export namespace TextScroller {
     export const install = (element: HTMLElement): Terminable => {
