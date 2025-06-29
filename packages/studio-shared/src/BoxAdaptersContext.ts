@@ -1,5 +1,3 @@
-// TODO: Fix BoxIO import after monorepo refactor
-// import {BoxIO} from "../data/boxes"
 import {AudioLoaderManager} from "./AudioLoader"
 import {RootBoxAdapter} from "./RootBoxAdapter"
 import {TimelineBoxAdapter} from "./adapters/timeline/TimelineBoxAdapter"

@@ -1,7 +1,7 @@
 import {Address, FieldKeys} from "opendaw-box"
 import {GrooveShuffleBox} from "studio-boxes"
-import {int, StringMapping, UUID, ValueMapping} from "opendaw-std"
-import {PPQN} from "opendaw-dsp"
+import {int, moebiusEase, squashUnit, StringMapping, Terminator, UUID, ValueMapping} from "opendaw-std"
+import {GroovePattern, GroovePatternFunction, ppqn, PPQN} from "opendaw-dsp"
 import {GrooveAdapter} from "./GrooveBoxAdapter"
 import {BoxAdaptersContext} from "../../BoxAdaptersContext"
 import {ParameterAdapterSet} from "../../ParameterAdapterSet"
@@ -19,19 +19,37 @@ export class GrooveShuffleBoxAdapter implements GrooveAdapter {
 
     readonly type = "groove-adapter"
 
+    readonly #terminator: Terminator = new Terminator()
+
     readonly #context: BoxAdaptersContext
     readonly #box: GrooveShuffleBox
 
     readonly #parametric: ParameterAdapterSet
     readonly namedParameter // let typescript infer the type
 
+    readonly #groove: GroovePattern = new GroovePattern({
+        duration: (): ppqn => this.#duration,
+        fx: x => moebiusEase(x, this.#amount),
+        fy: y => moebiusEase(y, 1.0 - this.#amount)
+    } satisfies GroovePatternFunction)
+
+    #amount: number = 0.0
+    #duration: ppqn = PPQN.SemiQuaver * 2
+
     constructor(context: BoxAdaptersContext, box: GrooveShuffleBox) {
         this.#context = context
         this.#box = box
 
-        this.#parametric = new ParameterAdapterSet(this.#context)
+        this.#parametric = this.#terminator.own(new ParameterAdapterSet(this.#context))
         this.namedParameter = this.#wrapParameters(box)
+        this.#terminator.ownAll(
+            this.namedParameter.duration.catchupAndSubscribe(owner => this.#duration = owner.getValue()),
+            this.namedParameter.amount.catchupAndSubscribe(owner => this.#amount = squashUnit(owner.getValue(), 0.01))
+        )
     }
+
+    unwarp(position: ppqn): ppqn {return this.#groove.unwarp(position)}
+    warp(position: ppqn): ppqn {return this.#groove.warp(position)}
 
     get box(): GrooveShuffleBox {return this.#box}
     get uuid(): UUID.Format {return this.#box.address.uuid}
@@ -39,7 +57,7 @@ export class GrooveShuffleBoxAdapter implements GrooveAdapter {
 
     parameterAt(fieldIndices: FieldKeys): AutomatableParameterFieldAdapter {return this.#parametric.parameterAt(fieldIndices)}
 
-    terminate(): void {this.#parametric.terminate()}
+    terminate(): void {this.#terminator.terminate()}
 
     #wrapParameters(box: GrooveShuffleBox) {
         return {

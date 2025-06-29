@@ -1,9 +1,9 @@
-import {Event, NoteEvent, ppqn} from "opendaw-dsp"
+import {assert, clamp, identity, int, Objects, Option, Terminable, UUID} from "opendaw-std"
+import {Event, Groove, NoteEvent, ppqn} from "opendaw-dsp"
 import {MidiEffectProcessor} from "../../processors.ts"
-import {assert, int, Option, Terminable, UUID} from "opendaw-std"
 import {AutomatableParameter} from "../../AutomatableParameter.ts"
 import {NoteEventSource, NoteLifecycleEvent} from "../../NoteEventSource.ts"
-import {NoteBroadcaster, ZeitgeistDeviceBoxAdapter} from "studio-shared"
+import {GrooveAdapter, NoteBroadcaster, ZeitgeistDeviceBoxAdapter} from "studio-shared"
 import {EventProcessor} from "../../EventProcessor.ts"
 import {Block} from "../../processing.ts"
 import {EngineContext} from "../../EngineContext.ts"
@@ -13,6 +13,7 @@ export class ZeitgeistDeviceProcessor extends EventProcessor implements MidiEffe
 
     readonly #noteBroadcaster: NoteBroadcaster
 
+    #groove: Option<GrooveAdapter> = Option.None
     #source: Option<NoteEventSource> = Option.None
 
     constructor(context: EngineContext, adapter: ZeitgeistDeviceBoxAdapter) {
@@ -23,16 +24,18 @@ export class ZeitgeistDeviceProcessor extends EventProcessor implements MidiEffe
         this.#noteBroadcaster = this.own(new NoteBroadcaster(context.broadcaster, adapter.address))
 
         this.ownAll(
-            /*adapter.box.groove.catchupAndSubscribe(pointer => {
-                this.#engineAdapter?.terminate()
-                this.#engineAdapter = pointer.targetVertex.isEmpty()
+            adapter.box.groove.catchupAndSubscribe(pointer => {
+                this.#groove.ifSome(adapter => adapter.terminate())
+                this.#groove = Option.wrap(pointer.targetVertex.isEmpty()
                     ? null
-                    : GrooveEngineAdapter.create(context.boxAdapters, this, pointer.targetVertex.unwrap().box)
+                    : context.boxAdapters.adapterFor(pointer.targetVertex.unwrap().box, GrooveAdapter.checkType))
             }),
-            Terminable.create(() => this.#engineAdapter?.terminate()),*/
+            Terminable.create(() => {
+                this.#groove.ifSome(adapter => adapter.terminate())
+                this.#groove = Option.None
+            }),
             context.registerProcessor(this)
         )
-        this.readAllParameters()
     }
 
     get uuid(): UUID.Format {return this.#adapter.uuid}
@@ -49,7 +52,7 @@ export class ZeitgeistDeviceProcessor extends EventProcessor implements MidiEffe
     * processNotes(from: ppqn, to: ppqn, flags: int): Generator<NoteLifecycleEvent> {
         if (this.#source.isEmpty()) {return}
         const source = this.#source.unwrap()
-        /*const groove = asDefined(this.#engineAdapter).groove()
+        const groove: Groove = this.#groove.mapOr(identity, Groove.Identity)
         for (const event of source.processNotes(groove.unwarp(from), groove.unwarp(to), flags)) {
             if (NoteLifecycleEvent.isStart(event)) {
                 this.#noteBroadcaster.noteOn(event.pitch)
@@ -57,16 +60,16 @@ export class ZeitgeistDeviceProcessor extends EventProcessor implements MidiEffe
                 this.#noteBroadcaster.noteOff(event.pitch)
             }
             yield Objects.overwrite(event, {position: clamp(groove.warp(event.position), from, to)})
-        }*/
+        }
     }
 
     * iterateActiveNotesAt(position: ppqn, onlyExternal: boolean): Generator<NoteEvent> {
         if (this.#source.isEmpty()) {return}
         const source = this.#source.unwrap()
-        /* const groove = asDefined(this.#engineAdapter).groove()
-         for (const event of source.iterateActiveNotesAt(groove.unwarp(position), onlyExternal)) {
-             yield Objects.overwrite(event, {position: groove.warp(event.position)})
-         }*/
+        const groove: Groove = this.#groove.mapOr(identity, Groove.Identity)
+        for (const event of source.iterateActiveNotesAt(groove.unwarp(position), onlyExternal)) {
+            yield Objects.overwrite(event, {position: groove.warp(event.position)})
+        }
     }
 
     reset(): void {this.eventInput.clear()}

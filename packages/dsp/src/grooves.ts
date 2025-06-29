@@ -12,6 +12,13 @@ export interface Groove {
     unwarp(position: ppqn): ppqn
 }
 
+export namespace Groove {
+    export const Identity: Groove = {
+        warp: (position: ppqn): ppqn => position,
+        unwarp: (position: ppqn): ppqn => position
+    }
+}
+
 export class GroovePattern implements Groove {
     readonly #func: GroovePatternFunction
 

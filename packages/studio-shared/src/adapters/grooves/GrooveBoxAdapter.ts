@@ -1,7 +1,8 @@
 import {AssertType} from "opendaw-std"
+import {Groove} from "opendaw-dsp"
 import {BoxAdapter} from "../../BoxAdapter"
 
-export interface GrooveAdapter extends BoxAdapter {
+export interface GrooveAdapter extends BoxAdapter, Groove {
     type: "groove-adapter"
 }
 
