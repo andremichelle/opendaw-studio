@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "strict": true,
+    "moduleResolution": "Node",
+    "useDefineForClassFields": true,
+    "experimentalDecorators": true,
+    "module": "ESNext",
+    "noEmit": true,
+    "lib": [
+      "ESNext"
+    ],
+    "sourceMap": true,
+    "declaration": true,
+    "sourceRoot": "./src"
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

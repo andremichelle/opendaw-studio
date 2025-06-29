@@ -1,0 +1,27 @@
+{
+  "name": "opendaw-forge-boxes",
+  "version": "0.0.0",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "npm run clear && npx tsx src/forge.ts && npm run format",
+    "clear": "rm -rf ../studio-boxes/src/*",
+    "format": "prettier --write \"../studio-boxes/src/**/*.ts\" --ignore-path /dev/null"
+  },
+  "devDependencies": {
+    "opendaw-std": "*",
+    "opendaw-box": "*",
+    "opendaw-box-forge": "*",
+    "opendaw-dsp": "*",
+    "studio-enums": "*",
+    "studio-shared": "*"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "noEmitHelpers": true,
+    "importsNotUsedAsValues": "remove",
+    "module": "ESNext",
+    "lib": [
+      "ESNext",
+      "DOM.Iterable"
+    ],
+    "sourceMap": true,
+    "noEmit": false,
+    "outDir": "./dist",
+    "declaration": true,
+    "sourceRoot": "./src",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "strict": true,
+    "jsx": "preserve",
+    "jsxFactory": "createElement",
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {}
+  },
+  "include": [
+    "src"
+  ]
+}

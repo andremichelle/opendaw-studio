@@ -1,0 +1,25 @@
+{
+  "name": "studio-worklet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": ["dist/**/*", "package.json"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "studio-enums": "*",
+    "studio-boxes": "*",
+    "studio-shared": "*",
+    "opendaw-std": "*",
+    "opendaw-box": "*",
+    "opendaw-fusion": "*"
+  }
+}

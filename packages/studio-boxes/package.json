@@ -1,0 +1,22 @@
+{
+  "name": "studio-boxes",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "opendaw-std": "*",
+    "opendaw-box": "*"
+  }
+} 

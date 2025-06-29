@@ -1,0 +1,29 @@
+import {ppqn} from "opendaw-dsp"
+
+export class TimeInfo {
+    #position: number = 0.0
+
+    #transporting: boolean = false
+    #leap: boolean = false
+    metronomeEnabled: boolean = false
+
+    getLeapStateAndReset(): boolean {
+        const leap = this.#leap
+        this.#leap = false
+        return leap
+    }
+
+    get position(): number {return this.#position}
+    set position(value: ppqn) {
+        this.#position = value
+        this.#leap = true
+    }
+
+    get transporting(): boolean {return this.#transporting}
+    set transporting(value: boolean) {
+        if (this.#transporting === value) {return}
+        this.#transporting = value
+    }
+
+    advanceTo(position: ppqn): void {this.#position = position}
+}

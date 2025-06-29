@@ -1,0 +1,31 @@
+{
+  "name": "studio-shared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist/**/*",
+    "package.json"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup src/index.ts --format cjs,esm --dts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "opendaw-std": "*",
+    "opendaw-box": "*",
+    "opendaw-fusion": "*",
+    "studio-enums": "*",
+    "studio-boxes": "*",
+    "studio-worklet": "*"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0"
+  }
+}

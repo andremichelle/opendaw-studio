@@ -1,0 +1,23 @@
+{
+  "name": "opendaw-box",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "opendaw-dom": "*",
+    "opendaw-runtime": "*",
+    "opendaw-std": "*",
+    "tsup": "^8.4.0",
+    "vite": "^6.3.5",
+    "vitest": "^3.1.3"
+  },
+  "files": [
+    "dist/**/*",
+    "package.json"
+  ]
+}

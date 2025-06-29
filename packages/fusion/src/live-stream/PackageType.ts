@@ -1,0 +1,1 @@
+export enum PackageType {Float, FloatArray, Integer, IntegerArray, ByteArray}

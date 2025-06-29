@@ -1,6 +1,9 @@
 {
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "clean": "bash ./clean.sh",
     "rebuild": "bash ./rebuild.sh",
     "cert": "bash ./cert.sh",
     "web": "bash ./run-web.sh"
@@ -10,5 +13,9 @@
     "@types/ssh2-sftp-client": "^9.0.4",
     "ssh2-sftp-client": "^12.0.0",
     "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "studio-enums": "^0.1.0",
+    "typescript": "^5.8.3"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "../../",
+    "paths": {
+      "@core/*": [
+        "packages/studio-core/src/*"
+      ],
+      "box-forge": [
+        "packages/box-forge/src"
+      ]
+    },
+    "target": "ESNext",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "experimentalDecorators": true
+  }
+}

@@ -1,0 +1,30 @@
+import {Lifecycle, unitValue} from "opendaw-std"
+import {Knob} from "@/ui/components/Knob.tsx"
+import {ParameterLabel} from "@/ui/components/ParameterLabel.tsx"
+import {createElement} from "opendaw-jsx"
+import {AutomatableParameterFieldAdapter} from "studio-shared"
+import {DeviceBoxAdapter} from "studio-shared"
+import {Editing} from "opendaw-box"
+import {MidiDevices} from "@/midi/devices/MidiDevices"
+
+type Construct = {
+    lifecycle: Lifecycle
+    editing: Editing
+    midiDevices: MidiDevices,
+    adapter: DeviceBoxAdapter
+    parameter: AutomatableParameterFieldAdapter
+    anchor: unitValue
+}
+
+export const LabelKnob = ({lifecycle, editing, midiDevices, adapter, parameter, anchor}: Construct) => {
+    return (
+        <div style={{display: "contents"}}>
+            <Knob lifecycle={lifecycle} value={parameter} anchor={anchor}/>
+            <ParameterLabel lifecycle={lifecycle}
+                            editing={editing}
+                            midiDevices={midiDevices}
+                            adapter={adapter}
+                            parameter={parameter}/>
+        </div>
+    )
+}
