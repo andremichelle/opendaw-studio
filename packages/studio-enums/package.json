@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "tsc --build",
+    "watch": "tsc --build --watch",
     "clean": "rimraf dist"
   }
 } 

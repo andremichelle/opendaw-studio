@@ -4,7 +4,7 @@
 and to **resurface the process of making music** by making **high-quality** creation tools accessible to everyone, with
 a strong focus on **education** and hands-on **learning**.
 
-![image](studio/public/images/meta.jpg)
+![image](packages/studio-app/public/images/meta.jpg)
 
 For more information about our mission and goals, please join our [Discord](https://discord.opendaw.studio/), visit
 our [official website](https://opendaw.org) and test our current [prototype](https://opendaw.studio/). Please consider

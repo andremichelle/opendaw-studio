@@ -13,7 +13,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate-exports": "node generate-exports.js",
-    "build": "npm run generate-exports && tsup src/index.ts --format cjs,esm --dts"
+    "build": "npm run generate-exports && tsup src/index.ts --format cjs,esm --dts",
+    "watch": "npm run generate-exports && tsup src/index.ts --format cjs,esm --dts --watch"
   },
   "keywords": [],
   "author": "",

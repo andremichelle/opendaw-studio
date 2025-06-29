@@ -1,7 +1,7 @@
 import {defineConfig, UserConfig} from "vite"
 import {resolve} from "path"
 import * as path from "node:path"
-import {readFileSync, writeFileSync} from "fs"
+import {readFileSync, writeFileSync, watch} from "fs"
 import {BuildInfo} from "./src/BuildInfo"
 import viteCompression from "vite-plugin-compression"
 import crossOriginIsolation from "vite-plugin-cross-origin-isolation"
@@ -53,6 +53,46 @@ export default defineConfig(({mode, command}) => {
                             next()
                         }
                     })
+                }
+            },
+            {
+                name: "watch-packages",
+                configureServer(server) {
+                    if (command === "serve") {
+                        // Watch package dist folders for changes
+                        const packagePaths = [
+                            "../lib-std/dist",
+                            "../lib-box/dist", 
+                            "../lib-dom/dist",
+                            "../lib-dsp/dist",
+                            "../lib-runtime/dist",
+                            "../lib-jsx/dist",
+                            "../lib-fusion/dist",
+                            "../studio-shared/dist",
+                            "../studio-boxes/dist",
+                            "../studio-enums/dist",
+                            "../studio-worklet/dist"
+                        ]
+                        
+                        packagePaths.forEach(pkgPath => {
+                            const fullPath = resolve(__dirname, pkgPath)
+                            try {
+                                watch(fullPath, { recursive: true }, (eventType, filename) => {
+                                    if (filename && !filename.endsWith('.map')) {
+                                        console.log(`Package changed: ${pkgPath}/${filename}`)
+                                        // Trigger a full page reload when packages change
+                                        server.ws.send({
+                                            type: 'full-reload',
+                                            path: '*'
+                                        })
+                                    }
+                                })
+                                console.log(`Watching package: ${pkgPath}`)
+                            } catch (error) {
+                                console.warn(`Could not watch ${pkgPath}:`, error)
+                            }
+                        })
+                    }
                 }
             },
             viteCompression({

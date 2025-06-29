@@ -1,12 +1,31 @@
 {
-  "private": true,
+  "private": false,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
     "rebuild": "bash ./rebuild.sh",
     "cert": "bash ./cert.sh",
-    "web": "bash ./run-web.sh"
+    "web": "bash ./run-web.sh",
+    "dev": "concurrently \"npm run watch:packages\" \"npm run dev:app\"",
+    "dev:libs": "concurrently \"npm run watch:libs\" \"npm run dev:app\"",
+    "dev:studio": "concurrently \"npm run watch:studio\" \"npm run dev:app\"",
+    "dev:all": "concurrently \"npm run watch:libs\" \"npm run watch:studio\" \"npm run dev:app\"",
+    "watch:packages": "npm run watch:libs",
+    "watch:libs": "concurrently \"npm run watch:lib-std\" \"npm run watch:lib-box\" \"npm run watch:lib-dom\" \"npm run watch:lib-dsp\" \"npm run watch:lib-runtime\" \"npm run watch:lib-jsx\" \"npm run watch:lib-fusion\"",
+    "watch:studio": "concurrently \"npm run watch:studio-shared\" \"npm run watch:studio-boxes\" \"npm run watch:studio-enums\" \"npm run watch:studio-worklet\"",
+    "dev:app": "cd packages/studio-app && npm run dev",
+    "watch:lib-std": "cd packages/lib-std && npm run watch",
+    "watch:lib-box": "cd packages/lib-box && npm run watch", 
+    "watch:lib-dom": "cd packages/lib-dom && npm run watch",
+    "watch:lib-dsp": "cd packages/lib-dsp && npm run watch",
+    "watch:lib-runtime": "cd packages/lib-runtime && npm run watch",
+    "watch:lib-jsx": "cd packages/lib-jsx && npm run watch",
+    "watch:lib-fusion": "cd packages/lib-fusion && npm run watch",
+    "watch:studio-shared": "cd packages/studio-shared && npm run watch",
+    "watch:studio-boxes": "cd packages/studio-boxes && npm run watch",
+    "watch:studio-enums": "cd packages/studio-enums && npm run watch",
+    "watch:studio-worklet": "cd packages/studio-worklet && npm run watch"
   },
   "dependencies": {
     "@types/node": "^22.15.18",
@@ -16,6 +35,7 @@
   },
   "devDependencies": {
     "studio-enums": "^0.1.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "concurrently": "^9.1.0"
   }
 }
