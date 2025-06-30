@@ -1,6 +1,6 @@
 import {AudioLoaderManager} from "./AudioLoader"
 import {RootBoxAdapter} from "./RootBoxAdapter"
-import {TimelineBoxAdapter} from "./adapters/timeline/TimelineBoxAdapter"
+import {TimelineBoxAdapter} from "./timeline/TimelineBoxAdapter"
 import {LiveStreamBroadcaster, LiveStreamReceiver} from "lib-fusion"
 import {ClipSequencing} from "./ClipSequencing"
 import {ParameterFieldAdapters} from "./ParameterFieldAdapters"

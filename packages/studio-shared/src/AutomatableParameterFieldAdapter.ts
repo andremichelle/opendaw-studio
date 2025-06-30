@@ -23,7 +23,7 @@ import {Browser} from "lib-dom"
 import {Address, PointerField, PointerTypes, PrimitiveField, PrimitiveType, PrimitiveValues} from "lib-box"
 import {Pointers} from "studio-enums"
 import {BoxVisitor, TrackBox} from "studio-boxes"
-import {TrackBoxAdapter} from "./adapters/timeline/TrackBoxAdapter"
+import {TrackBoxAdapter} from "./timeline/TrackBoxAdapter"
 import {BoxAdaptersContext} from "./BoxAdaptersContext"
 
 const ExternalControlTypes = [

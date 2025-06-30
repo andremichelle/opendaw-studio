@@ -1,6 +1,7 @@
 {
   "name": "studio-enums",
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "type": "module",
   "private": true,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

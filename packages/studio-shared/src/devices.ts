@@ -12,11 +12,11 @@ import {
     StereoToolDeviceBox,
     ZeitgeistDeviceBox
 } from "studio-boxes"
-import {TrackType} from "./adapters/timeline/TrackType"
+import {TrackType} from "./timeline/TrackType"
 import {SortedBoxAdapterCollection} from "./SortedBoxAdapterCollection"
 import {BoxAdapter} from "./BoxAdapter"
-import {AudioUnitInputAdapter} from "./adapters/audio-unit/AudioUnitInputAdapter"
-import {AudioUnitBoxAdapter} from "./adapters/audio-unit/AudioUnitBoxAdapter"
+import {AudioUnitInputAdapter} from "./audio-unit/AudioUnitInputAdapter"
+import {AudioUnitBoxAdapter} from "./audio-unit/AudioUnitBoxAdapter"
 
 export type DeviceType = "midi-effect" | "bus" | "instrument" | "audio-effect"
 export type DeviceAccepts = "midi" | "audio" | false

@@ -13,7 +13,7 @@ import {
     ValueMapping
 } from "lib-std"
 import {Address, PrimitiveField, PrimitiveType, PrimitiveValues} from "lib-box"
-import {TrackBoxAdapter} from "./adapters/timeline/TrackBoxAdapter"
+import {TrackBoxAdapter} from "./timeline/TrackBoxAdapter"
 import {Browser} from "lib-dom"
 
 export class FieldAdapter<T extends PrimitiveValues = any> implements MutableObservableValue<T>, Terminable {
