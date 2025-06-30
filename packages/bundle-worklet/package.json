@@ -1,11 +1,11 @@
 {
   "name": "@opendaw/bundle-worklet",
   "version": "0.0.1",
-  "description": "OpenDAW AudioWorklet bundle - complete audio processing worklets for web audio",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
   "type": "module",
+  "description": "OpenDAW AudioWorklet bundle - complete audio processing worklets for web audio",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": ["dist/**/*", "package.json", "README.md"],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",

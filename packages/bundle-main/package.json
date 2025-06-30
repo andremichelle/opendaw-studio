@@ -1,12 +1,15 @@
 {
   "name": "@opendaw/bundle-main",
   "version": "0.0.1",
-  "description": "OpenDAW main thread bundle - adapters, boxes, and utilities for web audio applications",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "description": "OpenDAW main thread bundle",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
-  "files": ["dist/**/*", "package.json", "README.md"],
+  "files": [
+    "dist/**/*",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "watch": "tsup src/index.ts --format esm,cjs --dts --watch",
@@ -15,7 +18,14 @@
     "pack:test": "npm pack",
     "test:local": "npm run build && npm pack && echo 'Package ready for local testing'"
   },
-  "keywords": ["audio", "opendaw", "music", "daw", "main-thread", "adapters"],
+  "keywords": [
+    "audio",
+    "opendaw",
+    "music",
+    "daw",
+    "main-thread",
+    "adapters"
+  ],
   "author": "Andre Michelle",
   "license": "ISC",
   "repository": {
@@ -27,9 +37,16 @@
     "@types/audioworklet": "^0.0.77"
   },
   "devDependencies": {
-    "typescript": "^5.8.3",
-    "tsup": "^8.4.0",
-    "vitest": "^3.1.3",
+    "lib-std": "workspace:*",
+    "lib-dsp": "workspace:*",
+    "lib-box": "workspace:*",
+    "lib-runtime": "workspace:*",
+    "lib-fusion": "workspace:*",
+    "studio-enums": "workspace:*",
+    "studio-boxes": "workspace:*",
+    "studio-adapters": "workspace:*"
+  },
+  "peerDependencies": {
     "lib-std": "*",
     "lib-dsp": "*",
     "lib-box": "*",
@@ -38,6 +55,16 @@
     "studio-enums": "*",
     "studio-boxes": "*",
     "studio-adapters": "*"
+  },
+  "overrides": {
+    "lib-std": "npm:@opendaw/bundle-main",
+    "lib-dsp": "npm:@opendaw/bundle-main",
+    "lib-box": "npm:@opendaw/bundle-main",
+    "lib-runtime": "npm:@opendaw/bundle-main",
+    "lib-fusion": "npm:@opendaw/bundle-main",
+    "studio-enums": "npm:@opendaw/bundle-main",
+    "studio-boxes": "npm:@opendaw/bundle-main",
+    "studio-adapters": "npm:@opendaw/bundle-main"
   },
   "publishConfig": {
     "access": "public"
