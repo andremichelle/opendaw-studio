@@ -5,7 +5,7 @@ import {Colors} from "@/ui/Colors.ts"
 import {createElement, Inject} from "lib-jsx"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {Appearance} from "../components/ButtonCheckboxRadio"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {Icon} from "@/ui/components/Icon"
 import {Html} from "lib-dom"
 

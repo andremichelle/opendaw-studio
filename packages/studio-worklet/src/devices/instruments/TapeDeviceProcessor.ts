@@ -1,6 +1,6 @@
 import {assert, Bits, isInstanceOf, Option, UUID} from "lib-std"
 import {LoopableRegion} from "lib-dsp"
-import {AudioClipBoxAdapter, AudioData, AudioRegionBoxAdapter, TapeDeviceBoxAdapter, TrackType} from "studio-shared"
+import {AudioClipBoxAdapter, AudioData, AudioRegionBoxAdapter, TapeDeviceBoxAdapter, TrackType} from "studio-adapters"
 import {RenderQuantum} from "../../constants.ts"
 import {EngineContext} from "../../EngineContext.ts"
 import {DeviceProcessor} from "../../processors.ts"

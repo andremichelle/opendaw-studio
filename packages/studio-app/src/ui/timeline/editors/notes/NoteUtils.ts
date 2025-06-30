@@ -1,6 +1,6 @@
 import {
     NoteEventCollectionBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {MidiFile} from "@/midi/format/MidiFile"
 import {MidiTrack} from "@/midi/format/MidiTrack"
 import {Promises} from "lib-runtime"

@@ -13,8 +13,8 @@ import {
 } from "lib-std"
 import {ValueAssignment} from "@/ui/timeline/editors/value/ValueAssignment.tsx"
 import {PointerField, PrimitiveValues} from "lib-box"
-import {TrackBoxAdapter} from "studio-shared"
-import {TrackType} from "studio-shared"
+import {TrackBoxAdapter} from "studio-adapters"
+import {TrackType} from "studio-adapters"
 import {Pointers} from "studio-enums"
 import {Project} from "@/project/Project.ts"
 

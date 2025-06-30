@@ -5,7 +5,7 @@ import {createElement} from "lib-jsx"
 import {CanvasPainter} from "@/ui/canvas/painter.ts"
 import {PianoRollLayout} from "@/ui/piano-panel/PianoRollLayout.ts"
 import {Fragmentor, LoopableRegion, MidiKeys, PPQN, ppqn} from "lib-dsp"
-import {NoteRegionBoxAdapter} from "studio-shared"
+import {NoteRegionBoxAdapter} from "studio-adapters"
 import {Fonts} from "@/ui/Fonts.ts"
 import {Project} from "@/project/Project.ts"
 

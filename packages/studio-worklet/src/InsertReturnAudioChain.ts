@@ -1,11 +1,11 @@
 import {Arrays, assert, SortedSet, Subscription, Terminator, UUID} from "lib-std"
 import {AudioDeviceProcessor, AudioEffectDeviceProcessor, DeviceProcessor} from "./processors.ts"
-import {AudioEffectDeviceBoxAdapter} from "studio-shared"
+import {AudioEffectDeviceBoxAdapter} from "studio-adapters"
 import {AudioEffectDeviceProcessorFactory} from "./DeviceProcessorFactory.ts"
 import {AudioInput, ProcessPhase} from "./processing.ts"
 import {DeviceChain} from "./DeviceChain.ts"
 import {EngineContext} from "./EngineContext.ts"
-import {SortedBoxAdapterCollection} from "studio-shared"
+import {SortedBoxAdapterCollection} from "studio-adapters"
 import {Pointers} from "studio-enums"
 
 // TODO Open this to MidiEffects as well

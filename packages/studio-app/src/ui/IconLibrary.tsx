@@ -1,5 +1,5 @@
 import {createElement} from "lib-jsx"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 
 export const IconLibrary = () => (
     <svg width="0" height="0" display="none">

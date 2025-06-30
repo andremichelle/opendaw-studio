@@ -15,7 +15,7 @@ import {
     ValueAxis
 } from "lib-std"
 import {Editing} from "lib-box"
-import {ValueEventBoxAdapter} from "studio-shared"
+import {ValueEventBoxAdapter} from "studio-adapters"
 import {Interpolation, ppqn, ValueEvent} from "lib-dsp"
 import {ValueModifier} from "./ValueModifier"
 import {ValueEventDraft} from "@/ui/timeline/editors/value/ValueEventDraft.ts"

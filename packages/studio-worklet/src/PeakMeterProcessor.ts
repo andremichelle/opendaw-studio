@@ -1,4 +1,4 @@
-import {PeakMeterProcessorOptions} from "studio-shared"
+import {PeakMeterProcessorOptions} from "studio-adapters"
 import {RenderQuantum} from "./constants.ts"
 import {RMS} from "lib-dsp"
 import {Arrays, int, Schema, SyncStream} from "lib-std"

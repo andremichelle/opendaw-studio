@@ -1,10 +1,10 @@
 import {
     ValueEventCollectionBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {Interpolation, ppqn, ValueEvent} from "lib-dsp"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
 import {assert, panic, unitValue} from "lib-std"
-import {ValueEventBoxAdapter} from "studio-shared"
+import {ValueEventBoxAdapter} from "studio-adapters"
 
 export namespace ValueEventEditing {
     export const deleteEvent = (collection: ValueEventCollectionBoxAdapter, event: ValueEventBoxAdapter) => {

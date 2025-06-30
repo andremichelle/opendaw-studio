@@ -8,7 +8,7 @@ import {UIAudioLoader} from "@/project/UIAudioLoader"
 import JSZip from "jszip"
 import {ProjectSession} from "@/project/ProjectSession"
 import {AudioStorage} from "@/audio/AudioStorage"
-import {ProjectDecoder} from "studio-shared"
+import {ProjectDecoder} from "studio-adapters"
 
 export type ProjectNewParameters = {
     uuid: UUID.Format

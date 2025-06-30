@@ -1,5 +1,5 @@
 import {EngineContext} from "./EngineContext.ts"
-import {TrackType} from "studio-shared"
+import {TrackType} from "studio-adapters"
 import {EventSpanRetainer, LoopableRegion, NoteEvent, ppqn} from "lib-dsp"
 import {
     Bits,
@@ -16,16 +16,16 @@ import {
     unitValue,
     UUID
 } from "lib-std"
-import {NoteClipBoxAdapter} from "studio-shared"
+import {NoteClipBoxAdapter} from "studio-adapters"
 import {
     NoteEventCollectionBoxAdapter
-} from "studio-shared"
-import {NoteRegionBoxAdapter} from "studio-shared"
-import {AudioUnitBoxAdapter} from "studio-shared"
-import {TrackBoxAdapter} from "studio-shared"
+} from "studio-adapters"
+import {NoteRegionBoxAdapter} from "studio-adapters"
+import {AudioUnitBoxAdapter} from "studio-adapters"
+import {TrackBoxAdapter} from "studio-adapters"
 import {NoteCompleteEvent, NoteEventSource, NoteLifecycleEvent} from "./NoteEventSource.ts"
 import {BlockFlag, ProcessPhase} from "./processing.ts"
-import {NoteBroadcaster} from "studio-shared"
+import {NoteBroadcaster} from "studio-adapters"
 
 type ExternalNote = {
     readonly pitch: byte

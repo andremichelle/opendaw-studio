@@ -1,5 +1,5 @@
-import {RingBuffer} from "studio-shared"
-import {RecordingProcessorOptions} from "studio-shared"
+import {RingBuffer} from "studio-adapters"
+import {RecordingProcessorOptions} from "studio-adapters"
 
 registerProcessor("recording-processor", class extends AudioWorkletProcessor {
     readonly #writer: RingBuffer.Writer

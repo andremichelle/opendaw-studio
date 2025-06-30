@@ -1,6 +1,6 @@
 import {Id, int, Option, Terminable, UUID} from "lib-std"
 import {dbToGain, Event, NoteEvent} from "lib-dsp"
-import {AudioData, AudioLoader, NanoDeviceBoxAdapter} from "studio-shared"
+import {AudioData, AudioLoader, NanoDeviceBoxAdapter} from "studio-adapters"
 import {EngineContext} from "../../EngineContext.ts"
 import {DeviceProcessor, InstrumentDeviceProcessor} from "../../processors.ts"
 import {AudioProcessor} from "../../AudioProcessor.ts"

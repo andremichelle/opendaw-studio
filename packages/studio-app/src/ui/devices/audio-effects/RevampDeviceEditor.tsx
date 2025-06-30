@@ -2,7 +2,7 @@ import css from "./RevampDeviceEditor.sass?inline"
 import {
     Parameters,
     RevampDeviceBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {asDefined, int, Lifecycle} from "lib-std"
 import {createElement} from "lib-jsx"
 import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
@@ -32,7 +32,7 @@ import {ControlIndicator} from "@/ui/components/ControlIndicator"
 import {attachParameterContextMenu} from "@/ui/menu/automation"
 import {Html} from "lib-dom"
 import {Effects} from "@/service/Effects"
-import {DeviceHost} from "studio-shared"
+import {DeviceHost} from "studio-adapters"
 
 const className = Html.adoptStyleSheet(css, "RevampDeviceEditor")
 

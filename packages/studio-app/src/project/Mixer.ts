@@ -1,9 +1,9 @@
 import {Arrays, asDefined, EmptyExec, SortedSet, Subscription, Terminable, Terminator, UUID} from "lib-std"
 import {Pointers} from "studio-enums"
 import {AudioUnitBox, AuxSendBox, BoxVisitor} from "studio-boxes"
-import {AudioUnitBoxAdapter} from "studio-shared"
+import {AudioUnitBoxAdapter} from "studio-adapters"
 import {DeferExec, deferNextFrame} from "lib-dom"
-import {SortedBoxAdapterCollection} from "studio-shared"
+import {SortedBoxAdapterCollection} from "studio-adapters"
 import {Box} from "lib-box"
 
 export interface ChannelStripView {

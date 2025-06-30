@@ -1,10 +1,10 @@
 import {Arrays, clamp, int, Option, Selection} from "lib-std"
-import {AnyLoopableRegionBoxAdapter, AnyRegionBoxAdapter} from "studio-shared"
+import {AnyLoopableRegionBoxAdapter, AnyRegionBoxAdapter} from "studio-adapters"
 import {ppqn, RegionCollection} from "lib-dsp"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
 import {Editing} from "lib-box"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"
-import {TrackBoxAdapter} from "studio-shared"
+import {TrackBoxAdapter} from "studio-adapters"
 import {RegionClipResolver} from "@/ui/timeline/tracks/audio-unit/regions/RegionClipResolver.ts"
 import {
     RegionModifyStrategies,

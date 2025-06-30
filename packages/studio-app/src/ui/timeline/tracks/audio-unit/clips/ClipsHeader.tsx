@@ -3,7 +3,7 @@ import {DefaultObservableValue, Lifecycle, ObservableValue, Option, Terminator, 
 import {createElement, DomElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {Icon} from "@/ui/components/Icon.tsx"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {deferNextFrame, Dragging, Events, Html} from "lib-dom"
 import {TextTooltip} from "@/ui/surface/TextTooltip"
 

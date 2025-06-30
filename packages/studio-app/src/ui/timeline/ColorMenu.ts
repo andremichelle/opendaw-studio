@@ -1,6 +1,6 @@
 import {MenuItem} from "@/ui/model/menu-item"
 import {ColorCodes} from "@/ui/mixer/ColorCodes"
-import {TrackType} from "studio-shared"
+import {TrackType} from "studio-adapters"
 import {Procedure} from "lib-std"
 
 export namespace ColorMenu {

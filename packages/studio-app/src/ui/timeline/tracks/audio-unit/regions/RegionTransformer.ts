@@ -1,10 +1,10 @@
-import {AnyRegionBoxAdapter} from "studio-shared"
-import {NoteRegionBoxAdapter} from "studio-shared"
-import {AudioRegionBoxAdapter} from "studio-shared"
-import {ValueRegionBoxAdapter} from "studio-shared"
+import {AnyRegionBoxAdapter} from "studio-adapters"
+import {NoteRegionBoxAdapter} from "studio-adapters"
+import {AudioRegionBoxAdapter} from "studio-adapters"
+import {ValueRegionBoxAdapter} from "studio-adapters"
 import {AudioClipBox, NoteClipBox, ValueClipBox} from "studio-boxes"
 import {asDefined, UUID} from "lib-std"
-import {AnyClipBox} from "studio-shared"
+import {AnyClipBox} from "studio-adapters"
 
 export namespace RegionTransformer {
     export const toClip = (region: AnyRegionBoxAdapter, copyEvents: boolean = true): AnyClipBox => {

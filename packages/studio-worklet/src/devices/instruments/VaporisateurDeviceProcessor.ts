@@ -10,7 +10,7 @@ import {
     velocityToGain,
     Waveform
 } from "lib-dsp"
-import {VaporisateurDeviceBoxAdapter} from "studio-shared"
+import {VaporisateurDeviceBoxAdapter} from "studio-adapters"
 import {RenderQuantum} from "../../constants.ts"
 import {EngineContext} from "../../EngineContext.ts"
 import {DeviceProcessor, InstrumentDeviceProcessor} from "../../processors.ts"

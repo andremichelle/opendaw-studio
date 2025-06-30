@@ -9,7 +9,7 @@ import {AxisProperty} from "@/ui/workspace/AxisProperty.ts"
 import {ContextMenu} from "@/ui/ContextMenu.ts"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {ContentGlue} from "@/ui/workspace/ContentGlue.ts"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {Browser, Events, Html} from "lib-dom"
 import FlexLayoutConstrains = Workspace.FlexLayoutConstrains
 

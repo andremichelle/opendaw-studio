@@ -6,7 +6,7 @@ import {Keyboard} from "lib-dom"
 import {Project} from "@/project/Project"
 import {
     PlayfieldSampleBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 
 export namespace SlotDragAndDrop {
     type Construct = {

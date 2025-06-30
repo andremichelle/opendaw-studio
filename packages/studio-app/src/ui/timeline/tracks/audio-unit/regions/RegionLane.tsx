@@ -4,10 +4,10 @@ import {Lifecycle} from "lib-std"
 import {createElement} from "lib-jsx"
 import {CanvasPainter} from "@/ui/canvas/painter.ts"
 import {renderRegions} from "@/ui/timeline/tracks/audio-unit/regions/RegionRenderer.ts"
-import {TrackBoxAdapter} from "studio-shared"
+import {TrackBoxAdapter} from "studio-adapters"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
-import {TrackType} from "studio-shared"
+import {TrackType} from "studio-adapters"
 
 const className = Html.adoptStyleSheet(css, "RegionLane")
 

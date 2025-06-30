@@ -1,6 +1,6 @@
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {Arrays, Curve, Func, isDefined, Nullable, unitValue} from "lib-std"
-import {ValueEventBoxAdapter} from "studio-shared"
+import {ValueEventBoxAdapter} from "studio-adapters"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {ValueEvent} from "lib-dsp"
 import {EventRadius} from "./Constants"

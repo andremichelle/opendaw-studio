@@ -5,7 +5,7 @@ import {Colors} from "@/ui/Colors.ts"
 import {Editing} from "lib-box"
 import {TimelineSelectableLocator} from "@/ui/timeline/TimelineSelectableLocator.ts"
 import {Dragging, Html, PointerCaptureTarget} from "lib-dom"
-import {BoxAdapter} from "studio-shared"
+import {BoxAdapter} from "studio-adapters"
 
 const className = Html.adoptStyleSheet(css, "SelectionRectangle")
 

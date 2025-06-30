@@ -1,5 +1,5 @@
 import {assert, int, Objects, Option, Terminable, UUID} from "lib-std"
-import {NoteBroadcaster, PitchDeviceBoxAdapter} from "studio-shared"
+import {NoteBroadcaster, PitchDeviceBoxAdapter} from "studio-adapters"
 import {Event, NoteEvent, ppqn} from "lib-dsp"
 import {EngineContext} from "../../EngineContext.ts"
 import {EventProcessor} from "../../EventProcessor.ts"

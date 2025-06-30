@@ -1,5 +1,5 @@
 import {Lifecycle} from "lib-std"
-import {AutomatableParameterFieldAdapter} from "studio-shared"
+import {AutomatableParameterFieldAdapter} from "studio-adapters"
 import {createElement, Group, JsxValue} from "lib-jsx"
 
 type Construct = {

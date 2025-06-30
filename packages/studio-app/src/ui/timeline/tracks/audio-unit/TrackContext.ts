@@ -1,5 +1,5 @@
-import {TrackBoxAdapter} from "studio-shared"
-import {AudioUnitBoxAdapter} from "studio-shared"
+import {TrackBoxAdapter} from "studio-adapters"
+import {AudioUnitBoxAdapter} from "studio-adapters"
 import {asDefined, Terminable} from "lib-std"
 
 export type Construct = {

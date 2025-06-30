@@ -1,4 +1,4 @@
-import {AudioData} from "studio-shared"
+import {AudioData} from "studio-adapters"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 import {OpfsAgent} from "@/service/agents"
 import {Arrays, ByteArrayInput, EmptyExec, UUID} from "lib-std"

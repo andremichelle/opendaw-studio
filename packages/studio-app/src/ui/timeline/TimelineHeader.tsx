@@ -7,7 +7,7 @@ import {FlexSpacer} from "@/ui/components/FlexSpacer.tsx"
 import {Colors} from "@/ui/Colors.ts"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {Checkbox} from "@/ui/components/Checkbox.tsx"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "TimelineHeader")

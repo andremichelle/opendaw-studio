@@ -1,8 +1,8 @@
 import {ProgressHandler, SortedSet, UUID} from "lib-std"
 import {UIAudioLoader} from "@/project/UIAudioLoader"
-import {AudioLoaderManager} from "studio-shared"
+import {AudioLoaderManager} from "studio-adapters"
 import {AudioServerApi} from "@/audio/AudioServerApi"
-import {AudioData} from "studio-shared"
+import {AudioData} from "studio-adapters"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 
 export class UIAudioManager implements AudioLoaderManager, AudioServerApi {

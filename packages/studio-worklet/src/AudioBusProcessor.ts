@@ -1,7 +1,7 @@
 import {Arrays, int, Option, Terminable, UUID} from "lib-std"
 import {AbstractProcessor} from "./AbstractProcessor.ts"
 import {DeviceProcessor, InstrumentDeviceProcessor} from "./processors.ts"
-import {AudioBusBoxAdapter} from "studio-shared"
+import {AudioBusBoxAdapter} from "studio-adapters"
 import {AudioBuffer} from "./AudioBuffer.ts"
 import {PeakBroadcaster} from "./PeakBroadcaster.ts"
 import {EngineContext} from "./EngineContext.ts"

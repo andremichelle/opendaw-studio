@@ -4,7 +4,7 @@ import {NoteSequencer} from "./NoteSequencer.ts"
 import {ProcessPhase} from "./processing.ts"
 import {AudioUnit} from "./AudioUnit.ts"
 import {DeviceChain} from "./DeviceChain.ts"
-import {MidiEffectDeviceAdapter} from "studio-shared"
+import {MidiEffectDeviceAdapter} from "studio-adapters"
 import {MidiEffectDeviceProcessorFactory} from "./DeviceProcessorFactory.ts"
 import {NoteEventSource} from "./NoteEventSource.ts"
 

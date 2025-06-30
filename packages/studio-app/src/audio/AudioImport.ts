@@ -1,5 +1,5 @@
 import {AudioSample} from "@/audio/AudioSample"
-import {AudioData} from "studio-shared"
+import {AudioData} from "studio-adapters"
 import {AudioPeaks} from "@/audio/AudioPeaks"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 import {AudioStorage} from "@/audio/AudioStorage"

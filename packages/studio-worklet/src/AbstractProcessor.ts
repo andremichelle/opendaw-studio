@@ -5,7 +5,7 @@ import {Pointers} from "studio-enums"
 import {ProcessInfo, Processor} from "./processing.ts"
 import {EngineContext} from "./EngineContext.ts"
 import {EventBuffer} from "./EventBuffer.ts"
-import {AutomatableParameterFieldAdapter} from "studio-shared"
+import {AutomatableParameterFieldAdapter} from "studio-adapters"
 
 export abstract class AbstractProcessor implements Processor, TerminableOwner, Terminable {
     readonly #terminator = new Terminator()

@@ -16,8 +16,8 @@ import {
 } from "studio-boxes"
 import {int, INVERSE_SQRT_2, UUID} from "lib-std"
 import {Project} from "@/project/Project.ts"
-import {IconSymbol} from "studio-shared"
-import {EffectPointerType} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
+import {EffectPointerType} from "studio-adapters"
 
 export namespace Effects {
     export interface Entry {

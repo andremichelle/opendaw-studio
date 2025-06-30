@@ -2,7 +2,7 @@ import css from "./Mixer.sass?inline"
 import {clamp, Lifecycle, Terminable, Terminator, UUID} from "lib-std"
 import {createElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
-import {AudioUnitBoxAdapter} from "studio-shared"
+import {AudioUnitBoxAdapter} from "studio-adapters"
 import {ChannelStrip} from "@/ui/mixer/ChannelStrip.tsx"
 import {Vertex} from "lib-box"
 import {Orientation, Scroller} from "@/ui/components/Scroller.tsx"
@@ -12,7 +12,7 @@ import {AnyDragData} from "@/ui/AnyDragData"
 import {installAutoScroll} from "@/ui/AutoScroll"
 import {InsertMarker} from "@/ui/components/InsertMarker"
 import {deferNextFrame, Events, Html} from "lib-dom"
-import {Devices} from "studio-shared"
+import {Devices} from "studio-adapters"
 
 const className = Html.adoptStyleSheet(css, "mixer")
 

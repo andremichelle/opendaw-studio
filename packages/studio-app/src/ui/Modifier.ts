@@ -12,19 +12,19 @@ import {
     ValueEventCollectionBox,
     ValueRegionBox
 } from "studio-boxes"
-import {AudioUnitBoxAdapter} from "studio-shared"
+import {AudioUnitBoxAdapter} from "studio-adapters"
 import {Effects} from "@/service/Effects.ts"
-import {DeviceHost, EffectDeviceBoxAdapter, EffectPointerType} from "studio-shared"
-import {IconSymbol} from "studio-shared"
-import {AnyClipBox} from "studio-shared"
-import {TrackType} from "studio-shared"
+import {DeviceHost, EffectDeviceBoxAdapter, EffectPointerType} from "studio-adapters"
+import {IconSymbol} from "studio-adapters"
+import {AnyClipBox} from "studio-adapters"
+import {TrackType} from "studio-adapters"
 import {ColorCodes} from "@/ui/mixer/ColorCodes.ts"
-import {TrackClips} from "studio-shared"
+import {TrackClips} from "studio-adapters"
 import {ppqn, PPQN} from "lib-dsp"
 import {showInfoDialog} from "./components/dialogs"
-import {TrackRegions} from "studio-shared"
+import {TrackRegions} from "studio-adapters"
 import {AudioUnitType} from "studio-enums"
-import {RootBoxAdapter} from "studio-shared"
+import {RootBoxAdapter} from "studio-adapters"
 
 export namespace Modifier {
     const AudioUnitOrdering = {

@@ -1,6 +1,6 @@
 import {int, Option, Terminable, UUID} from "lib-std"
 import {dbToGain} from "lib-dsp"
-import {AudioEffectDeviceBoxAdapter, ReverbDeviceBoxAdapter} from "studio-shared"
+import {AudioEffectDeviceBoxAdapter, ReverbDeviceBoxAdapter} from "studio-adapters"
 import {AudioEffectDeviceProcessor} from "../../processors.ts"
 import {EngineContext} from "../../EngineContext.ts"
 import {AudioBuffer} from "../../AudioBuffer.ts"

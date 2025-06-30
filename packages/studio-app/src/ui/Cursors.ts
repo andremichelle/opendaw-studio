@@ -1,5 +1,5 @@
 import {asDefined} from "lib-std"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {CssUtils} from "lib-dom"
 
 const iconSymbolToCursor = (symbol: IconSymbol, hotspotX: number, hotspotY: number, fallback: CssUtils.Cursor = "auto") => {

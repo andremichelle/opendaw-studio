@@ -2,7 +2,7 @@ import {Block, Processor} from "./processing.ts"
 import {Event} from "lib-dsp"
 import {NoteEventSource, NoteLifecycleEvent} from "./NoteEventSource.ts"
 import {assert, Option, Terminable, Terminator} from "lib-std"
-import {NoteBroadcaster} from "studio-shared"
+import {NoteBroadcaster} from "studio-adapters"
 import {Address} from "lib-box"
 import {LiveStreamBroadcaster} from "lib-fusion"
 

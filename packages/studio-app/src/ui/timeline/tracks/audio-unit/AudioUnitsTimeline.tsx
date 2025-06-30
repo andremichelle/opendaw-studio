@@ -8,8 +8,8 @@ import {TrackFactory, TracksManager} from "@/ui/timeline/tracks/audio-unit/Track
 import {Track} from "./Track"
 import {RegionsArea} from "./regions/RegionsArea.tsx"
 import {ClipsArea} from "./clips/ClipsArea.tsx"
-import {AudioUnitBoxAdapter} from "studio-shared"
-import {TrackBoxAdapter} from "studio-shared"
+import {AudioUnitBoxAdapter} from "studio-adapters"
+import {TrackBoxAdapter} from "studio-adapters"
 import {AnimationFrame, Events, Html} from "lib-dom"
 import {ExtraSpace} from "./Constants.ts"
 

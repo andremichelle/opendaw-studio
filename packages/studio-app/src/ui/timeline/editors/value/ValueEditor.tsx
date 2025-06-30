@@ -12,7 +12,7 @@ import {
     ValueAxis
 } from "lib-std"
 import {StudioService} from "@/service/StudioService.ts"
-import {ValueEventBoxAdapter} from "studio-shared"
+import {ValueEventBoxAdapter} from "studio-adapters"
 import {ValueEventBox} from "studio-boxes"
 import {RangePadding} from "@/ui/timeline/editors/value/Constants.ts"
 import {ObservableModifyContext} from "@/ui/timeline/ObservableModifyContext.ts"

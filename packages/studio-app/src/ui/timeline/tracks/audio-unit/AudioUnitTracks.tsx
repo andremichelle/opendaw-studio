@@ -1,12 +1,12 @@
 import css from "./AudioUnitTracks.sass?inline"
 import {Lifecycle} from "lib-std"
-import {AudioUnitBoxAdapter} from "studio-shared"
+import {AudioUnitBoxAdapter} from "studio-adapters"
 import {createElement} from "lib-jsx"
 import {Vertex} from "lib-box"
 import {Project} from "@/project/Project"
 import {AudioUnitType} from "studio-enums"
 import {Html} from "lib-dom"
-import {Devices} from "studio-shared"
+import {Devices} from "studio-adapters"
 
 const className = Html.adoptStyleSheet(css, "AudioUnitTracks")
 

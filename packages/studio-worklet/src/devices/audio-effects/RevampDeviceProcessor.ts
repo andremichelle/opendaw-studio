@@ -1,6 +1,6 @@
 import {Arrays, int, Option, Terminable, UUID} from "lib-std"
 import {BiquadCoeff, BiquadMono, BiquadProcessor, BiquadStack} from "lib-dsp"
-import {AudioEffectDeviceBoxAdapter, RevampDeviceBoxAdapter} from "studio-shared"
+import {AudioEffectDeviceBoxAdapter, RevampDeviceBoxAdapter} from "studio-adapters"
 import {AudioEffectDeviceProcessor} from "../../processors.ts"
 import {EngineContext} from "../../EngineContext.ts"
 import {Block, Processor} from "../../processing.ts"

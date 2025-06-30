@@ -6,13 +6,13 @@ import {PropertyParameters} from "@/ui/timeline/editors/notes/property/PropertyP
 import {NumberInput} from "@/ui/components/NumberInput.tsx"
 import {createElement, Inject} from "lib-jsx"
 import {MidiKeys} from "lib-dsp"
-import {NoteEventBoxAdapter} from "studio-shared"
+import {NoteEventBoxAdapter} from "studio-adapters"
 import {Editing} from "lib-box"
 import {ObservableModifyContext} from "@/ui/timeline/ObservableModifyContext.ts"
 import {NoteModifier} from "@/ui/timeline/editors/notes/NoteModifier.ts"
 import {NoteModifyStrategies} from "@/ui/timeline/editors/notes/NoteModifyStrategies.ts"
 import {Icon} from "@/ui/components/Icon.tsx"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 
 const className = Html.adoptStyleSheet(css, "PropertyTable")
 

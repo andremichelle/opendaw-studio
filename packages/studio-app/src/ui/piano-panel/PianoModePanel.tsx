@@ -8,13 +8,13 @@ import {Exec, Lifecycle, MutableObservableValue, Notifier, Subscription, Termina
 import {NumberInput} from "@/ui/components/NumberInput.tsx"
 import {Checkbox} from "@/ui/components/Checkbox.tsx"
 import {Icon} from "@/ui/components/Icon.tsx"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {RadioGroup} from "@/ui/components/RadioGroup.tsx"
 import {EditWrapper} from "@/ui/wrapper/EditWrapper.ts"
-import {TrackType} from "studio-shared"
-import {RootBoxAdapter} from "studio-shared"
-import {TrackBoxAdapter} from "studio-shared"
-import {AudioUnitBoxAdapter} from "studio-shared"
+import {TrackType} from "studio-adapters"
+import {RootBoxAdapter} from "studio-adapters"
+import {TrackBoxAdapter} from "studio-adapters"
+import {AudioUnitBoxAdapter} from "studio-adapters"
 import {Colors} from "@/ui/Colors.ts"
 
 const className = Html.adoptStyleSheet(css, "PianoModePanel")

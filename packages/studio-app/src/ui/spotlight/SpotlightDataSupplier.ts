@@ -1,6 +1,6 @@
 import {Arrays, assert, Exec} from "lib-std"
 
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 
 export type SpotlightResult = {
     name: string

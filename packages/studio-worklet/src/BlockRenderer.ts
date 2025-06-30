@@ -3,7 +3,7 @@ import {Block, BlockFlags, ProcessInfo} from "./processing.ts"
 import {RenderQuantum} from "./constants.ts"
 import {EngineContext} from "./EngineContext.ts"
 import {Exec, int, isDefined, Iterables, Nullable, Procedure, SetMultimap, Terminable} from "lib-std"
-import {MarkerBoxAdapter} from "studio-shared"
+import {MarkerBoxAdapter} from "studio-adapters"
 
 type Action = null
     | { type: "loop", target: ppqn }

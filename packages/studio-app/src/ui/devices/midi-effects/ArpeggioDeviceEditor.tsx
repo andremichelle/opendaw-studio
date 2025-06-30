@@ -1,5 +1,5 @@
 import css from "./ArpeggioDeviceEditor.sass?inline"
-import {ArpeggioDeviceBoxAdapter} from "studio-shared"
+import {ArpeggioDeviceBoxAdapter} from "studio-adapters"
 import {Lifecycle} from "lib-std"
 import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
 import {MenuItems} from "@/ui/devices/menu-items.ts"
@@ -9,7 +9,7 @@ import {ControlBuilder} from "@/ui/devices/ControlBuilder.tsx"
 import {DeviceMidiMeter} from "@/ui/devices/panel/DeviceMidiMeter.tsx"
 import {Effects} from "@/service/Effects"
 import {Html} from "lib-dom"
-import {DeviceHost} from "studio-shared"
+import {DeviceHost} from "studio-adapters"
 
 const className = Html.adoptStyleSheet(css, "ArpeggioDeviceEditor")
 

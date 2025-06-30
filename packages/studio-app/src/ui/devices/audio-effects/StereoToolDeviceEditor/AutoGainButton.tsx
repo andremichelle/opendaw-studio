@@ -6,12 +6,12 @@ import {LKR} from "@/ui/devices/constants"
 import {Colors} from "@/ui/Colors"
 import {Column} from "@/ui/devices/Column"
 import {Icon} from "@/ui/components/Icon"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {gainToDb} from "lib-dsp"
 import {Project} from "@/project/Project"
 import {
     StereoToolDeviceBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {Runtime} from "lib-runtime"
 
 const className = Html.adoptStyleSheet(css, "AutoGainButton")

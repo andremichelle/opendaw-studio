@@ -1,7 +1,7 @@
 import {PanelType} from "@/ui/workspace/PanelType.ts"
 import {PanelState} from "@/ui/workspace/PanelState.ts"
 import {DefaultWorkspace} from "@/ui/workspace/Default.ts"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 
 export namespace Workspace {
     export type Screen = {

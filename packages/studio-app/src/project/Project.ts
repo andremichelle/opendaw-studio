@@ -24,7 +24,7 @@ import {
     ProjectDecoder,
     RootBoxAdapter,
     TimelineBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {
     asInstanceOf,
     assert,

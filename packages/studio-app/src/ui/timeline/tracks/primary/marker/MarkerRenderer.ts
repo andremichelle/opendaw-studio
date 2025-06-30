@@ -1,8 +1,8 @@
-import {MarkerBoxAdapter} from "studio-shared"
+import {MarkerBoxAdapter} from "studio-adapters"
 import {TimelineRange} from "@/ui/timeline/TimelineRange"
 import {DefaultObservableValue, int, isDefined, Nullable, UUID} from "lib-std"
 import {CanvasPainter} from "@/ui/canvas/painter"
-import {MarkerTrackAdapter} from "studio-shared"
+import {MarkerTrackAdapter} from "studio-adapters"
 import {Context2d} from "lib-dom"
 
 export namespace MarkerRenderer {

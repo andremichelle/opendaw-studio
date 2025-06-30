@@ -1,6 +1,6 @@
 import {CanvasPainter} from "@/ui/canvas/painter.ts"
 import {int, Procedure, TAU} from "lib-std"
-import {AudioClipBoxAdapter} from "studio-shared"
+import {AudioClipBoxAdapter} from "studio-adapters"
 import {Peaks} from "lib-fusion"
 import {dbToGain} from "lib-dsp"
 

@@ -5,8 +5,8 @@ import {
     Parameters,
     PassParameters,
     ShelfParameters
-} from "studio-shared"
-import {AutomatableParameterFieldAdapter} from "studio-shared"
+} from "studio-adapters"
+import {AutomatableParameterFieldAdapter} from "studio-adapters"
 import {biquad} from "@/ui/devices/audio-effects/RevampDeviceEditor/constants.ts"
 import {gainToDb} from "lib-dsp"
 

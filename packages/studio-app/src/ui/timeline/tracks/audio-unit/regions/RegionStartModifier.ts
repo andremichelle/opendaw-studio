@@ -6,9 +6,9 @@ import {
     AnyLoopableRegionBoxAdapter,
     AnyRegionBoxAdapter,
     UnionAdapterTypes
-} from "studio-shared"
+} from "studio-adapters"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
-import {TrackBoxAdapter} from "studio-shared"
+import {TrackBoxAdapter} from "studio-adapters"
 import {RegionClipResolver} from "@/ui/timeline/tracks/audio-unit/regions/RegionClipResolver.ts"
 import {RegionModifyStrategy} from "@/ui/timeline/tracks/audio-unit/regions/RegionModifyStrategies.ts"
 import {Dragging} from "lib-dom"

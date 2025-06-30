@@ -1,4 +1,4 @@
-import {AudioData, Gate, PlayfieldSampleBoxAdapter} from "studio-shared"
+import {AudioData, Gate, PlayfieldSampleBoxAdapter} from "studio-adapters"
 import {NoteEvent, velocityToGain} from "lib-dsp"
 import {Id, int} from "lib-std"
 import {AutomatableParameters} from "./AutomatableParameters.ts"

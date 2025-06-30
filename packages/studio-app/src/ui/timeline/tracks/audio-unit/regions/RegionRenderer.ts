@@ -1,13 +1,13 @@
 import {int, Option, quantizeFloor, unitValue} from "lib-std"
 import {LoopableRegion, PPQN, ValueEvent} from "lib-dsp"
-import {AudioRegionBoxAdapter} from "studio-shared"
-import {NoteRegionBoxAdapter} from "studio-shared"
+import {AudioRegionBoxAdapter} from "studio-adapters"
+import {NoteRegionBoxAdapter} from "studio-adapters"
 import {
     RegionModifyStrategies,
     RegionModifyStrategy
 } from "@/ui/timeline/tracks/audio-unit/regions/RegionModifyStrategies.ts"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"
-import {ValueRegionBoxAdapter} from "studio-shared"
+import {ValueRegionBoxAdapter} from "studio-adapters"
 import {renderNotes} from "@/ui/timeline/renderer/notes.ts"
 import {RegionBound, RegionColors} from "@/ui/timeline/renderer/env.ts"
 import {renderAudio} from "@/ui/timeline/renderer/audio.ts"

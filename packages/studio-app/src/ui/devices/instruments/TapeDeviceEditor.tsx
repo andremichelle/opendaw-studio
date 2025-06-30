@@ -5,13 +5,13 @@ import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
 import {Tape} from "@/ui/devices/instruments/TapeDeviceEditor/Tape.tsx"
 import {Project} from "@/project/Project.ts"
 import {Timeline} from "@/ui/devices/instruments/TapeDeviceEditor/Timeline.tsx"
-import {AudioUnitTracks} from "studio-shared"
+import {AudioUnitTracks} from "studio-adapters"
 import {MenuItems} from "@/ui/devices/menu-items.ts"
-import {TapeDeviceBoxAdapter} from "studio-shared"
+import {TapeDeviceBoxAdapter} from "studio-adapters"
 import {DevicePeakMeter} from "@/ui/devices/panel/DevicePeakMeter.tsx"
 import {Html} from "lib-dom"
 import {Instruments} from "@/service/Instruments"
-import {DeviceHost} from "studio-shared"
+import {DeviceHost} from "studio-adapters"
 
 const className = Html.adoptStyleSheet(css, "TapeDeviceEditor")
 

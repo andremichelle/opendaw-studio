@@ -19,7 +19,7 @@
     "@types/audioworklet": "^0.0.77",
     "studio-enums": "*",
     "studio-boxes": "*",
-    "studio-shared": "*",
+    "studio-adapters": "*",
     "lib-std": "*",
     "lib-dsp": "*",
     "lib-box": "*",

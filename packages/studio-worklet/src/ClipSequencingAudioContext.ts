@@ -1,10 +1,10 @@
-import {AnyClipBoxAdapter} from "studio-shared"
+import {AnyClipBoxAdapter} from "studio-adapters"
 import {Arrays, identity, Option, quantizeFloor, SortedSet, UUID} from "lib-std"
 import {ppqn, PPQN} from "lib-dsp"
-import {TrackBoxAdapter} from "studio-shared"
+import {TrackBoxAdapter} from "studio-adapters"
 import {BoxGraph, Update} from "lib-box"
-import {ClipSequencing, Section} from "studio-shared"
-import {ClipSequencingUpdates} from "studio-shared"
+import {ClipSequencing, Section} from "studio-adapters"
+import {ClipSequencingUpdates} from "studio-adapters"
 
 // Just convenient to identify which UUID is for which type
 type ClipKey = UUID.Format

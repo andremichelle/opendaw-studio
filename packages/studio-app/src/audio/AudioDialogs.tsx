@@ -1,5 +1,5 @@
 import {Dialog} from "@/ui/components/Dialog"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {Surface} from "@/ui/surface/Surface"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 import {createElement} from "lib-jsx"

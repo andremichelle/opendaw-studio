@@ -1,4 +1,4 @@
-import {ExportStemConfiguration} from "studio-shared"
+import {ExportStemConfiguration} from "studio-adapters"
 
 export type AudioUnitOptions = Omit<ExportStemConfiguration, "fileName">
 

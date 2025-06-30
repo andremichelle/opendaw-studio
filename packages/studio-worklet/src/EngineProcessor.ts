@@ -40,7 +40,7 @@ import {
     RootBoxAdapter,
     TimelineBoxAdapter,
     TrackBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {AudioUnit} from "./AudioUnit.ts"
 import {Processor, ProcessPhase} from "./processing.ts"
 import {Mixer} from "./Mixer.ts"

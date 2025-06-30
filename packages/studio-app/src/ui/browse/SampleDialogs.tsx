@@ -1,6 +1,6 @@
 import {AudioSample} from "@/audio/AudioSample"
 import {Dialog} from "@/ui/components/Dialog"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {Surface} from "@/ui/surface/Surface"
 import {createElement} from "lib-jsx"
 import {showInfoDialog} from "@/ui/components/dialogs"

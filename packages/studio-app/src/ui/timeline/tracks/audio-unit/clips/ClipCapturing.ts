@@ -1,4 +1,4 @@
-import {AnyClipBoxAdapter} from "studio-shared"
+import {AnyClipBoxAdapter} from "studio-adapters"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {BinarySearch, int, Nullable, NumberComparator} from "lib-std"
 import {TracksManager} from "@/ui/timeline/tracks/audio-unit/TracksManager.ts"

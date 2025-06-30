@@ -1,25 +1,25 @@
-import {ValueRegionBoxAdapter} from "studio-shared"
+import {ValueRegionBoxAdapter} from "studio-adapters"
 import {
     ValueEventCollectionBoxAdapter
-} from "studio-shared"
-import {AudioRegionBoxAdapter} from "studio-shared"
-import {LoopableRegionBoxAdapter} from "studio-shared"
+} from "studio-adapters"
+import {AudioRegionBoxAdapter} from "studio-adapters"
+import {LoopableRegionBoxAdapter} from "studio-adapters"
 import {
     AudioEventOwnerReader,
     EventOwnerReader,
     NoteEventOwnerReader,
     ValueEventOwnerReader
 } from "@/ui/timeline/editors/EventOwnerReader.ts"
-import {NoteRegionBoxAdapter} from "studio-shared"
+import {NoteRegionBoxAdapter} from "studio-adapters"
 import {
     NoteEventCollectionBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {ppqn} from "lib-dsp"
 import {mod, Observer, Option, Subscription} from "lib-std"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {Propagation} from "lib-box"
-import {AudioFileBoxAdapter} from "studio-shared"
-import {TrackBoxAdapter} from "studio-shared"
+import {AudioFileBoxAdapter} from "studio-adapters"
+import {TrackBoxAdapter} from "studio-adapters"
 
 export class RegionReader<REGION extends LoopableRegionBoxAdapter<CONTENT>, CONTENT> implements EventOwnerReader<CONTENT> {
     static forAudioRegionBoxAdapter(region: AudioRegionBoxAdapter): AudioEventOwnerReader {

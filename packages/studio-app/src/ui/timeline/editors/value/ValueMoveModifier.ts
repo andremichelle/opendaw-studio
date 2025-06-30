@@ -16,15 +16,15 @@ import {
 } from "lib-std"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
 import {Editing} from "lib-box"
-import {ValueEventBoxAdapter} from "studio-shared"
+import {ValueEventBoxAdapter} from "studio-adapters"
 import {EventCollection, Interpolation, ppqn, ValueEvent} from "lib-dsp"
 import {ValueModifier} from "./ValueModifier"
 import {ValueEventDraft} from "./ValueEventDraft.ts"
 import {
     ValueEventCollectionBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {ValueEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"
-import {AutomatableParameterFieldAdapter} from "studio-shared"
+import {AutomatableParameterFieldAdapter} from "studio-adapters"
 import {Dragging} from "lib-dom"
 import {UIValueEvent} from "@/ui/timeline/editors/value/UIValueEvent.ts"
 

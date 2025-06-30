@@ -14,7 +14,7 @@
     "dev:all": "concurrently \"npm run watch:libs\" \"npm run watch:studio\" \"npm run dev:app\"",
     "watch:packages": "npm run watch:libs",
     "watch:libs": "concurrently \"npm run watch:lib-std\" \"npm run watch:lib-box\" \"npm run watch:lib-dom\" \"npm run watch:lib-dsp\" \"npm run watch:lib-runtime\" \"npm run watch:lib-jsx\" \"npm run watch:lib-fusion\"",
-    "watch:studio": "concurrently \"npm run watch:studio-shared\" \"npm run watch:studio-boxes\" \"npm run watch:studio-enums\" \"npm run watch:studio-worklet\"",
+    "watch:studio": "concurrently \"npm run watch:studio-adapters\" \"npm run watch:studio-boxes\" \"npm run watch:studio-enums\" \"npm run watch:studio-worklet\"",
     "dev:app": "cd packages/studio-app && npm run dev",
     "watch:lib-std": "cd packages/lib-std && npm run watch",
     "watch:lib-box": "cd packages/lib-box && npm run watch",
@@ -23,7 +23,7 @@
     "watch:lib-runtime": "cd packages/lib-runtime && npm run watch",
     "watch:lib-jsx": "cd packages/lib-jsx && npm run watch",
     "watch:lib-fusion": "cd packages/lib-fusion && npm run watch",
-    "watch:studio-shared": "cd packages/studio-shared && npm run watch",
+    "watch:studio-adapters": "cd packages/studio-adapters && npm run watch",
     "watch:studio-boxes": "cd packages/studio-boxes && npm run watch",
     "watch:studio-enums": "cd packages/studio-enums && npm run watch",
     "watch:studio-worklet": "cd packages/studio-worklet && npm run watch"

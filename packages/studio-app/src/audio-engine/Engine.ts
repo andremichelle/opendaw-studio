@@ -11,7 +11,7 @@ import {
     unitValue,
     UUID
 } from "lib-std"
-import {ClipNotification} from "studio-shared"
+import {ClipNotification} from "studio-adapters"
 
 export interface Engine {
     position(): ObservableValue<ppqn>

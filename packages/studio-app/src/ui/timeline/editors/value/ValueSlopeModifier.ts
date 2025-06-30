@@ -1,11 +1,11 @@
 import {clampUnit, Iterables, Notifier, Observer, Option, panic, Selection, Terminable, unitValue, ValueAxis} from "lib-std"
 import {Editing} from "lib-box"
-import {ValueEventBoxAdapter} from "studio-shared"
+import {ValueEventBoxAdapter} from "studio-adapters"
 import {EventCollection, Interpolation, ppqn, ValueEvent} from "lib-dsp"
 import {ValueModifier} from "./ValueModifier"
 import {
     ValueEventCollectionBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {ValueEventDraft} from "@/ui/timeline/editors/value/ValueEventDraft.ts"
 import {ValueEventOwnerReader} from "../EventOwnerReader"
 import {Dragging} from "lib-dom"

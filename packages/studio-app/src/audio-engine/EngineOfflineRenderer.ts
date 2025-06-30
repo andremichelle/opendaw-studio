@@ -7,7 +7,7 @@ import {Promises, Wait} from "lib-runtime"
 import {AnimationFrame, Errors, Files} from "lib-dom"
 import {encodeWavFloat} from "@/wav"
 import {ProjectMeta} from "@/project/ProjectMeta"
-import {ExportStemsConfiguration} from "studio-shared"
+import {ExportStemsConfiguration} from "studio-adapters"
 import JSZip from "jszip"
 
 export namespace EngineOfflineRenderer {

@@ -1,5 +1,5 @@
 import {TimelineCoordinates, TimelineSelectableLocator} from "@/ui/timeline/TimelineSelectableLocator.ts"
-import {ValueEventBoxAdapter} from "studio-shared"
+import {ValueEventBoxAdapter} from "studio-adapters"
 import {Iterables, ValueAxis} from "lib-std"
 import {ValueEvent} from "lib-dsp"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"

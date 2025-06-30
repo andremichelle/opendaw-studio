@@ -1,5 +1,5 @@
 import {byte, Option, SortedSet, Terminable, Terminator, UUID} from "lib-std"
-import {PlayfieldDeviceBoxAdapter, PlayfieldSampleBoxAdapter} from "studio-shared"
+import {PlayfieldDeviceBoxAdapter, PlayfieldSampleBoxAdapter} from "studio-adapters"
 import {EngineContext} from "../../EngineContext.ts"
 import {DeviceProcessor} from "../../processors.ts"
 import {AudioBuffer} from "../../AudioBuffer.ts"

@@ -10,14 +10,14 @@ import {
 import {UUID} from "lib-std"
 import {Utils} from "@/utils"
 import {BoxGraph} from "lib-box"
-import {TrackType} from "studio-shared"
+import {TrackType} from "studio-adapters"
 import {Project} from "@/project/Project.ts"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {Waveform} from "lib-dsp"
 import {Modifier} from "@/ui/Modifier.ts"
 import {AudioUnitType} from "studio-enums"
-import {DeviceHost} from "studio-shared"
-import {AudioUnitBoxAdapter} from "studio-shared"
+import {DeviceHost} from "studio-adapters"
+import {AudioUnitBoxAdapter} from "studio-adapters"
 
 export namespace Instruments {
     export interface Factory {

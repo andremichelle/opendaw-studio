@@ -4,7 +4,7 @@ import {createElement, Frag} from "lib-jsx"
 import {int, isDefined, Lifecycle, Nullable, Option, panic, Terminable, Terminator} from "lib-std"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {Surface} from "@/ui/surface/Surface.tsx"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {AnimationFrame, Events, Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "menu")

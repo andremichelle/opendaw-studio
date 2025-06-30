@@ -27,7 +27,7 @@
     "lib-jsx": "*",
     "lib-fusion": "*",
     "studio-enums": "*",
-    "studio-shared": "*",
+    "studio-adapters": "*",
     "studio-boxes": "*",
     "sass": "^1.88.0",
     "vite": "^6.3.5",

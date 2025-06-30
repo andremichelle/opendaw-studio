@@ -5,16 +5,16 @@ import {MenuItems} from "@/ui/devices/menu-items.ts"
 import {Project} from "@/project/Project.ts"
 import {DevicePeakMeter} from "@/ui/devices/panel/DevicePeakMeter.tsx"
 import {Instruments} from "@/service/Instruments"
-import {DeviceHost} from "studio-shared"
+import {DeviceHost} from "studio-adapters"
 import {
     PlayfieldSampleBoxAdapter
-} from "studio-shared"
-import {NoteSender, NoteSustainer} from "studio-shared"
+} from "studio-adapters"
+import {NoteSender, NoteSustainer} from "studio-adapters"
 import {SlotEditor} from "@/ui/devices/instruments/PlayfieldDeviceEditor/SlotEditor"
 import {Colors} from "@/ui/Colors"
 import {Events} from "lib-dom"
 import {Icon} from "@/ui/components/Icon"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {TextTooltip} from "@/ui/surface/TextTooltip"
 
 type Construct = {

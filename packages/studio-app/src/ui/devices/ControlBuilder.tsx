@@ -1,5 +1,5 @@
-import {DeviceBoxAdapter} from "studio-shared"
-import {AutomatableParameterFieldAdapter} from "studio-shared"
+import {DeviceBoxAdapter} from "studio-adapters"
+import {AutomatableParameterFieldAdapter} from "studio-adapters"
 import {Column} from "@/ui/devices/Column.tsx"
 import {createElement} from "lib-jsx"
 import {LKR} from "@/ui/devices/constants.ts"

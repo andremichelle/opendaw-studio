@@ -1,4 +1,4 @@
-import {AnyClipBoxAdapter} from "studio-shared"
+import {AnyClipBoxAdapter} from "studio-adapters"
 import {int} from "lib-std"
 
 export interface ClipModifyStrategies {

@@ -1,4 +1,4 @@
-import {NoteRegionBoxAdapter} from "studio-shared"
+import {NoteRegionBoxAdapter} from "studio-adapters"
 import {LoopableRegion} from "lib-dsp"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {RegionBound, RegionColors} from "@/ui/timeline/renderer/env.ts"

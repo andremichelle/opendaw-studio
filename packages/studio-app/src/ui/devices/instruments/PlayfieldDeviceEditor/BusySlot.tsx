@@ -12,13 +12,13 @@ import {
 } from "lib-std"
 import {createElement, DomElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
-import {PlayfieldDeviceBoxAdapter} from "studio-shared"
-import {NoteSender, NoteSustainer} from "studio-shared"
+import {PlayfieldDeviceBoxAdapter} from "studio-adapters"
+import {NoteSender, NoteSustainer} from "studio-adapters"
 import {SampleSelector} from "@/ui/devices/SampleSelector"
 import {CanvasPainter} from "@/ui/canvas/painter"
 import {SlotUtils} from "@/ui/devices/instruments/PlayfieldDeviceEditor/SlotUtils"
 import {Icon} from "@/ui/components/Icon"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {Checkbox} from "@/ui/components/Checkbox"
 import {Colors} from "@/ui/Colors"
 import {Editing} from "lib-box"
@@ -30,7 +30,7 @@ import {NoteLabel} from "@/ui/devices/instruments/PlayfieldDeviceEditor/NoteLabe
 import {DebugMenus} from "@/ui/menu/debug"
 import {
     PlayfieldSampleBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {TextTooltip} from "@/ui/surface/TextTooltip"
 
 const className = Html.adoptStyleSheet(css, "BusySlot")

@@ -1,6 +1,6 @@
 import {
     NoteEventCollectionBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {ppqn} from "lib-dsp"
 import {mod, Observer, Option, Subscription} from "lib-std"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
@@ -11,15 +11,15 @@ import {
     NoteEventOwnerReader,
     ValueEventOwnerReader
 } from "@/ui/timeline/editors/EventOwnerReader.ts"
-import {ClipBoxAdapter} from "studio-shared"
-import {NoteClipBoxAdapter} from "studio-shared"
+import {ClipBoxAdapter} from "studio-adapters"
+import {NoteClipBoxAdapter} from "studio-adapters"
 import {
     ValueEventCollectionBoxAdapter
-} from "studio-shared"
-import {ValueClipBoxAdapter} from "studio-shared"
-import {AudioClipBoxAdapter} from "studio-shared"
-import {AudioFileBoxAdapter} from "studio-shared"
-import {TrackBoxAdapter} from "studio-shared"
+} from "studio-adapters"
+import {ValueClipBoxAdapter} from "studio-adapters"
+import {AudioClipBoxAdapter} from "studio-adapters"
+import {AudioFileBoxAdapter} from "studio-adapters"
+import {TrackBoxAdapter} from "studio-adapters"
 
 export class ClipReader<CONTENT> implements EventOwnerReader<CONTENT> {
     static forAudioClipBoxAdapter(clip: AudioClipBoxAdapter): AudioEventOwnerReader {

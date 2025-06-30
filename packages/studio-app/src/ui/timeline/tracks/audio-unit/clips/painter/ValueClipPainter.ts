@@ -1,4 +1,4 @@
-import {ValueClipBoxAdapter} from "studio-shared"
+import {ValueClipBoxAdapter} from "studio-adapters"
 import {CanvasPainter} from "@/ui/canvas/painter.ts"
 import {Point, Procedure, TAU} from "lib-std"
 import {ValueEvent} from "lib-dsp"

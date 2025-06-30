@@ -13,14 +13,14 @@ import {
     tryCatch
 } from "lib-std"
 import {Project} from "@/project/Project"
-import {AudioUnitBoxAdapter} from "studio-shared"
+import {AudioUnitBoxAdapter} from "studio-adapters"
 import {MidiDeviceAccess} from "@/midi/devices/MidiDeviceAccess"
 import {MidiData} from "@/midi/MidiData"
 import {MidiDialogs} from "@/midi/devices/MidiDialogs"
 import {Engine} from "@/audio-engine/Engine"
 import {Address, AddressJSON, PrimitiveField, PrimitiveValues} from "lib-box"
 import {Pointers} from "studio-enums"
-import {AutomatableParameterFieldAdapter} from "studio-shared"
+import {AutomatableParameterFieldAdapter} from "studio-adapters"
 
 export type MidiConnectionJSON = (
     | {

@@ -3,7 +3,7 @@ import {createElement, Frag, PageContext, PageFactory} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {Icon} from "@/ui/components/Icon.tsx"
 import {Html} from "lib-dom"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 
 const className = Html.adoptStyleSheet(css, "IconsPage")
 

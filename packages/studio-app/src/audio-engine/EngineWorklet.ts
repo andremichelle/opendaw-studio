@@ -19,15 +19,15 @@ import {
 } from "lib-std"
 import {ppqn} from "lib-dsp"
 import {Engine} from "@/audio-engine/Engine.ts"
-import {EngineProcessorOptions, ExportStemsConfiguration} from "studio-shared"
-import {AudioData} from "studio-shared"
-import {ClipNotification, ClipSequencingUpdates} from "studio-shared"
+import {EngineProcessorOptions, ExportStemsConfiguration} from "studio-adapters"
+import {AudioData} from "studio-adapters"
+import {ClipNotification, ClipSequencingUpdates} from "studio-adapters"
 import {SyncSource} from "lib-box"
 import {Communicator, Messenger} from "lib-runtime"
 import {WorkletFactory} from "@/audio-engine/WorkletFactory"
-import {EngineState, EngineStateSchema} from "studio-shared"
+import {EngineState, EngineStateSchema} from "studio-adapters"
 import {AnimationFrame} from "lib-dom"
-import {EngineCommands, EngineToClient} from "studio-shared"
+import {EngineCommands, EngineToClient} from "studio-adapters"
 
 export class EngineWorklet extends AudioWorkletNode implements Engine {
     static bootFactory(context: BaseAudioContext): Promise<WorkletFactory<EngineWorklet>> {

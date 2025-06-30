@@ -1,6 +1,6 @@
 import {CanvasUnitPainter} from "@/ui/canvas/painter.ts"
 import {int, linear, Nullable, Terminable} from "lib-std"
-import {RevampDeviceBoxAdapter} from "studio-shared"
+import {RevampDeviceBoxAdapter} from "studio-adapters"
 import {Scale} from "@/ui/canvas/scale.ts"
 import {
     Bell,

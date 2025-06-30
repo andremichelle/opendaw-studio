@@ -1,5 +1,5 @@
 {
-  "name": "studio-shared",
+  "name": "studio-adapters",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.cjs",

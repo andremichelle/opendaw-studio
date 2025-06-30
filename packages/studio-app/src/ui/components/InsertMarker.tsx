@@ -1,6 +1,6 @@
 import css from "./InsertMarker.sass?inline"
 import {Html} from "lib-dom"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {Icon} from "@/ui/components/Icon"
 import {createElement} from "lib-jsx"
 

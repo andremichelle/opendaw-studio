@@ -1,7 +1,7 @@
 import {Capturing} from "@/ui/canvas/capturing.ts"
 import {Nullable, ObservableValue, ValueAxis} from "lib-std"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
-import {NoteEventBoxAdapter} from "studio-shared"
+import {NoteEventBoxAdapter} from "studio-adapters"
 import {EventRadius} from "@/ui/timeline/editors/notes/Constants.ts"
 import {PropertyAccessor} from "@/ui/timeline/editors/notes/property/PropertyAccessor.ts"
 import {NoteModifyStrategy} from "@/ui/timeline/editors/notes/NoteModifyStrategies.ts"

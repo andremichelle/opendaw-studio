@@ -1,6 +1,6 @@
 import {AudioUnitType} from "studio-enums"
 import {Colors} from "../Colors"
-import {TrackType} from "studio-shared"
+import {TrackType} from "studio-adapters"
 
 export namespace ColorCodes {
     export const forAudioType = (type?: AudioUnitType): string => {

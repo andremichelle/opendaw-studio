@@ -1,6 +1,6 @@
 import {Arrays, Option, Procedure, Terminable} from "lib-std"
 
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 
 export type MenuItemOptions = {
     hidden?: boolean

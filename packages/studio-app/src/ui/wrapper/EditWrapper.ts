@@ -1,4 +1,4 @@
-import {AutomatableParameterFieldAdapter} from "studio-shared"
+import {AutomatableParameterFieldAdapter} from "studio-adapters"
 import {Editing, PrimitiveValues} from "lib-box"
 import {MutableObservableValue, ObservableValue, Observer, Subscription} from "lib-std"
 

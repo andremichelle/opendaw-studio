@@ -4,7 +4,7 @@ import {createElement, Group} from "lib-jsx"
 import {PianoRollLayout} from "@/ui/piano-panel/PianoRollLayout.ts"
 import {isDefined, isInstanceOf, Lifecycle, Notifier} from "lib-std"
 import {LoopableRegion, PPQN, ppqn} from "lib-dsp"
-import {NoteRegionBoxAdapter} from "studio-shared"
+import {NoteRegionBoxAdapter} from "studio-adapters"
 import {Project} from "@/project/Project.ts"
 
 const className = Html.adoptStyleSheet(css, "PianoRoll")

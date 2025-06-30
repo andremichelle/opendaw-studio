@@ -1,10 +1,10 @@
-import {TrackBoxAdapter} from "studio-shared"
+import {TrackBoxAdapter} from "studio-adapters"
 import {Event, EventCollection, ppqn} from "lib-dsp"
 import {RegionModifyStrategies} from "@/ui/timeline/tracks/audio-unit/regions/RegionModifyStrategies.ts"
-import {AnyRegionBoxAdapter, UnionAdapterTypes} from "studio-shared"
+import {AnyRegionBoxAdapter, UnionAdapterTypes} from "studio-adapters"
 import {asDefined, assert, Exec, int, mod, panic} from "lib-std"
-import {RegionEditing} from "studio-shared"
-import {TrackType} from "studio-shared"
+import {RegionEditing} from "studio-adapters"
+import {TrackType} from "studio-adapters"
 
 export type ClipTask = {
     type: "delete"

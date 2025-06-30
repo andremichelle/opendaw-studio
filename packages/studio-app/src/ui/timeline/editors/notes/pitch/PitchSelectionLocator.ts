@@ -1,7 +1,7 @@
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {TimelineCoordinates, TimelineSelectableLocator} from "@/ui/timeline/TimelineSelectableLocator.ts"
-import {NoteEventBoxAdapter} from "studio-shared"
+import {NoteEventBoxAdapter} from "studio-adapters"
 import {Intervals, Iterables, ValueAxis} from "lib-std"
 import {PitchCaptureTarget} from "@/ui/timeline/editors/notes/pitch/PitchEventCapturing.ts"
 

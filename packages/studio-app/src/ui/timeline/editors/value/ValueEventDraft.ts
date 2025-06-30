@@ -1,7 +1,7 @@
 import {EventCollection, ppqn, ValueEvent} from "lib-dsp"
 import {int, Nullable} from "lib-std"
 import {ValueModifyStrategy} from "@/ui/timeline/editors/value/ValueModifyStrategies.ts"
-import {ValueEventBoxAdapter} from "studio-shared"
+import {ValueEventBoxAdapter} from "studio-adapters"
 import {UIValueEvent} from "./UIValueEvent"
 
 export interface ValueEventDraft extends UIValueEvent {

@@ -1,7 +1,7 @@
 {
-  "name": "opendaw-bundle-worklet",
+  "name": "@opendaw/bundle-worklet",
   "version": "0.0.1",
-  "description": "Audio worklet package for OpenDAW",
+  "description": "Audio worklet bundle for OpenDAW",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -25,7 +25,7 @@
     "lib-fusion": "*",
     "studio-enums": "*",
     "studio-boxes": "*",
-    "studio-shared": "*"
+    "studio-adapters": "*"
   },
   "devDependencies": {
     "typescript": "^5.8.3",

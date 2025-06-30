@@ -4,7 +4,7 @@ import {PPQN} from "lib-dsp"
 import {Colors} from "@/ui/Colors.ts"
 import {createElement} from "lib-jsx"
 import {Project} from "@/project/Project.ts"
-import {AudioUnitTracks} from "studio-shared"
+import {AudioUnitTracks} from "studio-adapters"
 
 type Contruct = {
     lifecycle: Lifecycle

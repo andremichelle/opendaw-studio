@@ -1,4 +1,4 @@
-import {AudioEffectDeviceBoxAdapter, DelayDeviceBoxAdapter} from "studio-shared"
+import {AudioEffectDeviceBoxAdapter, DelayDeviceBoxAdapter} from "studio-adapters"
 import {Bits, int, Option, Terminable, UUID} from "lib-std"
 import {dbToGain, Event, Fraction, PPQN, StereoMatrix} from "lib-dsp"
 import {AudioEffectDeviceProcessor} from "../../processors.ts"

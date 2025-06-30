@@ -1,6 +1,6 @@
 import {Peaks} from "lib-fusion"
 import {PeakAgent} from "@/service/agents"
-import {AudioData} from "studio-shared"
+import {AudioData} from "studio-adapters"
 import {ProgressHandler} from "lib-std"
 
 export namespace AudioPeaks {

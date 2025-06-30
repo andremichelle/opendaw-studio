@@ -1,5 +1,5 @@
 import {PrimitiveValues} from "lib-box"
-import {AutomatableParameterFieldAdapter} from "studio-shared"
+import {AutomatableParameterFieldAdapter} from "studio-adapters"
 import {assert, Notifier, Observer, Option, Subscription, Terminable, TerminableOwner, Terminator, unitValue} from "lib-std"
 import {ppqn} from "lib-dsp"
 import {EngineContext} from "./EngineContext.ts"

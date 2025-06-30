@@ -1,6 +1,6 @@
 import {int, UUID} from "lib-std"
 import {Event} from "lib-dsp"
-import {PlayfieldSampleBoxAdapter} from "studio-shared"
+import {PlayfieldSampleBoxAdapter} from "studio-adapters"
 import {AudioProcessor} from "../../../AudioProcessor.ts"
 import {DeviceProcessor} from "../../../processors.ts"
 import {AudioGenerator, Block, Processor} from "../../../processing.ts"

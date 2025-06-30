@@ -1,7 +1,7 @@
 import css from "./AuxSend.sass?inline"
 import {DefaultObservableValue, Lifecycle} from "lib-std"
 import {createElement, DomElement, Inject} from "lib-jsx"
-import {AuxSendBoxAdapter} from "studio-shared"
+import {AuxSendBoxAdapter} from "studio-adapters"
 import {Knob, TinyDesign} from "@/ui/components/Knob.tsx"
 import {RelativeUnitValueDragging} from "@/ui/wrapper/RelativeUnitValueDragging.tsx"
 import {MenuItem} from "@/ui/model/menu-item.ts"
@@ -10,7 +10,7 @@ import {IconCartridge} from "@/ui/components/Icon.tsx"
 import {Colors} from "../Colors.ts"
 import {SnapCenter} from "@/ui/configs.ts"
 import {Editing} from "lib-box"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {Html} from "lib-dom"
 
 const className = Html.adoptStyleSheet(css, "AuxSend")

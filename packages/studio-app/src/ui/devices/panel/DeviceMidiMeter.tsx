@@ -5,7 +5,7 @@ import {Address} from "lib-box"
 import {LiveStreamReceiver} from "lib-fusion"
 import {Colors} from "@/ui/Colors.ts"
 import {Html} from "lib-dom"
-import {NoteStreamReceiver} from "studio-shared"
+import {NoteStreamReceiver} from "studio-adapters"
 
 const className = Html.adoptStyleSheet(css, "DeviceMidiMeter")
 

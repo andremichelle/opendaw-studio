@@ -1,6 +1,6 @@
 import {WorkletFactory} from "@/audio-engine/WorkletFactory"
 import WorkletUrl from "studio-worklet/RecordingProcessor.ts?worker&url"
-import {mergeChunkPlanes, RingBuffer} from "studio-shared"
+import {mergeChunkPlanes, RingBuffer} from "studio-adapters"
 import {encodeWavFloat} from "@/wav"
 import {EmptyExec, int} from "lib-std"
 import {Files} from "lib-dom"

@@ -1,4 +1,4 @@
-import {AudioData} from "studio-shared"
+import {AudioData} from "studio-adapters"
 import {ProgressHandler, UUID} from "lib-std"
 import {AudioMetaData} from "@/audio/AudioMetaData"
 

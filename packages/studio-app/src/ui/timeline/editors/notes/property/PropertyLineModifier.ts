@@ -1,7 +1,7 @@
 import {clamp, Notifier, Observer, Option, Selection, Terminable, unitValue, ValueAxis} from "lib-std"
 import {Editing} from "lib-box"
 import {Line, NoteModifyStrategy, Point} from "../NoteModifyStrategies.ts"
-import {NoteEventBoxAdapter} from "studio-shared"
+import {NoteEventBoxAdapter} from "studio-adapters"
 import {EventCollection, ppqn} from "lib-dsp"
 import {NoteModifier} from "@/ui/timeline/editors/notes/NoteModifier.ts"
 import {

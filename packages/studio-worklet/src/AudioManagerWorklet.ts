@@ -1,5 +1,5 @@
 import {Peaks} from "lib-fusion"
-import {AudioData, AudioLoader, AudioLoaderManager, AudioLoaderState, EngineToClient} from "studio-shared"
+import {AudioData, AudioLoader, AudioLoaderManager, AudioLoaderState, EngineToClient} from "studio-adapters"
 import {Observer, Option, SortedSet, Subscription, Terminable, UUID} from "lib-std"
 
 export type FetchAudio = (uuid: UUID.Format) => Promise<AudioData>

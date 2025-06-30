@@ -3,7 +3,7 @@ import {TimelineSelectableLocator} from "@/ui/timeline/TimelineSelectableLocator
 import {Editing} from "lib-box"
 import {Event} from "lib-dsp"
 import {Events, Keyboard} from "lib-dom"
-import {BoxAdapter} from "studio-shared"
+import {BoxAdapter} from "studio-adapters"
 
 export const attachShortcuts = <E extends Event & BoxAdapter>(element: Element,
                                                               editing: Editing,

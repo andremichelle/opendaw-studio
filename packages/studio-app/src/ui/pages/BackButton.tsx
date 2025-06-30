@@ -1,7 +1,7 @@
 import css from "./BackButton.sass?inline"
 import {Html} from "lib-dom"
 import {Icon} from "@/ui/components/Icon"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {createElement, LocalLink} from "lib-jsx"
 
 const className = Html.adoptStyleSheet(css, "BackButton")

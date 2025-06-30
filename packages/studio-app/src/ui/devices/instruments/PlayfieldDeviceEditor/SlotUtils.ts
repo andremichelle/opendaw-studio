@@ -4,7 +4,7 @@ import {CanvasPainter} from "@/ui/canvas/painter"
 
 import {
     PlayfieldSampleBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 
 export namespace SlotUtils {
     export const color = (semitone: int) => `hsl(${semitone / 13 * 360}, 100%, 70%)`

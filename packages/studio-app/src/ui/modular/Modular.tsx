@@ -3,7 +3,7 @@ import {assert, Lifecycle, SortedSet, Terminable, Terminator, UUID} from "lib-st
 import {createElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {ModularBox} from "studio-boxes"
-import {ModularAdapter} from "studio-shared"
+import {ModularAdapter} from "studio-adapters"
 import {PointerField, Vertex} from "lib-box"
 import {ModularTabButton} from "@/ui/modular/ModularTabButton.tsx"
 import {ModularView} from "./ModularView.tsx"

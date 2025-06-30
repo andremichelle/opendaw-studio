@@ -5,7 +5,7 @@ import {Arrays, Bits, int, Terminable} from "lib-std"
 import {AbstractProcessor} from "./AbstractProcessor.ts"
 import {EventBuffer} from "./EventBuffer.ts"
 import {Fragmentor} from "lib-dsp"
-import {UpdateClockRate} from "studio-shared"
+import {UpdateClockRate} from "studio-adapters"
 
 export interface UpdateEvent extends Event {type: "update-event"}
 

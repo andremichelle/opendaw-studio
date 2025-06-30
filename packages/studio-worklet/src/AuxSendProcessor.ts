@@ -1,7 +1,7 @@
 import {EngineContext} from "./EngineContext.ts"
 import {AudioInput, Block, Processor} from "./processing.ts"
 import {Option, Terminable} from "lib-std"
-import {AuxSendBoxAdapter} from "studio-shared"
+import {AuxSendBoxAdapter} from "studio-adapters"
 import {AudioBuffer} from "./AudioBuffer.ts"
 import {AutomatableParameter} from "./AutomatableParameter.ts"
 import {dbToGain, Ramp} from "lib-dsp"

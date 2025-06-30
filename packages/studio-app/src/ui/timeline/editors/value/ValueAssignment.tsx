@@ -1,5 +1,5 @@
-import {DeviceBoxAdapter} from "studio-shared"
-import {AutomatableParameterFieldAdapter} from "studio-shared"
+import {DeviceBoxAdapter} from "studio-adapters"
+import {AutomatableParameterFieldAdapter} from "studio-adapters"
 
 export type ValueAssignment = {
     device?: DeviceBoxAdapter

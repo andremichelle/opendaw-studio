@@ -1,6 +1,6 @@
 import {int, Option, Terminable, UUID} from "lib-std"
 import {dbToGain, Ramp, StereoMatrix} from "lib-dsp"
-import {AudioEffectDeviceBoxAdapter, StereoToolDeviceBoxAdapter} from "studio-shared"
+import {AudioEffectDeviceBoxAdapter, StereoToolDeviceBoxAdapter} from "studio-adapters"
 import {AudioEffectDeviceProcessor} from "../../processors.ts"
 import {EngineContext} from "../../EngineContext.ts"
 import {Block, Processor} from "../../processing.ts"

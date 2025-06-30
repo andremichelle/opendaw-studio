@@ -3,15 +3,15 @@ import {Html} from "lib-dom"
 import {Arrays, DefaultObservableValue, int, Lifecycle, Option} from "lib-std"
 import {createElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
-import {NoteStreamReceiver} from "studio-shared"
+import {NoteStreamReceiver} from "studio-adapters"
 import {SlotState} from "@/ui/devices/instruments/PlayfieldDeviceEditor/SlotState"
-import {PlayfieldDeviceBoxAdapter} from "studio-shared"
+import {PlayfieldDeviceBoxAdapter} from "studio-adapters"
 import {Slot} from "@/ui/devices/instruments/PlayfieldDeviceEditor/Slot"
 import {OctaveSelector} from "@/ui/devices/instruments/PlayfieldDeviceEditor/OctaveSelector"
-import {NoteSender} from "studio-shared"
+import {NoteSender} from "studio-adapters"
 import {
     PlayfieldSampleBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 
 const className = Html.adoptStyleSheet(css, "SlotGrid")
 

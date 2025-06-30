@@ -1,7 +1,7 @@
 import css from "./EmptyModular.sass?inline"
 import {Lifecycle} from "lib-std"
 import {Icon} from "@/ui/components/Icon.tsx"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {createElement} from "lib-jsx"
 import {Html} from "lib-dom"
 

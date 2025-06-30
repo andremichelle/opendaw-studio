@@ -1,4 +1,4 @@
-import {DeviceHost, Devices, EffectDeviceBoxAdapter} from "studio-shared"
+import {DeviceHost, Devices, EffectDeviceBoxAdapter} from "studio-adapters"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {Effects} from "@/service/Effects.ts"
 import {Editing, PrimitiveField, PrimitiveValues, StringField} from "lib-box"

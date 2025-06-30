@@ -1,5 +1,5 @@
 import css from "./DelayDeviceEditor.sass?inline"
-import {DelayDeviceBoxAdapter} from "studio-shared"
+import {DelayDeviceBoxAdapter} from "studio-adapters"
 import {Lifecycle} from "lib-std"
 import {createElement} from "lib-jsx"
 import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
@@ -10,7 +10,7 @@ import {SnapCommonDecibel} from "@/ui/configs.ts"
 import {DevicePeakMeter} from "@/ui/devices/panel/DevicePeakMeter.tsx"
 import {Html} from "lib-dom"
 import {Effects} from "@/service/Effects"
-import {DeviceHost} from "studio-shared"
+import {DeviceHost} from "studio-adapters"
 
 const className = Html.adoptStyleSheet(css, "DelayDeviceEditor")
 

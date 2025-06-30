@@ -1,6 +1,6 @@
 import css from "./ModularTabButton.sass?inline"
 import {Lifecycle} from "lib-std"
-import {ModularAdapter} from "studio-shared"
+import {ModularAdapter} from "studio-adapters"
 import {UserEditing} from "@/UserEditingManager.ts"
 import {Vertex} from "lib-box"
 import {createElement, Inject} from "lib-jsx"

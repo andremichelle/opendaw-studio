@@ -1,7 +1,7 @@
 import {ContextMenu} from "@/ui/ContextMenu.ts"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
-import {AnyClipBoxAdapter} from "studio-shared"
+import {AnyClipBoxAdapter} from "studio-adapters"
 import {Project} from "@/project/Project.ts"
 import {EmptyExec, Procedure, Selection, UUID} from "lib-std"
 import {Surface} from "@/ui/surface/Surface.tsx"

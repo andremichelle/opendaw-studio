@@ -1,5 +1,5 @@
 import {TimelineSelectableLocator} from "@/ui/timeline/TimelineSelectableLocator.ts"
-import {AnyClipBoxAdapter} from "studio-shared"
+import {AnyClipBoxAdapter} from "studio-adapters"
 import {Coordinates, Iterables} from "lib-std"
 import {ppqn} from "lib-dsp"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"

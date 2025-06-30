@@ -1,4 +1,4 @@
-import {ArpeggioDeviceBoxAdapter} from "studio-shared"
+import {ArpeggioDeviceBoxAdapter} from "studio-adapters"
 import {Event, EventSpanRetainer, Fraction, NoteEvent, ppqn} from "lib-dsp"
 import {assert, Bits, Id, int, Option, Terminable, UUID} from "lib-std"
 import {EngineContext} from "../../EngineContext.ts"

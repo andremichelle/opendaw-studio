@@ -1,10 +1,10 @@
 import {ContextMenu} from "@/ui/ContextMenu.ts"
 import {MenuItem} from "@/ui/model/menu-item.ts"
-import {TrackType} from "studio-shared"
+import {TrackType} from "studio-adapters"
 import {Editing, PrimitiveValues} from "lib-box"
-import {AudioUnitTracks} from "studio-shared"
+import {AudioUnitTracks} from "studio-adapters"
 import {MidiDevices} from "@/midi/devices/MidiDevices"
-import {AutomatableParameterFieldAdapter} from "studio-shared"
+import {AutomatableParameterFieldAdapter} from "studio-adapters"
 
 export const attachParameterContextMenu = <T extends PrimitiveValues>(editing: Editing,
                                                                       midiDevices: MidiDevices,

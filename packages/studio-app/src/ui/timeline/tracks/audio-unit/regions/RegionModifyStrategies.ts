@@ -1,6 +1,6 @@
 import {ppqn, Region, RegionCollection} from "lib-dsp"
 import {int} from "lib-std"
-import {AnyLoopableRegionBoxAdapter, AnyRegionBoxAdapter} from "studio-shared"
+import {AnyLoopableRegionBoxAdapter, AnyRegionBoxAdapter} from "studio-adapters"
 
 export interface RegionModifyStrategies {
     showOrigin(): boolean

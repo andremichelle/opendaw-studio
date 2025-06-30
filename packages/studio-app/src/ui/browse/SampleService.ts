@@ -8,13 +8,13 @@ import {AudioUnitType} from "studio-enums"
 import {Instruments} from "@/service/Instruments"
 import {PPQN} from "lib-dsp"
 import {ColorCodes} from "../mixer/ColorCodes"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {showApproveDialog, showInfoDialog, showProcessDialog} from "../components/dialogs"
 import {AudioStorage} from "@/audio/AudioStorage"
 import {Projects} from "@/project/Projects"
 import {SampleApi} from "@/service/SampleApi"
 import {Promises} from "lib-runtime"
-import {AudioUnitBoxAdapter} from "studio-shared"
+import {AudioUnitBoxAdapter} from "studio-adapters"
 
 export class SampleService {
     readonly #service: StudioService

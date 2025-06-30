@@ -4,7 +4,7 @@ import {asDefined, clamp, Lifecycle, Option} from "lib-std"
 import {createElement} from "lib-jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {Icon} from "@/ui/components/Icon"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {CanvasPainter} from "@/ui/canvas/painter"
 import {EditWrapper} from "@/ui/wrapper/EditWrapper.ts"
 import {Colors} from "@/ui/Colors"
@@ -15,11 +15,11 @@ import {SlotUtils} from "@/ui/devices/instruments/PlayfieldDeviceEditor/SlotUtil
 import {RadioGroup} from "@/ui/components/RadioGroup"
 import {ParameterLabel} from "@/ui/components/ParameterLabel"
 import {RelativeUnitValueDragging} from "@/ui/wrapper/RelativeUnitValueDragging"
-import {AutomatableParameterFieldAdapter} from "studio-shared"
-import {Gate} from "studio-shared"
+import {AutomatableParameterFieldAdapter} from "studio-adapters"
+import {Gate} from "studio-adapters"
 import {
     PlayfieldSampleBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {SnapValueThresholdInPixels} from "@/ui/timeline/editors/value/ValueMoveModifier"
 
 const className = Html.adoptStyleSheet(css, "SlotEditor")

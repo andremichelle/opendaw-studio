@@ -14,10 +14,10 @@ import {
     Terminator,
     UUID
 } from "lib-std"
-import {AudioUnitBoxAdapter} from "studio-shared"
-import {IndexComparator} from "studio-shared"
+import {AudioUnitBoxAdapter} from "studio-adapters"
+import {IndexComparator} from "studio-adapters"
 import {RegionModifier} from "@/ui/timeline/tracks/audio-unit/regions/RegionModifier.ts"
-import {TrackBoxAdapter} from "studio-shared"
+import {TrackBoxAdapter} from "studio-adapters"
 import {StudioService} from "@/service/StudioService.ts"
 import {AudioUnitTracks} from "@/ui/timeline/tracks/audio-unit/AudioUnitTracks.tsx"
 import {ClipModifier} from "./clips/ClipModifier"

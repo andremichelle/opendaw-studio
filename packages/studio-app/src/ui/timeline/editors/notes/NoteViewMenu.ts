@@ -1,6 +1,6 @@
 import {MenuCollector, MenuItem} from "@/ui/model/menu-item.ts"
 import {Procedure} from "lib-std"
-import {NoteEventBoxAdapter} from "studio-shared"
+import {NoteEventBoxAdapter} from "studio-adapters"
 import {EventCollection} from "lib-dsp"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {PitchPositioner} from "@/ui/timeline/editors/notes/pitch/PitchPositioner.ts"

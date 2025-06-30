@@ -1,7 +1,7 @@
 import css from "./StereoToolDeviceEditor.sass?inline"
 import {
     StereoToolDeviceBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {Lifecycle} from "lib-std"
 import {createElement} from "lib-jsx"
 import {DeviceEditor} from "@/ui/devices/DeviceEditor.tsx"
@@ -17,13 +17,13 @@ import {Column} from "@/ui/devices/Column"
 import {Checkbox} from "@/ui/components/Checkbox"
 import {EditWrapper} from "@/ui/wrapper/EditWrapper.ts"
 import {Icon} from "@/ui/components/Icon"
-import {IconSymbol} from "studio-shared"
+import {IconSymbol} from "studio-adapters"
 import {ControlIndicator} from "@/ui/components/ControlIndicator"
 import {AutoGainButton} from "./StereoToolDeviceEditor/AutoGainButton"
 import {MenuItem} from "@/ui/model/menu-item"
 import {StereoMatrix} from "lib-dsp"
 import {MenuItems} from "../menu-items"
-import {DeviceHost} from "studio-shared"
+import {DeviceHost} from "studio-adapters"
 
 const className = Html.adoptStyleSheet(css, "StereoToolDeviceEditor")
 

@@ -2,7 +2,7 @@ import {int, Notifier, Observer, Option, Selection, Terminable, unitValue} from 
 import {Snapping} from "@/ui/timeline/Snapping.ts"
 import {Editing} from "lib-box"
 import {Line, NoteModifyStrategy} from "./NoteModifyStrategies"
-import {NoteEventBoxAdapter} from "studio-shared"
+import {NoteEventBoxAdapter} from "studio-adapters"
 import {EventCollection, ppqn} from "lib-dsp"
 import {NoteModifier} from "@/ui/timeline/editors/notes/NoteModifier.ts"
 import {NoteEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"

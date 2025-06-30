@@ -4,7 +4,7 @@ import {
     DeviceBoxAdapter,
     DeviceHost,
     MidiEffectDeviceAdapter
-} from "studio-shared"
+} from "studio-adapters"
 import {DeviceEditorFactory} from "@/ui/devices/DeviceEditorFactory"
 import {Exec, Lifecycle, Option, Subscription, Terminable, Terminator, UUID} from "lib-std"
 import {JsxValue} from "lib-jsx"

@@ -2,7 +2,7 @@ import {
     AnyLoopableRegionBoxAdapter,
     AnyRegionBoxAdapter,
     UnionAdapterTypes
-} from "studio-shared"
+} from "studio-adapters"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {BinarySearch, Nullable, NumberComparator} from "lib-std"
 import {PointerRadiusDistance} from "@/ui/timeline/constants.ts"

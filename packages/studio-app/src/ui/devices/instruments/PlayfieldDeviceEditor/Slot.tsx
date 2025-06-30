@@ -1,16 +1,16 @@
 import {DefaultObservableValue, int, Lifecycle, ObservableValue, Option, Terminator, UUID} from "lib-std"
 import {createElement, replaceChildren} from "lib-jsx"
-import {PlayfieldDeviceBoxAdapter} from "studio-shared"
-import {NoteSender} from "studio-shared"
+import {PlayfieldDeviceBoxAdapter} from "studio-adapters"
+import {NoteSender} from "studio-adapters"
 import {StudioService} from "@/service/StudioService"
 import {SampleSelector, SampleSelectStrategy} from "@/ui/devices/SampleSelector"
 import {AudioFileBox, PlayfieldSampleBox} from "studio-boxes"
 import {EmptySlot} from "@/ui/devices/instruments/PlayfieldDeviceEditor/EmptySlot"
 import {BusySlot} from "./BusySlot"
-import {NoteStreamReceiver} from "studio-shared"
+import {NoteStreamReceiver} from "studio-adapters"
 import {
     PlayfieldSampleBoxAdapter
-} from "studio-shared"
+} from "studio-adapters"
 
 type Construct = {
     lifecycle: Lifecycle

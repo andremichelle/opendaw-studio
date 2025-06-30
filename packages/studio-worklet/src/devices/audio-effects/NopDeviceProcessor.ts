@@ -1,5 +1,5 @@
 import {int, Option, Terminable, UUID} from "lib-std"
-import {AudioEffectDeviceBoxAdapter} from "studio-shared"
+import {AudioEffectDeviceBoxAdapter} from "studio-adapters"
 import {AudioEffectDeviceProcessor} from "../../processors.ts"
 import {EngineContext} from "../../EngineContext.ts"
 import {ProcessInfo, Processor} from "../../processing.ts"
