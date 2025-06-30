@@ -9,20 +9,16 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2",
-    "@tauri-apps/plugin-opener": "^2",
-    "@types/wicg-file-system-access": "^2023.10.5",
     "express": "^4.21.2",
     "jszip": "^3.10.1",
     "markdown-it": "^14.1.0",
-    "markdown-it-table": "^4.1.1"
+    "markdown-it-table": "^4.1.1",
+    "studio-worklet": "*"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2",
-    "@types/audioworklet": "^0.0.68",
     "@types/markdown-it": "^0.0.9",
     "@types/node": "^22.15.18",
-    "@types/ssh2-sftp-client": "^9.0.3",
     "lib-std": "*",
     "lib-dsp": "*",
     "lib-dom": "*",
@@ -33,12 +29,9 @@
     "studio-enums": "*",
     "studio-shared": "*",
     "studio-boxes": "*",
-    "prettier": "^3.5.3",
     "sass": "^1.88.0",
-    "ssh2-sftp-client": "^12.0.0",
     "vite": "^6.3.5",
     "vite-plugin-compression": "^0.5.1",
-    "vite-plugin-cross-origin-isolation": "^0.1.6",
-    "vitest": "^3.1.3"
+    "vite-plugin-cross-origin-isolation": "^0.1.6"
   }
 }

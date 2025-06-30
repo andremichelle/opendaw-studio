@@ -16,11 +16,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/audioworklet": "^0.0.77",
     "studio-enums": "*",
     "studio-boxes": "*",
     "studio-shared": "*",
     "lib-std": "*",
+    "lib-dsp": "*",
     "lib-box": "*",
+    "lib-runtime": "*",
     "lib-fusion": "*"
   }
 }

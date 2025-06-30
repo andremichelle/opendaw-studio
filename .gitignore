@@ -3,5 +3,5 @@ localhost.pem
 localhost-key.pem
 dist/
 node_modules/
-core/src/data/boxes/
 studio/public/build-info.json
+/packages/lib-box-forge/test/

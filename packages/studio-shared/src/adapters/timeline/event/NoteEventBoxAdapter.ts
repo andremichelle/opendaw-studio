@@ -4,7 +4,7 @@ import {NoteEventBox} from "studio-boxes"
 import {Address, Field, Propagation, Update} from "lib-box"
 import {Pointers} from "studio-enums"
 import {BoxAdapter} from "../../../BoxAdapter"
-import {BoxAdaptersContext} from "src/BoxAdaptersContext"
+import {BoxAdaptersContext} from "../../../BoxAdaptersContext"
 import {NoteEventCollectionBoxAdapter} from "../collection/NoteEventCollectionBoxAdapter"
 
 type CopyToParams = {

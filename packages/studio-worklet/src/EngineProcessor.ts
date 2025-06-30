@@ -22,12 +22,25 @@ import {Address, BoxGraph, createSyncTarget} from "lib-box"
 import {AudioFileBox, BoxIO, BoxVisitor} from "studio-boxes"
 import {EngineContext} from "./EngineContext.ts"
 import {TimeInfo} from "./TimeInfo.ts"
-import {EngineCommands, EngineToClient} from "../../studio-shared/src/protocols.ts"
-import {EngineProcessorOptions} from "studio-shared"
-import {BoxAdapters} from "studio-shared"
-import {RootBoxAdapter} from "studio-shared"
-import {TimelineBoxAdapter} from "studio-shared"
-import {AudioLoaderManager} from "studio-shared"
+import {
+    AnyClipBoxAdapter,
+    AudioData,
+    AudioLoaderManager,
+    AudioUnitBoxAdapter,
+    BoxAdapters,
+    ClipAdapters,
+    ClipSequencing,
+    ClipSequencingUpdates,
+    EngineCommands,
+    EngineProcessorOptions,
+    EngineStateSchema,
+    EngineToClient,
+    ParameterFieldAdapters,
+    ProjectDecoder,
+    RootBoxAdapter,
+    TimelineBoxAdapter,
+    TrackBoxAdapter
+} from "studio-shared"
 import {AudioUnit} from "./AudioUnit.ts"
 import {Processor, ProcessPhase} from "./processing.ts"
 import {Mixer} from "./Mixer.ts"
@@ -38,19 +51,9 @@ import {Metronome} from "./Metronome.ts"
 import {BlockRenderer} from "./BlockRenderer.ts"
 import {Graph, PPQN, TopologicalSort} from "lib-dsp"
 import {AudioManagerWorklet} from "./AudioManagerWorklet.ts"
-import {EngineStateSchema} from "../../studio-shared/src/EngineStateSchema.ts"
-import {AudioUnitBoxAdapter} from "studio-shared"
-import {ParameterFieldAdapters} from "studio-shared"
-import {ProjectDecoder} from "studio-shared"
-import {ClipAdapters} from "studio-shared"
-import {AnyClipBoxAdapter} from "studio-shared"
 import {ClipSequencingAudioContext} from "./ClipSequencingAudioContext.ts"
-import {TrackBoxAdapter} from "studio-shared"
-import {AudioData} from "studio-shared"
-import {ClipSequencing} from "studio-shared"
 import {Communicator, Messenger} from "lib-runtime"
 import {AudioUnitOptions} from "./AudioUnitOptions.ts"
-import {ClipSequencingUpdates} from "studio-shared"
 
 const DEBUG = false
 

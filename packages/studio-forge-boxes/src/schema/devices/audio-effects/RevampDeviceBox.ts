@@ -1,5 +1,5 @@
 import {BoxSchema, ClassSchema} from "lib-box-forge"
-import {Pointers} from "studio-pointers"
+import {Pointers} from "studio-enums"
 import {DefaultParameterPointerRules} from "../../defaults"
 import {createAudioEffectDevice} from "../builder"
 

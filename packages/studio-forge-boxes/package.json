@@ -21,7 +21,6 @@
     "lib-box": "*",
     "lib-box-forge": "*",
     "lib-dsp": "*",
-    "studio-enums": "*",
-    "studio-shared": "*"
+    "studio-enums": "*"
   }
 }

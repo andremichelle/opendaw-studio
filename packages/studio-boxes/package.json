@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "lib-std": "*",
-    "lib-box": "*"
+    "lib-box": "*",
+    "studio-enums": "*"
   }
 } 

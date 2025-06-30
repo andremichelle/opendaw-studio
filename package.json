@@ -5,6 +5,7 @@
   ],
   "scripts": {
     "rebuild": "bash ./rebuild.sh",
+    "test:all": "vitest run",
     "cert": "bash ./cert.sh",
     "web": "bash ./run-web.sh",
     "dev": "concurrently \"npm run watch:packages\" \"npm run dev:app\"",
@@ -16,7 +17,7 @@
     "watch:studio": "concurrently \"npm run watch:studio-shared\" \"npm run watch:studio-boxes\" \"npm run watch:studio-enums\" \"npm run watch:studio-worklet\"",
     "dev:app": "cd packages/studio-app && npm run dev",
     "watch:lib-std": "cd packages/lib-std && npm run watch",
-    "watch:lib-box": "cd packages/lib-box && npm run watch", 
+    "watch:lib-box": "cd packages/lib-box && npm run watch",
     "watch:lib-dom": "cd packages/lib-dom && npm run watch",
     "watch:lib-dsp": "cd packages/lib-dsp && npm run watch",
     "watch:lib-runtime": "cd packages/lib-runtime && npm run watch",
@@ -34,8 +35,9 @@
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
+    "concurrently": "^9.1.0",
+    "depcheck": "^1.4.7",
     "studio-enums": "^0.1.0",
-    "typescript": "^5.8.3",
-    "concurrently": "^9.1.0"
+    "typescript": "^5.8.3"
   }
 }

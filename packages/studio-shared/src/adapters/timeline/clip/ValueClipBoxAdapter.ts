@@ -18,7 +18,7 @@ import {Address, Int32Field, Propagation, Update} from "lib-box"
 import {ClipBoxAdapter, ClipBoxAdapterVisitor} from "../ClipBoxAdapter"
 import {TrackBoxAdapter} from "../TrackBoxAdapter"
 import {ValueEventCollectionBoxAdapter} from "../collection/ValueEventCollectionBoxAdapter"
-import {BoxAdaptersContext} from "src/BoxAdaptersContext"
+import {BoxAdaptersContext} from "../../../BoxAdaptersContext"
 import {ValueClipBox} from "studio-boxes"
 import {ValueEventBoxAdapter} from "../event/ValueEventBoxAdapter"
 

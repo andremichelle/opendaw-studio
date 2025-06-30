@@ -1,7 +1,7 @@
 import {beforeEach, describe, expect, it, vi} from "vitest"
 import {ByteArrayInput, ByteArrayOutput, Float, Option, UUID} from "lib-std"
 import {BoxGraph, Editing, PointerField} from "lib-box"
-import {PointerType} from "./pointers"
+import {PointerType} from "./Pointers"
 import {AudioConnectionBox, BoxIO, DelayBox, DrumBox, NetworkBox} from "./gen"
 import {Compression} from "lib-dom"
 

@@ -25,7 +25,8 @@
     "lib-fusion": "*",
     "studio-enums": "*",
     "studio-boxes": "*",
-    "studio-worklet": "*"
+    "lib-dsp": "*",
+    "lib-dom": "*"
   },
   "devDependencies": {
     "tsup": "^8.4.0"

@@ -1,7 +1,7 @@
-import { BoxSchema } from "lib-box-forge"
+import {BoxSchema} from "lib-box-forge"
 import {Pointers} from "studio-enums"
-import { createMidiEffectDevice } from "../builder"
+import {createMidiEffectDevice} from "../builder"
 
 export const ZeitgeistDeviceBox: BoxSchema<Pointers> = createMidiEffectDevice("ZeitgeistDeviceBox", {
-	10: { type: "pointer", name: "groove", pointerType: Pointers.Groove, mandatory: true }
+    10: {type: "pointer", name: "groove", pointerType: Pointers.Groove, mandatory: true}
 })

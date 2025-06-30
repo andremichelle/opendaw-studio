@@ -1,4 +1,4 @@
-import {Pointers, AudioUnitType} from "studio-enums"
+import {AudioUnitType, Pointers} from "studio-enums"
 import {DefaultParameterPointerRules} from "./defaults"
 import {BoxSchema} from "lib-box-forge"
 

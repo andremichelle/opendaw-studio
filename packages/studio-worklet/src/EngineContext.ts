@@ -5,8 +5,7 @@ import {UpdateClock} from "./UpdateClock.ts"
 import {TimeInfo} from "./TimeInfo.ts"
 import {AudioUnit} from "./AudioUnit.ts"
 import {Mixer} from "./Mixer.ts"
-import {EngineToClient} from "../../studio-shared/src/protocols.ts"
-import {BoxAdaptersContext} from "studio-shared"
+import {BoxAdaptersContext, EngineToClient} from "studio-shared"
 
 export interface EngineContext extends BoxAdaptersContext, Terminable {
     get broadcaster(): LiveStreamBroadcaster

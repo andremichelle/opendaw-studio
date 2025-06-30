@@ -1,8 +1,6 @@
 import {Peaks} from "lib-fusion"
-import {AudioLoader, AudioLoaderManager, AudioLoaderState} from "studio-shared"
-import {AudioData} from "studio-shared"
+import {AudioData, AudioLoader, AudioLoaderManager, AudioLoaderState, EngineToClient} from "studio-shared"
 import {Observer, Option, SortedSet, Subscription, Terminable, UUID} from "lib-std"
-import {EngineToClient} from "../../studio-shared/src/protocols.ts"
 
 export type FetchAudio = (uuid: UUID.Format) => Promise<AudioData>
 

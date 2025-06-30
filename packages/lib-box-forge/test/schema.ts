@@ -1,5 +1,5 @@
 import {BoxForge, ClassSchema, FieldName, FieldRecord, FieldSchema, mergeFields} from "../src"
-import {PointerType} from "./pointers"
+import {PointerType} from "./Pointers"
 import {PointerRules} from "lib-box"
 
 const Module = {
@@ -100,7 +100,7 @@ const DelayBox: ClassSchema<PointerType> = {
 BoxForge.gen<PointerType>({
     path: "./test/gen",
     pointers: {
-        from: "../pointers",
+        from: "../Pointers",
         enum: "PointerType",
         print: pointer => `PointerType.${PointerType[pointer]}`
     },

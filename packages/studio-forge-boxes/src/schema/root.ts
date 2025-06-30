@@ -40,7 +40,7 @@ export const RootBox: BoxSchema<Pointers> = {
                         2: {type: "float32", name: "time-range-in-quarters", value: 8},
                         3: {type: "float32", name: "note-scale", value: 1.5},
                         4: {type: "boolean", name: "note-labels", value: true},
-                        5: {type: "int32", name: "transpose", value: 0},
+                        5: {type: "int32", name: "transpose", value: 0}
                     }
                 }
             },
