@@ -1,5 +1,5 @@
 import {Arrays, assert, int} from "lib-std"
-import {RenderQuantum} from "./constants.ts"
+import {RenderQuantum} from "./constants"
 
 export class AudioBuffer {
     static Empty = new AudioBuffer(2)

@@ -1,4 +1,4 @@
-import {AudioEffectDeviceProcessor, InstrumentDeviceProcessor, MidiEffectProcessor} from "./processors.ts"
+import {AudioEffectDeviceProcessor, InstrumentDeviceProcessor, MidiEffectProcessor} from "./processors"
 import {
     ArpeggioDeviceBox,
     AudioBusBox,
@@ -15,38 +15,38 @@ import {
     VaporisateurDeviceBox,
     ZeitgeistDeviceBox
 } from "studio-boxes"
-import {DelayDeviceProcessor} from "./devices/audio-effects/DelayDeviceProcessor.ts"
+import {DelayDeviceProcessor} from "./devices/audio-effects/DelayDeviceProcessor"
 import {DelayDeviceBoxAdapter} from "studio-adapters"
-import {NopDeviceProcessor} from "./devices/audio-effects/NopDeviceProcessor.ts"
+import {NopDeviceProcessor} from "./devices/audio-effects/NopDeviceProcessor"
 import {ReverbDeviceBoxAdapter} from "studio-adapters"
 import {RevampDeviceBoxAdapter} from "studio-adapters"
 import {ModularDeviceBoxAdapter} from "studio-adapters"
 import {asDefined, Nullish} from "lib-std"
-import {EngineContext} from "./EngineContext.ts"
+import {EngineContext} from "./EngineContext"
 import {Box} from "lib-box"
-import {AudioBusProcessor} from "./AudioBusProcessor.ts"
+import {AudioBusProcessor} from "./AudioBusProcessor"
 import {AudioBusBoxAdapter} from "studio-adapters"
-import {VaporisateurDeviceProcessor} from "./devices/instruments/VaporisateurDeviceProcessor.ts"
-import {TapeDeviceProcessor} from "./devices/instruments/TapeDeviceProcessor.ts"
+import {VaporisateurDeviceProcessor} from "./devices/instruments/VaporisateurDeviceProcessor"
+import {TapeDeviceProcessor} from "./devices/instruments/TapeDeviceProcessor"
 import {TapeDeviceBoxAdapter} from "studio-adapters"
 import {
     VaporisateurDeviceBoxAdapter
 } from "studio-adapters"
 import {ArpeggioDeviceBoxAdapter} from "studio-adapters"
-import {ArpeggioDeviceProcessor} from "./devices/midi-effects/ArpeggioDeviceProcessor.ts"
-import {PitchDeviceProcessor} from "./devices/midi-effects/PitchDeviceProcessor.ts"
+import {ArpeggioDeviceProcessor} from "./devices/midi-effects/ArpeggioDeviceProcessor"
+import {PitchDeviceProcessor} from "./devices/midi-effects/PitchDeviceProcessor"
 import {PitchDeviceBoxAdapter} from "studio-adapters"
-import {RevampDeviceProcessor} from "./devices/audio-effects/RevampDeviceProcessor.ts"
-import {ReverbDeviceProcessor} from "./devices/audio-effects/ReverbDeviceProcessor.ts"
+import {RevampDeviceProcessor} from "./devices/audio-effects/RevampDeviceProcessor"
+import {ReverbDeviceProcessor} from "./devices/audio-effects/ReverbDeviceProcessor"
 import {NanoDeviceBoxAdapter} from "studio-adapters"
-import {NanoDeviceProcessor} from "./devices/instruments/NanoDeviceProcessor.ts"
-import {PlayfieldDeviceProcessor} from "./devices/instruments/PlayfieldDeviceProcessor.ts"
+import {NanoDeviceProcessor} from "./devices/instruments/NanoDeviceProcessor"
+import {PlayfieldDeviceProcessor} from "./devices/instruments/PlayfieldDeviceProcessor"
 import {PlayfieldDeviceBoxAdapter} from "studio-adapters"
 import {
     StereoToolDeviceBoxAdapter
 } from "studio-adapters"
-import {StereoToolDeviceProcessor} from "./devices/audio-effects/StereoToolDeviceProcessor.ts"
-import {ZeitgeistDeviceProcessor} from "./devices/midi-effects/ZeitgeistDeviceProcessor.ts"
+import {StereoToolDeviceProcessor} from "./devices/audio-effects/StereoToolDeviceProcessor"
+import {ZeitgeistDeviceProcessor} from "./devices/midi-effects/ZeitgeistDeviceProcessor"
 import {ZeitgeistDeviceBoxAdapter} from "studio-adapters"
 
 export namespace InstrumentDeviceProcessorFactory {

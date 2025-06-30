@@ -1,13 +1,13 @@
 import {int, Option, Terminable, UUID} from "lib-std"
 import {AudioEffectDeviceBoxAdapter} from "studio-adapters"
-import {AudioEffectDeviceProcessor} from "../../processors.ts"
-import {EngineContext} from "../../EngineContext.ts"
-import {ProcessInfo, Processor} from "../../processing.ts"
-import {RenderQuantum} from "../../constants.ts"
-import {AbstractProcessor} from "../../AbstractProcessor.ts"
-import {AudioBuffer} from "../../AudioBuffer.ts"
-import {PeakBroadcaster} from "../../PeakBroadcaster.ts"
-import {AutomatableParameter} from "../../AutomatableParameter.ts"
+import {AudioEffectDeviceProcessor} from "../../processors"
+import {EngineContext} from "../../EngineContext"
+import {ProcessInfo, Processor} from "../../processing"
+import {RenderQuantum} from "../../constants"
+import {AbstractProcessor} from "../../AbstractProcessor"
+import {AudioBuffer} from "../../AudioBuffer"
+import {PeakBroadcaster} from "../../PeakBroadcaster"
+import {AutomatableParameter} from "../../AutomatableParameter"
 
 export class NopDeviceProcessor extends AbstractProcessor implements AudioEffectDeviceProcessor {
     static ID: int = 0 | 0

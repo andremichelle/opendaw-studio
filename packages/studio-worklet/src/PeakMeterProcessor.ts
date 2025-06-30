@@ -1,5 +1,5 @@
 import {PeakMeterProcessorOptions} from "studio-adapters"
-import {RenderQuantum} from "./constants.ts"
+import {RenderQuantum} from "./constants"
 import {RMS} from "lib-dsp"
 import {Arrays, int, Schema, SyncStream} from "lib-std"
 

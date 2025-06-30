@@ -1,13 +1,13 @@
 import {Arrays, Terminable, UUID} from "lib-std"
-import {AudioProcessor} from "../../../AudioProcessor.ts"
-import {AudioDeviceProcessor} from "../../../processors.ts"
-import {AudioGenerator, Processor} from "../../../processing.ts"
-import {AudioBuffer} from "../../../AudioBuffer.ts"
-import {PeakBroadcaster} from "../../../PeakBroadcaster.ts"
-import {EventBuffer} from "../../../EventBuffer.ts"
-import {EngineContext} from "../../../EngineContext.ts"
-import {RenderQuantum} from "../../../constants.ts"
-import {PlayfieldDeviceProcessor} from "../PlayfieldDeviceProcessor.ts"
+import {AudioProcessor} from "../../../AudioProcessor"
+import {AudioDeviceProcessor} from "../../../processors"
+import {AudioGenerator, Processor} from "../../../processing"
+import {AudioBuffer} from "../../../AudioBuffer"
+import {PeakBroadcaster} from "../../../PeakBroadcaster"
+import {EventBuffer} from "../../../EventBuffer"
+import {EngineContext} from "../../../EngineContext"
+import {RenderQuantum} from "../../../constants"
+import {PlayfieldDeviceProcessor} from "../PlayfieldDeviceProcessor"
 
 export class MixProcessor extends AudioProcessor implements AudioDeviceProcessor, Processor, AudioGenerator {
     readonly #device: PlayfieldDeviceProcessor

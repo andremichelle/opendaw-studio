@@ -1,13 +1,13 @@
 import {int, Option, Terminable, UUID} from "lib-std"
 import {dbToGain, Ramp, StereoMatrix} from "lib-dsp"
 import {AudioEffectDeviceBoxAdapter, StereoToolDeviceBoxAdapter} from "studio-adapters"
-import {AudioEffectDeviceProcessor} from "../../processors.ts"
-import {EngineContext} from "../../EngineContext.ts"
-import {Block, Processor} from "../../processing.ts"
-import {AudioBuffer} from "../../AudioBuffer.ts"
-import {PeakBroadcaster} from "../../PeakBroadcaster.ts"
-import {AutomatableParameter} from "../../AutomatableParameter.ts"
-import {AudioProcessor} from "../../AudioProcessor.ts"
+import {AudioEffectDeviceProcessor} from "../../processors"
+import {EngineContext} from "../../EngineContext"
+import {Block, Processor} from "../../processing"
+import {AudioBuffer} from "../../AudioBuffer"
+import {PeakBroadcaster} from "../../PeakBroadcaster"
+import {AutomatableParameter} from "../../AutomatableParameter"
+import {AudioProcessor} from "../../AudioProcessor"
 
 export class StereoToolDeviceProcessor extends AudioProcessor implements AudioEffectDeviceProcessor {
     readonly #adapter: StereoToolDeviceBoxAdapter

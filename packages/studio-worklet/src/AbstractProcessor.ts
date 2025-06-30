@@ -1,10 +1,10 @@
 import {Arrays, Option, panic, Terminable, TerminableOwner, Terminator} from "lib-std"
 import {PointerField, PrimitiveValues} from "lib-box"
-import {AutomatableParameter} from "./AutomatableParameter.ts"
+import {AutomatableParameter} from "./AutomatableParameter"
 import {Pointers} from "studio-enums"
-import {ProcessInfo, Processor} from "./processing.ts"
-import {EngineContext} from "./EngineContext.ts"
-import {EventBuffer} from "./EventBuffer.ts"
+import {ProcessInfo, Processor} from "./processing"
+import {EngineContext} from "./EngineContext"
+import {EventBuffer} from "./EventBuffer"
 import {AutomatableParameterFieldAdapter} from "studio-adapters"
 
 export abstract class AbstractProcessor implements Processor, TerminableOwner, Terminable {

@@ -1,9 +1,9 @@
-import {BlockFlag, ProcessInfo} from "./processing.ts"
+import {BlockFlag, ProcessInfo} from "./processing"
 import {Event} from "lib-dsp"
-import {EngineContext} from "./EngineContext.ts"
+import {EngineContext} from "./EngineContext"
 import {Arrays, Bits, int, Terminable} from "lib-std"
-import {AbstractProcessor} from "./AbstractProcessor.ts"
-import {EventBuffer} from "./EventBuffer.ts"
+import {AbstractProcessor} from "./AbstractProcessor"
+import {EventBuffer} from "./EventBuffer"
 import {Fragmentor} from "lib-dsp"
 import {UpdateClockRate} from "studio-adapters"
 

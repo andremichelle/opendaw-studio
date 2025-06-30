@@ -1,14 +1,14 @@
 import {Arrays, int, Option, Terminable, UUID} from "lib-std"
 import {BiquadCoeff, BiquadMono, BiquadProcessor, BiquadStack} from "lib-dsp"
 import {AudioEffectDeviceBoxAdapter, RevampDeviceBoxAdapter} from "studio-adapters"
-import {AudioEffectDeviceProcessor} from "../../processors.ts"
-import {EngineContext} from "../../EngineContext.ts"
-import {Block, Processor} from "../../processing.ts"
-import {AudioBuffer} from "../../AudioBuffer.ts"
-import {PeakBroadcaster} from "../../PeakBroadcaster.ts"
-import {SpectrumAnalyser} from "../../SpectrumAnalyser.ts"
-import {AudioProcessor} from "../../AudioProcessor.ts"
-import {AutomatableParameter} from "../../AutomatableParameter.ts"
+import {AudioEffectDeviceProcessor} from "../../processors"
+import {EngineContext} from "../../EngineContext"
+import {Block, Processor} from "../../processing"
+import {AudioBuffer} from "../../AudioBuffer"
+import {PeakBroadcaster} from "../../PeakBroadcaster"
+import {SpectrumAnalyser} from "../../SpectrumAnalyser"
+import {AudioProcessor} from "../../AudioProcessor"
+import {AutomatableParameter} from "../../AutomatableParameter"
 
 export class RevampDeviceProcessor extends AudioProcessor implements AudioEffectDeviceProcessor {
     static ID: int = 0 | 0

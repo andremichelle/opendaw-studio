@@ -1,6 +1,6 @@
-import {Block, Processor} from "./processing.ts"
+import {Block, Processor} from "./processing"
 import {Event} from "lib-dsp"
-import {NoteEventSource, NoteLifecycleEvent} from "./NoteEventSource.ts"
+import {NoteEventSource, NoteLifecycleEvent} from "./NoteEventSource"
 import {assert, Option, Terminable, Terminator} from "lib-std"
 import {NoteBroadcaster} from "studio-adapters"
 import {Address} from "lib-box"

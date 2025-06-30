@@ -1,8 +1,8 @@
 import {int, Terminable} from "lib-std"
 import {NoteEvent, ppqn} from "lib-dsp"
-import {EventBuffer} from "./EventBuffer.ts"
-import {AudioBuffer} from "./AudioBuffer.ts"
-import {UpdateEvent} from "./UpdateClock.ts"
+import {EventBuffer} from "./EventBuffer"
+import {AudioBuffer} from "./AudioBuffer"
+import {UpdateEvent} from "./UpdateClock"
 
 export const enum BlockFlag {
     transporting = 1 << 0, // is true if the (main) timeline should not advance

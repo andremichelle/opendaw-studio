@@ -1,4 +1,4 @@
-import {EngineContext} from "./EngineContext.ts"
+import {EngineContext} from "./EngineContext"
 import {TrackType} from "studio-adapters"
 import {EventSpanRetainer, LoopableRegion, NoteEvent, ppqn} from "lib-dsp"
 import {
@@ -23,8 +23,8 @@ import {
 import {NoteRegionBoxAdapter} from "studio-adapters"
 import {AudioUnitBoxAdapter} from "studio-adapters"
 import {TrackBoxAdapter} from "studio-adapters"
-import {NoteCompleteEvent, NoteEventSource, NoteLifecycleEvent} from "./NoteEventSource.ts"
-import {BlockFlag, ProcessPhase} from "./processing.ts"
+import {NoteCompleteEvent, NoteEventSource, NoteLifecycleEvent} from "./NoteEventSource"
+import {BlockFlag, ProcessPhase} from "./processing"
 import {NoteBroadcaster} from "studio-adapters"
 
 type ExternalNote = {

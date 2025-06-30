@@ -1,14 +1,14 @@
 import {byte, Option, SortedSet, Terminable, Terminator, UUID} from "lib-std"
 import {PlayfieldDeviceBoxAdapter, PlayfieldSampleBoxAdapter} from "studio-adapters"
-import {EngineContext} from "../../EngineContext.ts"
-import {DeviceProcessor} from "../../processors.ts"
-import {AudioBuffer} from "../../AudioBuffer.ts"
-import {Processor} from "../../processing.ts"
-import {AutomatableParameter} from "../../AutomatableParameter.ts"
-import {NoteEventSource, NoteEventTarget} from "../../NoteEventSource.ts"
-import {PlayfieldSequencer} from "./Playfield/PlayfieldSequencer.ts"
-import {MixProcessor} from "./Playfield/MixProcessor.ts"
-import {SampleProcessor} from "./Playfield/SampleProcessor.ts"
+import {EngineContext} from "../../EngineContext"
+import {DeviceProcessor} from "../../processors"
+import {AudioBuffer} from "../../AudioBuffer"
+import {Processor} from "../../processing"
+import {AutomatableParameter} from "../../AutomatableParameter"
+import {NoteEventSource, NoteEventTarget} from "../../NoteEventSource"
+import {PlayfieldSequencer} from "./Playfield/PlayfieldSequencer"
+import {MixProcessor} from "./Playfield/MixProcessor"
+import {SampleProcessor} from "./Playfield/SampleProcessor"
 
 export class PlayfieldDeviceProcessor implements DeviceProcessor, NoteEventTarget {
     readonly #terminator = new Terminator()

@@ -1,4 +1,4 @@
-import {ChannelStripProcessor} from "./ChannelStripProcessor.ts"
+import {ChannelStripProcessor} from "./ChannelStripProcessor"
 import {asDefined, SortedSet, Terminable, UUID} from "lib-std"
 import {Pointers} from "studio-enums"
 import {AudioUnitBox, AuxSendBox, BoxVisitor} from "studio-boxes"

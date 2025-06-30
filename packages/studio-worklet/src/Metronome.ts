@@ -1,8 +1,8 @@
-import {BlockFlag, ProcessInfo} from "./processing.ts"
+import {BlockFlag, ProcessInfo} from "./processing"
 import {PPQN} from "lib-dsp"
 import {assert, Bits, int, TAU} from "lib-std"
-import {RenderQuantum} from "./constants.ts"
-import {AudioBuffer} from "./AudioBuffer.ts"
+import {RenderQuantum} from "./constants"
+import {AudioBuffer} from "./AudioBuffer"
 import {Fragmentor} from "lib-dsp"
 
 export class Metronome {

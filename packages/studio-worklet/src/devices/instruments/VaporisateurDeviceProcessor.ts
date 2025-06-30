@@ -11,16 +11,16 @@ import {
     Waveform
 } from "lib-dsp"
 import {VaporisateurDeviceBoxAdapter} from "studio-adapters"
-import {RenderQuantum} from "../../constants.ts"
-import {EngineContext} from "../../EngineContext.ts"
-import {DeviceProcessor, InstrumentDeviceProcessor} from "../../processors.ts"
-import {AudioProcessor} from "../../AudioProcessor.ts"
-import {AudioBuffer} from "../../AudioBuffer.ts"
-import {Block, Processor} from "../../processing.ts"
-import {PeakBroadcaster} from "../../PeakBroadcaster.ts"
-import {AutomatableParameter} from "../../AutomatableParameter.ts"
-import {NoteEventSource, NoteEventTarget, NoteLifecycleEvent} from "../../NoteEventSource.ts"
-import {NoteEventInstrument} from "../../NoteEventInstrument.ts"
+import {RenderQuantum} from "../../constants"
+import {EngineContext} from "../../EngineContext"
+import {DeviceProcessor, InstrumentDeviceProcessor} from "../../processors"
+import {AudioProcessor} from "../../AudioProcessor"
+import {AudioBuffer} from "../../AudioBuffer"
+import {Block, Processor} from "../../processing"
+import {PeakBroadcaster} from "../../PeakBroadcaster"
+import {AutomatableParameter} from "../../AutomatableParameter"
+import {NoteEventSource, NoteEventTarget, NoteLifecycleEvent} from "../../NoteEventSource"
+import {NoteEventInstrument} from "../../NoteEventInstrument"
 
 export class VaporisateurDeviceProcessor extends AudioProcessor implements InstrumentDeviceProcessor, NoteEventTarget {
     readonly #adapter: VaporisateurDeviceBoxAdapter

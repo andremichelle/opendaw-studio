@@ -1,5 +1,5 @@
 import {int, nextPowOf2} from "lib-std"
-import {AudioBuffer} from "./AudioBuffer.ts"
+import {AudioBuffer} from "./AudioBuffer"
 
 export class FreeVerb {
     roomSize: number

@@ -1,14 +1,14 @@
 import {AudioEffectDeviceBoxAdapter, DelayDeviceBoxAdapter} from "studio-adapters"
 import {Bits, int, Option, Terminable, UUID} from "lib-std"
 import {dbToGain, Event, Fraction, PPQN, StereoMatrix} from "lib-dsp"
-import {AudioEffectDeviceProcessor} from "../../processors.ts"
-import {EngineContext} from "../../EngineContext.ts"
-import {Block, BlockFlag, Processor} from "../../processing.ts"
-import {AudioBuffer} from "../../AudioBuffer.ts"
-import {PeakBroadcaster} from "../../PeakBroadcaster.ts"
-import {AudioProcessor} from "../../AudioProcessor.ts"
-import {AutomatableParameter} from "../../AutomatableParameter.ts"
-import {DelayDeviceDsp} from "./DelayDeviceDsp.ts"
+import {AudioEffectDeviceProcessor} from "../../processors"
+import {EngineContext} from "../../EngineContext"
+import {Block, BlockFlag, Processor} from "../../processing"
+import {AudioBuffer} from "../../AudioBuffer"
+import {PeakBroadcaster} from "../../PeakBroadcaster"
+import {AudioProcessor} from "../../AudioProcessor"
+import {AutomatableParameter} from "../../AutomatableParameter"
+import {DelayDeviceDsp} from "./DelayDeviceDsp"
 
 export class DelayDeviceProcessor extends AudioProcessor implements AudioEffectDeviceProcessor {
     static ID: int = 0 | 0

@@ -1,14 +1,14 @@
 import {Arrays, int, Option, Terminable, UUID} from "lib-std"
-import {AbstractProcessor} from "./AbstractProcessor.ts"
-import {DeviceProcessor, InstrumentDeviceProcessor} from "./processors.ts"
+import {AbstractProcessor} from "./AbstractProcessor"
+import {DeviceProcessor, InstrumentDeviceProcessor} from "./processors"
 import {AudioBusBoxAdapter} from "studio-adapters"
-import {AudioBuffer} from "./AudioBuffer.ts"
-import {PeakBroadcaster} from "./PeakBroadcaster.ts"
-import {EngineContext} from "./EngineContext.ts"
-import {NoteEventTarget} from "./NoteEventSource.ts"
-import {ProcessInfo, Processor} from "./processing.ts"
-import {RenderQuantum} from "./constants.ts"
-import {AutomatableParameter} from "./AutomatableParameter.ts"
+import {AudioBuffer} from "./AudioBuffer"
+import {PeakBroadcaster} from "./PeakBroadcaster"
+import {EngineContext} from "./EngineContext"
+import {NoteEventTarget} from "./NoteEventSource"
+import {ProcessInfo, Processor} from "./processing"
+import {RenderQuantum} from "./constants"
+import {AutomatableParameter} from "./AutomatableParameter"
 
 export class AudioBusProcessor extends AbstractProcessor implements InstrumentDeviceProcessor, Terminable {
     static ID: int = 0 | 0

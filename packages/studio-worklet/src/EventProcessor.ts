@@ -1,8 +1,8 @@
-import {Block, ProcessInfo} from "./processing.ts"
+import {Block, ProcessInfo} from "./processing"
 import {Event, ppqn} from "lib-dsp"
 import {Nullish} from "lib-std"
-import {AbstractProcessor} from "./AbstractProcessor.ts"
-import {UpdateEvent} from "./UpdateClock.ts"
+import {AbstractProcessor} from "./AbstractProcessor"
+import {UpdateEvent} from "./UpdateClock"
 
 export abstract class EventProcessor extends AbstractProcessor {
     process({blocks}: ProcessInfo): void {

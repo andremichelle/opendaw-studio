@@ -1,14 +1,14 @@
 import {int, Option, Terminable, UUID} from "lib-std"
 import {dbToGain} from "lib-dsp"
 import {AudioEffectDeviceBoxAdapter, ReverbDeviceBoxAdapter} from "studio-adapters"
-import {AudioEffectDeviceProcessor} from "../../processors.ts"
-import {EngineContext} from "../../EngineContext.ts"
-import {AudioBuffer} from "../../AudioBuffer.ts"
-import {PeakBroadcaster} from "../../PeakBroadcaster.ts"
-import {FreeVerb} from "../../FreeVerb.ts"
-import {AudioProcessor} from "../../AudioProcessor.ts"
-import {AutomatableParameter} from "../../AutomatableParameter.ts"
-import {Processor} from "../../processing.ts"
+import {AudioEffectDeviceProcessor} from "../../processors"
+import {EngineContext} from "../../EngineContext"
+import {AudioBuffer} from "../../AudioBuffer"
+import {PeakBroadcaster} from "../../PeakBroadcaster"
+import {FreeVerb} from "../../FreeVerb"
+import {AudioProcessor} from "../../AudioProcessor"
+import {AutomatableParameter} from "../../AutomatableParameter"
+import {Processor} from "../../processing"
 
 export class ReverbDeviceProcessor extends AudioProcessor implements AudioEffectDeviceProcessor {
     static ID: int = 0 | 0

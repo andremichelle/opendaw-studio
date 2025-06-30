@@ -1,10 +1,10 @@
 import {Observer, Subscription, Terminable, UUID} from "lib-std"
-import {Processor, ProcessPhase} from "./processing.ts"
+import {Processor, ProcessPhase} from "./processing"
 import {LiveStreamBroadcaster} from "lib-fusion"
-import {UpdateClock} from "./UpdateClock.ts"
-import {TimeInfo} from "./TimeInfo.ts"
-import {AudioUnit} from "./AudioUnit.ts"
-import {Mixer} from "./Mixer.ts"
+import {UpdateClock} from "./UpdateClock"
+import {TimeInfo} from "./TimeInfo"
+import {AudioUnit} from "./AudioUnit"
+import {Mixer} from "./Mixer"
 import {BoxAdaptersContext, EngineToClient} from "studio-adapters"
 
 export interface EngineContext extends BoxAdaptersContext, Terminable {

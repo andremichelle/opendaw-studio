@@ -1,11 +1,11 @@
-import {EngineContext} from "./EngineContext.ts"
-import {AudioInput, Block, Processor} from "./processing.ts"
+import {EngineContext} from "./EngineContext"
+import {AudioInput, Block, Processor} from "./processing"
 import {Option, Terminable} from "lib-std"
 import {AuxSendBoxAdapter} from "studio-adapters"
-import {AudioBuffer} from "./AudioBuffer.ts"
-import {AutomatableParameter} from "./AutomatableParameter.ts"
+import {AudioBuffer} from "./AudioBuffer"
+import {AutomatableParameter} from "./AutomatableParameter"
 import {dbToGain, Ramp} from "lib-dsp"
-import {AudioProcessor} from "./AudioProcessor.ts"
+import {AudioProcessor} from "./AudioProcessor"
 
 export class AuxSendProcessor extends AudioProcessor implements Processor, AudioInput {
     readonly #adapter: AuxSendBoxAdapter

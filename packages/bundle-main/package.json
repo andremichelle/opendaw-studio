@@ -1,7 +1,7 @@
 {
-  "name": "@opendaw/bundle-worklet",
+  "name": "@opendaw/bundle-main",
   "version": "0.0.1",
-  "description": "OpenDAW AudioWorklet bundle - complete audio processing worklets for web audio",
+  "description": "OpenDAW main thread bundle - adapters, boxes, and utilities for web audio applications",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -15,16 +15,21 @@
     "pack:test": "npm pack",
     "test:local": "npm run build && npm pack && echo 'Package ready for local testing'"
   },
-  "keywords": ["audio", "worklet", "dsp", "web-audio", "opendaw", "music", "audioworklet"],
+  "keywords": ["audio", "opendaw", "music", "daw", "main-thread", "adapters"],
   "author": "Andre Michelle",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/andre-michelle/opendaw-studio.git",
-    "directory": "packages/bundle-worklet"
+    "directory": "packages/bundle-main"
   },
   "dependencies": {
-    "@types/audioworklet": "^0.0.77",
+    "@types/audioworklet": "^0.0.77"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "tsup": "^8.4.0",
+    "vitest": "^3.1.3",
     "lib-std": "*",
     "lib-dsp": "*",
     "lib-box": "*",
@@ -32,15 +37,9 @@
     "lib-fusion": "*",
     "studio-enums": "*",
     "studio-boxes": "*",
-    "studio-adapters": "*",
-    "studio-worklet": "*"
-  },
-  "devDependencies": {
-    "typescript": "^5.8.3",
-    "tsup": "^8.4.0",
-    "vitest": "^3.1.3"
+    "studio-adapters": "*"
   },
   "publishConfig": {
     "access": "public"
   }
-}
+} 

@@ -1,12 +1,12 @@
 import {assert, int, Objects, Option, Terminable, UUID} from "lib-std"
 import {NoteBroadcaster, PitchDeviceBoxAdapter} from "studio-adapters"
 import {Event, NoteEvent, ppqn} from "lib-dsp"
-import {EngineContext} from "../../EngineContext.ts"
-import {EventProcessor} from "../../EventProcessor.ts"
-import {MidiEffectProcessor} from "../../processors.ts"
-import {Block, Processor} from "../../processing.ts"
-import {AutomatableParameter} from "../../AutomatableParameter.ts"
-import {NoteEventSource, NoteLifecycleEvent} from "../../NoteEventSource.ts"
+import {EngineContext} from "../../EngineContext"
+import {EventProcessor} from "../../EventProcessor"
+import {MidiEffectProcessor} from "../../processors"
+import {Block, Processor} from "../../processing"
+import {AutomatableParameter} from "../../AutomatableParameter"
+import {NoteEventSource, NoteLifecycleEvent} from "../../NoteEventSource"
 
 export class PitchDeviceProcessor extends EventProcessor implements MidiEffectProcessor {
     readonly #adapter: PitchDeviceBoxAdapter

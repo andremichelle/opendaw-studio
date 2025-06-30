@@ -1,13 +1,13 @@
-import {AudioInput, Block, Processor} from "./processing.ts"
+import {AudioInput, Block, Processor} from "./processing"
 import {int, Option, Terminable} from "lib-std"
-import {EngineContext} from "./EngineContext.ts"
+import {EngineContext} from "./EngineContext"
 import {dbToGain, Event, Ramp, StereoMatrix} from "lib-dsp"
-import {AudioBuffer} from "./AudioBuffer.ts"
+import {AudioBuffer} from "./AudioBuffer"
 import {AudioUnitBoxAdapter} from "studio-adapters"
-import {PeakBroadcaster} from "./PeakBroadcaster.ts"
-import {AudioProcessor} from "./AudioProcessor.ts"
-import {AutomatableParameter} from "./AutomatableParameter.ts"
-import {RenderQuantum} from "./constants.ts"
+import {PeakBroadcaster} from "./PeakBroadcaster"
+import {AudioProcessor} from "./AudioProcessor"
+import {AutomatableParameter} from "./AutomatableParameter"
+import {RenderQuantum} from "./constants"
 
 export class ChannelStripProcessor extends AudioProcessor implements Processor, AudioInput, Terminable {
     readonly #adapter: AudioUnitBoxAdapter

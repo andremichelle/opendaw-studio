@@ -1,7 +1,7 @@
 import {ppqn, PPQN} from "lib-dsp"
-import {Block, BlockFlags, ProcessInfo} from "./processing.ts"
-import {RenderQuantum} from "./constants.ts"
-import {EngineContext} from "./EngineContext.ts"
+import {Block, BlockFlags, ProcessInfo} from "./processing"
+import {RenderQuantum} from "./constants"
+import {EngineContext} from "./EngineContext"
 import {Exec, int, isDefined, Iterables, Nullable, Procedure, SetMultimap, Terminable} from "lib-std"
 import {MarkerBoxAdapter} from "studio-adapters"
 

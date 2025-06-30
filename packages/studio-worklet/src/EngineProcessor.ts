@@ -20,8 +20,8 @@ import {
 } from "lib-std"
 import {Address, BoxGraph, createSyncTarget} from "lib-box"
 import {AudioFileBox, BoxIO, BoxVisitor} from "studio-boxes"
-import {EngineContext} from "./EngineContext.ts"
-import {TimeInfo} from "./TimeInfo.ts"
+import {EngineContext} from "./EngineContext"
+import {TimeInfo} from "./TimeInfo"
 import {
     AnyClipBoxAdapter,
     AudioData,
@@ -41,19 +41,19 @@ import {
     TimelineBoxAdapter,
     TrackBoxAdapter
 } from "studio-adapters"
-import {AudioUnit} from "./AudioUnit.ts"
-import {Processor, ProcessPhase} from "./processing.ts"
-import {Mixer} from "./Mixer.ts"
+import {AudioUnit} from "./AudioUnit"
+import {Processor, ProcessPhase} from "./processing"
+import {Mixer} from "./Mixer"
 import {LiveStreamBroadcaster} from "lib-fusion"
-import {UpdateClock} from "./UpdateClock.ts"
-import {PeakBroadcaster} from "./PeakBroadcaster.ts"
-import {Metronome} from "./Metronome.ts"
-import {BlockRenderer} from "./BlockRenderer.ts"
+import {UpdateClock} from "./UpdateClock"
+import {PeakBroadcaster} from "./PeakBroadcaster"
+import {Metronome} from "./Metronome"
+import {BlockRenderer} from "./BlockRenderer"
 import {Graph, PPQN, TopologicalSort} from "lib-dsp"
-import {AudioManagerWorklet} from "./AudioManagerWorklet.ts"
-import {ClipSequencingAudioContext} from "./ClipSequencingAudioContext.ts"
+import {AudioManagerWorklet} from "./AudioManagerWorklet"
+import {ClipSequencingAudioContext} from "./ClipSequencingAudioContext"
 import {Communicator, Messenger} from "lib-runtime"
-import {AudioUnitOptions} from "./AudioUnitOptions.ts"
+import {AudioUnitOptions} from "./AudioUnitOptions"
 
 const DEBUG = false
 

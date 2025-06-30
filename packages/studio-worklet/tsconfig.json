@@ -4,7 +4,6 @@
     "useDefineForClassFields": true,
     "noEmitHelpers": true,
     "importsNotUsedAsValues": "remove",
-    "allowImportingTsExtensions": true,
     "module": "ESNext",
     "lib": [
       "ESNext",
@@ -12,10 +11,12 @@
       "WebWorker"
     ],
     "sourceMap": true,
-    "noEmit": true,
+    "noEmit": false,
+    "declaration": true,
+    "outDir": "./dist",
     "sourceRoot": "./src",
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
     "jsxFactory": "createElement",

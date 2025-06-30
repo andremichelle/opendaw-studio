@@ -1,9 +1,9 @@
 import {Event, PPQN} from "lib-dsp"
 import {assert, int, Nullish, panic} from "lib-std"
-import {Block, ProcessInfo} from "./processing.ts"
-import {AbstractProcessor} from "./AbstractProcessor.ts"
-import {UpdateEvent} from "./UpdateClock.ts"
-import {EngineContext} from "./EngineContext.ts"
+import {Block, ProcessInfo} from "./processing"
+import {AbstractProcessor} from "./AbstractProcessor"
+import {UpdateEvent} from "./UpdateClock"
+import {EngineContext} from "./EngineContext"
 
 export abstract class AudioProcessor extends AbstractProcessor {
     protected constructor(context: EngineContext) {

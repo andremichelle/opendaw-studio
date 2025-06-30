@@ -1,4 +1,4 @@
-import {AutomatableParameter} from "../../../AutomatableParameter.ts"
+import {AutomatableParameter} from "../../../AutomatableParameter"
 
 export type AutomatableParameters = {
     sampleStart: AutomatableParameter<number>

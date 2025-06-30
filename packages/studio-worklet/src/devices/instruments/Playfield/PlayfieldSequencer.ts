@@ -1,11 +1,11 @@
 import {Terminable} from "lib-std"
 import {Event} from "lib-dsp"
-import {Block} from "../../../processing.ts"
-import {EngineContext} from "../../../EngineContext.ts"
-import {EventProcessor} from "../../../EventProcessor.ts"
-import {NoteEventSource, NoteEventTarget, NoteLifecycleEvent} from "../../../NoteEventSource.ts"
-import {NoteEventInstrument} from "../../../NoteEventInstrument.ts"
-import {PlayfieldDeviceProcessor} from "../PlayfieldDeviceProcessor.ts"
+import {Block} from "../../../processing"
+import {EngineContext} from "../../../EngineContext"
+import {EventProcessor} from "../../../EventProcessor"
+import {NoteEventSource, NoteEventTarget, NoteLifecycleEvent} from "../../../NoteEventSource"
+import {NoteEventInstrument} from "../../../NoteEventInstrument"
+import {PlayfieldDeviceProcessor} from "../PlayfieldDeviceProcessor"
 
 export class PlayfieldSequencer extends EventProcessor implements NoteEventTarget {
     readonly #device: PlayfieldDeviceProcessor

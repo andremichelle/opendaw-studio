@@ -1,7 +1,7 @@
 import {int, Option, Terminable, UUID} from "lib-std"
-import {AudioGenerator, AudioInput, Processor} from "./processing.ts"
+import {AudioGenerator, AudioInput, Processor} from "./processing"
 import {AudioEffectDeviceBoxAdapter, MidiEffectDeviceAdapter} from "studio-adapters"
-import {NoteEventSource, NoteEventTarget} from "./NoteEventSource.ts"
+import {NoteEventSource, NoteEventTarget} from "./NoteEventSource"
 
 export interface DeviceProcessor extends Terminable {
     get uuid(): UUID.Format

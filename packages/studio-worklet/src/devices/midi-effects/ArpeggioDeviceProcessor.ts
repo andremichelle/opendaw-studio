@@ -1,14 +1,14 @@
 import {ArpeggioDeviceBoxAdapter} from "studio-adapters"
 import {Event, EventSpanRetainer, Fraction, NoteEvent, ppqn} from "lib-dsp"
 import {assert, Bits, Id, int, Option, Terminable, UUID} from "lib-std"
-import {EngineContext} from "../../EngineContext.ts"
-import {EventProcessor} from "../../EventProcessor.ts"
-import {MidiEffectProcessor} from "../../processors.ts"
+import {EngineContext} from "../../EngineContext"
+import {EventProcessor} from "../../EventProcessor"
+import {MidiEffectProcessor} from "../../processors"
 import {Fragmentor} from "lib-dsp"
-import {Block, BlockFlag, Processor} from "../../processing.ts"
-import {AutomatableParameter} from "../../AutomatableParameter.ts"
-import {NoteEventSource, NoteEventTarget, NoteLifecycleEvent} from "../../NoteEventSource.ts"
-import {ArpeggioModes, Mode, VelocityMatrix} from "./ArpeggioDevice/ArpeggioModes.ts"
+import {Block, BlockFlag, Processor} from "../../processing"
+import {AutomatableParameter} from "../../AutomatableParameter"
+import {NoteEventSource, NoteEventTarget, NoteLifecycleEvent} from "../../NoteEventSource"
+import {ArpeggioModes, Mode, VelocityMatrix} from "./ArpeggioDevice/ArpeggioModes"
 
 export class ArpeggioDeviceProcessor extends EventProcessor implements MidiEffectProcessor {
     readonly #adapter: ArpeggioDeviceBoxAdapter

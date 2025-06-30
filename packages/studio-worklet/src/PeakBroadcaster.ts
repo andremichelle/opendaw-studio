@@ -2,7 +2,7 @@ import {Arrays, int, Terminable} from "lib-std"
 import {Address} from "lib-box"
 import {RMS, StereoMatrix} from "lib-dsp"
 import {LiveStreamBroadcaster} from "lib-fusion"
-import {RenderQuantum} from "./constants.ts"
+import {RenderQuantum} from "./constants"
 
 export class PeakBroadcaster implements Terminable {
     static readonly PEAK_DECAY = Math.exp(-1.0 / (sampleRate * 0.250))

@@ -1,12 +1,12 @@
 import {assert, SortedSet, Subscription, Terminator, UUID} from "lib-std"
-import {MidiEffectProcessor} from "./processors.ts"
-import {NoteSequencer} from "./NoteSequencer.ts"
-import {ProcessPhase} from "./processing.ts"
-import {AudioUnit} from "./AudioUnit.ts"
-import {DeviceChain} from "./DeviceChain.ts"
+import {MidiEffectProcessor} from "./processors"
+import {NoteSequencer} from "./NoteSequencer"
+import {ProcessPhase} from "./processing"
+import {AudioUnit} from "./AudioUnit"
+import {DeviceChain} from "./DeviceChain"
 import {MidiEffectDeviceAdapter} from "studio-adapters"
-import {MidiEffectDeviceProcessorFactory} from "./DeviceProcessorFactory.ts"
-import {NoteEventSource} from "./NoteEventSource.ts"
+import {MidiEffectDeviceProcessorFactory} from "./DeviceProcessorFactory"
+import {NoteEventSource} from "./NoteEventSource"
 
 type MidiEffectDeviceEntry = {
     device: MidiEffectProcessor

@@ -1,6 +1,6 @@
 import {Id, int, unitValue} from "lib-std"
 import {NoteEvent, ppqn} from "lib-dsp"
-import {NoteLifecycleEvent} from "../../../NoteEventSource.ts"
+import {NoteLifecycleEvent} from "../../../NoteEventSource"
 
 export type Stack = ReadonlyArray<Omit<NoteEvent, "position">>
 export type VelocityMatrix = { mult: unitValue, add: unitValue }

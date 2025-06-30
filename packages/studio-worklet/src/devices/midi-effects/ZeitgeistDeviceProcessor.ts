@@ -1,12 +1,12 @@
 import {assert, clamp, identity, int, Objects, Option, Terminable, UUID} from "lib-std"
 import {Event, Groove, NoteEvent, ppqn} from "lib-dsp"
-import {MidiEffectProcessor} from "../../processors.ts"
-import {AutomatableParameter} from "../../AutomatableParameter.ts"
-import {NoteEventSource, NoteLifecycleEvent} from "../../NoteEventSource.ts"
+import {MidiEffectProcessor} from "../../processors"
+import {AutomatableParameter} from "../../AutomatableParameter"
+import {NoteEventSource, NoteLifecycleEvent} from "../../NoteEventSource"
 import {GrooveAdapter, NoteBroadcaster, ZeitgeistDeviceBoxAdapter} from "studio-adapters"
-import {EventProcessor} from "../../EventProcessor.ts"
-import {Block} from "../../processing.ts"
-import {EngineContext} from "../../EngineContext.ts"
+import {EventProcessor} from "../../EventProcessor"
+import {Block} from "../../processing"
+import {EngineContext} from "../../EngineContext"
 
 export class ZeitgeistDeviceProcessor extends EventProcessor implements MidiEffectProcessor {
     readonly #adapter: ZeitgeistDeviceBoxAdapter

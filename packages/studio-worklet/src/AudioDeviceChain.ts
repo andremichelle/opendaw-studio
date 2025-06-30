@@ -1,14 +1,14 @@
 import {Arrays, assert, SortedSet, Subscription, Terminator, UUID} from "lib-std"
-import {AudioDeviceProcessor, AudioEffectDeviceProcessor} from "./processors.ts"
-import {AuxSendProcessor} from "./AuxSendProcessor.ts"
-import {ChannelStripProcessor} from "./ChannelStripProcessor.ts"
+import {AudioDeviceProcessor, AudioEffectDeviceProcessor} from "./processors"
+import {AuxSendProcessor} from "./AuxSendProcessor"
+import {ChannelStripProcessor} from "./ChannelStripProcessor"
 import {AudioEffectDeviceBoxAdapter} from "studio-adapters"
-import {AudioEffectDeviceProcessorFactory} from "./DeviceProcessorFactory.ts"
+import {AudioEffectDeviceProcessorFactory} from "./DeviceProcessorFactory"
 import {AuxSendBoxAdapter} from "studio-adapters"
-import {ProcessPhase} from "./processing.ts"
-import {AudioUnit} from "./AudioUnit.ts"
-import {DeviceChain} from "./DeviceChain.ts"
-import {AudioUnitOptions} from "./AudioUnitOptions.ts"
+import {ProcessPhase} from "./processing"
+import {AudioUnit} from "./AudioUnit"
+import {DeviceChain} from "./DeviceChain"
+import {AudioUnitOptions} from "./AudioUnitOptions"
 
 type AudioEffectDeviceEntry = {
     device: AudioEffectDeviceProcessor

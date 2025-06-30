@@ -1,7 +1,7 @@
 import {AudioData, Gate, PlayfieldSampleBoxAdapter} from "studio-adapters"
 import {NoteEvent, velocityToGain} from "lib-dsp"
 import {Id, int} from "lib-std"
-import {AutomatableParameters} from "./AutomatableParameters.ts"
+import {AutomatableParameters} from "./AutomatableParameters"
 
 const FAST_RELEASE = Math.floor(0.005 * sampleRate)
 

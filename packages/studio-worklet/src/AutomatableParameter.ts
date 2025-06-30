@@ -2,7 +2,7 @@ import {PrimitiveValues} from "lib-box"
 import {AutomatableParameterFieldAdapter} from "studio-adapters"
 import {assert, Notifier, Observer, Option, Subscription, Terminable, TerminableOwner, Terminator, unitValue} from "lib-std"
 import {ppqn} from "lib-dsp"
-import {EngineContext} from "./EngineContext.ts"
+import {EngineContext} from "./EngineContext"
 
 export class AutomatableParameter<T extends PrimitiveValues = any> implements TerminableOwner, Terminable {
     readonly #terminator = new Terminator()
