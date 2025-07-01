@@ -19,3 +19,6 @@ echo "✅ All dist folders removed"
 echo "🔒 Removing all package-lock.json files..."
 find . -name "package-lock.json" -type f -delete 2>/dev/null || true
 echo "✅ All package-lock.json files removed"
+
+# 4. Clean studio boxes src directory
+rm -rf packages/studio/boxes/src/* 2>/dev/null || true
