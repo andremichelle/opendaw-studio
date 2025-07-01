@@ -1,5 +1,5 @@
 {
-  "name": "opendaw-forge-boxes",
+  "name": "studio-forge-boxes",
   "version": "0.0.1",
   "type": "commonjs",
   "main": "dist/index.js",
@@ -13,8 +13,8 @@
   },
   "scripts": {
     "build": "npm run clear && npx tsx src/forge.ts && npm run format",
-    "clear": "rm -rf ../studio-boxes/src/*",
-    "format": "prettier --write \"../studio-boxes/src/**/*.ts\" --ignore-path /dev/null"
+    "clear": "rm -rf ../boxes/src/*",
+    "format": "prettier --write \"../boxes/src/**/*.ts\" --ignore-path /dev/null"
   },
   "devDependencies": {
     "lib-std": "*",
