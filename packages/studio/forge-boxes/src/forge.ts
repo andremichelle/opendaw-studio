@@ -29,7 +29,7 @@ import {GrooveShuffleBox} from "./schema/grooves"
 import {Pointers} from "studio-enums"
 
 BoxForge.gen<Pointers>({
-    path: "../boxes/src/",
+    path: "../../boxes/src/",
     pointers: {
         from: "studio-enums",
         enum: "Pointers",
