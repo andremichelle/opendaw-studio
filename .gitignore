@@ -3,5 +3,6 @@ localhost.pem
 localhost-key.pem
 dist/
 node_modules/
-packages/studio-app/public/build-info.json
-/packages/lib-box-forge/test/
+
+packages/libraries/box-forge/test/
+packages/apps/opendaw/public/build-info.json
