@@ -30,15 +30,18 @@ requestAnimationFrame(async () => {
                 alert(`Could not boot EngineWorklet (${error})`)
                 return
             }
-            const project = Project.new({
+
+            const project = Project.load({
                 audioManager: {
                     getOrCreateAudioLoader(_uuid: UUID.Format): AudioLoader {
                         return panic("sample are not yet implemented")
                     }
                 }
-            })
+            }, await fetch("asleep.od").then(x => x.arrayBuffer()))
             const worklet = value.create(context => new EngineWorklet(context, project))
             console.debug(worklet)
+            worklet.connect(context.destination)
+            worklet.isPlaying().setValue(true)
         }
         if (context.state === "suspended") {
             window.addEventListener("click",
