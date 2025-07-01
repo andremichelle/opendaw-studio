@@ -1,11 +1,10 @@
 {
-  "name": "opendaw-studio",
+  "name": "opendaw-headless",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --mode production",
-    "preview": "vite preview"
+    "build": "vite build --mode production"
   },
   "dependencies": {
     "express": "^4.21.2",
@@ -18,10 +17,8 @@
     "@types/node": "^22.15.18",
     "lib-std": "*",
     "lib-dsp": "*",
-    "lib-dom": "*",
     "lib-runtime": "*",
     "lib-box": "*",
-    "lib-jsx": "*",
     "lib-fusion": "*",
     "studio-enums": "*",
     "studio-adapters": "*",
