@@ -3,6 +3,7 @@ localhost.pem
 localhost-key.pem
 dist/
 node_modules/
+package-lock.json
 
 packages/libraries/box-forge/test/
 packages/apps/opendaw/public/build-info.json
