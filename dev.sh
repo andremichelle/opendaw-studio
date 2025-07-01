@@ -11,4 +11,4 @@ fi
 
 # Start the development environment
 echo "📦 Starting package watchers and Vite dev server..."
-npm run dev 
+npm run dev

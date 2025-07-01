@@ -5,8 +5,6 @@
 
 set -e  # Exit on any error
 
-echo "🧹 Starting complete rebuild of OpenDAW Studio monorepo..."
-
 # 1. Delete all node_modules folders
 echo "📦 Removing all node_modules folders..."
 find . -name "node_modules" -type d -exec rm -rf {} + 2>/dev/null || true

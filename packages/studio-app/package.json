@@ -16,7 +16,6 @@
     "studio-worklet": "*"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^2",
     "@types/markdown-it": "^0.0.9",
     "@types/node": "^22.15.18",
     "lib-std": "*",

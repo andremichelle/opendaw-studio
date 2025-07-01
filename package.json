@@ -4,6 +4,7 @@
     "packages/*"
   ],
   "scripts": {
+    "clean": "bash ./clean.sh",
     "rebuild": "bash ./rebuild.sh",
     "test:all": "vitest run",
     "cert": "bash ./cert.sh",
@@ -37,7 +38,7 @@
   "devDependencies": {
     "concurrently": "^9.1.0",
     "depcheck": "^1.4.7",
-    "studio-enums": "^0.1.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "prettier": "^3.5.3"
   }
 }
