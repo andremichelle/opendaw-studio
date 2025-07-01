@@ -1,14 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "../../",
-    "paths": {
-      "@core/*": [
-        "packages/studio-core/src/*"
-      ],
-      "lib-box-forge": [
-        "packages/box-forge/src"
-      ]
-    },
+    "paths": {},
     "target": "ESNext",
     "module": "commonjs",
     "esModuleInterop": true,

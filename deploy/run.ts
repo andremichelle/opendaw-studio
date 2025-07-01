@@ -64,7 +64,7 @@ async function uploadDirectory(localDir: string, remoteDir: string) {
     console.log(`⏩ upload…`)
     await sftp.connect(config)
     await deleteDirectory("/")
-    await uploadDirectory("./studio/dist", "/")
+    await uploadDirectory("./packages/apps/opendaw/dist", "/")
     await sftp.end()
     const webhookUrl = process.env.DISCORD_WEBHOOK
     if (webhookUrl) {
