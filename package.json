@@ -1,7 +1,10 @@
 {
   "private": false,
   "workspaces": [
-    "packages/*"
+    "packages/libraries/*",
+    "packages/studio/*",
+    "packages/apps/*",
+    "packages/bundles/*"
   ],
   "scripts": {
     "clean": "bash ./clean.sh",
@@ -14,20 +17,20 @@
     "dev:studio": "concurrently \"npm run watch:studio\" \"npm run dev:app\"",
     "dev:all": "concurrently \"npm run watch:libs\" \"npm run watch:studio\" \"npm run dev:app\"",
     "watch:packages": "npm run watch:libs",
-    "watch:libs": "concurrently \"npm run watch:lib-std\" \"npm run watch:lib-box\" \"npm run watch:lib-dom\" \"npm run watch:lib-dsp\" \"npm run watch:lib-runtime\" \"npm run watch:lib-jsx\" \"npm run watch:lib-fusion\"",
-    "watch:studio": "concurrently \"npm run watch:studio-adapters\" \"npm run watch:studio-boxes\" \"npm run watch:studio-enums\" \"npm run watch:studio-worklet\"",
-    "dev:app": "cd packages/studio-app && npm run dev",
-    "watch:lib-std": "cd packages/lib-std && npm run watch",
-    "watch:lib-box": "cd packages/lib-box && npm run watch",
-    "watch:lib-dom": "cd packages/lib-dom && npm run watch",
-    "watch:lib-dsp": "cd packages/lib-dsp && npm run watch",
-    "watch:lib-runtime": "cd packages/lib-runtime && npm run watch",
-    "watch:lib-jsx": "cd packages/lib-jsx && npm run watch",
-    "watch:lib-fusion": "cd packages/lib-fusion && npm run watch",
-    "watch:studio-adapters": "cd packages/studio-adapters && npm run watch",
-    "watch:studio-boxes": "cd packages/studio-boxes && npm run watch",
-    "watch:studio-enums": "cd packages/studio-enums && npm run watch",
-    "watch:studio-worklet": "cd packages/studio-worklet && npm run watch"
+    "watch:libs": "concurrently \"npm run watch:std\" \"npm run watch:box\" \"npm run watch:dom\" \"npm run watch:dsp\" \"npm run watch:runtime\" \"npm run watch:jsx\" \"npm run watch:fusion\"",
+    "watch:studio": "concurrently \"npm run watch:adapters\" \"npm run watch:boxes\" \"npm run watch:enums\" \"npm run watch:worklet\"",
+    "dev:app": "cd packages/apps/opendaw && npm run dev",
+    "watch:std": "cd packages/libraries/std && npm run watch",
+    "watch:box": "cd packages/libraries/box && npm run watch",
+    "watch:dom": "cd packages/libraries/dom && npm run watch",
+    "watch:dsp": "cd packages/libraries/dsp && npm run watch",
+    "watch:runtime": "cd packages/libraries/runtime && npm run watch",
+    "watch:jsx": "cd packages/libraries/jsx && npm run watch",
+    "watch:fusion": "cd packages/libraries/fusion && npm run watch",
+    "watch:adapters": "cd packages/studio/adapters && npm run watch",
+    "watch:boxes": "cd packages/studio/boxes && npm run watch",
+    "watch:enums": "cd packages/studio/enums && npm run watch",
+    "watch:worklet": "cd packages/studio/worklet && npm run watch"
   },
   "dependencies": {
     "@types/node": "^22.15.18",

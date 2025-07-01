@@ -18,62 +18,67 @@ echo "🔨 Building packages in dependency order..."
 # Function to build a package
 build_package() {
     local package_name=$1
+    local package_type=$2
     echo "Building $package_name..."
-    cd "packages/$package_name"
+    cd "packages/$package_type/$package_name"
     npm run build
-    cd ../..
+    cd ../../..
     echo "✅ $package_name built successfully"
 }
 
 # Function to test a package (if test script exists)
 test_package() {
     local package_name=$1
-    cd "packages/$package_name"
+    local package_type=$2
+    cd "packages/$package_type/$package_name"
     if npm run 2>/dev/null | grep -q " test"; then
         echo "🧪 Testing $package_name..."
         if npm test; then
             echo "✅ $package_name tests passed"
         else
             echo "❌ $package_name tests failed"
-            cd ../..
+            cd ../../..
             exit 1
         fi
     else
         echo "⚠️  No test script for $package_name, skipping tests."
     fi
-    cd ../..
+    cd ../../..
 }
 
-build_package "lib-std"
-test_package "lib-std"
-build_package "lib-dsp"
-test_package "lib-dsp"
-build_package "lib-runtime"
-test_package "lib-runtime"
-build_package "lib-dom"
-test_package "lib-dom"
-build_package "lib-box"
-test_package "lib-box"
-build_package "lib-jsx"
-test_package "lib-jsx"
-build_package "lib-fusion"
-test_package "lib-fusion"
-build_package "lib-box-forge"
-test_package "lib-box-forge"
-build_package "studio-enums"
-test_package "studio-enums"
-build_package "studio-forge-boxes"
-test_package "studio-forge-boxes"
-build_package "studio-boxes"
-test_package "studio-boxes"
-build_package "studio-adapters"
-test_package "studio-adapters"
-build_package "studio-worklet"
-test_package "studio-worklet"
-build_package "bundle-worklet"
-test_package "bundle-worklet"
-build_package "studio-app"
-test_package "studio-app"
+# Build libraries
+build_package "std" "libraries"
+test_package "std" "libraries"
+build_package "dsp" "libraries"
+test_package "dsp" "libraries"
+build_package "runtime" "libraries"
+test_package "runtime" "libraries"
+build_package "dom" "libraries"
+test_package "dom" "libraries"
+build_package "box" "libraries"
+test_package "box" "libraries"
+build_package "jsx" "libraries"
+test_package "jsx" "libraries"
+build_package "fusion" "libraries"
+test_package "fusion" "libraries"
+build_package "box-forge" "libraries"
+test_package "box-forge" "libraries"
+
+# Build studio packages
+build_package "enums" "studio"
+test_package "enums" "studio"
+build_package "forge-boxes" "studio"
+test_package "forge-boxes" "studio"
+build_package "boxes" "studio"
+test_package "boxes" "studio"
+build_package "adapters" "studio"
+test_package "adapters" "studio"
+build_package "worklet" "studio"
+test_package "worklet" "studio"
+
+# Build apps
+build_package "opendaw" "apps"
+test_package "opendaw" "apps"
 
 echo "🎉 All packages built successfully!"
 echo "🚀 OpenDAW Studio monorepo is ready to run!" 

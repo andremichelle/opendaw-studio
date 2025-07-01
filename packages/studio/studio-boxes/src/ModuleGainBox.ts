@@ -1,0 +1,111 @@
+import { Nullish, safeExecute, UUID, Procedure } from "lib-std";
+import {
+  Box,
+  BoxConstruct,
+  BoxGraph,
+  NoPointers,
+  Field,
+  Float32Field,
+} from "lib-box";
+import { ModuleAttributes } from "./ModuleAttributes";
+import { BoxVisitor } from ".";
+import { Pointers } from "studio-enums";
+
+//
+//   ___          ___
+//  | _ ) _____ _| __|__ _ _ __ _ ___
+//  | _ \/ _ \ \ / _/ _ \ '_/ _` / -_)
+//  |___/\___/_\_\_|\___/_| \__, \___|
+//                         |___/
+//
+//  auto-generated | do not edit | blame andre.michelle@gmail.com
+//
+export type ModuleGainBoxFields = {
+  1: /* attributes */ ModuleAttributes;
+  10: /* voltageInput */ Field<Pointers.VoltageConnection>;
+  12: /* voltageOutput */ Field<Pointers.VoltageConnection>;
+  20: /* gain */ Float32Field<Pointers.ParameterController>;
+};
+
+export class ModuleGainBox extends Box<
+  Pointers.Selection,
+  ModuleGainBoxFields
+> {
+  static create(
+    graph: BoxGraph,
+    uuid: UUID.Format,
+    constructor?: Procedure<ModuleGainBox>,
+  ): ModuleGainBox {
+    return graph.stageBox(
+      new ModuleGainBox({
+        uuid,
+        graph,
+        name: "ModuleGainBox",
+        pointerRules: { accepts: [Pointers.Selection], mandatory: false },
+      }),
+      constructor,
+    );
+  }
+
+  private constructor(construct: BoxConstruct<Pointers.Selection>) {
+    super(construct);
+  }
+
+  accept<R>(visitor: BoxVisitor<R>): Nullish<R> {
+    return safeExecute(visitor.visitModuleGainBox, this);
+  }
+
+  get attributes(): ModuleAttributes {
+    return this.getField(1);
+  }
+
+  get voltageInput(): Field<Pointers.VoltageConnection> {
+    return this.getField(10);
+  }
+
+  get voltageOutput(): Field<Pointers.VoltageConnection> {
+    return this.getField(12);
+  }
+
+  get gain(): Float32Field<Pointers.ParameterController> {
+    return this.getField(20);
+  }
+
+  initializeFields(): ModuleGainBoxFields {
+    return {
+      1: ModuleAttributes.create({
+        parent: this,
+        fieldKey: 1,
+        fieldName: "attributes",
+        pointerRules: NoPointers,
+      }),
+      10: Field.hook({
+        parent: this,
+        fieldKey: 10,
+        fieldName: "voltageInput",
+        pointerRules: {
+          accepts: [Pointers.VoltageConnection],
+          mandatory: false,
+        },
+      }),
+      12: Field.hook({
+        parent: this,
+        fieldKey: 12,
+        fieldName: "voltageOutput",
+        pointerRules: {
+          accepts: [Pointers.VoltageConnection],
+          mandatory: false,
+        },
+      }),
+      20: Float32Field.create({
+        parent: this,
+        fieldKey: 20,
+        fieldName: "gain",
+        pointerRules: {
+          accepts: [Pointers.ParameterController],
+          mandatory: false,
+        },
+      }),
+    };
+  }
+}

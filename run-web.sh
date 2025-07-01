@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Starts web-server
-(cd packages/studio-app && npm run dev)
+(cd packages/apps/opendaw && npm run dev)
