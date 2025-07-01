@@ -1,1 +1,0 @@
-export const RenderQuantum = 128 | 0
