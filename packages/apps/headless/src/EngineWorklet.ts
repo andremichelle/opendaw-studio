@@ -1,6 +1,4 @@
-import {Project} from "@/project/Project"
 import WorkletUrl from "studio-worklet/EngineProcessor.ts?worker&url"
-import {BoxIO} from "studio-boxes"
 import {
     Arrays,
     byte,
@@ -30,9 +28,11 @@ import {
     ExportStemsConfiguration
 } from "studio-adapters"
 import {SyncSource} from "lib-box"
-import {Communicator, Messenger} from "lib-runtime"
-import {WorkletFactory} from "@/audio-engine/WorkletFactory"
 import {AnimationFrame} from "lib-dom"
+import {Communicator, Messenger} from "lib-runtime"
+import {BoxIO} from "studio-boxes"
+import {Project} from "@/Project"
+import {WorkletFactory} from "@/WorkletFactory"
 
 export class EngineWorklet extends AudioWorkletNode {
     static bootFactory(context: BaseAudioContext): Promise<WorkletFactory<EngineWorklet>> {

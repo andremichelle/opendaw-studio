@@ -2,11 +2,9 @@ import {Peaks} from "lib-fusion"
 import {AudioData, AudioLoader, AudioLoaderManager, AudioLoaderState, EngineToClient} from "studio-adapters"
 import {Observer, Option, SortedSet, Subscription, Terminable, UUID} from "lib-std"
 
-export type FetchAudio = (uuid: UUID.Format) => Promise<AudioData>
-
 class AudioLoaderWorklet implements AudioLoader {
     readonly peaks: Option<Peaks> = Option.None
-    readonly #state: AudioLoaderState = {type: "loaded"}
+    readonly #state: AudioLoaderState = {type: "idle"}
 
     #data: Option<AudioData> = Option.None
 

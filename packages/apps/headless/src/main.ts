@@ -1,10 +1,11 @@
-import {panic, UUID} from "lib-std"
-import {Browser} from "lib-dom"
+import {panic} from "lib-std"
+import {AnimationFrame, Browser} from "lib-dom"
 import {Promises} from "lib-runtime"
 import {testFeatures} from "@/features"
-import {EngineWorklet} from "@/audio-engine/EngineWorklet"
-import {Project} from "@/project/Project"
-import {AudioLoader} from "studio-adapters"
+import {EngineWorklet} from "@/EngineWorklet"
+import {Project} from "@/Project"
+import {MainThreadAudioLoaderManager} from "@/MainThreadAudioLoaderManager"
+import {PPQN} from "lib-dsp"
 
 window.name = "main"
 
@@ -14,6 +15,7 @@ requestAnimationFrame(async () => {
         console.debug("isLocalHost", Browser.isLocalHost())
         if (!window.crossOriginIsolated) {return panic("window must be crossOriginIsolated")}
         console.debug("booting...")
+        document.body.textContent = "booting..."
         {
             const {status, error} = await Promises.tryCatch(testFeatures())
             if (status === "rejected") {
@@ -30,24 +32,24 @@ requestAnimationFrame(async () => {
                 alert(`Could not boot EngineWorklet (${error})`)
                 return
             }
-
-            const project = Project.load({
-                audioManager: {
-                    getOrCreateAudioLoader(_uuid: UUID.Format): AudioLoader {
-                        return panic("sample are not yet implemented")
-                    }
-                }
-            }, await fetch("asleep.od").then(x => x.arrayBuffer()))
+            const audioManager = new MainThreadAudioLoaderManager(context)
+            const project = Project.load({audioManager}, await fetch("subset.od").then(x => x.arrayBuffer()))
             const worklet = value.create(context => new EngineWorklet(context, project))
-            console.debug(worklet)
+            await worklet.isReady()
+            while (!await worklet.queryLoadingComplete()) {}
             worklet.connect(context.destination)
             worklet.isPlaying().setValue(true)
+            AnimationFrame.add(() => {
+                const {bars, beats} = PPQN.toParts(worklet.position().getValue())
+                document.body.textContent = `${bars + 1}:${beats + 1}`
+            })
         }
         if (context.state === "suspended") {
             window.addEventListener("click",
                 async () => await context.resume().then(() =>
                     console.debug(`AudioContext resumed (${context.state})`)), {capture: true, once: true})
         }
+        AnimationFrame.start()
         document.querySelector("#preloader")?.remove()
     }
 )

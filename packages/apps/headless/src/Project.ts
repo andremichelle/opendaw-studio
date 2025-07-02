@@ -26,7 +26,6 @@ import {
 } from "studio-adapters"
 import {asInstanceOf, ByteArrayOutput, Option, panic, Terminable, TerminableOwner, Terminator, UUID} from "lib-std"
 import {LiveStreamBroadcaster, LiveStreamReceiver} from "lib-fusion"
-import {Mixer} from "@/project/Mixer"
 import {AudioUnitType} from "studio-enums"
 
 export type ProjectEnv = {
@@ -148,7 +147,6 @@ export class Project implements BoxAdaptersContext, Terminable, TerminableOwner 
     readonly boxAdapters: BoxAdapters
     readonly parameterFieldAdapters: ParameterFieldAdapters
     readonly liveStreamReceiver: LiveStreamReceiver
-    readonly mixer: Mixer
 
     private constructor(env: ProjectEnv,
                         boxGraph: BoxGraph, {
@@ -169,7 +167,6 @@ export class Project implements BoxAdaptersContext, Terminable, TerminableOwner 
         this.editing = new Editing(this.boxGraph)
         this.parameterFieldAdapters = new ParameterFieldAdapters()
         this.boxAdapters = this.#terminator.own(new BoxAdapters(this))
-        this.mixer = new Mixer(this.rootBoxAdapter.audioUnits)
 
         console.debug(`Project was created on ${this.rootBoxAdapter.created.toString()}`)
     }

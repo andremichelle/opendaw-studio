@@ -78,6 +78,12 @@ export const canWrite = <T>(obj: T, key: keyof any): obj is T & Record<typeof ke
     }
     return false
 }
+export const requireProperty = <T extends {}>(object: T, key: keyof T): void => {
+    const {status, value} = tryCatch(() => object instanceof Function ? object.name : object.constructor.name)
+    const feature = status === "failure" ? `${object}.${String(key)}` : `${value}.${String(key)}`
+    console.debug(`%c${feature}%c available`, "color: hsl(200, 83%, 60%)", "color: inherit")
+    if (!(key in object)) {throw feature}
+}
 export const tryCatch = <T>(statement: Provider<T>)
     : { status: "success", error: null, value: T } | { status: "failure", error: unknown, value: null } => {
     try {

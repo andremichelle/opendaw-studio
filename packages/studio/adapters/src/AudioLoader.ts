@@ -15,6 +15,7 @@ export interface AudioLoader {
 }
 
 export type AudioLoaderState =
+    | { type: "idle" }
     | { type: "progress", progress: unitValue }
     | { type: "error", reason: string }
     | { type: "loaded" }
