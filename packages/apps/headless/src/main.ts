@@ -1,4 +1,4 @@
-import {panic} from "lib-std"
+import {assert} from "lib-std"
 import {AnimationFrame, Browser} from "lib-dom"
 import {PPQN} from "lib-dsp"
 import {Promises} from "lib-runtime"
@@ -14,9 +14,7 @@ requestAnimationFrame(async () => {
         console.debug("agent", Browser.userAgent)
         console.debug("isLocalHost", Browser.isLocalHost())
         console.debug("WorkletUrl", WorkletUrl)
-        if (!crossOriginIsolated) {
-            return panic("window must be crossOriginIsolated")
-        }
+        assert(crossOriginIsolated, "window must be crossOriginIsolated")
         console.debug("booting...")
         document.body.textContent = "booting..."
         {
