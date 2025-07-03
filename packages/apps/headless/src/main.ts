@@ -14,7 +14,7 @@ requestAnimationFrame(async () => {
         console.debug("agent", Browser.userAgent)
         console.debug("isLocalHost", Browser.isLocalHost())
         console.debug("WorkletUrl", WorkletUrl)
-        if (!window.crossOriginIsolated) {
+        if (!crossOriginIsolated) {
             return panic("window must be crossOriginIsolated")
         }
         console.debug("booting...")

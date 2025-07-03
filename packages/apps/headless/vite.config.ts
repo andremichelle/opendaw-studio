@@ -1,126 +1,136 @@
-import {defineConfig, UserConfig} from "vite"
-import {resolve} from "path"
-import * as path from "node:path"
-import {readFileSync, watch} from "fs"
-import viteCompression from "vite-plugin-compression"
+import {defineConfig} from "vite"
+import compression from "vite-plugin-compression"
 import crossOriginIsolation from "vite-plugin-cross-origin-isolation"
+import fs from "fs"
+import path from "path"
 
-export const generateUUID = (): string => {
-    const format = crypto.getRandomValues(new Uint8Array(16))
-    format[6] = (format[6] & 0x0f) | 0x40 // Version 4 (random)
-    format[8] = (format[8] & 0x3f) | 0x80 // Variant 10xx for UUID
-    const hex: Array<string> = []
-    for (let index = 0; index < 256; index++) {
-        hex[index] = (index + 0x100).toString(16).substring(1)
-    }
-    return hex[format[0]] + hex[format[1]] +
-        hex[format[2]] + hex[format[3]] + "-" +
-        hex[format[4]] + hex[format[5]] + "-" +
-        hex[format[6]] + hex[format[7]] + "-" +
-        hex[format[8]] + hex[format[9]] + "-" +
-        hex[format[10]] + hex[format[11]] +
-        hex[format[12]] + hex[format[13]] +
-        hex[format[14]] + hex[format[15]]
-}
+const workspacePackages = [
+    "lib-std", "lib-box", "lib-dom", "lib-dsp", "lib-runtime", "lib-jsx", "lib-fusion",
+    "studio-adapters", "studio-boxes", "studio-enums", "studio-worklet-main", "studio-worklet-runtime"
+]
+export default defineConfig({
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "./src")
+        },
+        // Force deduplication of all workspace packages
+        dedupe: workspacePackages
+    },
 
-export default defineConfig(({mode, command}) => {
-    const uuid = generateUUID()
-    const config: UserConfig = {
-        base: "/",
-        mode,
-        plugins: [
-            crossOriginIsolation(),
-            {
-                name: "spa",
-                configureServer(server) {
-                    server.middlewares.use((req, res, next) => {
-                        const url: string | undefined = req.url
-                        if (url !== undefined && url.indexOf(".") === -1 && !url.startsWith("/@vite/")) {
-                            const indexPath = path.resolve(__dirname, "index.html")
-                            res.end(readFileSync(indexPath))
-                        } else {
-                            next()
-                        }
-                    })
+    optimizeDeps: {
+        // Include all workspace packages for pre-bundling
+        include: workspacePackages,
+        // Force fresh dependency analysis  
+        force: true,
+        // Don't exclude any workspace packages
+        exclude: [],
+        esbuildOptions: {
+            // Ensure consistent module format
+            format: "esm",
+            target: "esnext",
+            keepNames: true,
+            // Force single instance of modules
+            mainFields: ["module", "main"]
+        }
+    },
+
+    define: {
+        __DEV__: JSON.stringify(false),
+        __PROD__: JSON.stringify(true)
+    },
+
+    build: {
+        target: "esnext",
+        rollupOptions: {
+            // Don't externalize workspace packages - bundle them
+            external: (id: string) => {
+                // Never externalize workspace packages
+                if (workspacePackages.some(pkg => id.includes(`/${pkg}/`))) {
+                    return false
                 }
+                return false
             },
-            {
-                name: "watch-packages",
-                configureServer(server) {
-                    if (command === "serve") {
-                        // Watch package dist folders for changes
-                        const packagePaths = [
-                            "../../libraries/std/dist",
-                            "../../libraries/box/dist",
-                            "../../libraries/dom/dist",
-                            "../../libraries/dsp/dist",
-                            "../../libraries/runtime/dist",
-                            "../../libraries/jsx/dist",
-                            "../../libraries/fusion/dist",
-                            "../../studio/adapters/dist",
-                            "../../studio/boxes/dist",
-                            "../../studio/enums/dist",
-                            "../../studio/worklet-main/dist",
-                            "../../studio/worklet-runtime/dist"
-                        ]
-
-                        packagePaths.forEach(pkgPath => {
-                            const fullPath = resolve(__dirname, pkgPath)
-                            try {
-                                watch(fullPath, {recursive: true}, (eventType, filename) => {
-                                    if (filename && !filename.endsWith(".map")) {
-                                        console.log(`Package changed: ${pkgPath}/${filename}`)
-                                        // Trigger a full page reload when packages change
-                                        server.ws.send({
-                                            type: "full-reload",
-                                            path: "*"
-                                        })
-                                    }
-                                })
-                                console.log(`Watching package: ${pkgPath}`)
-                            } catch (error) {
-                                console.warn(`Could not watch ${pkgPath}:`, error)
-                            }
-                        })
+            output: {
+                // Ensure workspace packages are in the same chunk
+                manualChunks: (id: string) => {
+                    // Group all workspace packages together
+                    if (workspacePackages.some(pkg => id.includes(`/${pkg}/`))) {
+                        return "vendor-workspace"
+                    }
+                    // Group external node_modules
+                    if (id.includes("node_modules")) {
+                        return "vendor-external"
                     }
                 }
-            },
-            viteCompression({
-                algorithm: "brotliCompress"
-            })
-        ],
-        resolve: {
-            alias: {
-                "@": resolve(__dirname, "./src")
             }
         },
-        build: {
-            target: "esnext",
-            minify: true,
-            sourcemap: true,
-            rollupOptions: {
-                output: {
-                    format: "es",
-                    entryFileNames: `[name].${uuid}.js`,
-                    chunkFileNames: `[name].${uuid}.js`,
-                    assetFileNames: `[name].${uuid}.[ext]`
-                }
-            }
+        sourcemap: true
+    },
+
+    server: {
+        port: 8080,
+        host: "localhost",
+        https: {
+            key: fs.readFileSync("../../../localhost-key.pem"),
+            cert: fs.readFileSync("../../../localhost.pem")
         },
-        esbuild: {
-            target: "esnext"
+        headers: {
+            "Cross-Origin-Opener-Policy": "same-origin",
+            "Cross-Origin-Embedder-Policy": "require-corp"
         },
-        clearScreen: false
-    }
-    if (command === "serve") {
-        config.server = {
-            port: 8080,
-            strictPort: true,
-            https: {
-                key: readFileSync(resolve(__dirname, "../../../localhost-key.pem")),
-                cert: readFileSync(resolve(__dirname, "../../../localhost.pem"))
+        fs: {
+            // Allow serving files from the entire workspace
+            allow: [".."]
+        }
+    },
+
+    plugins: [
+        crossOriginIsolation(),
+        compression({
+            algorithm: "brotliCompress",
+            ext: ".br",
+            threshold: 1024
+        }),
+        {
+            name: "workspace-watcher",
+            configureServer(server) {
+                const watchPaths = workspacePackages.flatMap(pkg => [
+                    path.resolve(__dirname, `../../libraries/${pkg.replace("lib-", "")}/dist`),
+                    path.resolve(__dirname, `../../studio/${pkg.replace("studio-", "")}/dist`)
+                ]).filter(dir => {
+                    try {
+                        return fs.statSync(dir).isDirectory()
+                    } catch {
+                        return false
+                    }
+                })
+
+                watchPaths.forEach(dir => {
+                    try {
+                        server.watcher.add(dir)
+                        console.log(`Watching package: ${path.relative(process.cwd(), dir)}`)
+                    } catch (error: any) {
+                        console.log(`Could not watch ${path.relative(process.cwd(), dir)}: ${error.message}`)
+                    }
+                })
+
+                server.ws.on("connection", () => {
+                    watchPaths.forEach(dir => {
+                        fs.watch(dir, {recursive: false}, (eventType, filename) => {
+                            if (filename?.endsWith(".js") || filename?.endsWith(".mjs")) {
+                                console.log(`Package changed: ${path.relative(process.cwd(), path.join(dir, filename))}`)
+                                server.ws.send({
+                                    type: "full-reload"
+                                })
+                            }
+                        })
+                    })
+                })
             }
         }
+    ],
+    worker: {
+        format: "es",
+        plugins: () => []
     }
-    return config
 })

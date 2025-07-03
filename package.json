@@ -30,7 +30,10 @@
     "watch:adapters": "cd packages/studio/adapters && npm run watch",
     "watch:boxes": "cd packages/studio/boxes && npm run watch",
     "watch:enums": "cd packages/studio/enums && npm run watch",
-    "watch:worklet-runtime": "cd packages/studio/worklet-runtime && npm run watch"
+    "watch:worklet-runtime": "cd packages/studio/worklet-runtime && npm run watch",
+    "dedupe": "npm dedupe",
+    "analyze:bundle": "cd packages/apps/headless && npm run build && npx vite-bundle-analyzer dist",
+    "analyze:deps": "npx depcheck --ignore-patterns='dist/**' --ignore-patterns='node_modules/**'"
   },
   "dependencies": {
     "@types/node": "^22.15.18",

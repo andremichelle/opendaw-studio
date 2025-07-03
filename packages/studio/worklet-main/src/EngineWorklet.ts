@@ -62,7 +62,6 @@ export class EngineWorklet extends AudioWorkletNode {
         console.debug("constructor")
         const numberOfChannels = ExportStemsConfiguration.countStems(Option.wrap(exportConfiguration)) * 2
         const reader = SyncStream.reader<EngineState>(EngineStateSchema(), state => {
-            console.debug("position", state.position)
             this.#ignoreUpdates = true
             this.#position.setValue(state.position)
             this.#ignoreUpdates = false
@@ -142,10 +141,7 @@ export class EngineWorklet extends AudioWorkletNode {
             } satisfies EngineToClient
         )
         this.#terminator.ownAll(
-            AnimationFrame.add(() => {
-                console.debug("tryRead", reader.tryRead()) // does not execute
-
-            }),
+            AnimationFrame.add(() => reader.tryRead()),
             project.liveStreamReceiver.connect(messenger.channel("engine-live-data")),
             new SyncSource<BoxIO.TypeMap>(project.boxGraph, messenger.channel("engine-sync"), false),
             this.#isPlaying.catchupAndSubscribe(owner => {
