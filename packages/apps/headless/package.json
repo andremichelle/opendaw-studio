@@ -6,24 +6,9 @@
     "dev": "vite",
     "build": "vite build --mode production"
   },
-  "dependencies": {
-    "express": "^4.21.2",
-    "jszip": "^3.10.1",
-    "markdown-it": "^14.1.0",
-    "markdown-it-table": "^4.1.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/markdown-it": "^0.0.9",
     "@types/node": "^22.15.18",
-    "lib-std": "*",
-    "lib-dsp": "*",
-    "lib-runtime": "*",
-    "lib-box": "*",
-    "lib-fusion": "*",
-    "studio-enums": "*",
-    "studio-adapters": "*",
-    "studio-boxes": "*",
-    "studio-forge-boxes": "*",
     "studio-worklet-main": "*",
     "studio-worklet-runtime": "*",
     "sass": "^1.88.0",
