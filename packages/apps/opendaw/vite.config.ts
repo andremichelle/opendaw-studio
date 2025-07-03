@@ -102,7 +102,7 @@ export default defineConfig(({mode, command}) => {
         resolve: {
             alias: {
                 "@": resolve(__dirname, "./src"),
-                "studio-worklet": resolve(__dirname, "../../studio/worklet/src"),
+                "studio-worklet-runtime": resolve(__dirname, "../../studio/worklet-runtime/src")
             }
         },
         build: {

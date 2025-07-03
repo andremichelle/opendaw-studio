@@ -1,0 +1,35 @@
+{
+  "name": "studio-worklet-main",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --sourcemap --clean && tsc --emitDeclarationOnly",
+    "watch": "tsup src/index.ts --format cjs,esm --sourcemap --watch"
+  },
+  "dependencies": {
+    "lib-std": "*",
+    "lib-dsp": "*",
+    "lib-box": "*",
+    "lib-dom": "*",
+    "lib-fusion": "*",
+    "lib-runtime": "*",
+    "studio-enums": "*",
+    "studio-boxes": "*",
+    "studio-adapters": "*"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}

@@ -123,6 +123,7 @@ registerProcessor("engine-processor", class extends AudioWorkletProcessor implem
         this.#metronome = new Metronome()
         this.#renderer = new BlockRenderer(this)
         this.#stateSender = SyncStream.writer(EngineStateSchema(), sab, x => {
+            console.debug("set position")
             x.position = this.#timeInfo.position
         })
         this.#liveStreamBroadcaster = this.#terminator.own(LiveStreamBroadcaster.create(this.#messenger, "engine-live-data"))

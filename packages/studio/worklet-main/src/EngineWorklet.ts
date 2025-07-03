@@ -1,4 +1,3 @@
-import WorkletUrl from "studio-worklet/EngineProcessor.ts?worker&url"
 import {
     Arrays,
     byte,
@@ -31,12 +30,12 @@ import {SyncSource} from "lib-box"
 import {AnimationFrame} from "lib-dom"
 import {Communicator, Messenger} from "lib-runtime"
 import {BoxIO} from "studio-boxes"
-import {Project} from "@/Project"
-import {WorkletFactory} from "@/WorkletFactory"
+import {Project} from "./Project"
+import {WorkletFactory} from "./WorkletFactory"
 
 export class EngineWorklet extends AudioWorkletNode {
-    static bootFactory(context: BaseAudioContext): Promise<WorkletFactory<EngineWorklet>> {
-        return WorkletFactory.boot(context, WorkletUrl)
+    static bootFactory(context: BaseAudioContext, workletURL: string): Promise<WorkletFactory<EngineWorklet>> {
+        return WorkletFactory.boot(context, workletURL)
     }
 
     static ID: int = 0 | 0
@@ -60,8 +59,10 @@ export class EngineWorklet extends AudioWorkletNode {
     constructor(context: BaseAudioContext,
                 project: Readonly<Project>,
                 exportConfiguration?: ExportStemsConfiguration) {
+        console.debug("constructor")
         const numberOfChannels = ExportStemsConfiguration.countStems(Option.wrap(exportConfiguration)) * 2
         const reader = SyncStream.reader<EngineState>(EngineStateSchema(), state => {
+            console.debug("position", state.position)
             this.#ignoreUpdates = true
             this.#position.setValue(state.position)
             this.#ignoreUpdates = false
@@ -141,7 +142,10 @@ export class EngineWorklet extends AudioWorkletNode {
             } satisfies EngineToClient
         )
         this.#terminator.ownAll(
-            AnimationFrame.add(() => reader.tryRead()),
+            AnimationFrame.add(() => {
+                console.debug("tryRead", reader.tryRead()) // does not execute
+
+            }),
             project.liveStreamReceiver.connect(messenger.channel("engine-live-data")),
             new SyncSource<BoxIO.TypeMap>(project.boxGraph, messenger.channel("engine-sync"), false),
             this.#isPlaying.catchupAndSubscribe(owner => {

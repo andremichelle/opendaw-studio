@@ -73,8 +73,10 @@ build_package "boxes" "studio"
 test_package "boxes" "studio"
 build_package "adapters" "studio"
 test_package "adapters" "studio"
-build_package "worklet" "studio"
-test_package "worklet" "studio"
+build_package "worklet-runtime" "studio"
+test_package "worklet-runtime" "studio"
+build_package "worklet-main" "studio"
+test_package "worklet-main" "studio"
 
 # Build apps
 build_package "opendaw" "apps"

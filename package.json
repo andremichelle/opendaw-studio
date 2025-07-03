@@ -18,7 +18,7 @@
     "dev:all": "concurrently \"npm run watch:libs\" \"npm run watch:studio\" \"npm run dev:app\"",
     "watch:packages": "npm run watch:libs",
     "watch:libs": "concurrently \"npm run watch:std\" \"npm run watch:box\" \"npm run watch:dom\" \"npm run watch:dsp\" \"npm run watch:runtime\" \"npm run watch:jsx\" \"npm run watch:fusion\"",
-    "watch:studio": "concurrently \"npm run watch:adapters\" \"npm run watch:boxes\" \"npm run watch:enums\" \"npm run watch:worklet\"",
+    "watch:studio": "concurrently \"npm run watch:adapters\" \"npm run watch:boxes\" \"npm run watch:enums\" \"npm run watch:worklet-runtime\"",
     "dev:app": "cd packages/apps/opendaw && npm run dev",
     "watch:std": "cd packages/libraries/std && npm run watch",
     "watch:box": "cd packages/libraries/box && npm run watch",
@@ -30,7 +30,7 @@
     "watch:adapters": "cd packages/studio/adapters && npm run watch",
     "watch:boxes": "cd packages/studio/boxes && npm run watch",
     "watch:enums": "cd packages/studio/enums && npm run watch",
-    "watch:worklet": "cd packages/studio/worklet && npm run watch"
+    "watch:worklet-runtime": "cd packages/studio/worklet-runtime && npm run watch"
   },
   "dependencies": {
     "@types/node": "^22.15.18",

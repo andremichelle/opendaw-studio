@@ -1,5 +1,5 @@
 import {Project} from "@/project/Project"
-import WorkletUrl from "studio-worklet/EngineProcessor.ts?worker&url"
+import WorkletUrl from "studio-worklet-runtime/EngineProcessor.ts?worker&url"
 import {BoxIO} from "studio-boxes"
 import {
     Arrays,

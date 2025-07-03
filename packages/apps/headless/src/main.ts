@@ -1,11 +1,11 @@
 import {panic} from "lib-std"
 import {AnimationFrame, Browser} from "lib-dom"
+import {PPQN} from "lib-dsp"
 import {Promises} from "lib-runtime"
 import {testFeatures} from "@/features"
-import {EngineWorklet} from "@/EngineWorklet"
-import {Project} from "@/Project"
 import {MainThreadAudioLoaderManager} from "@/MainThreadAudioLoaderManager"
-import {PPQN} from "lib-dsp"
+import {EngineWorklet, Project} from "studio-worklet-main"
+import WorkletUrl from "studio-worklet-runtime/worker?worker&url"
 
 window.name = "main"
 
@@ -13,7 +13,10 @@ requestAnimationFrame(async () => {
         console.debug("openDAW -> headless")
         console.debug("agent", Browser.userAgent)
         console.debug("isLocalHost", Browser.isLocalHost())
-        if (!window.crossOriginIsolated) {return panic("window must be crossOriginIsolated")}
+        console.debug("WorkletUrl", WorkletUrl)
+        if (!window.crossOriginIsolated) {
+            return panic("window must be crossOriginIsolated")
+        }
         console.debug("booting...")
         document.body.textContent = "booting..."
         {
@@ -27,20 +30,25 @@ requestAnimationFrame(async () => {
         const context = new AudioContext({latencyHint: 0})
         console.debug(`AudioContext state: ${context.state}, sampleRate: ${context.sampleRate}`)
         {
-            const {status, error, value} = await Promises.tryCatch(EngineWorklet.bootFactory(context))
+            const {
+                status,
+                error,
+                value: engineFactory
+            } = await Promises.tryCatch(EngineWorklet.bootFactory(context, WorkletUrl))
             if (status === "rejected") {
                 alert(`Could not boot EngineWorklet (${error})`)
                 return
             }
             const audioManager = new MainThreadAudioLoaderManager(context)
             const project = Project.load({audioManager}, await fetch("subset.od").then(x => x.arrayBuffer()))
-            const worklet = value.create(context => new EngineWorklet(context, project))
+            const worklet = engineFactory.create(context => new EngineWorklet(context, project))
             await worklet.isReady()
             while (!await worklet.queryLoadingComplete()) {}
             worklet.connect(context.destination)
             worklet.isPlaying().setValue(true)
             AnimationFrame.add(() => {
-                const {bars, beats} = PPQN.toParts(worklet.position().getValue())
+                const ppqn = worklet.position().getValue()
+                const {bars, beats} = PPQN.toParts(ppqn)
                 document.body.textContent = `${bars + 1}:${beats + 1}`
             })
         }

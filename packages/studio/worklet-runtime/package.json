@@ -1,5 +1,5 @@
 {
-  "name": "studio-worklet",
+  "name": "studio-worklet-runtime",
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
@@ -7,10 +7,18 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "files": ["dist/**/*", "package.json"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./worker": "./dist/worker/EngineProcessor.js"
+  },
   "scripts": {
     "test": "echo \"no tests yet\"",
-    "build": "tsc -p tsconfig.json",
-    "watch": "tsc -p tsconfig.json --watch"
+    "build": "tsup",
+    "watch": "tsup --watch"
   },
   "keywords": [],
   "author": "",
@@ -25,5 +33,8 @@
     "lib-box": "*",
     "lib-runtime": "*",
     "lib-fusion": "*"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2"
   }
 }

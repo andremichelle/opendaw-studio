@@ -1,8 +1,7 @@
 import {defineConfig, UserConfig} from "vite"
 import {resolve} from "path"
 import * as path from "node:path"
-import {readFileSync, writeFileSync, watch} from "fs"
-import {BuildInfo} from "./src/BuildInfo"
+import {readFileSync, watch} from "fs"
 import viteCompression from "vite-plugin-compression"
 import crossOriginIsolation from "vite-plugin-cross-origin-isolation"
 
@@ -26,21 +25,11 @@ export const generateUUID = (): string => {
 
 export default defineConfig(({mode, command}) => {
     const uuid = generateUUID()
-    const env = process.env.NODE_ENV as BuildInfo["env"]
-    const date = Date.now()
     const config: UserConfig = {
         base: "/",
         mode,
         plugins: [
             crossOriginIsolation(),
-            {
-                name: "generate-date-json",
-                buildStart() {
-                    const outputPath = resolve(__dirname, "public", "build-info.json")
-                    writeFileSync(outputPath, JSON.stringify({date, uuid, env} satisfies BuildInfo, null, 2))
-                    console.debug(`Build info written to: ${outputPath}`)
-                }
-            },
             {
                 name: "spa",
                 configureServer(server) {
@@ -62,7 +51,7 @@ export default defineConfig(({mode, command}) => {
                         // Watch package dist folders for changes
                         const packagePaths = [
                             "../../libraries/std/dist",
-                            "../../libraries/box/dist", 
+                            "../../libraries/box/dist",
                             "../../libraries/dom/dist",
                             "../../libraries/dsp/dist",
                             "../../libraries/runtime/dist",
@@ -71,19 +60,20 @@ export default defineConfig(({mode, command}) => {
                             "../../studio/adapters/dist",
                             "../../studio/boxes/dist",
                             "../../studio/enums/dist",
-                            "../../studio/worklet/dist"
+                            "../../studio/worklet-main/dist",
+                            "../../studio/worklet-runtime/dist"
                         ]
-                        
+
                         packagePaths.forEach(pkgPath => {
                             const fullPath = resolve(__dirname, pkgPath)
                             try {
-                                watch(fullPath, { recursive: true }, (eventType, filename) => {
-                                    if (filename && !filename.endsWith('.map')) {
+                                watch(fullPath, {recursive: true}, (eventType, filename) => {
+                                    if (filename && !filename.endsWith(".map")) {
                                         console.log(`Package changed: ${pkgPath}/${filename}`)
                                         // Trigger a full page reload when packages change
                                         server.ws.send({
-                                            type: 'full-reload',
-                                            path: '*'
+                                            type: "full-reload",
+                                            path: "*"
                                         })
                                     }
                                 })
@@ -101,8 +91,7 @@ export default defineConfig(({mode, command}) => {
         ],
         resolve: {
             alias: {
-                "@": resolve(__dirname, "./src"),
-                "studio-worklet": resolve(__dirname, "../../studio/worklet/src"),
+                "@": resolve(__dirname, "./src")
             }
         },
         build: {
@@ -130,9 +119,6 @@ export default defineConfig(({mode, command}) => {
             https: {
                 key: readFileSync(resolve(__dirname, "../../../localhost-key.pem")),
                 cert: readFileSync(resolve(__dirname, "../../../localhost.pem"))
-            },
-            watch: {
-                ignored: ["**/src-tauri/**"]
             }
         }
     }

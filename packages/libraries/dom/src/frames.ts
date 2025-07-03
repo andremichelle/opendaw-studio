@@ -1,5 +1,7 @@
 import {Exec, int, Terminable} from "lib-std"
 
+console.debug("AnimationFrame imported")
+
 export namespace AnimationFrame {
     const nonrecurring = new Set<Exec>()
     const recurring = new Set<Exec>()
