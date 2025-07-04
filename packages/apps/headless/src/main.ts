@@ -2,10 +2,10 @@ import {assert} from "lib-std"
 import {AnimationFrame, Browser} from "lib-dom"
 import {PPQN} from "lib-dsp"
 import {Promises} from "lib-runtime"
+import {EngineWorklet, Project} from "studio-worklet-main"
+import WorkletUrl from "studio-worklet-main/worklet?worker&url"
 import {testFeatures} from "@/features"
 import {MainThreadAudioLoaderManager} from "@/MainThreadAudioLoaderManager"
-import {EngineWorklet, Project} from "studio-worklet-main"
-import WorkletUrl from "studio-worklet-runtime/worker?worker&url"
 
 window.name = "main"
 

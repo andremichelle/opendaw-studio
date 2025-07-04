@@ -11,9 +11,12 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./worklet": "./dist/worklet.js"
   },
   "scripts": {
+    "prebuild": "npm run build --workspace=studio-worklet-runtime",
+    "postbuild": "cp ../worklet-runtime/dist/worker/EngineProcessor.js ./dist/worklet.js",
     "build": "tsup src/index.ts --format cjs,esm --sourcemap --clean && tsc --emitDeclarationOnly",
     "watch": "tsup src/index.ts --format cjs,esm --sourcemap --watch"
   },
