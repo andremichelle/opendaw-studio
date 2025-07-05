@@ -72,7 +72,10 @@ export class SessionService implements MutableObservableValue<Option<ProjectSess
                 const meta = ProjectMeta.init(name)
                 this.#setSession(uuid, project, meta, Option.None)
             })
-            .catch(() => showInfoDialog({headline: "Could not load template", message: "Please try again."}))
+            .catch(reason => {
+                console.warn("Could not load template", reason)
+                showInfoDialog({headline: "Could not load template", message: "Please try again."})
+            })
             .finally(() => handler.close())
     }
 

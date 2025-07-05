@@ -70,7 +70,7 @@ export class ValuePaintModifier implements ValueModifier {
     isVisible(_event: ValueEvent): boolean {return true}
     readPosition(event: ValueEvent): ppqn {return event.position}
     readValue(event: ValueEvent): unitValue {return event.value}
-    readSlope(event: ValueEventBoxAdapter): unitValue {return event.slope}
+    readInterpolation(event: UIValueEvent): Interpolation {return event.interpolation}
     * iterator(searchMin: ppqn, searchMax: ppqn): Generator<ValueEventDraft> {
         const offset = this.#reader.offset
         const min = Arrays.getFirst(this.#strokes, "Internal Error").position - offset
@@ -81,7 +81,6 @@ export class ValuePaintModifier implements ValueModifier {
                 type: "value-event",
                 position: event.position,
                 value: event.value,
-                slope: event.slope,
                 interpolation: event.interpolation,
                 index: event.index,
                 isSelected: event.isSelected,
@@ -92,8 +91,7 @@ export class ValuePaintModifier implements ValueModifier {
             type: "value-event",
             position: stroke.position - this.#reader.offset,
             value: stroke.value,
-            slope: 0.5,
-            interpolation: Interpolation.Default,
+            interpolation: Interpolation.Linear,
             index: 0,
             isSelected: true,
             direction: 0
@@ -103,7 +101,6 @@ export class ValuePaintModifier implements ValueModifier {
                 type: "value-event",
                 position: event.position,
                 value: event.value,
-                slope: event.slope,
                 interpolation: event.interpolation,
                 index: event.index,
                 isSelected: event.isSelected,
@@ -151,8 +148,7 @@ export class ValuePaintModifier implements ValueModifier {
             this.#selection.select(...this.#strokes.map(stroke => content.createEvent({
                 position: stroke.position - offset,
                 value: stroke.value,
-                slope: 0.5,
-                interpolation: Interpolation.Default,
+                interpolation: Interpolation.Linear,
                 index: 0
             })))
         })

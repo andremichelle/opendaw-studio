@@ -2,7 +2,7 @@ import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {Arrays, Curve, Func, isDefined, Nullable, unitValue} from "std"
 import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
-import {Interpolation, ValueEvent} from "dsp"
+import {ValueEvent} from "dsp"
 import {EventRadius} from "./Constants"
 import {PointerRadiusDistance} from "@/ui/timeline/constants.ts"
 import {ValueEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"
@@ -57,7 +57,8 @@ export const createValueEventCapturing = (element: Element,
             const n1 = array[index + 1]
             const y0 = valueToY(n0.value)
             const y1 = valueToY(n1.value)
-            if (n0.interpolation === Interpolation.None) {
+            const interpolation = n0.interpolation
+            if (interpolation.type === "none") {
                 if (Math.abs(valueToY(n0.value) - y) < PointerRadiusDistance) {
                     return {type: "event", event: n0}
                 } else {
@@ -66,15 +67,15 @@ export const createValueEventCapturing = (element: Element,
             }
             const x0 = range.unitToX(n0.position + offset)
             const x1 = range.unitToX(n1.position + offset)
-            if (n0.slope === 0.5) {
+            if (interpolation.type === "linear") {
                 const numerator = Math.abs((y1 - y0) * x - (x1 - x0) * y + x1 * y0 - y1 * x0)
                 const denominator = Math.sqrt((y1 - y0) ** 2 + (x1 - x0) ** 2)
                 if (numerator / denominator < PointerRadiusDistance) {
                     return {type: "curve", event: n0}
                 }
-            } else {
+            } else if (interpolation.type === "curve") {
                 // TODO This is not the 2d distance, just the y-distance
-                const dy = Curve.valueAt({slope: n0.slope, steps: x1 - x0, y0, y1}, x - x0) - y
+                const dy = Curve.valueAt({slope: interpolation.slope, steps: x1 - x0, y0, y1}, x - x0) - y
                 if (Math.abs(dy) < PointerRadiusDistance) {
                     return {type: "curve", event: n0}
                 }

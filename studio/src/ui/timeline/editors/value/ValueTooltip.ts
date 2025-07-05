@@ -49,7 +49,9 @@ export namespace ValueTooltip {
                         const clientRect = element.getBoundingClientRect()
                         const clientX = range.unitToX(modifier.readPosition(mostRightEvent) + reader.offset) + clientRect.left + 8
                         const clientY = valueAxis.valueToAxis(modifier.readValue(mostRightEvent)) + clientRect.top + 8
-                        return ({...stringMapping.x(modifier.readSlope(event)), clientX, clientY})
+                        const interpolation = modifier.readInterpolation(event)
+                        const slope = interpolation.type !== "curve" ? 0.5 : interpolation.slope
+                        return ({...stringMapping.x(slope), clientX, clientY})
                     })
                 } else {
                     Surface.get(element).valueTooltip.hide()

@@ -2,7 +2,7 @@ import {int, Notifier, Observer, Option, Terminable, unitValue} from "std"
 import {Snapping} from "@/ui/timeline/Snapping.ts"
 import {Editing} from "box"
 import {ValueEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"
-import {ppqn, ValueEvent} from "dsp"
+import {Interpolation, ppqn, ValueEvent} from "dsp"
 import {ValueModifier} from "./ValueModifier"
 import {UIValueEvent} from "@/ui/timeline/editors/value/UIValueEvent.ts"
 import {Dragging} from "dom"
@@ -43,7 +43,7 @@ export class ValueContentDurationModifier implements ValueModifier {
     snapValue(): Option<unitValue> {return Option.None}
     readPosition(event: ValueEvent): ppqn {return event.position}
     readValue(event: ValueEvent): unitValue {return event.value}
-    readSlope(event: ValueEvent): unitValue {return event.slope}
+    readInterpolation(event: UIValueEvent): Interpolation {return event.interpolation}
     translateSearch(value: ppqn): ppqn {return value}
     isVisible(_event: UIValueEvent): boolean {return true}
     iterator(searchMin: ppqn, searchMax: ppqn): IteratorObject<UIValueEvent> {
@@ -66,8 +66,7 @@ export class ValueContentDurationModifier implements ValueModifier {
 
     approve(editing: Editing): void {
         if (this.#deltaLoopDuration === 0) {return}
-        editing.modify(() =>
-            this.#reference.contentDuration = this.readContentDuration(this.#reference))
+        editing.modify(() => this.#reference.contentDuration = this.readContentDuration(this.#reference))
     }
 
     cancel(): void {

@@ -1,4 +1,4 @@
-import {createElement} from "jsx"
+import {createElement, JsxValue} from "jsx"
 import {Button, Dialog, DialogHandler} from "@/ui/components/Dialog.tsx"
 import {Arrays, Exec, isDefined, ObservableValue, Option, Procedure, Provider, Terminator, unitValue} from "std"
 import {Surface} from "@/ui/surface/Surface.tsx"
@@ -11,9 +11,9 @@ import {Colors} from "../Colors"
 import EmailBody from "@/ErrorMail.txt?raw"
 import {Errors} from "dom"
 
-export const showInfoDialog = async ({headline, message, okText, buttons, origin}: {
+export const showDialog = async ({headline, content, okText, buttons, origin}: {
     headline?: string,
-    message: string,
+    content: JsxValue,
     okText?: string,
     buttons?: ReadonlyArray<Button>
     origin?: Element
@@ -22,7 +22,7 @@ export const showInfoDialog = async ({headline, message, okText, buttons, origin
     let resolved = false
     const {resolve, reject, promise} = Promise.withResolvers<void>()
     const dialog: HTMLDialogElement = (
-        <Dialog headline={headline ?? "Info"}
+        <Dialog headline={headline ?? "Dialog"}
                 icon={IconSymbol.System}
                 cancelable={true}
                 buttons={[...buttons, {
@@ -34,9 +34,7 @@ export const showInfoDialog = async ({headline, message, okText, buttons, origin
                         resolve()
                     }
                 }]}>
-            <div style={{padding: "1em 0"}}>
-                <p>{message}</p>
-            </div>
+            <div style={{padding: "1em 0"}}>{content}</div>
         </Dialog>
     )
     Surface.get(origin).body.appendChild(dialog)
@@ -44,6 +42,14 @@ export const showInfoDialog = async ({headline, message, okText, buttons, origin
     dialog.addEventListener("close", () => {if (!resolved) {reject()}}, {once: true})
     return promise
 }
+
+export const showInfoDialog = async ({headline, message, okText, buttons, origin}: {
+    headline?: string,
+    message: string,
+    okText?: string,
+    buttons?: ReadonlyArray<Button>
+    origin?: Element
+}): Promise<void> => showDialog({headline, content: (<p>{message}</p>), okText, buttons, origin})
 
 type ApproveCreation = {
     headline?: string
@@ -226,31 +232,33 @@ export const showNewItemDialog = (headline: string, suggestion: string, factory:
 }
 
 export const showErrorDialog = (scope: string,
+                                name: string,
                                 message: string,
                                 backupCommand: Option<Provider<Promise<void>>> = Option.None): void => {
+    console.debug(`Recovery enabled: ${backupCommand}`)
     const dialog: HTMLDialogElement = (
         <Dialog headline="An error occurred :("
                 icon={IconSymbol.Robot}
-                buttons={backupCommand.nonEmpty() ? [
-                    {
-                        text: "Recover",
-                        onClick: () => {
-                            const command = backupCommand.unwrap()
-                            command().then(() => location.reload())
-                        }
-                    }, {
-                        text: "Dismiss",
-                        onClick: () => location.reload()
-                    }, {
-                        text: "EMail",
-                        primary: true,
-                        onClick: () => window.location.href =
-                            `mailto:support@opendaw.org?subject=${encodeURI("Bug Report - openDAW")}&body=${encodeURI(EmailBody)}`
-                    }] : Arrays.empty()}
+                buttons={backupCommand.nonEmpty() ? [{
+                    text: "Recover",
+                    onClick: () => {
+                        const command = backupCommand.unwrap()
+                        command().then(() => location.reload())
+                    }
+                }, {
+                    text: "Dismiss",
+                    onClick: () => location.reload()
+                }, {
+                    text: "EMail",
+                    primary: true,
+                    onClick: () => window.location.href =
+                        `mailto:support@opendaw.org?subject=${
+                            encodeURI("Bug Report - openDAW")}&body=${encodeURI(EmailBody)}`
+                }] : Arrays.empty()}
                 cancelable={false}
                 error>
             <div style={{padding: "1em 0", maxWidth: "50vw"}}>
-                <h3>{`Scope: '${scope}'`}</h3>
+                <h3>{name}</h3>
                 <p>{message}</p>
                 {document.scripts.length > 1 &&
                     <p style={{color: Colors.red}}>

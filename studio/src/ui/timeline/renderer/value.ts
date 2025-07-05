@@ -1,6 +1,6 @@
 import {TimelineRange} from "@/ui/timeline/TimelineRange.ts"
 import {RegionColors} from "@/ui/timeline/renderer/env.ts"
-import {Interpolation, LoopableRegion, ValueEvent} from "dsp"
+import {LoopableRegion, ValueEvent} from "dsp"
 import {asDefined, assert, Curve, Func, unitValue} from "std"
 
 export const renderValueStream = (context: CanvasRenderingContext2D,
@@ -28,15 +28,14 @@ export const renderValueStream = (context: CanvasRenderingContext2D,
     let prev: ValueEvent = asDefined(value)
     for (const next of generator) {
         assert(prev !== next, "iterator error")
-        const {position: p0, value: v0, slope, interpolation} = prev
+        const {position: p0, value: v0, interpolation} = prev
         const {position: p1, value: v1} = next
-        const step = v1 - v0
-        const distance = p1 - p0
+        const type = interpolation.type
         const x0 = unitToX(p0)
         const x1 = unitToX(p1)
         const y0 = valueToY(v0)
         const y1 = valueToY(v1)
-        if (interpolation === Interpolation.None || distance === 0) { // hold and jumps to next event's value
+        if (type === "none" || p1 - p0 === 0) { // hold and jumps to the next event's value
             if (notMoved) {
                 if (p1 > windowMax) {break} // leave the rest for after the loop
                 path.moveTo(xMin, y0) // move pen to window min
@@ -44,45 +43,41 @@ export const renderValueStream = (context: CanvasRenderingContext2D,
                 notMoved = false
             }
             if (x1 > xMax) {break}
-            path.lineTo(x1, y0) // hold value to next event
-            path.lineTo(x1, y1) // jump to next event value
-        } else if (prev.interpolation === Interpolation.Default) {
-            if (prev.slope === 0.5) { // linear interpolation
-                const ratio = step / distance
-                if (notMoved) {
-                    path.moveTo(xMin, valueToY(p0 < windowMin ? v0 + ratio * (windowMin - p0) : v0)) // move pen to window min
-                    if (p0 > windowMin) {path.lineTo(x0, y0)} // line to first event
-                    notMoved = false
-                }
-                if (p1 > windowMax) {
-                    path.lineTo(xMax, valueToY(v0 + ratio * (windowMax - p0))) // line to window max
-                } else {
-                    path.lineTo(x1, y1) // line to next event
-                }
-            } else { // curve interpolation
-                const steps = x1 - x0
-                const cx0 = Math.max(x0, xMin)
-                const cx1 = Math.min(x1, xMax)
-                const definition: Curve.Definition = {slope, steps, y0, y1}
-                if (notMoved) {
-                    if (p0 > windowMin) {
-                        path.moveTo(xMin, y0) // move to window edge
-                        path.lineTo(x0, y0) // draw line to first event
-                    } else {
-                        path.moveTo(cx0, Curve.valueAt(definition, cx0 - x0))
-                    }
-                    notMoved = false
-                }
-                // TODO We can optimise this by walking the Curve.coefficients
-                for (let x = cx0; x <= cx1; x += 4) {
-                    path.lineTo(x, Curve.valueAt(definition, x - x0))
-                }
-                path.lineTo(cx1, Curve.valueAt(definition, cx1 - x0))
+            path.lineTo(x1, y0) // hold value to the next event
+            path.lineTo(x1, y1) // jump to the next event value
+        } else if (type === "linear") {
+            const ratio = (v1 - v0) / (p1 - p0)
+            if (notMoved) {
+                path.moveTo(xMin, valueToY(p0 < windowMin ? v0 + ratio * (windowMin - p0) : v0)) // move pen to window min
+                if (p0 > windowMin) {path.lineTo(x0, y0)} // line to first event
+                notMoved = false
             }
+            if (p1 > windowMax) {
+                path.lineTo(xMax, valueToY(v0 + ratio * (windowMax - p0))) // line to window max
+            } else {
+                path.lineTo(x1, y1) // line to next event
+            }
+        } else if (type === "curve") {
+            const cx0 = Math.max(x0, xMin)
+            const cx1 = Math.min(x1, xMax)
+            const definition: Curve.Definition = {slope: interpolation.slope, steps: x1 - x0, y0, y1}
+            if (notMoved) {
+                if (p0 > windowMin) {
+                    path.moveTo(xMin, y0) // move to window edge
+                    path.lineTo(x0, y0) // draw the line to the first event
+                } else {
+                    path.moveTo(cx0, Curve.valueAt(definition, cx0 - x0))
+                }
+                notMoved = false
+            }
+            // TODO We can optimise this by walking the Curve.coefficients
+            for (let x = cx0; x <= cx1; x += 4) {
+                path.lineTo(x, Curve.valueAt(definition, x - x0))
+            }
+            path.lineTo(cx1, Curve.valueAt(definition, cx1 - x0))
         }
         prev = next
     }
-
     if (notMoved) {
         // we have not moved, so let's draw a straight line from min to max to respect the sole event
         path.moveTo(xMin, valueToY(prev.value))
@@ -91,10 +86,8 @@ export const renderValueStream = (context: CanvasRenderingContext2D,
         // hold value to the window max
         path.lineTo(xMax, valueToY(prev.value))
     }
-
     const yMin = valueToY(anchor) + devicePixelRatio
     const style = index === (debug ? 1 : 0) ? contentColor : contentLoopColor
-
     context.fillStyle = style
     context.strokeStyle = style
     context.beginPath()

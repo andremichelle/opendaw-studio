@@ -32,7 +32,6 @@ import {showApproveDialog, showInfoDialog, showProcessDialog} from "@/ui/compone
 import {BuildInfo} from "@/BuildInfo.ts"
 import {MidiDeviceAccess} from "@/midi/devices/MidiDeviceAccess"
 import {EngineWorklet} from "@/audio-engine/EngineWorklet"
-import {ErrorHandler} from "@/errors/ErrorHandler.ts"
 import {SamplePlayback} from "@/service/SamplePlayback"
 import {Shortcuts} from "@/service/Shortcuts"
 import {ProjectMeta} from "@/project/ProjectMeta"
@@ -55,6 +54,7 @@ import {ProjectDialogs} from "@/project/ProjectDialogs"
 import {AudioImporter} from "@/audio/AudioImport"
 import {AudioWorklets} from "@/audio-engine/AudioWorklets"
 import {Address} from "box"
+import {Recovery} from "@/Recovery.ts"
 
 /**
  * I am just piling stuff after stuff in here to boot the environment.
@@ -98,8 +98,9 @@ export class StudioService {
     readonly panelLayout = new PanelContents(createPanelFactory(this))
     readonly spotlightDataSupplier = new SpotlightDataSupplier()
     readonly samplePlayback: SamplePlayback
-    readonly shortcuts = new Shortcuts(this) // TODO reference will be used later in key-mapping configurator
+    readonly shortcuts = new Shortcuts(this) // TODO reference will be used later in a key-mapping configurator
     readonly engine = new EngineFacade()
+    readonly recovery = new Recovery(this)
     readonly #signals = new Notifier<StudioSignal>()
 
     #factoryFooterLabel: Option<Provider<FooterLabel>> = Option.None
@@ -110,12 +111,10 @@ export class StudioService {
                 readonly audioWorklets: AudioWorklets,
                 readonly audioDevices: AudioOutputDevice,
                 readonly audioManager: UIAudioManager,
-                readonly errorHandler: ErrorHandler,
                 readonly buildInfo: BuildInfo) {
         this.samplePlayback = new SamplePlayback(context)
         const lifeTime = new Terminator()
         const observer = (optSession: Option<ProjectSession>) => {
-            errorHandler.optSession = optSession
             const root = RouteLocation.get().path === "/"
             if (root) {this.layout.screen.setValue(null)}
             lifeTime.terminate()
@@ -217,7 +216,7 @@ export class StudioService {
                 document.body.classList.toggle("help-hidden", !visible)
             }, true)
 
-        this.errorHandler.restoreSession(this).then(optSession => {
+        this.recovery.restoreSession().then(optSession => {
             if (optSession.nonEmpty()) {
                 this.sessionService.setValue(optSession)
             }
@@ -385,7 +384,6 @@ export class StudioService {
             // we will only accept the first error
             client.removeEventListener("error", handler)
             client.removeEventListener("processorerror", handler)
-            this.errorHandler.warning(event)
             const screen = this.layout.screen.getValue()
             // we need to restart the screen to subscribe to new broadcaster instances
             this.switchScreen(null)

@@ -116,7 +116,7 @@ export const ValueEditor = ({lifecycle, service, range, snapping, reader, contex
                             : valueMapping.x(valueMapping.y(clickValue))
                         return editing.modify(() => ValueEventEditing
                             .createOrMoveEvent(reader.content, snapping, position, value,
-                                valueMapping.floating() ? Interpolation.Default : Interpolation.None))
+                                valueMapping.floating() ? Interpolation.Linear : Interpolation.None))
                             .match({
                                 none: () => Option.None,
                                 some: adapter => {

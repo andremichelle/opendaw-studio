@@ -37,8 +37,7 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 2,
                 index: 0,
                 value: 0.5,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -51,8 +50,7 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: -PPQN.Quarter,
                 index: 0,
                 value: 0.5,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -65,8 +63,7 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 5,
                 index: 0,
                 value: 0.5,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -74,14 +71,13 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
     {
         label: "Linear",
         events: [
-            {type: "value-event", position: 0, index: 0, value: 0.0, slope: 0.5, interpolation: Interpolation.Default},
+            {type: "value-event", position: 0, index: 0, value: 0.0, interpolation: Interpolation.Linear},
             {
                 type: "value-event",
                 position: PPQN.Bar,
                 index: 0,
                 value: 1.0,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -94,16 +90,14 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: -PPQN.Quarter,
                 index: 0,
                 value: 0.0,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             },
             {
                 type: "value-event",
                 position: PPQN.Bar + PPQN.Quarter,
                 index: 0,
                 value: 1.0,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -116,16 +110,14 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 2,
                 index: 0,
                 value: 0.5,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             },
             {
                 type: "value-event",
                 position: PPQN.Bar,
                 index: 0,
                 value: 1.0,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -133,14 +125,13 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
     {
         label: "Last In",
         events: [
-            {type: "value-event", position: 0, index: 0, value: 0.0, slope: 0.5, interpolation: Interpolation.Default},
+            {type: "value-event", position: 0, index: 0, value: 0.0, interpolation: Interpolation.Linear},
             {
                 type: "value-event",
                 position: PPQN.Quarter * 2,
                 index: 0,
                 value: 0.5,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -153,16 +144,14 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter,
                 index: 0,
                 value: 0.0,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             },
             {
                 type: "value-event",
                 position: PPQN.Bar - PPQN.Quarter,
                 index: 0,
                 value: 1.0,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -175,16 +164,14 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 2,
                 index: 0,
                 value: 1.0,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 2,
                 index: 1,
                 value: 0.0,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -192,30 +179,27 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
     {
         label: "Two Center IO (top first)",
         events: [
-            {type: "value-event", position: 0, index: 0, value: 0.5, slope: 0.5, interpolation: Interpolation.Default},
+            {type: "value-event", position: 0, index: 0, value: 0.5, interpolation: Interpolation.Linear},
             {
                 type: "value-event",
                 position: PPQN.Quarter * 2,
                 index: 0,
                 value: 1.0,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 2,
                 index: 1,
                 value: 0.0,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             },
             {
                 type: "value-event",
                 position: PPQN.Bar,
                 index: 0,
                 value: 0.5,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -223,30 +207,27 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
     {
         label: "Two Center IO (bottom first)",
         events: [
-            {type: "value-event", position: 0, index: 0, value: 0.5, slope: 0.5, interpolation: Interpolation.Default},
+            {type: "value-event", position: 0, index: 0, value: 0.5, interpolation: Interpolation.Linear},
             {
                 type: "value-event",
                 position: PPQN.Quarter * 2,
                 index: 1,
                 value: 1.0,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 2,
                 index: 0,
                 value: 0.0,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             },
             {
                 type: "value-event",
                 position: PPQN.Bar,
                 index: 0,
                 value: 0.5,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -259,16 +240,14 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 1,
                 index: 0,
                 value: 0.75,
-                slope: 0.5,
-                interpolation: Interpolation.None
+                interpolation: Interpolation.Linear
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 3,
                 index: 0,
                 value: 0.25,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -281,7 +260,6 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: -PPQN.Quarter * 1,
                 index: 0,
                 value: 0.75,
-                slope: 0.5,
                 interpolation: Interpolation.None
             },
             {
@@ -289,8 +267,7 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 3,
                 index: 0,
                 value: 0.25,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -303,7 +280,6 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 1,
                 index: 0,
                 value: 0.75,
-                slope: 0.5,
                 interpolation: Interpolation.None
             },
             {
@@ -311,8 +287,7 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 5,
                 index: 0,
                 value: 0.25,
-                slope: 0.5,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Linear
             }
         ],
         section
@@ -320,10 +295,10 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
     {
         label: "Interpolation None (clip-out with step)",
         events: [
-            {type: "value-event", position: -960, index: 0, value: 0.5, slope: 0.5, interpolation: 0},
-            {type: "value-event", position: 960, index: 0, value: 0, slope: 0.2, interpolation: 0},
-            {type: "value-event", position: 2880, index: 0, value: 1, slope: 0.5, interpolation: 0},
-            {type: "value-event", position: 4800, index: 0, value: 0.5, slope: 0.5, interpolation: 0}
+            {type: "value-event", position: -960, index: 0, value: 0.5, interpolation: Interpolation.None},
+            {type: "value-event", position: 960, index: 0, value: 0, interpolation: Interpolation.None},
+            {type: "value-event", position: 2880, index: 0, value: 1, interpolation: Interpolation.None},
+            {type: "value-event", position: 4800, index: 0, value: 0.5, interpolation: Interpolation.None}
         ],
         section
     },
@@ -335,7 +310,6 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 1,
                 index: 0,
                 value: 0.75,
-                slope: 0.5,
                 interpolation: Interpolation.None
             },
             {
@@ -343,7 +317,6 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 2,
                 index: 0,
                 value: 0.25,
-                slope: 0.5,
                 interpolation: Interpolation.None
             },
             {
@@ -351,7 +324,6 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 3,
                 index: 0,
                 value: 0.50,
-                slope: 0.5,
                 interpolation: Interpolation.None
             }
         ],
@@ -360,14 +332,13 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
     {
         label: "Curve Exact",
         events: [
-            {type: "value-event", position: 0, index: 0, value: 0.0, slope: 0.7, interpolation: Interpolation.Default},
+            {type: "value-event", position: 0, index: 0, value: 0.0, interpolation: Interpolation.Curve(0.7)},
             {
                 type: "value-event",
                 position: PPQN.Bar,
                 index: 0,
                 value: 1.0,
-                slope: 0.0,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.0)
             }
         ],
         section
@@ -380,16 +351,14 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter,
                 index: 0,
                 value: 0.0,
-                slope: 0.7,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.7)
             },
             {
                 type: "value-event",
                 position: PPQN.Bar - PPQN.Quarter,
                 index: 0,
                 value: 1.0,
-                slope: 0.0,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.0)
             }
         ],
         section
@@ -402,16 +371,14 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: -PPQN.Quarter,
                 index: 0,
                 value: 0.0,
-                slope: 0.7,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.7)
             },
             {
                 type: "value-event",
                 position: PPQN.Bar + PPQN.Quarter,
                 index: 0,
                 value: 1.0,
-                slope: 0.0,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.0)
             }
         ],
         section
@@ -424,16 +391,14 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Bar / 2,
                 index: 0,
                 value: 0.0,
-                slope: 0.7,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.7)
             },
             {
                 type: "value-event",
                 position: PPQN.Bar,
                 index: 0,
                 value: 1.0,
-                slope: 0.0,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.0)
             }
         ],
         section
@@ -441,14 +406,13 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
     {
         label: "Curve Stops Half",
         events: [
-            {type: "value-event", position: 0, index: 0, value: 0.0, slope: 0.7, interpolation: Interpolation.Default},
+            {type: "value-event", position: 0, index: 0, value: 0.0, interpolation: Interpolation.Curve(0.7)},
             {
                 type: "value-event",
                 position: PPQN.Bar / 2,
                 index: 0,
                 value: 1.0,
-                slope: 0.0,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.0)
             }
         ],
         section
@@ -461,64 +425,56 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 0,
                 index: 0,
                 value: 0.0,
-                slope: 0.7,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.7)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 1,
                 index: 0,
                 value: 1.0,
-                slope: 0.7,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.7)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 1,
                 index: 1,
                 value: 0.0,
-                slope: 0.7,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.7)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 2,
                 index: 0,
                 value: 1.0,
-                slope: 0.7,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.7)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 2,
                 index: 1,
                 value: 0.0,
-                slope: 0.7,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.7)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 3,
                 index: 0,
                 value: 1.0,
-                slope: 0.7,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.7)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 3,
                 index: 1,
                 value: 0.0,
-                slope: 0.7,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.7)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 4,
                 index: 0,
                 value: 1.0,
-                slope: 0.7,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.7)
             }
         ],
         section
@@ -531,48 +487,42 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 0,
                 index: 0,
                 value: 0.0,
-                slope: 0.8,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.8)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 1,
                 index: 0,
                 value: 1.0,
-                slope: 0.2,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.2)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 2,
                 index: 0,
                 value: 0.0,
-                slope: 0.8,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.8)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 3,
                 index: 0,
                 value: 1.0,
-                slope: 0.2,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.2)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 4,
                 index: 0,
                 value: 0.0,
-                slope: 0.8,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.8)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 5,
                 index: 0,
                 value: 1.0,
-                slope: 0.2,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.2)
             }
         ],
         section
@@ -585,40 +535,35 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter * 0,
                 index: 0,
                 value: 0.5,
-                slope: 0.8,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.8)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 1,
                 index: 0,
                 value: 1.0,
-                slope: 0.2,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.2)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 2,
                 index: 0,
                 value: 0.5,
-                slope: 0.8,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.8)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 3,
                 index: 0,
                 value: 0.0,
-                slope: 0.2,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.2)
             },
             {
                 type: "value-event",
                 position: PPQN.Quarter * 4,
                 index: 0,
                 value: 0.5,
-                slope: 0.8,
-                interpolation: Interpolation.Default
+                interpolation: Interpolation.Curve(0.8)
             }
         ],
         section
@@ -631,11 +576,10 @@ const EdgeCases: ReadonlyArray<EdgeCase> = [
                 position: PPQN.Quarter,
                 index: 0,
                 value: 0.25,
-                slope: 0.9405259683098594,
-                interpolation: 1
+                interpolation: Interpolation.Curve(0.9405259683098594)
             },
-            {type: "value-event", position: PPQN.Quarter, index: 1, value: 0, slope: 0.5, interpolation: 1},
-            {type: "value-event", position: PPQN.Quarter * 3, index: 0, value: 0.5, slope: 0.5, interpolation: 1}
+            {type: "value-event", position: PPQN.Quarter, index: 1, value: 0, interpolation: Interpolation.Linear},
+            {type: "value-event", position: PPQN.Quarter * 3, index: 0, value: 0.5, interpolation: Interpolation.Linear}
         ],
         section
     }

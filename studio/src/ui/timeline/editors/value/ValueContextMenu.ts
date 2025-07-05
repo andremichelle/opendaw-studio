@@ -2,10 +2,11 @@ import {ContextMenu} from "@/ui/ContextMenu.ts"
 import {MenuItem} from "@/ui/model/menu-item.ts"
 import {ElementCapturing} from "@/ui/canvas/capturing.ts"
 import {Editing} from "box"
-import {Selection} from "std"
+import {Objects, Selection} from "std"
 import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
 import {ValueCaptureTarget} from "@/ui/timeline/editors/value/ValueEventCapturing.ts"
 import {Interpolation} from "dsp"
+import {DebugMenus} from "@/ui/menu/debug.ts"
 
 type Construct = {
     element: Element
@@ -30,29 +31,29 @@ export const installValueContextMenu = ({element, capturing, editing, selection}
                 .setRuntimeChildrenProcedure(parent => parent.addMenuItem(
                     MenuItem.default({
                         label: "None",
-                        checked: target.event.interpolation === Interpolation.None
+                        checked: target.event.interpolation.type === "none"
                     }).setTriggerProcedure(() => editing.modify(() => selection.selected()
-                        .forEach(adapter => {
-                            adapter.box.slope.setValue(0.5)
-                            adapter.box.interpolation.setValue(Interpolation.None)
-                        }))),
+                        .forEach(adapter => adapter.interpolation = Interpolation.None))),
                     MenuItem.default({
-                        label: "Default (Linear, Curve)",
-                        checked: target.event.interpolation === Interpolation.Default
+                        label: "Linear",
+                        checked: target.event.interpolation.type === "linear"
                     }).setTriggerProcedure(() => editing.modify(() => selection.selected()
-                        .forEach(adapter => adapter.box.interpolation.setValue(Interpolation.Default))))
+                        .forEach(adapter => adapter.interpolation = Interpolation.Linear))),
+                    MenuItem.default({
+                        label: "Curve",
+                        checked: target.event.interpolation.type === "curve"
+                    }).setTriggerProcedure(() => {
+                        editing.modify(() => {
+                            const interpolation = Interpolation.Curve(0.75)
+                            selection.selected().forEach(adapter => adapter.interpolation = interpolation)
+                        })
+                    })
                 )),
-            MenuItem.default({
-                label: "Curve to Line",
-                selectable: target.event.slope !== 0.5
-            }).setTriggerProcedure(() => editing.modify(() => selection.selected()
-                .forEach(adapter => adapter.box.slope.setValue(0.5)))),
             MenuItem.default({label: "Print events to console"})
                 .setTriggerProcedure(() => {
-                    console.debug(target.event.collection.unwrap().events.asArray()
-                        .map(({position, index, value, slope, interpolation}) =>
-                            `{position: ${position}, index: ${index}, value: ${value}, slope: ${slope}, interpolation: ${interpolation}}`)
-                        .join(",\n"))
-                })
+                    console.debug(JSON.stringify(target.event.collection.unwrap().events.asArray()
+                        .map(event => Objects.include(event, "position", "value", "interpolation", "index"))))
+                }),
+            DebugMenus.debugBox(target.event.box)
         )
     })

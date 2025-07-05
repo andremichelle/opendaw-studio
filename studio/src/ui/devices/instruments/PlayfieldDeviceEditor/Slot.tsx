@@ -49,30 +49,26 @@ export const Slot = (
     lifecycle.ownAll(
         sample.catchupAndSubscribe(owner => {
             sampleLifecycle.terminate()
-            owner.getValue().match({
-                none: () => {
-                    replaceChildren(group, (
-                        <EmptySlot lifecycle={sampleLifecycle}
-                                   service={service}
-                                   noteReceiver={noteReceiver}
-                                   sampleSelector={sampleSelector}
-                                   octave={octave}
-                                   semitone={semitone}/>
-                    ))
-                },
-                some: sample => {
-                    replaceChildren(group, (
-                        <BusySlot lifecycle={sampleLifecycle}
-                                  service={service}
-                                  adapter={adapter}
-                                  sampleSelector={sampleSelector}
-                                  sample={sample}
-                                  noteSender={noteSender}
-                                  octave={octave}
-                                  semitone={semitone}/>
-                    ))
-                }
-            })
+            replaceChildren(group, owner.getValue().match({
+                none: () => (
+                    <EmptySlot lifecycle={sampleLifecycle}
+                               service={service}
+                               noteReceiver={noteReceiver}
+                               sampleSelector={sampleSelector}
+                               octave={octave}
+                               semitone={semitone}/>
+                ),
+                some: sample => (
+                    <BusySlot lifecycle={sampleLifecycle}
+                              service={service}
+                              adapter={adapter}
+                              sampleSelector={sampleSelector}
+                              sample={sample}
+                              noteSender={noteSender}
+                              octave={octave}
+                              semitone={semitone}/>
+                )
+            }))
         })
     )
     return group

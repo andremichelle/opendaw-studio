@@ -9,6 +9,8 @@ import {
     RootBox,
     TimelineBox,
     UserInterfaceBox,
+    ValueEventBox,
+    ValueEventCurveBox,
     ZeitgeistDeviceBox
 } from "@/data/boxes"
 import {UIAudioManager} from "@/project/UIAudioManager"
@@ -120,6 +122,32 @@ export class Project implements BoxAdaptersContext, Terminable, TerminableOwner 
                     boxGraph.beginTransaction()
                     box.groove.refer(rootBox.groove.targetVertex.unwrap())
                     boxGraph.endTransaction()
+                }
+            },
+            visitValueEventBox: (eventBox: ValueEventBox) => {
+                const slope = eventBox.slope.getValue()
+                if (isNaN(slope)) {return} // already migrated, nothing to do
+                if (slope === 0.0) { // never set
+                    console.debug("Migrate 'ValueEventBox'")
+                    boxGraph.beginTransaction()
+                    eventBox.slope.setValue(NaN)
+                    boxGraph.endTransaction()
+                } else if (eventBox.interpolation.getValue() === 1) { // linear
+                    if (slope === 0.5) {
+                        console.debug("Migrate 'ValueEventBox' to linear")
+                        boxGraph.beginTransaction()
+                        eventBox.slope.setValue(NaN)
+                        boxGraph.endTransaction()
+                    } else {
+                        console.debug("Migrate 'ValueEventBox' to new ValueEventCurveBox")
+                        boxGraph.beginTransaction()
+                        ValueEventCurveBox.create(boxGraph, UUID.generate(), box => {
+                            box.event.refer(eventBox.interpolation)
+                            box.slope.setValue(slope)
+                        })
+                        eventBox.slope.setValue(NaN)
+                        boxGraph.endTransaction()
+                    }
                 }
             }
         }))

@@ -120,7 +120,7 @@ class Voice {
         this.#device = device
         this.#event = event
 
-        this.#speed = Math.pow(2.0, event.pitch / 12.0 - 5.0)
+        this.#speed = Math.pow(2.0, (event.pitch + event.cent / 100.0) / 12.0 - 5.0)
     }
 
     event(): Id<NoteEvent> {return this.#event}

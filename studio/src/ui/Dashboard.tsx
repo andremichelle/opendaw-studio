@@ -1,6 +1,6 @@
 import css from "./Dashboard.sass?inline"
 import {Lifecycle, TimeSpan} from "std"
-import {createElement} from "jsx"
+import {createElement, LocalLink} from "jsx"
 import {StudioService} from "@/service/StudioService.ts"
 import {Colors} from "@/ui/Colors.ts"
 import {Html} from "dom"
@@ -68,8 +68,9 @@ export const Dashboard = ({service}: Construct) => {
                     Last built was <span style={{color: Colors.green}}>{time}</span>. Join our <a
                     href="https://discord.opendaw.studio" target="discord" style={{color: Colors.blue}}>discord
                     community</a> to stay updated! · <a href="https://github.com/andremichelle/opendaw"
-                                                      target="github"
-                                                      style={{color: Colors.blue}}>Source code</a> · Built with 🤍
+                                                        target="github"
+                                                        style={{color: Colors.blue}}>sourcecode</a> · <LocalLink
+                    href="/imprint">imprint</LocalLink> · Built with ❤️
                 </p>
             </article>
         </div>

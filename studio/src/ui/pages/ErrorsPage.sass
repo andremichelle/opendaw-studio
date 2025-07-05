@@ -1,0 +1,41 @@
+@use "@/colors"
+@use "@/mixins"
+
+component
+  flex: 1
+  padding: 2em
+  display: flex
+  flex-direction: column
+  overflow: hidden
+  @include colors.panel-background
+
+  h1
+    color: var(--color-cream)
+
+  p
+    opacity: 0.66
+    font-size: 0.75rem
+
+  div.list
+    display: grid
+    grid-template-columns: repeat(9, auto)
+    column-gap: 1em
+    align-content: start
+    justify-content: start
+    overflow: hidden scroll
+    font-size: 0.75rem
+
+    div
+      white-space: nowrap
+      user-select: text
+      -webkit-user-select: text
+
+    div.error-message, div.browser
+      max-width: 20rem
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+
+    h4
+      margin-bottom: 0.125rem
+      color: var(--color-blue)

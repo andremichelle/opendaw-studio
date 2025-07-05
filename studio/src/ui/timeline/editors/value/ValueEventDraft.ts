@@ -16,8 +16,7 @@ export namespace ValueEventDraft {
         const position = event.position
         const index = event.index
         const interpolation = event.interpolation
-        const slope = event.slope
-        return ({type: "value-event", position, index, value, interpolation, slope, direction: 0, isSelected: false})
+        return ({type: "value-event", position, index, value, interpolation, direction: 0, isSelected: false})
     }
 
     export const wrapSelected = (event: UIValueEvent,
@@ -26,26 +25,8 @@ export namespace ValueEventDraft {
         const position = strategy.readPosition(event)
         const index = event.index
         const interpolation = event.interpolation
-        const slope = event.slope
         const direction = Math.sign(position - event.position)
-        /*
-        TODO
-         This allows a in-place copy (same position), but introduces other results, that are not expected.
-         We can just remove this suggestion, if we cannot find a better solution
-        const direction = (() => {
-                const value = Math.sign(position - event.position)
-                if (value === 0) {
-                        const events = event.collection.unwrap().events.asArray()
-                        const index = events.indexOf(event)
-                        if (index === 0 || !events[index - 1].isSelected) {
-                                return -1
-                        } else if (index === events.length - 1 || !events[index + 1].isSelected) {
-                                return 1
-                        }
-                }
-                return value
-        })()*/
-        return ({type: "value-event", position, index, value, interpolation, slope, direction, isSelected: true})
+        return ({type: "value-event", position, index, value, interpolation, direction, isSelected: true})
     }
 
     export const min = (a: Nullable<ValueEventDraft>, b: Nullable<ValueEventDraft>): Nullable<ValueEventDraft> => {
@@ -85,14 +66,12 @@ export namespace ValueEventDraft {
         constructor(collection: EventCollection<ValueEventBoxAdapter>,
                     strategy: ValueModifyStrategy,
                     searchFrom: ppqn,
-                    searchMax: ppqn) {
+                    _searchMax: ppqn) {
             this.#strategy = strategy
-
             this.#selectedIterator = collection.iterateFrom(strategy.translateSearch(searchFrom), adapter => adapter.isSelected)
-            this.#nextSelected = this.#pullSelected()
             this.#unselectedIterator = collection.iterateFrom(searchFrom)
+            this.#nextSelected = this.#pullSelected()
             this.#nextUnselected = this.#pullUnselected()
-
             this.#evalNext()
         }
 

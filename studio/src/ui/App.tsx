@@ -11,6 +11,8 @@ import {ManualPage} from "@/ui/pages/ManualPage"
 import {ColorsPage} from "@/ui/pages/ColorsPage"
 import {Header} from "@/ui/header/Header"
 import {AudioInputDevicesPage} from "./pages/AudioInputDevicesPage"
+import {ErrorsPage} from "@/ui/pages/ErrorsPage.tsx"
+import {ImprintPage} from "@/ui/pages/ImprintPage.tsx"
 
 export const App = (service: StudioService) => {
     const terminator = new Terminator()
@@ -28,13 +30,14 @@ export const App = (service: StudioService) => {
                 routes={[
                     {path: "/", factory: WorkspacePage},
                     {path: "/manuals/*", factory: ManualPage},
-                    // from here these are all debugging and developing pages
+                    {path: "/imprint", factory: ImprintPage},
                     {path: "/icons", factory: IconsPage},
                     {path: "/components", factory: ComponentsPage},
                     {path: "/automation", factory: AutomationPage},
+                    {path: "/errors", factory: ErrorsPage},
                     {path: "/upload", factory: SampleUploadPage},
-                    {path: "/colors", factory: ColorsPage},
-                    {path: "/audio-input", factory: AudioInputDevicesPage}
+                    {path: "/audio-input", factory: AudioInputDevicesPage},
+                    {path: "/colors", factory: ColorsPage}
                 ]}
             />
             <Footer lifecycle={terminator} service={service}/>

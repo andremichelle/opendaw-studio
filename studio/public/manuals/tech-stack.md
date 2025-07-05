@@ -42,4 +42,3 @@ Each in-house library has a clear, focused purpose. [github repository](https://
 
 * [jszip](https://www.npmjs.com/package/jszip) (Pack & Unpack Zip-Files)
 * [markdown-it](https://www.npmjs.com/package/markdown-it) (Markdown parser)
-* [rollbar](https://rollbar.com) (Runtime Error Logging)

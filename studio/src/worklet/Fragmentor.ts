@@ -6,7 +6,7 @@ export class Fragmentor {
         let index = Math.ceil(p0 / stepSize)
         let position = index * stepSize
         while (position < p1) {
-            if (position >= p0) {yield position}
+            yield position
             position = ++index * stepSize
         }
     }
@@ -15,7 +15,7 @@ export class Fragmentor {
         let index = Math.ceil(p0 / stepSize)
         let position = index * stepSize
         while (position < p1) {
-            if (position >= p0) {yield {position, index}}
+            yield {position, index}
             position = ++index * stepSize
         }
     }

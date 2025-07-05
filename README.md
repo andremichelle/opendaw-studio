@@ -12,13 +12,28 @@ supporting this project on [Patreon](https://www.patreon.com/join/openDAW) or [k
 
 ## Goals
 
-- **Web-Based Platform**: Create and edit music directly from your browser.
+### Planned Features
+
 - **Offline Version**: A downloadable version that you own.
 - **Educational Resources**: Access tutorials and guides to enhance your music production skills.
 - **Best Data-Protection**: Store your data locally, on your server or a service you trust.
 - **Modular Systems**: Create and share your own devices and tools to extend the built-in feature-set.
 - **Collaborative Tools**: Work seamlessly with others in real-time.
-- **User-Friendly Interface**: Intuitive design for both beginners and professionals alike.
+
+### Built on Trust and Transparency
+
+**openDAW stands for radical simplicity and respect.**
+
+- **No SignUp**  
+- **No Tracking**  
+- **No Cookie Banners**  
+- **No User Profiling**  
+- **No Terms & Conditions**  
+- **No Ads**
+- **No Paywalls**  
+- **No Data Mining**
+
+**Just a free, open-source DAW in your browser.**
 
 ## Links
 
@@ -90,7 +105,6 @@ This is a list of the external libraries we currently use in the web studio:
 
 * [jszip](https://www.npmjs.com/package/jszip) (for openDAW project bundle file)
 * [markdown-it](https://www.npmjs.com/package/markdown-it) + [markdown-it-table](https://www.npmjs.com/package/markdown-it-table) (for help pages)
-* [rollbar](https://www.npmjs.com/package/rollbar) (for runtime error reporting in development mode)
 
 ### Prepare, Clone, Install and Run
 

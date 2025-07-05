@@ -61,11 +61,15 @@ export namespace Modifier {
     }
 
     export const deleteAudioUnit = ({rootBoxAdapter}: Project, adapter: AudioUnitBoxAdapter): void => {
-        console.debug(`deleteAudioUnit adapter: ${adapter.toString()} #${adapter.indexField.getValue()}`)
         const adapters = rootBoxAdapter.audioUnits.adapters()
+        const boxIndex = adapter.indexField.getValue()
         const deleteIndex = adapters.indexOf(adapter)
+        console.debug(`deleteAudioUnit adapter: ${adapter.toString()}, deleteIndex: ${deleteIndex}, indexField: ${boxIndex}`)
         if (deleteIndex === -1) {return panic(`Cannot delete ${adapter}. Does not exist.`)}
-        if (deleteIndex !== adapter.indexField.getValue()) {return panic(`Cannot delete ${adapter}. Wrong index.`)}
+        if (deleteIndex !== boxIndex) {
+            console.debug("indices", adapters.map(x => x.box.index.getValue()).join(", "))
+            return panic(`Cannot delete ${adapter}. Wrong index.`)
+        }
         for (let index = deleteIndex + 1; index < adapters.length; index++) {
             adapters[index].indexField.setValue(index - 1)
         }

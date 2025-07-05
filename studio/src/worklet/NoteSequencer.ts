@@ -75,7 +75,10 @@ export class NoteSequencer implements NoteEventSource, Terminable {
 
     pushRawNoteOff(pitch: byte): void {
         for (const entry of this.#externalNotes) {
-            if (entry.pitch === pitch) {
+            if (entry.running.isEmpty()) {
+                // never started
+                this.#externalNotes.delete(entry)
+            } else if (entry.pitch === pitch) {
                 entry.gate = false
                 return
             }

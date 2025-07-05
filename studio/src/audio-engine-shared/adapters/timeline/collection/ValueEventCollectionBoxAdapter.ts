@@ -3,9 +3,11 @@ import {
     asDefined,
     Curve,
     int,
+    linear,
     Notifier,
     Observer,
     Option,
+    panic,
     SortedSet,
     Subscription,
     Terminator,
@@ -18,12 +20,12 @@ import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/even
 import {Pointers} from "@/data/pointers.ts"
 import {BoxAdaptersContext} from "@/audio-engine-shared/BoxAdaptersContext"
 import {BoxAdapter} from "@/audio-engine-shared/BoxAdapter"
+import {InterpolationFieldAdapter} from "@/audio-engine-shared/adapters/timeline/event/InterpolationFieldAdapter.ts"
 
 type CreateEventParams = {
     position: ppqn,
     index: int,
     value: unitValue,
-    slope: unitValue,
     interpolation: Interpolation
 }
 
@@ -85,59 +87,72 @@ export class ValueEventCollectionBoxAdapter implements BoxAdapter {
             return Option.wrap(this.createEvent({
                 position,
                 value: low.value,
-                slope: 0.5,
                 index: low.index,
                 interpolation: low.interpolation
             }))
         }
         if (null === low) {
-            if (null === high) {return Option.None}
             return Option.wrap(this.createEvent({
                 position,
                 value: high.value,
-                slope: 0.5,
                 index: high.index,
                 interpolation: high.interpolation
             }))
         }
         if (low.position === position) {return Option.wrap(low)}
-        if (low.interpolation === Interpolation.None) {
+        if (low.interpolation.type === "none") {
             return Option.wrap(this.createEvent({
                 position,
                 value: low.value,
-                slope: 0.5,
                 index: low.index,
                 interpolation: low.interpolation
             }))
         }
-        const {position: p0, value: y0} = low
-        const {position: p1, value: y1} = high
-        const steps = p1 - p0
-        const cutOffset = position - p0
-        const curve = Curve.byHalf(steps, y0, Curve.valueAt({slope: low.slope, steps, y0, y1}, steps * 0.5), y1)
-        const cutValue = Curve.valueAt(curve, cutOffset)
-        const lowSlope = Curve.slopeByHalf(y0, Curve.valueAt(curve, cutOffset * 0.5), cutValue)
-        low.box.slope.setValue(lowSlope)
-        return Option.wrap(this.createEvent({
-            position,
-            value: cutValue,
-            slope: Curve.slopeByHalf(cutValue, Curve.valueAt(curve, (cutOffset + steps) * 0.5), y1),
-            index: 0,
-            interpolation: Interpolation.Default
-        }))
+        if (low.interpolation.type === "linear") {
+            const {position: p0, value: v0} = low
+            const {position: p1, value: v1} = high
+            return Option.wrap(this.createEvent({
+                position,
+                value: linear(v0, v1, (position - p0) / (p1 - p0)),
+                index: 0,
+                interpolation: low.interpolation
+            }))
+        }
+        if (low.interpolation.type === "curve") {
+            const {position: p0, value: y0} = low
+            const {position: p1, value: y1} = high
+            const steps = p1 - p0
+            const cutOffset = position - p0
+            const curve = Curve.byHalf(steps, y0, Curve.valueAt({
+                slope: low.interpolation.slope,
+                steps,
+                y0,
+                y1
+            }, steps * 0.5), y1)
+            const cutValue = Curve.valueAt(curve, cutOffset)
+            const lowSlope = Curve.slopeByHalf(y0, Curve.valueAt(curve, cutOffset * 0.5), cutValue)
+            InterpolationFieldAdapter.write(low.box.interpolation, Interpolation.Curve(lowSlope))
+            return Option.wrap(this.createEvent({
+                position,
+                value: cutValue,
+                index: 0,
+                interpolation: Interpolation.Curve(Curve.slopeByHalf(cutValue, Curve.valueAt(curve, (cutOffset + steps) * 0.5), y1))
+            }))
+        }
+        return panic("Unknown interpolation type")
     }
 
     subscribeChange(observer: Observer<this>): Subscription {return this.#changeNotifier.subscribe(observer)}
 
-    createEvent({position, index, value, slope, interpolation}: CreateEventParams): ValueEventBoxAdapter {
-        return this.#context.boxAdapters.adapterFor(ValueEventBox.create(this.#context.boxGraph, UUID.generate(), box => {
+    createEvent({position, index, value, interpolation}: CreateEventParams): ValueEventBoxAdapter {
+        const eventBox = ValueEventBox.create(this.#context.boxGraph, UUID.generate(), box => {
             box.position.setValue(position)
             box.index.setValue(index)
             box.value.setValue(value)
-            box.slope.setValue(slope)
-            box.interpolation.setValue(interpolation)
             box.events.refer(this.#box.events)
-        }), ValueEventBoxAdapter)
+        })
+        InterpolationFieldAdapter.write(eventBox.interpolation, interpolation)
+        return this.#context.boxAdapters.adapterFor(eventBox, ValueEventBoxAdapter)
     }
 
     requestSorting(): void {

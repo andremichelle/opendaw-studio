@@ -14,6 +14,11 @@ export class PianoRollLayout {
         ]
     }
 
+    static getByIndex(index: int): PianoRollLayout {
+        const layouts = this.Defaults()
+        return layouts[index] ?? layouts[0]
+    }
+
     static readonly WhiteKey: Size = {width: 20, height: 100}
     static readonly BlackKey: Size = {width: 12, height: 60}
     static readonly BlackKeyOffsets: Record<int, number> = {1: 0.55, 3: 0.45, 6: 0.55, 8: 0.50, 10: 0.45} as const
@@ -69,7 +74,7 @@ export class PianoRollLayout {
                 const x = whiteIndex * WhiteKey.width
                 this.#whiteKeysX.push({key, x})
                 this.#centered[key] = whiteIndex + 0.5
-                if (localNote === 0 || localNote === 5) this.#octaveSplits.push(whiteIndex)
+                if (localNote === 0 || localNote === 5) {this.#octaveSplits.push(whiteIndex)}
                 whiteIndex++
             }
         }

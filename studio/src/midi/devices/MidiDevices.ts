@@ -90,12 +90,10 @@ export class MidiDevices implements Terminable {
     readonly #terminator = new Terminator()
 
     readonly #project: Project
-
     readonly #connections: SortedSet<Address, MidiConnection>
 
     constructor(project: Project) {
         this.#project = project
-
         this.#connections = Address.newSet<MidiConnection>(connection => connection.address)
     }
 
@@ -191,7 +189,6 @@ export class MidiDevices implements Terminable {
         console.debug(`startListeningKeys channel: ${channel}`)
         const engine = this.#project.service.engine
         const {observer, terminate} = createMidiKeysObserver(engine, adapter)
-        if (isDefined(event)) {observer(event)}
         const subscription = MidiDeviceAccess.subscribeMessageEvents(observer, channel)
         this.#connections.add({
             address: adapter.address,
@@ -206,6 +203,7 @@ export class MidiDevices implements Terminable {
                 subscription.terminate()
             }
         })
+        if (isDefined(event)) {observer(event)}
     }
     #startListeningControl(field: PrimitiveField<PrimitiveValues, Pointers.MidiControl | Pointers>,
                            channel: byte,

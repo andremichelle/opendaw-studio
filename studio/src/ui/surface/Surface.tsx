@@ -223,7 +223,9 @@ export class Surface implements TerminableOwner {
         this.#terminator.ownAll(
             Events.subscribe(this.#owner, "pointerdown", (event: PointerEvent) => {
                 if (pointerDown.nonEmpty()) {
-                    console.debug("simulate pointerup ondown")
+                    // TODO There is a strange behavior on some machines, where it appears
+                    //  that the pointerdown event is sent twice immediately (related to to-do above)
+                    console.debug("simulate pointerup onpointerdown", Date.now())
                     pointerDown.unwrap().dispatchEvent(new PointerEvent("pointerup", event))
                     pointerDown = Option.None
                 }
@@ -233,7 +235,7 @@ export class Surface implements TerminableOwner {
             }, {capture: true}),
             Events.subscribe(this.#owner, "pointermove", (event: PointerEvent) => {
                 if (pointerDown.nonEmpty() && event.buttons === 0) {
-                    console.debug("simulate pointerup")
+                    console.debug("simulate pointerup pointermove")
                     pointerDown.unwrap().dispatchEvent(new PointerEvent("pointerup", event))
                     pointerDown = Option.None
                 }
@@ -274,6 +276,7 @@ export class Surface implements TerminableOwner {
                 if (event.ctrlKey) {event.preventDefault()}
             }, {passive: false}),
             Events.subscribe(this.#owner, "contextmenu", (event) => {
+                console.debug("contextmenu", event.target)
                 event.preventDefault()
                 event.stopPropagation()
                 AnimationFrame.once(() => CssUtils.setCursor("auto"))

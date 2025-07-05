@@ -1,7 +1,7 @@
-import {clamp, Iterables, Notifier, Observer, Option, Selection, Terminable, unitValue, ValueAxis} from "std"
+import {clampUnit, Iterables, Notifier, Observer, Option, panic, Selection, Terminable, unitValue, ValueAxis} from "std"
 import {Editing} from "box"
 import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
-import {EventCollection, ppqn, ValueEvent} from "dsp"
+import {EventCollection, Interpolation, ppqn, ValueEvent} from "dsp"
 import {ValueModifier} from "./ValueModifier"
 import {
     ValueEventCollectionBoxAdapter
@@ -9,6 +9,7 @@ import {
 import {ValueEventDraft} from "@/ui/timeline/editors/value/ValueEventDraft.ts"
 import {ValueEventOwnerReader} from "../EventOwnerReader"
 import {Dragging} from "dom"
+import {UIValueEvent} from "@/ui/timeline/editors/value/UIValueEvent.ts"
 
 type Construct = Readonly<{
     element: Element
@@ -51,10 +52,19 @@ export class ValueSlopeModifier implements ValueModifier {
     isVisible(_event: ValueEvent): boolean {return true}
     readPosition(event: ValueEvent): ppqn {return event.position}
     readValue(event: ValueEvent): unitValue {return event.value}
-    readSlope(event: ValueEventBoxAdapter): unitValue {
+    readInterpolation(event: UIValueEvent): Interpolation {
         const successor = ValueEvent.nextEvent(this.#unwrapEventCollection(), event)
-        if (successor === null) {return event.slope} // last event has no successor hence no curve
-        return clamp(event.slope - this.#deltaSlope * Math.sign(event.value - successor.value), 0.0, 1.0)
+        if (successor === null) {return event.interpolation} // the last event has no successor hence no curve
+        const interpolation = event.interpolation
+        if (interpolation.type === "none") {
+            return Interpolation.None
+        } else if (interpolation.type === "linear") {
+            return Interpolation.Linear
+        } else if (interpolation.type === "curve") {
+            const slope = clampUnit(interpolation.slope - this.#deltaSlope * Math.sign(event.value - successor.value))
+            return Interpolation.Curve(slope)
+        }
+        return panic("Internal Error (readInterpolation)")
     }
     readContentDuration(owner: ValueEventOwnerReader): number {return owner.contentDuration}
     iterator(searchMin: ppqn, searchMax: ppqn): IteratorObject<ValueEventDraft> {
@@ -62,8 +72,7 @@ export class ValueSlopeModifier implements ValueModifier {
             type: "value-event",
             position: event.position,
             value: event.value,
-            slope: event.isSelected ? this.readSlope(event) : event.slope,
-            interpolation: event.interpolation,
+            interpolation: event.isSelected ? this.readInterpolation(event) : event.interpolation,
             index: event.index,
             isSelected: event.isSelected,
             direction: 0
@@ -81,16 +90,12 @@ export class ValueSlopeModifier implements ValueModifier {
     }
 
     approve(editing: Editing): void {
-        if (this.#deltaSlope === 0.0) {
-            return
-        }
-        const result: ReadonlyArray<{
-            event: ValueEventBoxAdapter,
-            slope: unitValue
-        }> = this.#selection.selected().map(event => ({
-            event, slope: this.readSlope(event)
-        }))
-        editing.modify(() => result.forEach(({event, slope}) => event.box.slope.setValue(slope)))
+        if (this.#deltaSlope === 0.0) {return}
+        type Subject = { event: ValueEventBoxAdapter, interpolation: Interpolation }
+        const result: ReadonlyArray<Subject> = this.#selection.selected()
+            .map(event => ({event, interpolation: this.readInterpolation(event)}))
+        editing.modify(() => result.forEach(({event, interpolation}) => event.interpolation = interpolation))
+        this.#deltaSlope = 0.0
     }
 
     cancel(): void {

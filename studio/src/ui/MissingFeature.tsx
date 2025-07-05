@@ -1,6 +1,6 @@
 import css from "./MissingFeature.sass?inline"
-import {createElement} from "../../../lib/jsx/dist"
-import {Html} from "../../../lib/dom/dist"
+import {createElement} from "jsx"
+import {Html} from "dom"
 import {Colors} from "@/ui/Colors.ts"
 
 const className = Html.adoptStyleSheet(css, "MissingFeature")

@@ -1,11 +1,11 @@
-import {Block, BlockFlag} from "@/worklet/processing"
+import {Block} from "@/worklet/processing"
 import {EngineContext} from "@/worklet/EngineContext"
 import {EventProcessor} from "@/worklet/EventProcessor"
 import {PlayfieldDeviceProcessor} from "@/worklet/devices/instruments/PlayfieldDeviceProcessor"
 import {Event} from "dsp"
 import {NoteEventSource, NoteEventTarget, NoteLifecycleEvent} from "@/worklet/NoteEventSource"
 import {NoteEventInstrument} from "@/worklet/NoteEventInstrument"
-import {Bits, Terminable} from "std"
+import {Terminable} from "std"
 
 export class PlayfieldSequencer extends EventProcessor implements NoteEventTarget {
     readonly #device: PlayfieldDeviceProcessor
@@ -31,11 +31,7 @@ export class PlayfieldSequencer extends EventProcessor implements NoteEventTarge
         this.#noteEventInstrument.clear()
     }
 
-    processEvents(block: Readonly<Block>, _from: number, _to: number): void {
-        if (Bits.every(block.flags, BlockFlag.transporting)) {
-            this.eventInput.get(block.index).forEach(event => this.handleEvent(block, event))
-        }
-    }
+    processEvents(_block: Readonly<Block>, _from: number, _to: number): void {}
 
     handleEvent({index}: Readonly<Block>, event: Event): void {
         if (NoteLifecycleEvent.isStart(event)) {

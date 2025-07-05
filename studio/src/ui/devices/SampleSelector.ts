@@ -29,7 +29,7 @@ export namespace SampleSelectStrategy {
                     if (UUID.equals(newFile.address.uuid, existingFile.address.uuid)) {
                         console.debug("Same Sample. Ignore.")
                     } else {
-                        const mustDelete = existingFile.pointerHub.size() === 1 // filePointer was only pointer > delete
+                        const mustDelete = existingFile.pointerHub.size() === 1 // filePointer was the only pointer > delete
                         filePointer.refer(newFile)
                         if (mustDelete) {
                             existingFile.delete()

@@ -17,7 +17,7 @@ import {
 import {Snapping} from "@/ui/timeline/Snapping.ts"
 import {Editing} from "box"
 import {ValueEventBoxAdapter} from "@/audio-engine-shared/adapters/timeline/event/ValueEventBoxAdapter.ts"
-import {EventCollection, ppqn, ValueEvent} from "dsp"
+import {EventCollection, Interpolation, ppqn, ValueEvent} from "dsp"
 import {ValueModifier} from "./ValueModifier"
 import {ValueEventDraft} from "./ValueEventDraft.ts"
 import {
@@ -26,6 +26,7 @@ import {
 import {ValueEventOwnerReader} from "@/ui/timeline/editors/EventOwnerReader.ts"
 import {AutomatableParameterFieldAdapter} from "@/audio-engine-shared/adapters/AutomatableParameterFieldAdapter.ts"
 import {Dragging} from "dom"
+import {UIValueEvent} from "@/ui/timeline/editors/value/UIValueEvent.ts"
 
 type Construct = Readonly<{
     element: Element
@@ -109,7 +110,7 @@ export class ValueMoveModifier implements ValueModifier {
     }
     readPosition(adapter: ValueEvent): ppqn {return adapter.position + this.#deltaPosition}
     readValue(event: ValueEvent): unitValue {return clamp(event.value + this.#deltaValue, 0.0, 1.0)}
-    readSlope(event: ValueEvent): unitValue {return event.slope}
+    readInterpolation(event: UIValueEvent): Interpolation {return event.interpolation}
     iterator(searchMin: ppqn, searchMax: ppqn): Generator<ValueEventDraft> {
         return new ValueEventDraft.Solver(this.#unwrapEventCollection(), this,
             searchMin - Math.max(0, this.#deltaPosition), searchMax).iterate()

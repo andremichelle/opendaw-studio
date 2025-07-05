@@ -22,7 +22,7 @@ export namespace ValueEventEditing {
                                       snapping: Snapping,
                                       pointer: ppqn,
                                       value: unitValue,
-                                      interpolation: Interpolation = Interpolation.Default): ValueEventBoxAdapter => {
+                                      interpolation: Interpolation = Interpolation.Linear): ValueEventBoxAdapter => {
         const position: ppqn = snapping.round(pointer)
         const le = collection.events.lowerEqual(position)
         const ge = collection.events.greaterEqual(position)
@@ -31,7 +31,6 @@ export namespace ValueEventEditing {
                 position: position,
                 index: 0,
                 value,
-                slope: 0.5,
                 interpolation
             })
         } else if (le === ge) {
@@ -41,7 +40,6 @@ export namespace ValueEventEditing {
                         position,
                         index: 1,
                         value,
-                        slope: 0.5,
                         interpolation
                     })
                 } else {
@@ -54,7 +52,6 @@ export namespace ValueEventEditing {
                     position,
                     index: 0,
                     value,
-                    slope: 0.5,
                     interpolation
                 })
             }
@@ -71,7 +68,6 @@ export namespace ValueEventEditing {
                 position,
                 index: 0,
                 value,
-                slope: 0.5,
                 interpolation
             })
         }

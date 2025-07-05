@@ -9,9 +9,21 @@ import {SelectionBox} from "./schema/selection"
 import {UserInterfaceBox} from "./schema/user-interface"
 import {DeviceDefinitions} from "./schema/devices"
 import {ModuleDefinitions} from "./schema/modular"
-import {NoteClipBox, NoteEventBox, NoteEventCollectionBox, NoteRegionBox} from "./schema/timeline/notes"
+import {
+    NoteClipBox,
+    NoteEventBox,
+    NoteEventCollectionBox,
+    NoteEventRepeatBox,
+    NoteRegionBox
+} from "./schema/timeline/notes"
 import {AudioClipBox, AudioRegionBox} from "./schema/timeline/audio"
-import {ValueClipBox, ValueEventBox, ValueEventCollectionBox, ValueRegionBox} from "./schema/timeline/value"
+import {
+    ValueClipBox,
+    ValueEventBox,
+    ValueEventCollectionBox,
+    ValueEventCurveBox,
+    ValueRegionBox
+} from "./schema/timeline/value"
 import {TrackBox} from "./schema/timeline/track"
 import {MarkerBox} from "./schema/timeline/marker"
 import {GrooveShuffleBox} from "./schema/grooves"
@@ -26,8 +38,8 @@ BoxForge.gen<Pointers>({
     boxes: [
         RootBox, SelectionBox, UserInterfaceBox,
         TimelineBox, TrackBox,
-        NoteEventBox, NoteEventCollectionBox, NoteRegionBox, NoteClipBox,
-        ValueEventBox, ValueEventCollectionBox, ValueRegionBox, ValueClipBox,
+        NoteEventBox, NoteEventRepeatBox, NoteEventCollectionBox, NoteRegionBox, NoteClipBox,
+        ValueEventBox, ValueEventCollectionBox, ValueEventCurveBox, ValueRegionBox, ValueClipBox,
         AudioRegionBox, AudioClipBox,
         MarkerBox,
         AudioFileBox,

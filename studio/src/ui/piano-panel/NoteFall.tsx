@@ -43,7 +43,7 @@ export const NoteFall = ({lifecycle, project, updateNotifier}: Construct) => {
         context.strokeStyle = "rgba(255, 255, 255, 0.2)"
         context.setLineDash([4, 4])
         context.beginPath()
-        const pianoLayout = PianoRollLayout.Defaults()[keyboard.getValue()]
+        const pianoLayout = PianoRollLayout.getByIndex(keyboard.getValue())
         for (const position of pianoLayout.octaveSplits) {
             const x = Math.floor(position * actualWidth)
             context.moveTo(x, 0.0)
